@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "jumapro",
+  "private_key_id": "b4ffc40e7129731b6de46be312956a7440c0411f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDHEaBD9lkqvumV\ncaENZB+5qn/xzuTaY+1ALZDYqNL5s0/AiXHkWqqhEbrlVpLZnX12hJ7Rq6lmMalw\noRbuFZwKAxBhmxrhp/np3fzT5WFeyNqdeGevPH5JhEEn9cOW1RRcsEE73VlA2KpA\nFuw8jht35WPU/I1nH/latp8+mhDZGSHrTXVwtvrvNsJAa63+5jsDey/lk/mmYKpl\nzhloOAZ6mz2O9/1uSG9M5NmDVnY7P6d5ZokaF2U5C1U0m2Q+/c5y1UZab2CTY2kw\nmxbBMYoq6qMLus43CtSO2WRiHi4O3CjeBiB6i6YFcx87e9gzivaQJHHazzKqWXGw\nR3BIqBD9AgMBAAECggEAFQgbspJ4YTfCXfOfXFbTsz38PoPpUdl02270+q77ez4i\nkujyi3m4xUOmR0yaPzuQYdEpJmXIg++DQ08BqS3HSpeAR4+ni2e/06GMcKavXuBB\nmJl7+tudTA8ZAyvH+kuQ1yoX+kcsgtlhQ1wooU0yQbyOi5YTKm4KXjclI+wLE6SQ\nP9IOQwFgfDPq9ZNQnuu7pDJCX8u46LYZoYG4i1bPKf1W3qRdloJrvs5STUd0Bj/a\nW/eqqeji5bferBNFwpxIRuRKnyKX7VA/jGF52FSZRU3kFRGbZg6Rq/gmjiNCN3Ua\ngqSAnvFUBZR5hLZ3Cfn054+ZFJmoCNAx88vyiaEfAQKBgQD1Jg3ypsNGB023hUuz\nPTGSIL238O2srM+HkC+s/VSjgtdiJIl0dD3yjd/DQIKXUlPubPfnM3Vj8F3du9z0\na3dkeKemdbo7JQ1b4ZkR+qD+WIZz7wyQWlb2Anb7WRNUuVFPW7Kz5HD5m8ooZjKd\nV9sLwcBoBrj/mo2qnhBkwpEWTQKBgQDP4Wj9y5eW01apEULy1fQohMJBAxDBpShX\npW4ilJ4UtCj7qCF5ozp39+GzMEa78cx+yTbtkCIMk0Kstu8sUXP3+8i06khVNA95\n1nBDajCnQmBJn4CGoxmg7oRU/EG0HOzUMcL2JVbBdCRWxVB8W5OQPZYmXTqOqb4R\nwbEd87CdcQKBgQDUp2gd/48Q5jECa3yZRRIFIqWwNCzYRyfW/rp8o1ySYmOX3P3n\nqRY7m9ppM0KVJXNtNdVuF3NTeCTUvawT0k1FOGyltyYPPDr0YyQ3NmQFfqFTXCBX\n8CXTTZwMuN5N9luULYU9C4L846lflhd96cI31qCjHIHKKDWPtYGfBjB5WQKBgHJ1\nxa6AjD4CraO3mmpE/gPVXXQYcQB+pKDluKeXtxblP++Y2p20D3yA4ygbu8a+U3+3\n4OObSfQsnTimHTkEvFrdqtxaZ2tql97ZAMVN0e42cPf4t/bqFTF0Qy7cGn1Gs+v+\nXj/TvVoVTfDtAe0HK0/vaR5ElPp6Yeo7AP/h7uwxAoGACF/Tl2XPqQ9wV5itQUE7\nps2DF1n2HJ5XHh+XWB0fRhm7vggWUwIcWwnZJ2ZYbxO2IdqTmh8pMy0jz0E0e44A\nLaKCj6g4EXK4u8jdutm94oc9pVxFsIdOZD8pHo81QQoypzAWJ4g35xIT87WWdTXX\nF8mjN/OPzeQ35G78ZMDpueg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "st-gsheets@jumapro.iam.gserviceaccount.com",
+  "client_id": "107339515304066869928",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/st-gsheets%40jumapro.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
