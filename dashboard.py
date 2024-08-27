@@ -6,7 +6,7 @@ import pickle
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 # Baca data dari Google Sheets
-data = conn.read()
+data = conn.read(worksheet="Data Jumlah Mahasiswa")
 
 last_column_name = data.columns[-1]
 st.header("Data Jumlah Mahasiswa Baru 2013 - " + (str(last_column_name)) + " dan Prediksi Hingga " + (str(last_column_name+5)))
