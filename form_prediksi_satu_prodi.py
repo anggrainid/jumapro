@@ -57,7 +57,7 @@ for i in range(1, input_years_to_predict + 1):
     current_students = data_prodi[column_name].copy()
 
 st.write(data_prodi)
-
+input_fields
 
 
 # Fungsi untuk menghitung persentase penurunan
@@ -67,9 +67,9 @@ def hitung_persentase_penurunan(data, predict_year):
     # penurunan_total = (data[f"{end_year} (Prediksi)"] - data_mahasiswa_start_year)
     # persentase_penurunan = (penurunan_total / 2) * 100
     # return persentase_penurunan
-    ts_predict = data[f"{predict_year} (Prediksi)"]
-    ts_current = data[[current_students]]
-    penurunan = (ts_predict - ts_current) / ts_current
+    ts_1 = data[f"{predict_year} (Prediksi)"]
+    ts_0 = data["current_students"]
+    penurunan = (ts_0 - ts_1) / ts_1
 
     persentase_penurunan = penurunan * 100
 
@@ -79,14 +79,19 @@ hasil_hitung_persentase = hitung_persentase_penurunan(data_prodi, input_predict_
 st.write(hasil_hitung_persentase)
 
 # Fungsi untuk menghitung persentase penurunan dengan lebih dari satu tahun data
-def hitung_persentase_penurunan_lebih_dari_satu(data, banyak_data_ts):
+def hitung_persentase_penurunan_lebih_dari_satu(data, predict_year, banyak_data_ts):
     total_penurunan = 0
 
     # Iterasi dari TS-1 hingga TS-n (n = banyak_data_ts)
     for i in range(banyak_data_ts - 1):
-        ts_current = data[f"input_jumlah_mahasiswa_ts{i}"]
-        ts_next = data[f"input_jumlah_mahasiswa_ts{i+1}"]
-        penurunan = (ts_next - ts_current) / ts_current
+        if i == 0:
+            ts_1 = data[f"{predict_year} (Prediksi)"]
+            ts_0 = data["current_students"]
+        else:
+            ts_1 = input_fields[f"input_jumlah_mahasiswa_ts{i-1}"]
+            ts_0 = input_fields[f"input_jumlah_mahasiswa_ts{i}"]
+
+        penurunan = (ts_0 - ts_1) / ts_1
         total_penurunan += penurunan
 
     # Hitung rata-rata penurunan
@@ -95,37 +100,36 @@ def hitung_persentase_penurunan_lebih_dari_satu(data, banyak_data_ts):
 
     return persentase_penurunan
 
+    hasil_hitung_persentase_1 = hitung_persentase_penurunan_lebih_dari_satu(data_prodi, input_predict_year, input_banyak_data_ts)
+    st.write(hasil_hitung_persentase_1)
 # Perbarui fungsi prediksi_dan_penilaian untuk menggunakan fungsi yang baru
+
 def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data, input_years_to_predict, input_kriteria, input_ambang_batas_jumlah, input_ambang_batas_persen, input_fields):
     # Load model dari file .sav
-    model = pickle.load(open(r"D:\jumapro\next_year_students_prediction.sav", "rb"))
+    # model = pickle.load(open(r"D:\jumapro\next_year_students_prediction.sav", "rb"))
 
-    # Siapkan data untuk prediksi
-    last_year_data = input_last_year_data
-    current_year = input_predict_year
-    years_to_predict = input_years_to_predict
 
-    if input_kriteria == "Jumlah Minimal":
-        new_data_prodi = {
-            'Prodi': [input_prodi],
-            'current_students': [input_jumlah_mahasiswa_ts]
-        }
-    else:
-        new_data_prodi = {
-            'Prodi': [input_prodi],
-            'current_students': [input_fields[list(input_fields.keys())[0]]]
-        }
+    # if input_kriteria == "Jumlah Minimal":
+    #     new_data_prodi = {
+    #         'Prodi': [input_prodi],
+    #         'current_students': [input_jumlah_mahasiswa_ts]
+    #     }
+    # else:
+    #     new_data_prodi = {
+    #         'Prodi': [input_prodi],
+    #         'current_students': [input_fields[list(input_fields.keys())[0]]]
+    #     }
     
-    data_prodi = pd.DataFrame(new_data_prodi)
+    # data_prodi = pd.DataFrame(new_data_prodi)
 
-    # Prediksi beberapa tahun ke depan
-    current_students = data_prodi['current_students'].copy()
-    for i in range(1, input_years_to_predict + 1):
-        next_year = input_last_year_data + i
-        column_name = f'{next_year} (Prediksi)'
-        data_prodi[column_name] = model.predict(current_students.values.reshape(-1, 1))
-        data_prodi[column_name] = data_prodi[column_name].astype(int)
-        current_students = data_prodi[column_name].copy()
+    # # Prediksi beberapa tahun ke depan
+    # current_students = data_prodi['current_students'].copy()
+    # for i in range(1, input_years_to_predict + 1):
+    #     next_year = input_last_year_data + i
+    #     column_name = f'{next_year} (Prediksi)'
+    #     data_prodi[column_name] = model.predict(current_students.values.reshape(-1, 1))
+    #     data_prodi[column_name] = data_prodi[column_name].astype(int)
+    #     current_students = data_prodi[column_name].copy()
 
     # Penilaian kelolosan berdasarkan kriteria
     if input_kriteria == "Jumlah Minimal":
@@ -135,16 +139,18 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
 
 
     elif input_kriteria == "Persentase Penurunan":
-        if len(input_fields) > 1:
-            persentase_penurunan = hitung_persentase_penurunan_lebih_dari_satu(input_fields, input_banyak_data_ts)
+        if input_banyak_data_ts > 2:
+            persentase_penurunan = hitung_persentase_penurunan_lebih_dari_satu(data_prodi, input_predict_year, input_banyak_data_ts)
         else:
             persentase_penurunan = hitung_persentase_penurunan(data_prodi, input_predict_year)
         
-        ambang_batas_jumlah_mahasiswa = int(input_fields[list(input_fields.keys())[0]] * (1 - input_ambang_batas_persen / 100))
-        hasil_prediksi_pemantauan = "Lolos" if persentase_penurunan < input_ambang_batas_persen else "Tidak Lolos"
+        # ambang_batas_jumlah_mahasiswa = int(input_fields[list(input_fields.keys())[0]] * (1 - input_ambang_batas_persen / 100))
+        ambang_batas_jumlah_mahasiswa = int(data_prodi["current_students"] * (1 - input_ambang_batas_persen / 100))
+        hasil_prediksi_pemantauan = "Lolos" if persentase_penurunan.values[0] < input_ambang_batas_persen else "Tidak Lolos"
         data_prodi["Persentase Penurunan"] = persentase_penurunan
         data_prodi["Ambang Batas Jumlah Mahasiswa"] = ambang_batas_jumlah_mahasiswa
         data_prodi["Hasil Prediksi Pemantauan"] = hasil_prediksi_pemantauan
+        data_prodi.rename(columns={'current_students': f'{input_last_year_data} (Saat Ini)'}, inplace=True)
 
     return data_prodi
 
