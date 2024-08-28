@@ -48,7 +48,7 @@ if input_formula == "Sudah Ada":
 
     else:
         input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
-        input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa TS:", value=0)
+        input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa TS (Tahun Sekarang):", value=0)
         input_ambang_batas_persen = None
         input_fields = None
 
@@ -66,7 +66,6 @@ else:
             field_name = f"input_jumlah_mahasiswa_ts{i}"
             input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
             
-        input_fields
     else:
         input_ambang_batas_jumlah = st.number_input("Ambang Batas Jumlah Mahasiswa Minimal", min_value=1, step=1)
         input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa TS:", value=0)
@@ -180,7 +179,7 @@ def prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, inpu
         for col, value in input_fields.items():
             data_prodi[col] = value
         # data_prodi = pd.concat([data_prodi, data_ts], ignore_index=True)
-        ts = [f"input_jumlah_mahasiswa_ts{i}" for i in range(0, int(input_banyak_data_ts-1))]
+        ts = [f"input_jumlah_mahasiswa_ts{i+1}" for i in range(0, int(input_banyak_data_ts-1))]
         ordered_data_prodi = ["Prodi"] + ts + ["current_students"] + data_predict_target + ["Persentase Penurunan Maksimal"] + ["Hitung Persentase Penurunan"] + [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + data_predict_years + ["Tahun Tidak Lolos (Prediksi)"]
         data_prodi = data_prodi[ordered_data_prodi]
         data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
