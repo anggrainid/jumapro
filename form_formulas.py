@@ -9,7 +9,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 
 # Baca data dari Google Sheets
 data = conn.read()
-
+st.write(data)
 
 # Dropdown options for Lembaga
 lembaga_options = data['Lembaga'].unique()
@@ -89,7 +89,8 @@ input_keterangan = st.text_area("Keterangan")
 #     # predicted_columns = [f'predicted_{current_year + i}_students' for i in range(1, years_to_predict + 1)]
 #     st.write(data)
 
-new_formula = pd.DataFrame({
+new_formula = pd.DataFrame(
+    {
     "Lembaga": [input_lembaga],
     "Nama Rumus": [input_nama_rumus],
     "Kriteria": [input_kriteria],
@@ -97,7 +98,9 @@ new_formula = pd.DataFrame({
     "Ambang Batas (Jumlah)": [input_ambang_batas_jumlah],
     "Tanggal Mulai Berlaku": [input_tanggal_mulai],
     "Keterangan": [input_keterangan]
-})
+}
+
+)
 
 def create_formulas_df():
     return new_formula
