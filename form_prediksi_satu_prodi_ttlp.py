@@ -60,12 +60,12 @@ for i in range(1, input_years_to_predict + 1):
     if input_kriteria == "Jumlah Minimal":
         if data_prodi[column_name].values[0] < input_ambang_batas_jumlah:
             tahun_tidak_lolos = next_year
-            break
+            
     elif input_kriteria == "Persentase Penurunan":
         ambang_batas_jumlah_mahasiswa = int(data_prodi["current_students"].values[0] * (1 - input_ambang_batas_persen / 100))
         if data_prodi[column_name].values[0] < ambang_batas_jumlah_mahasiswa:
             tahun_tidak_lolos = next_year
-            break
+            
     
     current_students = data_prodi[column_name].copy()
 
@@ -125,3 +125,6 @@ def prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, inpu
 if st.button("Prediksi"):
     hasil_prediksi = prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, input_years_to_predict, input_kriteria, input_ambang_batas_jumlah, input_ambang_batas_persen, input_fields)
     st.write(hasil_prediksi)
+    
+
+df_prediksi_satu_prodi = pd.DataFrame(hasil_prediksi)
