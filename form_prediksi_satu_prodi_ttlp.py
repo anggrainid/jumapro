@@ -163,6 +163,12 @@ def prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, inpu
    
    
     elif input_kriteria == "Persentase Penurunan":
+        for col, value in input_fields.items():
+            if col!="input_jumlah_mahasiswa_ts0":
+                data_prodi[col] = value
+        ts = [f"input_jumlah_mahasiswa_ts{i}" for i in range(1, int(input_banyak_data_ts-1))]
+        ts = sorted(ts, reverse=True)
+        # ts = ts.sort(reverse=True)
         if input_banyak_data_ts > 2:
             persentase_penurunan = hitung_persentase_penurunan_lebih_dari_satu(data_prodi, input_predict_year, input_banyak_data_ts)
         else:
@@ -175,16 +181,12 @@ def prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, inpu
         # data_prodi["Ambang Batas Jumlah Mahasiswa"] = ambang_batas_jumlah_mahasiswa
         data_prodi[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
         data_prodi["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
-        # data_ts = pd.DataFrame([input_fields])
-        for col, value in input_fields.items():
-            data_prodi[col] = value
-        # data_prodi = pd.concat([data_prodi, data_ts], ignore_index=True)
-        ts = [f"input_jumlah_mahasiswa_ts{i+1}" for i in range(0, int(input_banyak_data_ts-1))]
         ordered_data_prodi = ["Prodi"] + ts + ["current_students"] + data_predict_target + ["Persentase Penurunan Maksimal"] + ["Hitung Persentase Penurunan"] + [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + data_predict_years + ["Tahun Tidak Lolos (Prediksi)"]
         data_prodi = data_prodi[ordered_data_prodi]
         data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
-        rename_ts = {f"input_jumlah_mahasiswa_ts{i}": f"{input_last_year-i-1}" for i in range(int(input_banyak_data_ts-1))}
+        rename_ts = {f"input_jumlah_mahasiswa_ts{i+1}": f"{input_last_year-i-1}" for i in range(int(input_banyak_data_ts-1))}
         data_prodi.rename(columns=rename_ts, inplace=True)
+        
     return data_prodi
 
 # Tampilkan hasil prediksi dan penilaian jika tombol "Prediksi" ditekan
