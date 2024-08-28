@@ -1,6 +1,19 @@
 import streamlit as st
 import pickle
 import pandas as pd
+from streamlit_gsheets import GSheetsConnection
+
+# Establishing a Google Sheets connection
+conn = st.connection("gsheets", type=GSheetsConnection)
+
+# Fetch existing vendors data
+existing_data = conn.read(worksheet="Rumus Pemantauan", usecols=list(range(7)), ttl=5)
+existing_data = existing_data.dropna(how="all")
+st.write(existing_data)
+
+# Dropdown options for Lembaga
+formula_options = existing_data['Nama Rumus'].unique()
+
 
 # Halaman Prediksi Suatu Prodi
 st.title("Halaman Prediksi Suatu Prodi")
@@ -13,28 +26,56 @@ input_last_year = input_predict_year - 1
 
 input_years_to_predict = st.number_input("Masukkan Proyeksi Prediksi (Dalam Satuan Tahun) : ", min_value=1, max_value=10)
 
-input_kriteria = st.radio("Kriteria", ["Jumlah Minimal", "Persentase Penurunan"])
+input_formula = st.radio("Formula yang Digunakan", ["Sudah Ada", "Baru"])
 
-if input_kriteria == "Persentase Penurunan":
-    input_ambang_batas_persen = st.number_input("Ambang Batas Persentase Maksimal (%)", min_value=1, max_value=100, step=1)
-    input_banyak_data_ts = st.number_input("Masukkan Banyak Tahun yang Dipakai untuk Persentase Penurunan : ", min_value=2, max_value=5, step=1)
-    input_ambang_batas_jumlah = None
+if input_formula == "Sudah Ada":
+    input_existing_formula = st.selectbox("Pilih Rumus yang Digunakan : ", formula_options)
+    # Mengambil baris formula yang dipilih
+    selected_formula = existing_data[existing_data['Nama Rumus'] == input_existing_formula].iloc[0]
+    st.write(selected_formula)
+    # Cek kriteria
+    input_kriteria = selected_formula["Kriteria"]
 
-    input_fields = {}
-    for i in range(input_banyak_data_ts - 1):
-        field_name = f"input_jumlah_mahasiswa_ts{i}"
-        input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
+    if input_kriteria == "Persentase Penurunan":
+        input_ambang_batas_persen = selected_formula["Ambang Batas (%)"]
+        input_banyak_data_ts = selected_formula["Banyak Data TS"]
+        input_ambang_batas_jumlah = None
+
+        input_fields = {}
+        for i in range(int(input_banyak_data_ts) - 1):
+            field_name = f"input_jumlah_mahasiswa_ts{i}"
+            input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
+
+    else:
+        input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
+        input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa TS:", value=0)
+        input_ambang_batas_persen = None
+        input_fields = None
+
+    
 
 else:
-    input_ambang_batas_jumlah = st.number_input("Ambang Batas Jumlah Mahasiswa Minimal", min_value=1, step=1)
-    input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa TS:", value=0)
-    input_ambang_batas_persen = None
-    input_fields = None
+    input_kriteria = st.radio("Kriteria", ["Jumlah Minimal", "Persentase Penurunan"])
+    if input_kriteria == "Persentase Penurunan":
+        input_ambang_batas_persen = st.slider("Ambang Batas Persentase Maksimal (%)", min_value=1, max_value=100, step=1)
+        input_banyak_data_ts = st.slider("Masukkan Banyak Tahun yang Dipakai untuk Persentase Penurunan : ", min_value=2, max_value=5, step=1)
+        input_ambang_batas_jumlah = None
+
+        input_fields = {}
+        for i in range(input_banyak_data_ts - 1):
+            field_name = f"input_jumlah_mahasiswa_ts{i}"
+            input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
+
+    else:
+        input_ambang_batas_jumlah = st.number_input("Ambang Batas Jumlah Mahasiswa Minimal", min_value=1, step=1)
+        input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa TS:", value=0)
+        input_ambang_batas_persen = None
+        input_fields = None
 
 model = pickle.load(open(r"D:\jumapro\next_year_students_prediction.sav", "rb"))
 
 # Membuat DataFrame berdasarkan kriteria
-if input_kriteria == "Jumlah Minimal":
+if input_kriteria == "Jumlah Mahasiswa":
     new_data_prodi = {
         'Prodi': [input_prodi],
         'current_students': [input_jumlah_mahasiswa_ts]
@@ -83,7 +124,7 @@ def hitung_persentase_penurunan(data, predict_year):
 # Fungsi untuk menghitung persentase penurunan dengan lebih dari satu tahun data
 def hitung_persentase_penurunan_lebih_dari_satu(data, predict_year, banyak_data_ts):
     total_penurunan = 0
-    for i in range(banyak_data_ts - 1):
+    for i in range(int(banyak_data_ts) - 1):
         if i == 0:
             ts_1 = data[f"{predict_year} (Prediksi)"]
             ts_0 = data["current_students"]
@@ -121,34 +162,7 @@ def prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, inpu
         data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
     return data_prodi
 
-
-
-
-# Establishing a Google Sheets connection
-conn = st.connection("gsheets")
-
-# Fetch existing vendors data
-existing_data = conn.read(worksheet="Histori Prediksi Suatu Prodi", usecols=list(range(7)), ttl=5)
-existing_data = existing_data.dropna(how="all")
-st.write(existing_data)
-
 # Tampilkan hasil prediksi dan penilaian jika tombol "Prediksi" ditekan
 if st.button("Prediksi"):
     hasil_prediksi = prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, input_years_to_predict, input_kriteria, input_ambang_batas_jumlah, input_ambang_batas_persen, input_fields)
     st.write(hasil_prediksi)
-    new_data = pd.DataFrame(hasil_prediksi)
-
-    # Add the new vendor data to the existing data
-    updated_df = pd.concat([existing_data, new_data], ignore_index=True)
-
-    # Update Google Sheets with the new vendor data
-    conn.update(worksheet="Rumus Pemantauan", data=updated_df)
-
-    st.success("Rumus berhasil ditambahkan!")
-    st.write(updated_df)
-    
-
-
-
-
-

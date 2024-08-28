@@ -25,10 +25,12 @@ input_kriteria = st.radio("Kriteria", ["Persentase Penurunan", "Jumlah Mahasiswa
 
 if input_kriteria == "Persentase Penurunan":
     input_ambang_batas_persen = st.slider("Ambang Batas Persentase Penurunan Maksimal (%)",0,100,5)
+    input_banyak_data_ts = st.slider("Masukkan Banyak Tahun yang Dipakai untuk Persentase Penurunan : ", min_value=2, max_value=5, step=1)
     input_ambang_batas_jumlah = None
 else:
     input_ambang_batas_jumlah = st.number_input("Ambang Batas Jumlah Mahasiswa Minimal", min_value=1, step=1)
     input_ambang_batas_persen = None
+    input_banyak_data_ts = None
 
 input_tanggal_mulai = st.date_input("Tanggal Mulai Berlaku", value="default_value_today")
 input_keterangan = st.text_area("Keterangan")
@@ -51,6 +53,7 @@ if st.button("Tambah Rumus"):
                     "Lembaga": input_lembaga,
                     "Nama Rumus": input_nama_rumus,
                     "Kriteria": input_kriteria,
+                    "Banyak Data TS" : input_banyak_data_ts,
                     "Ambang Batas (%)": input_ambang_batas_persen,
                     "Ambang Batas (Jumlah)": input_ambang_batas_jumlah,
                     "Tanggal Mulai Berlaku": input_tanggal_mulai,
