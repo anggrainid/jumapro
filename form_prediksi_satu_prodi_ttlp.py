@@ -6,10 +6,10 @@ from streamlit_gsheets import GSheetsConnection
 # Establishing a Google Sheets connection
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-# Fetch existing vendors data
+# Fetch existing formulas data
 existing_data = conn.read(worksheet="Rumus Pemantauan", usecols=list(range(7)), ttl=5)
 existing_data = existing_data.dropna(how="all")
-st.write(existing_data)
+# st.write(existing_data)
 
 # Dropdown options for Lembaga
 formula_options = existing_data['Nama Rumus'].unique()
