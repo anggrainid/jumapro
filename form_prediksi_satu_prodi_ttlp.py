@@ -121,10 +121,34 @@ def prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, inpu
         data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
     return data_prodi
 
+
+
+
+# Establishing a Google Sheets connection
+conn = st.connection("gsheets")
+
+# Fetch existing vendors data
+existing_data = conn.read(worksheet="Histori Prediksi Suatu Prodi", usecols=list(range(7)), ttl=5)
+existing_data = existing_data.dropna(how="all")
+st.write(existing_data)
+
 # Tampilkan hasil prediksi dan penilaian jika tombol "Prediksi" ditekan
 if st.button("Prediksi"):
     hasil_prediksi = prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, input_years_to_predict, input_kriteria, input_ambang_batas_jumlah, input_ambang_batas_persen, input_fields)
     st.write(hasil_prediksi)
+    new_data = pd.DataFrame(hasil_prediksi)
+
+    # Add the new vendor data to the existing data
+    updated_df = pd.concat([existing_data, new_data], ignore_index=True)
+
+    # Update Google Sheets with the new vendor data
+    conn.update(worksheet="Rumus Pemantauan", data=updated_df)
+
+    st.success("Rumus berhasil ditambahkan!")
+    st.write(updated_df)
     
 
-df_prediksi_satu_prodi = pd.DataFrame(hasil_prediksi)
+
+
+
+
