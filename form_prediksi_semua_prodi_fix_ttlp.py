@@ -4,7 +4,7 @@ import pickle
 import pandas as pd
 
 # Halaman Prediksi Suatu Prodi
-st.title("Halaman Prediksi Suatu Prodi Dengan Formula")
+st.title("Halaman Prediksi Semua Prodi Dengan Formula")
 
 
 # Establishing a Google Sheets connection
@@ -26,7 +26,8 @@ existing_formula = existing_formula.dropna(how="all")
 formula_options = existing_formula['Nama Rumus'].unique()
 
 # Input fields
-input_prodi = st.text_input("Masukkan Nama Program Studi : ")
+# input_prodi = st.text_input("Masukkan Nama Program Studi : ")
+input_prodi = existing_djm["Prodi"]
 
 input_predict_year = st.number_input("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=2024)
 input_last_year = input_predict_year - 1
@@ -50,11 +51,13 @@ if input_formula == "Sudah Ada":
         input_fields = {}
         for i in range(int(input_banyak_data_ts-1)):
             field_name = f"input_jumlah_mahasiswa_ts{i}"
-            input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
+            # input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
+            input_fields[field_name] = existing_djm[f"{input_predict_year-1}"]
 
     else:
         input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
-        input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa TS:", value=0)
+        # input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa TS:", value=0)
+        input_jumlah_mahasiswa_ts = existing_djm[{input_predict_year-1}]
         input_ambang_batas_persen = None
         input_fields = None
 
@@ -68,49 +71,55 @@ else:
         input_fields = {}
         for i in range(input_banyak_data_ts - 1):
             field_name = f"input_jumlah_mahasiswa_ts{i}"
-            input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
+            input_fields[field_name] = existing_djm[f"{input_predict_year-1}"]
                 
     else:
         input_ambang_batas_jumlah = st.number_input("Ambang Batas Jumlah Mahasiswa Minimal", min_value=1, step=1)
-        input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa TS:", value=0)
+        input_jumlah_mahasiswa_ts = existing_djm[f"{input_predict_year-1}"]
         input_ambang_batas_persen = None
         input_fields = None
 
 model = pickle.load(open(r"D:\jumapro\next_year_students_prediction.sav", "rb"))
 
+existing_djm = existing_djm.dropna()
+# if input_kriteria == "Jumlah Mahasiswa":
+existing_djm.rename(columns={input_last_year:"current_students"}, inplace=True)
+#     new_data_prodi = {
+#         'Prodi': [input_prodi],
+#         'current_students': [input_jumlah_mahasiswa_ts]
+#     }
+# else:
+#     new_data_prodi = {
+#         'Prodi': [input_prodi],
+#         'current_students': [input_fields[list(input_fields.keys())[0]]]
+#     }
 
-if input_kriteria == "Jumlah Mahasiswa":
-    new_data_prodi = {
-        'Prodi': [input_prodi],
-        'current_students': [input_jumlah_mahasiswa_ts]
-    }
-else:
-    new_data_prodi = {
-        'Prodi': [input_prodi],
-        'current_students': [input_fields[list(input_fields.keys())[0]]]
-    }
-
-data_prodi = pd.DataFrame(new_data_prodi)
+# data_prodi = pd.DataFrame(new_data_prodi)
 
 # Prediksi beberapa tahun ke depan
-current_students = data_prodi['current_students'].copy()
+current_students = existing_djm['current_students'].copy()
 
 tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
 
 for i in range(1, input_years_to_predict + 1):
     next_year = input_last_year + i
     column_name = f'{next_year} (Prediksi)'
-    data_prodi[column_name] = model.predict(current_students.values.reshape(-1, 1))
-    data_prodi[column_name] = data_prodi[column_name].astype(int)
-    current_students = data_prodi[column_name].copy()
+
+    # Lakukan prediksi menggunakan nilai di current_students
+    existing_djm[column_name] = model.predict(current_students.values.reshape(-1, 1))
+    existing_djm[column_name] = existing_djm[column_name].astype(int)
+
+     # Gunakan hasil prediksi tahun ini sebagai current_students untuk prediksi tahun berikutnya
+    current_students = existing_djm[column_name].copy()
+    
     if tahun_tidak_lolos == f"Lebih dari {input_years_to_predict} Tahun ke Depan":  # Only update if no year has been set yet
         if input_kriteria == "Jumlah Mahasiswa":
-            if data_prodi[column_name].values[0] < input_ambang_batas_jumlah:
+            if existing_djm[column_name].values[0] < input_ambang_batas_jumlah:
                 tahun_tidak_lolos = next_year
                 
         elif input_kriteria == "Persentase Penurunan":
-            ambang_batas_jumlah_mahasiswa = int(data_prodi["current_students"].values[0] * (1 - input_ambang_batas_persen / 100))
-            if data_prodi[column_name].values[0] < ambang_batas_jumlah_mahasiswa:
+            ambang_batas_jumlah_mahasiswa = int(existing_djm["current_students"].values[0] * (1 - input_ambang_batas_persen / 100))
+            if existing_djm[column_name].values[0] < ambang_batas_jumlah_mahasiswa:
                 tahun_tidak_lolos = next_year
 
 
@@ -164,51 +173,51 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
 
     # Penilaian kelolosan berdasarkan kriteria
     if input_kriteria == "Jumlah Mahasiswa":
-        hasil_prediksi_pemantauan = "Lolos" if data_prodi[f"{input_predict_year} (Prediksi)"].values[0] > input_ambang_batas_jumlah else "Tidak Lolos"
-        data_prodi["Jumlah Mahasiswa Minimal"] = input_ambang_batas_jumlah
-        data_prodi[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
-        data_prodi["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
+        hasil_prediksi_pemantauan = "Lolos" if existing_djm[f"{input_predict_year} (Prediksi)"].values[0] > input_ambang_batas_jumlah else "Tidak Lolos"
+        existing_djm["Jumlah Mahasiswa Minimal"] = input_ambang_batas_jumlah
+        existing_djm[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
+        existing_djm["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
 
         ordered_data_prodi = ["Prodi"] + ["current_students"] + data_predict_target + ["Jumlah Mahasiswa Minimal"] + [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + data_predict_years + ["Tahun Tidak Lolos (Prediksi)"]
-        tampil_data_prodi = data_prodi[ordered_data_prodi]
+        tampil_data_prodi = existing_djm[ordered_data_prodi]
         tampil_data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
 
-        updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
-        conn.update(worksheet="Data Histori Prediksi Suatu Prodi", data=updated_dhp)
+        # updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
+        # conn.update(worksheet="Histori Prediksi Suatu Prodi", data=updated_dhp)
 
     elif input_kriteria == "Persentase Penurunan":
 
         if input_banyak_data_ts > 2:
-            persentase_penurunan = hitung_persentase_penurunan_lebih_dari_satu(data_prodi, input_predict_year, input_banyak_data_ts)
+            persentase_penurunan = hitung_persentase_penurunan_lebih_dari_satu(existing_djm, input_predict_year, input_banyak_data_ts)
         else:
-            persentase_penurunan = hitung_persentase_penurunan(data_prodi, input_predict_year)
+            persentase_penurunan = hitung_persentase_penurunan(existing_djm, input_predict_year)
         
         hasil_prediksi_pemantauan = "Lolos" if persentase_penurunan.values[0] <= input_ambang_batas_persen else "Tidak Lolos"
         
         
-        convert_percent_to_ambang_batas_jumlah_mahasiswa = int(data_prodi["current_students"].values[0] * (1 - input_ambang_batas_persen / 100))
+        convert_percent_to_ambang_batas_jumlah_mahasiswa = int(existing_djm["current_students"].values[0] * (1 - input_ambang_batas_persen / 100))
         # ambang_batas_jumlah_mahasiswa = int(data_prodi["current_students"] * (1 - input_ambang_batas_persen / 100))
-        data_prodi["Hitung Persentase Penurunan"] = persentase_penurunan
-        data_prodi["Persentase Penurunan Maksimal"] = f"{input_ambang_batas_persen}%"
-        data_prodi["Ambang Batas Jumlah Mahasiswa Minimal"] = convert_percent_to_ambang_batas_jumlah_mahasiswa
-        data_prodi[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
-        data_prodi["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
+        existing_djm["Hitung Persentase Penurunan"] = persentase_penurunan
+        existing_djm["Persentase Penurunan Maksimal"] = f"{input_ambang_batas_persen}%"
+        existing_djm["Ambang Batas Jumlah Mahasiswa Minimal"] = convert_percent_to_ambang_batas_jumlah_mahasiswa
+        existing_djm[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
+        existing_djm["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
     
         for col, value in input_fields.items():
             if col!="input_jumlah_mahasiswa_ts0":
-                data_prodi[col] = value
+                existing_djm[col] = value
         ts = [f"input_jumlah_mahasiswa_ts{i}" for i in range(1, int(input_banyak_data_ts-1))]
         ts = sorted(ts, reverse=True)
 
         ordered_data_prodi = ["Prodi"] + ts + ["current_students"] + data_predict_target + ["Persentase Penurunan Maksimal"] + ["Hitung Persentase Penurunan"] + [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + ["Ambang Batas Jumlah Mahasiswa Minimal"] + data_predict_years + ["Tahun Tidak Lolos (Prediksi)"]
-        tampil_data_prodi = data_prodi[ordered_data_prodi]
+        tampil_data_prodi = existing_djm[ordered_data_prodi]
         tampil_data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
         rename_ts = {f"input_jumlah_mahasiswa_ts{i+1}": f"{input_last_year-i-1}" for i in range(int(input_banyak_data_ts-1))}
         tampil_data_prodi.rename(columns=rename_ts, inplace=True)
         tampil_data_prodi.rename(columns={'current_students': f'{input_last_year_data} (Saat Ini)'}, inplace=True)
 
-        updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
-        conn.update(worksheet="Data Histori Prediksi Suatu Prodi", data=updated_dhp)
+        # updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
+        # conn.update(worksheet="Histori Prediksi Suatu Prodi", data=updated_dhp)
 
     return tampil_data_prodi
     
