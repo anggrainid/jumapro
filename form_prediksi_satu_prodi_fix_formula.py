@@ -4,15 +4,23 @@ import pickle
 import pandas as pd
 
 # Halaman Prediksi Suatu Prodi
-st.title("Halaman Prediksi Suatu Prodi Tanpa Formula")
+st.title("Halaman Prediksi Suatu Prodi Dengan Formula")
 
 
 # Establishing a Google Sheets connection
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-# Fetch existing vendors data dhp = data history prediction
+# Fetch data dhp = data history prediction
 existing_dhp = conn.read(worksheet="Histori Prediksi Suatu Prodi", ttl=5)
 existing_dhp = existing_dhp.dropna(how="all")
+
+# Fetch data djm = data jumlah mahasiswa
+existing = conn.read(worksheet="Data Jumlah Ja")
+
+
+# Fetch existing formulas data
+existing_formula = conn.read(worksheet="Rumus Pemantauan", usecols=list(range(7)), ttl=5)
+existing_formula = existing_formula.dropna(how="all")
 
 # Input fields
 input_prodi = st.text_input("Masukkan Nama Program Studi : ")
