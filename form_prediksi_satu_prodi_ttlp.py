@@ -65,7 +65,8 @@ else:
         for i in range(input_banyak_data_ts - 1):
             field_name = f"input_jumlah_mahasiswa_ts{i}"
             input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
-            
+    
+
     else:
         input_ambang_batas_jumlah = st.number_input("Ambang Batas Jumlah Mahasiswa Minimal", min_value=1, step=1)
         input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa TS:", value=0)
@@ -86,6 +87,65 @@ else:
     }
 
 data_prodi = pd.DataFrame(new_data_prodi)
+
+# Fungsi untuk menghitung persentase penurunan
+def hitung_persentase_penurunan(data, predict_year):
+    ts_1 = data[f"{input_predict_year} (Tahun Prediksi/Pemantauan)"]
+    ts_0 = data["current_students"]
+    penurunan = (ts_0 - ts_1) / ts_1
+    persentase_penurunan = penurunan * 100
+    return persentase_penurunan
+
+# Fungsi untuk menghitung persentase penurunan dengan lebih dari satu tahun data
+def hitung_persentase_penurunan_lebih_dari_satu(data, predict_year, banyak_data_ts):
+    total_penurunan = 0
+    for i in range(0, int(banyak_data_ts-1)):
+        if i == 0:
+            ts_1 = input_fields[f"input_jumlah_mahasiswa_ts{i}"]
+            ts_0 = data[f"{predict_year} (Tahun Prediksi/Pemantauan)"]
+        
+        else:
+            ts_1 = input_fields[f"input_jumlah_mahasiswa_ts{i}"]
+            ts_0 = input_fields[f"input_jumlah_mahasiswa_ts{i-1}"]
+
+        penurunan = (ts_0 - ts_1) / ts_1
+        total_penurunan += penurunan
+
+    rata_rata_penurunan = total_penurunan / banyak_data_ts
+    persentase_penurunan = -(rata_rata_penurunan * 100)
+    return persentase_penurunan
+
+
+def hitung_ambang_batas_jumlah_mahasiswa(data, persentase_penurunan_maksimal):
+    banyak_data_ts = input_banyak_data_ts  # Banyaknya data TS (tahun saat ini hingga TS-(n-1))
+    
+    if banyak_data_ts < 2:
+        return None  # Tidak bisa menghitung ambang batas jika hanya ada satu data
+    
+    total_penurunan = 0
+    for i in range(0, int(banyak_data_ts-1)):
+        if i == 0:
+            ts_1 = input_fields[f"input_jumlah_mahasiswa_ts{i}"]
+            ts_0 = data[f"{input_predict_year} (Tahun Prediksi/Pemantauan)"]
+   
+        
+        else:
+            ts_1 = input_fields[f"input_jumlah_mahasiswa_ts{i}"]
+            ts_0 = input_fields[f"input_jumlah_mahasiswa_ts{i-1}"]
+          
+        penurunan = (ts_0 - ts_1) / ts_1
+        total_penurunan += penurunan
+
+    rata_rata_penurunan = total_penurunan / banyak_data_ts
+    persentase_penurunan = -(rata_rata_penurunan * 100)
+
+    # Rumus untuk menghitung ambang batas jumlah mahasiswa TS-n
+    ts_n_minus_1 = data["current_students"]  # TS-(n-1) adalah data mahasiswa tahun terakhir sebelum prediksi
+    ambang_batas = ts_n_minus_1 * (1 - (persentase_penurunan_maksimal * (banyak_data_ts-1) + persentase_penurunan) / (100 * (banyak_data_ts-1)))
+    
+    return ambang_batas
+
+
 # Prediksi beberapa tahun ke depan dan cek kapan prodi tidak lolos pemantauan
 current_students = data_prodi['current_students'].copy()
 
@@ -109,8 +169,9 @@ for i in range(1, input_years_to_predict + 1):
                 tahun_tidak_lolos = next_year
                 
         elif input_kriteria == "Persentase Penurunan":
-            ambang_batas_jumlah_mahasiswa = int(data_prodi["current_students"].values[0] * (1 - input_ambang_batas_persen / 100))
-            if data_prodi[column_name].values[0] > ambang_batas_jumlah_mahasiswa:
+            # ambang_batas_jumlah_mahasiswa = int(data_prodi[f"{input_predict_year} (Tahun Prediksi/Pemantauan)"].values[0] * (1 - input_ambang_batas_persen / 100)) + 1
+            ambang_batas_jumlah_mahasiswa = hitung_ambang_batas_jumlah_mahasiswa(data_prodi, input_ambang_batas_persen)
+            if data_prodi[column_name].values[0] < ambang_batas_jumlah_mahasiswa.values[0]:
                 tahun_tidak_lolos = next_year
 
     current_students = data_prodi[column_name].copy()
@@ -123,36 +184,10 @@ data_predict_target= [f"{input_predict_year} (Tahun Prediksi/Pemantauan)"]
 
 
 
-# Fungsi untuk menghitung persentase penurunan
-def hitung_persentase_penurunan(data, predict_year):
-    ts_1 = data[f"{input_predict_year} (Tahun Prediksi/Pemantauan)"]
-    ts_0 = data["current_students"]
-    penurunan = (ts_0 - ts_1) / ts_1
-    persentase_penurunan = penurunan * 100
-    return persentase_penurunan
-
-# Fungsi untuk menghitung persentase penurunan dengan lebih dari satu tahun data
-def hitung_persentase_penurunan_lebih_dari_satu(data, predict_year, banyak_data_ts):
-    total_penurunan = 0
-    for i in range(int(banyak_data_ts) - 1):
-        if i == 0:
-            ts_1 = data[f"{input_predict_year} (Tahun Prediksi/Pemantauan)"]
-            ts_0 = data["current_students"]
-        else:
-            ts_1 = input_fields[f"input_jumlah_mahasiswa_ts{i-1}"]
-            ts_0 = input_fields[f"input_jumlah_mahasiswa_ts{i}"]
-
-        penurunan = (ts_0 - ts_1) / ts_1
-        total_penurunan += penurunan
-
-    rata_rata_penurunan = total_penurunan / (banyak_data_ts - 1)
-    persentase_penurunan = rata_rata_penurunan * 100
-    return persentase_penurunan
-
 # Fungsi untuk prediksi dan penilaian
 def prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, input_years_to_predict, input_kriteria, input_ambang_batas_jumlah, input_ambang_batas_persen, input_fields):
     if input_kriteria == "Jumlah Mahasiswa":
-        hasil_prediksi_pemantauan = "Lolos" if data_prodi[f"{input_predict_year} (Tahun Prediksi/Pemantauan)"].values[0] > input_ambang_batas_jumlah else "Tidak Lolos"
+        hasil_prediksi_pemantauan = "Lolos" if data_prodi[f"{input_predict_year} (Tahun Prediksi/Pemantauan)"].values[0] >= input_ambang_batas_jumlah else "Tidak Lolos"
         data_prodi["Jumlah Mahasiswa Minimal"] = input_ambang_batas_jumlah
         data_prodi[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
         data_prodi["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
@@ -174,20 +209,22 @@ def prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, inpu
         else:
             persentase_penurunan = hitung_persentase_penurunan(data_prodi, input_predict_year)
         
-        hasil_prediksi_pemantauan = "Lolos" if persentase_penurunan.values[0] < input_ambang_batas_persen else "Tidak Lolos"
+        hasil_prediksi_pemantauan = "Lolos" if persentase_penurunan.values[0] <= input_ambang_batas_persen else "Tidak Lolos"
 
         data_prodi["Hitung Persentase Penurunan"] = f"{round(persentase_penurunan.values[0])}%"
         data_prodi["Persentase Penurunan Maksimal"] = f"{input_ambang_batas_persen}%"
-        # data_prodi["Ambang Batas Jumlah Mahasiswa"] = ambang_batas_jumlah_mahasiswa
+        data_prodi["Ambang Batas Jumlah Mahasiswa"] = ambang_batas_jumlah_mahasiswa
         data_prodi[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
         data_prodi["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
-        ordered_data_prodi = ["Prodi"] + ts + ["current_students"] + data_predict_target + ["Persentase Penurunan Maksimal"] + ["Hitung Persentase Penurunan"] + [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + data_predict_years + ["Tahun Tidak Lolos (Prediksi)"]
+        ordered_data_prodi = ["Prodi"] + ts + ["current_students"] + data_predict_target + ["Hitung Persentase Penurunan"] + ["Persentase Penurunan Maksimal"] + [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + ["Ambang Batas Jumlah Mahasiswa"] + data_predict_years + ["Tahun Tidak Lolos (Prediksi)"]
         data_prodi = data_prodi[ordered_data_prodi]
         data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
         rename_ts = {f"input_jumlah_mahasiswa_ts{i+1}": f"{input_last_year-i-1}" for i in range(int(input_banyak_data_ts-1))}
         data_prodi.rename(columns=rename_ts, inplace=True)
         
     return data_prodi
+
+
 
 # Tampilkan hasil prediksi dan penilaian jika tombol "Prediksi" ditekan
 if st.button("Prediksi"):
