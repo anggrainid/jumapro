@@ -15,12 +15,15 @@ existing_dhp = conn.read(worksheet="Histori Prediksi Suatu Prodi", ttl=5)
 existing_dhp = existing_dhp.dropna(how="all")
 
 # Fetch data djm = data jumlah mahasiswa
-existing = conn.read(worksheet="Data Jumlah Ja")
-
+existing_djm = conn.read(worksheet="Data Jumlah Mahasiswa")
+existing_djm = existing_djm.dropna(how="all")
 
 # Fetch existing formulas data
 existing_formula = conn.read(worksheet="Rumus Pemantauan", usecols=list(range(7)), ttl=5)
 existing_formula = existing_formula.dropna(how="all")
+
+# Dropdown options for Lembaga
+formula_options = existing_formula['Nama Rumus'].unique()
 
 # Input fields
 input_prodi = st.text_input("Masukkan Nama Program Studi : ")

@@ -14,8 +14,11 @@ existing_data = conn.read(worksheet="Rumus Pemantauan", usecols=list(range(7)), 
 existing_data = existing_data.dropna(how="all")
 st.write(existing_data)
 
+
+existing_djm = conn.read(worksheet="Data Jumlah Mahasiswa")
+existing_djm = existing_djm.dropna(how="all")
 # Dropdown options for Lembaga
-lembaga_options = existing_data['Lembaga'].unique()
+lembaga_options = existing_djm['Lembaga'].unique()
 
 
 input_lembaga = st.selectbox("Pilih Lembaga : ", lembaga_options)
