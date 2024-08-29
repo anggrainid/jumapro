@@ -137,6 +137,7 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
     # Penilaian kelolosan berdasarkan kriteria
     if input_kriteria == "Jumlah Minimal":
         hasil_prediksi_pemantauan = "Lolos" if data_prodi[f"{input_predict_year} (Prediksi)"].values[0] > input_ambang_batas_jumlah else "Tidak Lolos"
+        data_prodi["Jumlah Mahasiswa Minimal"] = input_ambang_batas_jumlah
         data_prodi[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
         data_prodi.rename(columns={'current_students': f'{input_last_year_data} (Saat Ini)'}, inplace=True)
 
