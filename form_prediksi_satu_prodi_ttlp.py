@@ -110,7 +110,7 @@ for i in range(1, input_years_to_predict + 1):
                 
         elif input_kriteria == "Persentase Penurunan":
             ambang_batas_jumlah_mahasiswa = int(data_prodi["current_students"].values[0] * (1 - input_ambang_batas_persen / 100))
-            if data_prodi[column_name].values[0] > ambang_batas_jumlah_mahasiswa:
+            if data_prodi[column_name].values[0] < ambang_batas_jumlah_mahasiswa:
                 tahun_tidak_lolos = next_year
 
     current_students = data_prodi[column_name].copy()
@@ -152,7 +152,7 @@ def hitung_persentase_penurunan_lebih_dari_satu(data, predict_year, banyak_data_
 # Fungsi untuk prediksi dan penilaian
 def prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, input_years_to_predict, input_kriteria, input_ambang_batas_jumlah, input_ambang_batas_persen, input_fields):
     if input_kriteria == "Jumlah Mahasiswa":
-        hasil_prediksi_pemantauan = "Lolos" if data_prodi[f"{input_predict_year} (Tahun Prediksi/Pemantauan)"].values[0] > input_ambang_batas_jumlah else "Tidak Lolos"
+        hasil_prediksi_pemantauan = "Lolos" if data_prodi[f"{input_predict_year} (Tahun Prediksi/Pemantauan)"].values[0] >= input_ambang_batas_jumlah else "Tidak Lolos"
         data_prodi["Jumlah Mahasiswa Minimal"] = input_ambang_batas_jumlah
         data_prodi[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
         data_prodi["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
@@ -174,7 +174,7 @@ def prediksi_dan_penilaian(data_prodi, input_predict_year, input_last_year, inpu
         else:
             persentase_penurunan = hitung_persentase_penurunan(data_prodi, input_predict_year)
         
-        hasil_prediksi_pemantauan = "Lolos" if persentase_penurunan.values[0] < input_ambang_batas_persen else "Tidak Lolos"
+        hasil_prediksi_pemantauan = "Lolos" if persentase_penurunan.values[0] <= input_ambang_batas_persen else "Tidak Lolos"
 
         data_prodi["Hitung Persentase Penurunan"] = f"{round(persentase_penurunan.values[0])}%"
         data_prodi["Persentase Penurunan Maksimal"] = f"{input_ambang_batas_persen}%"
