@@ -1,9 +1,18 @@
 import streamlit as st
+from streamlit_gsheets import GSheetsConnection
 import pickle
 import pandas as pd
 
 # Halaman Prediksi Suatu Prodi
 st.title("Halaman Prediksi Suatu Prodi")
+
+
+# Establishing a Google Sheets connection
+conn = st.connection("gsheets", type=GSheetsConnection)
+
+# Fetch existing vendors data dhp = data history prediction
+existing_dhp = conn.read(worksheet="Histori Prediksi Suatu Prodi", ttl=5)
+existing_dhp = existing_dhp.dropna(how="all")
 
 # Input fields
 input_prodi = st.text_input("Masukkan Nama Program Studi : ")
@@ -153,6 +162,9 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
         tampil_data_prodi = data_prodi[ordered_data_prodi]
         tampil_data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
 
+        updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
+        conn.update(worksheet="Histori Prediksi Suatu Prodi", data=updated_dhp)
+
     elif input_kriteria == "Persentase Penurunan":
 
         if input_banyak_data_ts > 2:
@@ -184,7 +196,11 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
         tampil_data_prodi.rename(columns=rename_ts, inplace=True)
         tampil_data_prodi.rename(columns={'current_students': f'{input_last_year_data} (Saat Ini)'}, inplace=True)
 
+        updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
+        conn.update(worksheet="Histori Prediksi Suatu Prodi", data=updated_dhp)
+
     return tampil_data_prodi
+    
 
 
 # Tampilkan hasil prediksi dan penilaian jika tombol "Prediksi" ditekan
@@ -192,3 +208,5 @@ if st.button("Prediksi"):
     
     hasil_prediksi = prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year, input_years_to_predict, input_kriteria, input_ambang_batas_jumlah, input_ambang_batas_persen, input_fields)
     st.write(hasil_prediksi)
+    st.success("Data berhasil ditambahkan ke worksheet!")
+    
