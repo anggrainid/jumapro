@@ -22,7 +22,7 @@ input_last_year = input_predict_year - 1
 
 input_years_to_predict = st.number_input("Masukkan Proyeksi Prediksi (Dalam Satuan Tahun) : ", min_value=1, max_value=10)
 
-input_kriteria = st.radio("Kriteria", ["Jumlah Minimal", "Persentase Penurunan"])
+input_kriteria = st.radio("Kriteria", ["Jumlah Mahasiswa", "Persentase Penurunan"])
 
 if input_kriteria == "Persentase Penurunan":
     input_ambang_batas_persen = st.number_input("Ambang Batas Persentase Maksimal (%)", min_value=1, max_value=100, step=1)
@@ -43,7 +43,7 @@ else:
 model = pickle.load(open(r"D:\jumapro\next_year_students_prediction.sav", "rb"))
 
 
-if input_kriteria == "Jumlah Minimal":
+if input_kriteria == "Jumlah Mahasiswa":
     new_data_prodi = {
         'Prodi': [input_prodi],
         'current_students': [input_jumlah_mahasiswa_ts]
@@ -68,7 +68,7 @@ for i in range(1, input_years_to_predict + 1):
     data_prodi[column_name] = data_prodi[column_name].astype(int)
     current_students = data_prodi[column_name].copy()
     if tahun_tidak_lolos == f"Lebih dari {input_years_to_predict} Tahun ke Depan":  # Only update if no year has been set yet
-        if input_kriteria == "Jumlah Minimal":
+        if input_kriteria == "Jumlah Mahasiswa":
             if data_prodi[column_name].values[0] < input_ambang_batas_jumlah:
                 tahun_tidak_lolos = next_year
                 
@@ -129,7 +129,7 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
     # model = pickle.load(open(r"D:\jumapro\next_year_students_prediction.sav", "rb"))
 
 
-    # if input_kriteria == "Jumlah Minimal":
+    # if input_kriteria == "Jumlah Mahasiswa":
     #     new_data_prodi = {
     #         'Prodi': [input_prodi],
     #         'current_students': [input_jumlah_mahasiswa_ts]
@@ -152,7 +152,7 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
     #     current_students = data_prodi[column_name].copy()
 
     # Penilaian kelolosan berdasarkan kriteria
-    if input_kriteria == "Jumlah Minimal":
+    if input_kriteria == "Jumlah Mahasiswa":
         hasil_prediksi_pemantauan = "Lolos" if data_prodi[f"{input_predict_year} (Prediksi)"].values[0] > input_ambang_batas_jumlah else "Tidak Lolos"
         data_prodi["Jumlah Mahasiswa Minimal"] = input_ambang_batas_jumlah
         data_prodi[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
