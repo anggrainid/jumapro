@@ -97,55 +97,37 @@ def hitung_persentase_penurunan(data, predict_year):
     return persentase_penurunan
 
 # Fungsi untuk menghitung persentase penurunan dengan lebih dari satu tahun data
-def hitung_persentase_penurunan_lebih_dari_satu(data, predict_year, banyak_data_ts):
+def hitung_persentase_penurunan_lebih_dari_satu(data_mahasiswa):
+    banyak_ts = len(data_mahasiswa) - 1  # Banyaknya data TS (tahun saat ini hingga TS-(n-1))
+    if banyak_ts < 1:
+        return None  # Tidak bisa menghitung penurunan jika hanya ada satu data
+    
     total_penurunan = 0
-    for i in range(0, int(banyak_data_ts-1)):
-        if i == 0:
-            ts_1 = input_fields[f"input_jumlah_mahasiswa_ts{i}"]
-            ts_0 = data[f"{predict_year} (Tahun Prediksi/Pemantauan)"]
-        
-        else:
-            ts_1 = input_fields[f"input_jumlah_mahasiswa_ts{i}"]
-            ts_0 = input_fields[f"input_jumlah_mahasiswa_ts{i-1}"]
-
-        penurunan = (ts_0 - ts_1) / ts_1
-        total_penurunan += penurunan
-
-    rata_rata_penurunan = total_penurunan / banyak_data_ts
-    persentase_penurunan = -(rata_rata_penurunan * 100)
+    for i in range(1, len(data_mahasiswa)):
+        penurunan_tahun = (data_mahasiswa[i] - data_mahasiswa[i-1]) / data_mahasiswa[i-1]
+        total_penurunan += penurunan_tahun
+    
+    persentase_penurunan = - (total_penurunan / banyak_ts) * 100
     return persentase_penurunan
 
-
-def hitung_ambang_batas_jumlah_mahasiswa(data, persentase_penurunan_maksimal):
-    banyak_data_ts = input_banyak_data_ts  # Banyaknya data TS (tahun saat ini hingga TS-(n-1))
+def hitung_ambang_batas_jumlah_mahasiswa(data_mahasiswa, persentase_penurunan_maksimal):
+    banyak_ts = len(data_mahasiswa)  # Banyaknya data TS (tahun saat ini hingga TS-(n-1))
     
-    if banyak_data_ts < 2:
+    if banyak_ts < 2:
         return None  # Tidak bisa menghitung ambang batas jika hanya ada satu data
     
     total_penurunan = 0
-    for i in range(0, int(banyak_data_ts-1)):
-        if i == 0:
-            ts_1 = input_fields[f"input_jumlah_mahasiswa_ts{i}"]
-            ts_0 = data[f"{input_predict_year} (Tahun Prediksi/Pemantauan)"]
-   
-        
-        else:
-            ts_1 = input_fields[f"input_jumlah_mahasiswa_ts{i}"]
-            ts_0 = input_fields[f"input_jumlah_mahasiswa_ts{i-1}"]
-          
-        penurunan = (ts_0 - ts_1) / ts_1
-        total_penurunan += penurunan
-
-    rata_rata_penurunan = total_penurunan / banyak_data_ts
-    persentase_penurunan = -(rata_rata_penurunan * 100)
-
+    for i in range(1, len(data_mahasiswa)-1):
+        penurunan_tahun = (data_mahasiswa[i] - data_mahasiswa[i-1]) / data_mahasiswa[i-1]
+        total_penurunan += penurunan_tahun
+    
     # Rumus untuk menghitung ambang batas jumlah mahasiswa TS-n
-    ts_n_minus_1 = data["current_students"]  # TS-(n-1) adalah data mahasiswa tahun terakhir sebelum prediksi
-    ambang_batas = ts_n_minus_1 * (1 - (persentase_penurunan_maksimal * (banyak_data_ts-1) + persentase_penurunan) / (100 * (banyak_data_ts-1)))
+    ts_n_minus_1 = data_mahasiswa[-1]  # TS-(n-1) adalah data mahasiswa tahun terakhir sebelum prediksi
+    ambang_batas = ts_n_minus_1 * (1 - (persentase_penurunan_maksimal * (banyak_ts-1) + total_penurunan) / (100 * (banyak_ts-1)))
     
     return ambang_batas
-
-
+    
+hitung_ambang_batas_jumlah_mahasiswa(data_prodi, input_ambang_batas_persen)
 # Prediksi beberapa tahun ke depan dan cek kapan prodi tidak lolos pemantauan
 current_students = data_prodi['current_students'].copy()
 
@@ -171,7 +153,7 @@ for i in range(1, input_years_to_predict + 1):
         elif input_kriteria == "Persentase Penurunan":
             # ambang_batas_jumlah_mahasiswa = int(data_prodi[f"{input_predict_year} (Tahun Prediksi/Pemantauan)"].values[0] * (1 - input_ambang_batas_persen / 100)) + 1
             ambang_batas_jumlah_mahasiswa = hitung_ambang_batas_jumlah_mahasiswa(data_prodi, input_ambang_batas_persen)
-            if data_prodi[column_name].values[0] < ambang_batas_jumlah_mahasiswa.values[0]:
+            if data_prodi[column_name].values[0] < ambang_batas_jumlah_mahasiswa:
                 tahun_tidak_lolos = next_year
 
     current_students = data_prodi[column_name].copy()
