@@ -49,6 +49,9 @@ data_prodi = pd.DataFrame(new_data_prodi)
 
 # Prediksi beberapa tahun ke depan
 current_students = data_prodi['current_students'].copy()
+
+tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
+
 for i in range(1, input_years_to_predict + 1):
     next_year = input_last_year + i
     column_name = f'{next_year} (Prediksi)'
