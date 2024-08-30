@@ -98,35 +98,38 @@ existing_djm.rename(columns={input_last_year:"current_students"}, inplace=True)
 # data_prodi = pd.DataFrame(new_data_prodi)
 
 # Prediksi beberapa tahun ke depan
+for index, row in existing_djm.iterrows():
+    # Ambil data current_students dari baris saat ini
+    current_students = row['current_students']
+    tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
 
-current_students = existing_djm['current_students'].copy()
+    for i in range(1, input_years_to_predict + 1):
+        next_year = input_last_year + i
+        column_name = f'{next_year} (Prediksi)'
 
-tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
+        # Lakukan prediksi menggunakan model untuk current_students dari baris ini
+        prediksi_mahasiswa = model.predict([[current_students]])[0]
+        existing_djm.at[index, column_name] = int(prediksi_mahasiswa)
 
-for i in range(1, input_years_to_predict + 1):
-    next_year = input_last_year + i
-    column_name = f'{next_year} (Prediksi)'
+        # Perbarui current_students untuk iterasi berikutnya
+        current_students = prediksi_mahasiswa
 
-    # Lakukan prediksi menggunakan nilai di current_students
-    
-    
-    existing_djm[column_name] = model.predict(current_students.values.reshape(-1, 1))
-    existing_djm[column_name] = existing_djm[column_name].astype(int)
+        # Cek apakah jumlah mahasiswa di bawah ambang batas untuk kriteria Jumlah Mahasiswa
+        if input_kriteria == "Jumlah Mahasiswa" and prediksi_mahasiswa < input_ambang_batas_jumlah:
+            tahun_tidak_lolos = next_year
 
-     # Gunakan hasil prediksi tahun ini sebagai current_students untuk prediksi tahun berikutnya
-    current_students = existing_djm[column_name].copy()
-    
-    if tahun_tidak_lolos == f"Lebih dari {input_years_to_predict} Tahun ke Depan":  # Only update if no year has been set yet
-        if input_kriteria == "Jumlah Mahasiswa":
-            if existing_djm[column_name].values[0] < input_ambang_batas_jumlah:
-                tahun_tidak_lolos = next_year
-                
+        # Cek apakah jumlah mahasiswa di bawah ambang batas untuk kriteria Persentase Penurunan
         elif input_kriteria == "Persentase Penurunan":
-            ambang_batas_jumlah_mahasiswa = int(existing_djm["current_students"].values[0] * (1 - input_ambang_batas_persen / 100))
-            if existing_djm[column_name].values[0] < ambang_batas_jumlah_mahasiswa:
+            ambang_batas_jumlah_mahasiswa = int(row["current_students"] * (1 - input_ambang_batas_persen / 100))
+            if prediksi_mahasiswa < ambang_batas_jumlah_mahasiswa:
                 tahun_tidak_lolos = next_year
 
-
+    # Update kolom hasil pemantauan dan tahun tidak lolos
+    if input_kriteria == "Jumlah Mahasiswa":
+        existing_djm.at[index, f"Hasil Prediksi Pemantauan ({input_predict_year})"] = "Lolos" if prediksi_mahasiswa >= input_ambang_batas_jumlah else "Tidak Lolos"
+    elif input_kriteria == "Persentase Penurunan":
+        existing_djm.at[index, f"Hasil Prediksi Pemantauan ({input_predict_year})"] = "Lolos" if prediksi_mahasiswa >= ambang_batas_jumlah_mahasiswa else "Tidak Lolos"
+    
 
 
 
@@ -176,7 +179,6 @@ def hitung_persentase_penurunan_lebih_dari_satu(data, predict_year, banyak_data_
 def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data, input_years_to_predict, input_kriteria, input_ambang_batas_jumlah, input_ambang_batas_persen, input_fields):
 
     for index, row in existing_djm.iterrows():
-        
     
         # Penilaian kelolosan berdasarkan kriteria
         if input_kriteria == "Jumlah Mahasiswa":
