@@ -175,55 +175,58 @@ def hitung_persentase_penurunan_lebih_dari_satu(data, predict_year, banyak_data_
 
 def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data, input_years_to_predict, input_kriteria, input_ambang_batas_jumlah, input_ambang_batas_persen, input_fields):
 
-    # Penilaian kelolosan berdasarkan kriteria
-    if input_kriteria == "Jumlah Mahasiswa":
-        hasil_prediksi_pemantauan = "Lolos" if existing_djm[f"{input_predict_year} (Prediksi)"].values[0] > input_ambang_batas_jumlah else "Tidak Lolos"
-        existing_djm["Jumlah Mahasiswa Minimal"] = input_ambang_batas_jumlah
-        existing_djm[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
-        existing_djm["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
+    for index, row in existing_djm.iterrows():
 
-        ordered_data_prodi = ["Prodi"] + ["current_students"] + data_predict_target + ["Jumlah Mahasiswa Minimal"] + [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + data_predict_years + ["Tahun Tidak Lolos (Prediksi)"]
-        tampil_data_prodi = existing_djm[ordered_data_prodi]
-        tampil_data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
-
-        # updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
-        # conn.update(worksheet="Histori Prediksi Suatu Prodi", data=updated_dhp)
-
-    elif input_kriteria == "Persentase Penurunan":
-
-        if input_banyak_data_ts > 2:
-            persentase_penurunan = hitung_persentase_penurunan_lebih_dari_satu(existing_djm, input_predict_year, input_banyak_data_ts)
-        else:
-            persentase_penurunan = hitung_persentase_penurunan(existing_djm, input_predict_year)
-        
-        hasil_prediksi_pemantauan = "Lolos" if persentase_penurunan.values[0] <= input_ambang_batas_persen else "Tidak Lolos"
-        
-        
-        convert_percent_to_ambang_batas_jumlah_mahasiswa = int(existing_djm["current_students"].values[0] * (1 - input_ambang_batas_persen / 100))
-        # ambang_batas_jumlah_mahasiswa = int(data_prodi["current_students"] * (1 - input_ambang_batas_persen / 100))
-        existing_djm["Hitung Persentase Penurunan"] = persentase_penurunan
-        existing_djm["Persentase Penurunan Maksimal"] = f"{input_ambang_batas_persen}%"
-        existing_djm["Ambang Batas Jumlah Mahasiswa Minimal"] = convert_percent_to_ambang_batas_jumlah_mahasiswa
-        existing_djm[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
-        existing_djm["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
     
-        for col, value in input_fields.items():
-            if col!="input_jumlah_mahasiswa_ts0":
-                existing_djm[col] = value
-        ts = [f"input_jumlah_mahasiswa_ts{i}" for i in range(1, int(input_banyak_data_ts-1))]
-        ts = sorted(ts, reverse=True)
+        # Penilaian kelolosan berdasarkan kriteria
+        if input_kriteria == "Jumlah Mahasiswa":
+            hasil_prediksi_pemantauan = "Lolos" if existing_djm[f"{input_predict_year} (Prediksi)"].values[0] > input_ambang_batas_jumlah else "Tidak Lolos"
+            existing_djm["Jumlah Mahasiswa Minimal"] = input_ambang_batas_jumlah
+            existing_djm[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
+            existing_djm["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
 
-        ordered_data_prodi = ["Prodi"] + ts + ["current_students"] + data_predict_target + ["Persentase Penurunan Maksimal"] + ["Hitung Persentase Penurunan"] + [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + ["Ambang Batas Jumlah Mahasiswa Minimal"] + data_predict_years + ["Tahun Tidak Lolos (Prediksi)"]
-        tampil_data_prodi = existing_djm[ordered_data_prodi]
-        tampil_data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
-        rename_ts = {f"input_jumlah_mahasiswa_ts{i+1}": f"{input_last_year-i-1}" for i in range(int(input_banyak_data_ts-1))}
-        tampil_data_prodi.rename(columns=rename_ts, inplace=True)
-        tampil_data_prodi.rename(columns={'current_students': f'{input_last_year_data} (Saat Ini)'}, inplace=True)
+            ordered_data_prodi = ["Prodi"] + ["current_students"] + data_predict_target + ["Jumlah Mahasiswa Minimal"] + [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + data_predict_years + ["Tahun Tidak Lolos (Prediksi)"]
+            tampil_data_prodi = existing_djm[ordered_data_prodi]
+            tampil_data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
 
-        # updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
-        # conn.update(worksheet="Histori Prediksi Suatu Prodi", data=updated_dhp)
+            # updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
+            # conn.update(worksheet="Histori Prediksi Suatu Prodi", data=updated_dhp)
 
-    return tampil_data_prodi
+        elif input_kriteria == "Persentase Penurunan":
+
+            if input_banyak_data_ts > 2:
+                persentase_penurunan = hitung_persentase_penurunan_lebih_dari_satu(existing_djm, input_predict_year, input_banyak_data_ts)
+            else:
+                persentase_penurunan = hitung_persentase_penurunan(existing_djm, input_predict_year)
+            
+            hasil_prediksi_pemantauan = "Lolos" if persentase_penurunan.values[0] <= input_ambang_batas_persen else "Tidak Lolos"
+            
+            
+            convert_percent_to_ambang_batas_jumlah_mahasiswa = int(existing_djm["current_students"].values[0] * (1 - input_ambang_batas_persen / 100))
+            # ambang_batas_jumlah_mahasiswa = int(data_prodi["current_students"] * (1 - input_ambang_batas_persen / 100))
+            existing_djm["Hitung Persentase Penurunan"] = persentase_penurunan
+            existing_djm["Persentase Penurunan Maksimal"] = f"{input_ambang_batas_persen}%"
+            existing_djm["Ambang Batas Jumlah Mahasiswa Minimal"] = convert_percent_to_ambang_batas_jumlah_mahasiswa
+            existing_djm[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
+            existing_djm["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
+        
+            for col, value in input_fields.items():
+                if col!="input_jumlah_mahasiswa_ts0":
+                    existing_djm[col] = value
+            ts = [f"input_jumlah_mahasiswa_ts{i}" for i in range(1, int(input_banyak_data_ts-1))]
+            ts = sorted(ts, reverse=True)
+
+            ordered_data_prodi = ["Prodi"] + ts + ["current_students"] + data_predict_target + ["Persentase Penurunan Maksimal"] + ["Hitung Persentase Penurunan"] + [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + ["Ambang Batas Jumlah Mahasiswa Minimal"] + data_predict_years + ["Tahun Tidak Lolos (Prediksi)"]
+            tampil_data_prodi = existing_djm[ordered_data_prodi]
+            tampil_data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
+            rename_ts = {f"input_jumlah_mahasiswa_ts{i+1}": f"{input_last_year-i-1}" for i in range(int(input_banyak_data_ts-1))}
+            tampil_data_prodi.rename(columns=rename_ts, inplace=True)
+            tampil_data_prodi.rename(columns={'current_students': f'{input_last_year_data} (Saat Ini)'}, inplace=True)
+
+            # updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
+            # conn.update(worksheet="Histori Prediksi Suatu Prodi", data=updated_dhp)
+
+        return tampil_data_prodi
     
 
 

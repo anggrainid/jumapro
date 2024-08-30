@@ -11,7 +11,7 @@ st.title("Halaman Prediksi Suatu Prodi Tanpa Formula")
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 # Fetch existing vendors data dhp = data history prediction
-existing_dhp = conn.read(worksheet="Histori Prediksi Suatu Prodi", ttl=5)
+existing_dhp = conn.read(worksheet="Data Histori Prediksi Suatu Prodi", ttl=5)
 existing_dhp = existing_dhp.dropna(how="all")
 
 # Input fields
@@ -163,7 +163,7 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
         tampil_data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
 
         updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
-        conn.update(worksheet="Histori Prediksi Suatu Prodi", data=updated_dhp)
+        conn.update(worksheet="Data Histori Prediksi Suatu Prodi", data=updated_dhp)
 
     elif input_kriteria == "Persentase Penurunan":
 
@@ -197,7 +197,7 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
         tampil_data_prodi.rename(columns={'current_students': f'{input_last_year_data} (Saat Ini)'}, inplace=True)
 
         updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
-        conn.update(worksheet="Histori Prediksi Suatu Prodi", data=updated_dhp)
+        conn.update(worksheet="Data Histori Prediksi Suatu Prodi", data=updated_dhp)
 
     return tampil_data_prodi
     
