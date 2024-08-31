@@ -35,8 +35,6 @@ input_formula = st.radio("Formula yang Digunakan", ["Sudah Ada", "Baru"])
 
 selected_formulas = {}
 if input_formula == "Sudah Ada":
-
-    
     for lembaga_name in lembaga_options:
         # Filter formulas by the selected Lembaga
         formula_options = existing_formula[existing_formula['Lembaga'] == lembaga_name]['Nama Rumus'].unique()
