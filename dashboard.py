@@ -14,6 +14,7 @@ st.subheader("Data Jumlah Mahasiswa Baru 2013 - " + (str(last_column_name)) + " 
 st.caption("Data Jumlah Mahasiswa Baru 2013 - " + (str(last_column_name)) + " dan Prediksi Hingga " + (str(last_column_name+5)))
 st.markdown("Data Jumlah Mahasiswa Baru 2013 - " + (str(last_column_name)) + " dan Prediksi Hingga " + (str(last_column_name+5)))
 # st.dataframe(data)
+# visualisasi
 
 unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Program Studi', 'BAN PT', 'Departemen', 'Kluster', 'PDDIKTI x BAN']
 data = data.drop(unused_column, axis=1)

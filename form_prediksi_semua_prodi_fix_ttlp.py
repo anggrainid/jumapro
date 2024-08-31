@@ -35,7 +35,7 @@ input_prodi = existing_djm["Prodi"]
 max_value = int(existing_djm.columns[-1])
 min_value = int(existing_djm.columns[12])
 
-input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=min_value, max_value=max_value)
+input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=min_value+1, max_value=max_value+1)
 input_last_year = input_predict_year - 1
 
 input_years_to_predict = st.slider("Masukkan Proyeksi Prediksi (Dalam Satuan Tahun) : ", min_value=1, max_value=10)
@@ -54,6 +54,7 @@ if input_formula == "Sudah Ada":
         # Mengambil baris formula yang dipilih
         selected_formula = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas[lembaga_name]) & (existing_formula['Lembaga'] == lembaga_name)].iloc[0]
 
+        st.write(selected_formula)
         # Cek kriteria
         input_kriteria = selected_formula["Kriteria"]
 
@@ -61,11 +62,12 @@ if input_formula == "Sudah Ada":
             input_ambang_batas_persen = selected_formula["Ambang Batas (%)"]
             input_banyak_data_ts = selected_formula["Banyak Data TS"]
             input_ambang_batas_jumlah = None
+            input_fields = {}
+            for i in range(int(input_banyak_data_ts-1)):
+                field_name = f"input_jumlah_mahasiswa_ts{i}"
+                # input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
+                input_fields[field_name] = existing_djm[input_predict_year-1]
 
-            # input_fields = {}
-            # for i in range(int(input_banyak_data_ts) - 1):
-            #     field_name = f"input_jumlah_mahasiswa_ts{i}"
-            #     input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
 
         else:
             input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
@@ -107,6 +109,7 @@ existing_djm.rename(columns={input_last_year:"current_students"}, inplace=True)
 #     }
 
 # data_prodi = pd.DataFrame(new_data_prodi)
+existing_djm
 
 # Prediksi beberapa tahun ke depan
 for index, row in existing_djm.iterrows():
