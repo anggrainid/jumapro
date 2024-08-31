@@ -24,43 +24,54 @@ existing_formula = conn.read(worksheet="Rumus Pemantauan", usecols=list(range(7)
 existing_formula = existing_formula.dropna(how="all")
 
 # Dropdown options for Lembaga
+lembaga_options = existing_djm['Lembaga'].unique()
 formula_options = existing_formula['Nama Rumus'].unique()
 
 # Input fields
 # input_prodi = st.text_input("Masukkan Nama Program Studi : ")
 input_prodi = existing_djm["Prodi"]
 
-input_predict_year = st.number_input("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=2024)
+# CRUD Form
+max_value = int(existing_djm.columns[-1])
+min_value = int(existing_djm.columns[12])
+
+input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=min_value, max_value=max_value)
 input_last_year = input_predict_year - 1
 
-input_years_to_predict = st.number_input("Masukkan Proyeksi Prediksi (Dalam Satuan Tahun) : ", min_value=1, max_value=10)
+input_years_to_predict = st.slider("Masukkan Proyeksi Prediksi (Dalam Satuan Tahun) : ", min_value=1, max_value=10)
 
 input_formula = st.radio("Formula yang Digunakan", ["Sudah Ada", "Baru"])
 
+selected_formulas = {}
 if input_formula == "Sudah Ada":
-    input_existing_formula = st.selectbox("Pilih Rumus yang Digunakan : ", formula_options)
-    # Mengambil baris formula yang dipilih
-    selected_formula = existing_formula[existing_formula['Nama Rumus'] == input_existing_formula].iloc[0]
-    st.write(selected_formula)
-    # Cek kriteria
-    input_kriteria = selected_formula["Kriteria"]
-    if input_kriteria == "Persentase Penurunan":
-        input_ambang_batas_persen = selected_formula["Ambang Batas (%)"]
-        input_banyak_data_ts = selected_formula["Banyak Data TS"]
-        input_ambang_batas_jumlah = None
+    for lembaga_name in lembaga_options:
+        # Filter formulas by the selected Lembaga
+        formula_options = existing_formula[existing_formula['Lembaga'] == lembaga_name]['Nama Rumus'].unique()
 
-        input_fields = {}
-        for i in range(int(input_banyak_data_ts-1)):
-            field_name = f"input_jumlah_mahasiswa_ts{i}"
-            # input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
-            input_fields[field_name] = existing_djm[input_predict_year-1]
+        # Dropdown to select formula for the current Lembaga
+        selected_formulas[lembaga_name] = st.selectbox(f"Pilih Rumus yang Digunakan bagi Prodi di bawah Lembaga {lembaga_name} : ", formula_options)
 
-    else:
-        input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
-        # input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa TS:", value=0)
-        input_jumlah_mahasiswa_ts = existing_djm[input_predict_year-1]
-        input_ambang_batas_persen = None
-        input_fields = None
+        # Mengambil baris formula yang dipilih
+        selected_formula = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas[lembaga_name]) & (existing_formula['Lembaga'] == lembaga_name)].iloc[0]
+
+        # Cek kriteria
+        input_kriteria = selected_formula["Kriteria"]
+
+        if input_kriteria == "Persentase Penurunan":
+            input_ambang_batas_persen = selected_formula["Ambang Batas (%)"]
+            input_banyak_data_ts = selected_formula["Banyak Data TS"]
+            input_ambang_batas_jumlah = None
+
+            # input_fields = {}
+            # for i in range(int(input_banyak_data_ts) - 1):
+            #     field_name = f"input_jumlah_mahasiswa_ts{i}"
+            #     input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
+
+        else:
+            input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
+            # input_jumlah_mahasiswa_ts = None
+            input_ambang_batas_persen = None
+            input_fields = None
 
 else:
     input_kriteria = st.radio("Kriteria", ["Jumlah Mahasiswa", "Persentase Penurunan"])
