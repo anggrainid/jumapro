@@ -49,6 +49,8 @@ input_formula = st.radio("Formula yang Digunakan", ["Sudah Ada", "Baru"])
 
 model = pickle.load(open(r"D:\jumapro\next_year_students_prediction.sav", "rb"))
 
+
+
 selected_formulas = {}
 if input_formula == "Sudah Ada":
     for lembaga_name in lembaga_options:
@@ -57,59 +59,59 @@ if input_formula == "Sudah Ada":
 
         # Dropdown to select formula for the current Lembaga
         selected_formulas[lembaga_name] = st.selectbox(f"Pilih Rumus yang Digunakan bagi Prodi di bawah Lembaga {lembaga_name} : ", formula_options)
+        selected_formulas_name = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas[lembaga_name]) & (existing_formula['Lembaga'] == lembaga_name)].iloc[0]
+        st.write(selected_formulas_name)
 
-        
-        
-for index, row in existing_djm.iterrows():
-    lembaga_prodi = row['Lembaga']
-    prodi_name = row['Prodi']
+            
+            
+    for index, row in existing_djm.iterrows():
+        lembaga_prodi = row['Lembaga']
+        prodi_name = row['Prodi']
 
-        
-    # Mengambil baris formula yang dipilih
-    selected_formula = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas[lembaga_prodi]) & (existing_formula['Lembaga'] == lembaga_prodi)].iloc[0]
+            
+        # Mengambil baris formula yang dipilih
+        selected_formula = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas[lembaga_prodi]) & (existing_formula['Lembaga'] == lembaga_prodi)].iloc[0]
 
-    st.write(selected_formula)
-    # Cek kriteria
-    input_kriteria = selected_formula["Kriteria"]
+        # st.write(selected_formula)
+        # Cek kriteria
+        input_kriteria = selected_formula["Kriteria"]
 
-    if input_kriteria == "Persentase Penurunan":
-        input_ambang_batas_persen = selected_formula["Ambang Batas (%)"]
-        input_banyak_data_ts = selected_formula["Banyak Data TS"]
-        input_ambang_batas_jumlah = None
-        input_fields = {}
-        for i in range(int(input_banyak_data_ts-1)):
-            field_name = f"input_jumlah_mahasiswa_ts{i}"
-            # input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
-            input_fields[field_name] = existing_djm[input_predict_year-1]
+        if input_kriteria == "Persentase Penurunan":
+            input_ambang_batas_persen = selected_formula["Ambang Batas (%)"]
+            input_banyak_data_ts = selected_formula["Banyak Data TS"]
+            input_ambang_batas_jumlah = None
+            input_fields = {}
+            for i in range(int(input_banyak_data_ts-1)):
+                field_name = f"input_jumlah_mahasiswa_ts{i}"
+                # input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
+                input_fields[field_name] = existing_djm[input_predict_year-1]
 
 
-    else:
-        input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
-        # input_jumlah_mahasiswa_ts = None
-        input_ambang_batas_persen = None
-        input_fields = None
+        else:
+            input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
+            # input_jumlah_mahasiswa_ts = None
+            input_ambang_batas_persen = None
+            input_fields = None
+            # Calculate predictions
+            current_students = row[input_last_year]
+            tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
 
-        # Calculate predictions
-        current_students = row['current_students']
-        tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
+            for i in range(1, input_years_to_predict + 1):
+                next_year = input_last_year + i
+                column_name = f'{next_year} (Prediksi)'
 
-        for i in range(1, input_years_to_predict + 1):
-            next_year = input_last_year + i
-            column_name = f'{next_year} (Prediksi)'
+                # Lakukan prediksi menggunakan model untuk current_students dari baris ini
+                prediksi_mahasiswa = model.predict([[current_students]])[0]
+                existing_djm.at[index, column_name] = int(prediksi_mahasiswa)
 
-            # Lakukan prediksi menggunakan model untuk current_students dari baris ini
-            prediksi_mahasiswa = model.predict([[current_students]])[0]
-            existing_djm.at[index, column_name] = int(prediksi_mahasiswa)
+                # Perbarui current_students untuk iterasi berikutnya
+                current_students = prediksi_mahasiswa
 
-            # Perbarui current_students untuk iterasi berikutnya
-            current_students = prediksi_mahasiswa
+                # Cek apakah jumlah mahasiswa di bawah ambang batas
+                if prediksi_mahasiswa < input_ambang_batas_jumlah:
+                    tahun_tidak_lolos = next_year
 
-            # Cek apakah jumlah mahasiswa di bawah ambang batas
-            if prediksi_mahasiswa < input_ambang_batas_jumlah:
-                tahun_tidak_lolos = next_year
-
-        existing_djm.at[index, f"Hasil Prediksi Pemantauan ({input_predict_year})"] = "Lolos" if prediksi_mahasiswa >= input_ambang_batas_jumlah else "Tidak Lolos"
-
+            existing_djm.at[index, f"Hasil Prediksi Pemantauan ({input_predict_year})"] = "Lolos" if prediksi_mahasiswa >= input_ambang_batas_jumlah else "Tidak Lolos"
 else:
     input_kriteria = st.radio("Kriteria", ["Jumlah Mahasiswa", "Persentase Penurunan"])
     if input_kriteria == "Persentase Penurunan":
@@ -234,8 +236,7 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
             hasil_prediksi_pemantauan = "Lolos" if row[f"{input_predict_year} (Prediksi)"] > input_ambang_batas_jumlah else "Tidak Lolos"
             existing_djm.at[index, f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
             # existing_djm[f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
-            existing_djm.at[index, "Jumlah Mahasiswa Minimal"] = existing_djm['']
-            input_ambang_batas_jumlah
+            existing_djm.at[index, "Jumlah Mahasiswa Minimal"] = input_ambang_batas_jumlah
             # existing_djm["Jumlah Mahasiswa Minimal"] = input_ambang_batas_jumlah
             existing_djm.at[index,"Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
             # existing_djm["Tahun Tidak Lolos (Prediksi)"] = str(tahun_tidak_lolos)
