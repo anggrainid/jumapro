@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 import pickle
 import pandas as pd
+from datetime import date
 
 # Halaman Prediksi Suatu Prodi
 st.title("Halaman Prediksi Suatu Prodi Dengan Formula")
@@ -172,6 +173,7 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
         ordered_data_prodi = ["Prodi"] + ["current_students"] + data_predict_target + ["Jumlah Mahasiswa Minimal"] + [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + data_predict_years + ["Tahun Tidak Lolos (Prediksi)"]
         tampil_data_prodi = data_prodi[ordered_data_prodi]
         tampil_data_prodi.rename(columns={'current_students': f'{input_last_year} (Saat Ini)'}, inplace=True)
+        tampil_data_prodi["Tanggal Prediksi"] = date.today()
 
         updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
         conn.update(worksheet="Data Histori Prediksi Suatu Prodi", data=updated_dhp)
@@ -206,7 +208,7 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
         rename_ts = {f"input_jumlah_mahasiswa_ts{i+1}": f"{input_last_year-i-1}" for i in range(int(input_banyak_data_ts-1))}
         tampil_data_prodi.rename(columns=rename_ts, inplace=True)
         tampil_data_prodi.rename(columns={'current_students': f'{input_last_year_data} (Saat Ini)'}, inplace=True)
-
+        tampil_data_prodi["Tanggal Prediksi"] = date.today()
         updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
         conn.update(worksheet="Data Histori Prediksi Suatu Prodi", data=updated_dhp)
 
