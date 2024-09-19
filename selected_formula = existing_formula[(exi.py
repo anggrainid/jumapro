@@ -1,0 +1,1 @@
+selected_formula = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas[lembaga_prodi]) & (existing_formula['Lembaga'] == lembaga_prodi)].iloc[0]
