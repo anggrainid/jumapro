@@ -50,6 +50,12 @@ input_formula = st.radio("Formula yang Digunakan", ["Sudah Ada", "Baru"])
 model = pickle.load(open(r"D:\jumapro\next_year_students_prediction.sav", "rb"))
 
 
+# input_fields = {}
+# for i in range(input_banyak_data_ts - 1):
+#     field_name = f"input_jumlah_mahasiswa_ts{i}"
+#     input_fields[field_name] = existing_djm[input_predict_year]
+
+# input_fields
 
 selected_formulas = {}
 if input_formula == "Sudah Ada":
@@ -84,7 +90,7 @@ if input_formula == "Sudah Ada":
             for i in range(int(input_banyak_data_ts-1)):
                 field_name = f"input_jumlah_mahasiswa_ts{i}"
                 # input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
-                input_fields[field_name] = existing_djm[input_predict_year-1]
+                input_fields[field_name] = existing_djm[input_predict_year-i-1]
 
 
         else:
@@ -112,6 +118,7 @@ if input_formula == "Sudah Ada":
                     tahun_tidak_lolos = next_year
 
             existing_djm.at[index, f"Hasil Prediksi Pemantauan ({input_predict_year})"] = "Lolos" if prediksi_mahasiswa >= input_ambang_batas_jumlah else "Tidak Lolos"
+    
 else:
     input_kriteria = st.radio("Kriteria", ["Jumlah Mahasiswa", "Persentase Penurunan"])
     if input_kriteria == "Persentase Penurunan":
@@ -122,7 +129,9 @@ else:
         input_fields = {}
         for i in range(input_banyak_data_ts - 1):
             field_name = f"input_jumlah_mahasiswa_ts{i}"
-            input_fields[field_name] = existing_djm[input_predict_year-1]
+            input_fields[field_name] = existing_djm[input_predict_year-i-1]
+        
+        
                 
     else:
         input_ambang_batas_jumlah = st.number_input("Ambang Batas Jumlah Mahasiswa Minimal", min_value=1, step=1)
@@ -130,6 +139,8 @@ else:
         input_ambang_batas_persen = None
         input_fields = None
 
+input_fields
+# input_fields
 model = pickle.load(open(r"D:\jumapro\next_year_students_prediction.sav", "rb"))
 
 # existing_djm = existing_djm.dropna()
@@ -283,8 +294,9 @@ def prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year_data
 
             # updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
             # conn.update(worksheet="Histori Prediksi Suatu Prodi", data=updated_dhp)
+            
 
-        return tampil_data_prodi
+    return tampil_data_prodi
     
 
 
