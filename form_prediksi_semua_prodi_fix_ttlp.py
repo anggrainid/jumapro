@@ -69,7 +69,7 @@ input_formula = st.radio("Formula yang Digunakan", ["Sudah Ada", "Baru"])
 model = pickle.load(open(r"D:\jumapro\next_year_students_prediction.sav", "rb"))
 
 
-print('existing formula:', existing_formula)
+
 selected_formulas = {}
 if input_formula == "Sudah Ada":
     for lembaga_name in lembaga_options:
@@ -108,14 +108,8 @@ if input_formula == "Sudah Ada":
             for i in range(int(input_banyak_data_ts)):
                 field_name = f"input_jumlah_mahasiswa_ts{i}"
                 # input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
-                try:
-                    input_fields[field_name] = existing_djm[input_predict_year-i-1]
-                    # print(f'jmlh {i} | {field_name} | {input_predict_year-i} | { existing_djm[input_predict_year-i]}')
-                except KeyError:
-                    # MUNGKIN datanya ga cukup, misal pilih 2014, tapi datanya cmn ada dari 2013, trus ambil -3 tahun
-                    # input_fields[field_name] = 1
-                    raise ValueError("TAHUNNYA KURANG BRO")
-                
+                input_fields[field_name] = existing_djm[input_predict_year-1]
+
 
         else:
             input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
@@ -137,11 +131,11 @@ if input_formula == "Sudah Ada":
             #     # Perbarui current_students untuk iterasi berikutnya
             #     current_students = prediksi_mahasiswa
 
-            #     # Cek apakah jumlah mahasiswa di bawah ambang batas
-            #     if prediksi_mahasiswa < input_ambang_batas_jumlah:
-            #         tahun_tidak_lolos = next_year
-            # print('after milih jumlah mahasiswa, sudah menghitung variable tahun_tidak_lolos: ', tahun_tidak_lolos)
-            # existing_djm.at[index, f"Hasil Prediksi Pemantauan ({input_predict_year})"] = "Lolos" if prediksi_mahasiswa >= input_ambang_batas_jumlah else "Tidak Lolos"
+                # Cek apakah jumlah mahasiswa di bawah ambang batas
+                if prediksi_mahasiswa < input_ambang_batas_jumlah:
+                    tahun_tidak_lolos = next_year
+
+            existing_djm.at[index, f"Hasil Prediksi Pemantauan ({input_predict_year})"] = "Lolos" if prediksi_mahasiswa >= input_ambang_batas_jumlah else "Tidak Lolos"
 else:
     input_kriteria = st.radio("Kriteria", ["Jumlah Mahasiswa", "Persentase Penurunan"])
     if input_kriteria == "Persentase Penurunan":
@@ -152,9 +146,7 @@ else:
         input_fields = {}
         for i in range(input_banyak_data_ts - 1):
             field_name = f"input_jumlah_mahasiswa_ts{i}"
-            input_fields[field_name] = existing_djm[input_predict_year-i-1]
-
-            
+            input_fields[field_name] = existing_djm[input_predict_year-1]
                 
     else:
         input_ambang_batas_jumlah = st.number_input("Ambang Batas Jumlah Mahasiswa Minimal", min_value=1, step=1)
@@ -162,6 +154,8 @@ else:
         input_ambang_batas_persen = None
         input_fields = None
 
+input_fields
+# input_fields
 model = pickle.load(open(r"D:\jumapro\next_year_students_prediction.sav", "rb"))
 
 # existing_djm = existing_djm.dropna()
@@ -411,11 +405,8 @@ def prediksi_dan_penilaian(input_prodi, input_formula_type, input_predict_year, 
                 tampil_data_prodi.rename(columns={'current_students': f'{input_last_year_data} (Saat Ini)'}, inplace=True)                
             # updated_dhp = pd.concat([existing_dhp, tampil_data_prodi], ignore_index=True)
             # conn.update(worksheet="Histori Prediksi Suatu Prodi", data=updated_dhp)
-        else:
-            print('Other ', index)
 
-    return tampil_data_prodi
-        # return existing_djm
+        return tampil_data_prodi
     
 
 
