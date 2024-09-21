@@ -184,12 +184,6 @@ elif input_formula == "Sudah Ada":
         # Dipindah ke 8
         # tahun_tidak_lolos_found = False
         # existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Lebih dari {input_years_to_predict} Tahun ke Depan"
-        input_banyak_data_ts = selected_formula["Banyak Data TS"]
-        # input_ambang_batas_persen = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[existing_djm.at[index, 'Lembaga']]) & (existing_formula['Lembaga'] == existing_djm.at[index, 'Lembaga'])].iloc[0]['Ambang Batas (%)']
-        input_ambang_batas_persen = selected_formula["Ambang Batas (%)"]
-        input_ambang_batas_persen = 0 if np.isnan(input_ambang_batas_persen) else input_ambang_batas_persen
-
-
 
 # 8. Prediksi setiap prodi
 model = pickle.load(open(r"D:\jumapro\next_year_students_prediction.sav", "rb"))
@@ -239,10 +233,10 @@ for index, row in existing_djm.iterrows():
         print(index, 'PERSENTASE PENURUNAN')
         # input_ambang_batas_persen = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[existing_djm.at[index, 'Lembaga']]) & (existing_formula['Lembaga'] == existing_djm.at[index, 'Lembaga'])].iloc[0]['Ambang Batas (%)']
         # input_ambang_batas_persen = 0 if np.isnan(input_ambang_batas_persen) else input_ambang_batas_persen
-        # 236 dipindah ke 187 # input_banyak_data_ts = selected_formula["Banyak Data TS"]
+        input_banyak_data_ts = selected_formula["Banyak Data TS"]
         input_ambang_batas_jumlah = None
         input_fields = {}
-        # selected_formula = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[lembaga_prodi]) & (existing_formula['Lembaga'] == lembaga_prodi)].iloc[0]
+        selected_formula = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[lembaga_prodi]) & (existing_formula['Lembaga'] == lembaga_prodi)].iloc[0]
         
         
         for i in range(int(input_banyak_data_ts)-1):
@@ -255,10 +249,9 @@ for index, row in existing_djm.iterrows():
                 raise ValueError("TAHUNNYA KURANG BRO")    
     
 
-        # dari looping function # 255 256 dipindah ke 188
-        # input_ambang_batas_persen = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[existing_djm.at[index, 'Lembaga']]) & (existing_formula['Lembaga'] == existing_djm.at[index, 'Lembaga'])].iloc[0]['Ambang Batas (%)']
-        # input_ambang_batas_persen = 0 if np.isnan(input_ambang_batas_persen) else input_ambang_batas_persen
-
+        # dari looping function
+        input_ambang_batas_persen = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[existing_djm.at[index, 'Lembaga']]) & (existing_formula['Lembaga'] == existing_djm.at[index, 'Lembaga'])].iloc[0]['Ambang Batas (%)']
+        input_ambang_batas_persen = 0 if np.isnan(input_ambang_batas_persen) else input_ambang_batas_persen
         
         if input_banyak_data_ts > 2:
             persentase_penurunan = hitung_persentase_penurunan_lebih_dari_satu(index, existing_djm, input_predict_year, input_banyak_data_ts)
