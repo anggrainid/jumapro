@@ -117,22 +117,22 @@ if input_formula == "Sudah Ada":
             input_ambang_batas_persen = None
             input_fields = None
             # # Calculate predictions
-            # current_students = row[input_last_year]
-            # tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
+            current_students = row[input_last_year]
+            tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
 
-            # for i in range(1, input_years_to_predict + 1):
-            #     next_year = input_last_year + i
-            #     column_name = f'{next_year} (Prediksi)'
+            for i in range(1, input_years_to_predict + 1):
+                next_year = input_last_year + i
+                column_name = f'{next_year} (Prediksi)'
 
-            #     # Lakukan prediksi menggunakan model untuk current_students dari baris ini
-            #     prediksi_mahasiswa = model.predict([[current_students]])[0]
-            #     existing_djm.at[index, column_name] = int(prediksi_mahasiswa)
+                # Lakukan prediksi menggunakan model untuk current_students dari baris ini
+                prediksi_mahasiswa = model.predict([[current_students]])[0]
+                existing_djm.at[index, column_name] = int(prediksi_mahasiswa)
 
-            #     # Perbarui current_students untuk iterasi berikutnya
-            #     current_students = prediksi_mahasiswa
+                # Perbarui current_students untuk iterasi berikutnya
+                current_students = prediksi_mahasiswa
 
                 # Cek apakah jumlah mahasiswa di bawah ambang batas
-                if prediksi_mahasiswa < input_ambang_batas_jumlah:
+            if prediksi_mahasiswa < input_ambang_batas_jumlah:
                     tahun_tidak_lolos = next_year
 
             existing_djm.at[index, f"Hasil Prediksi Pemantauan ({input_predict_year})"] = "Lolos" if prediksi_mahasiswa >= input_ambang_batas_jumlah else "Tidak Lolos"
