@@ -2,7 +2,7 @@
 
 import streamlit as st
 import pandas as pd
-import plotly.express as px
+# import plotly.express as px
 from streamlit_gsheets import GSheetsConnection
 import pickle
 import re
