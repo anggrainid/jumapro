@@ -48,7 +48,8 @@ formula_options = existing_formula['Nama Rumus'].unique()
 unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Program Studi', 'BAN PT', 'Departemen', 'Kluster', 'PDDIKTI x BAN']
 existing_djm = existing_djm.drop(unused_column, axis=1)
 # existing_djm.head()
-existing_djm
+existing_djm.info()
+
 max_value = int(existing_djm.columns[-1])
 min_value = int(existing_djm.columns[12])
 
