@@ -26,9 +26,6 @@ import numpy as np
 with open('existing_djm.pickle', 'rb') as handle:
     existing_djm = pickle.load(handle)
 
-with open('existing_djm.pickle', 'rb') as handle:
-    existing_djm = pickle.load(handle)
-
 with open('existing_formula.pickle', 'rb') as handle:
     existing_formula = pickle.load(handle)
     
@@ -60,10 +57,13 @@ djm_prodi = existing_djm["Prodi"]
 max_year = int(existing_djm.columns[-1])
 min_year = int(existing_djm.columns[12])
 
-input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=min_year, max_value=max_year+1)
-input_last_year = input_predict_year - 1
 
-input_years_to_predict = st.slider("Masukkan Proyeksi Prediksi (Dalam Satuan Tahun) : ", min_value=1, max_value=10)
+input_last_year = st.slider("Masukkan Tahun Sekarang (ex: 2024) : ", min_value=min_year, max_value=max_year)
+# input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=min_year, max_value=max_year+1)
+input_predict_year = input_last_year-1
+# input_last_year = input_predict_year - 1
+
+# input_years_to_predict = st.slider("Masukkan Proyeksi Prediksi (Dalam Satuan Tahun) : ", min_value=0, max_value=5)
 
 
 # print(min_year, max_year)
@@ -72,8 +72,8 @@ input_years_to_predict = st.slider("Masukkan Proyeksi Prediksi (Dalam Satuan Tah
 
 # existing_djm[f'Hasil Prediksi Pemantauan ({input_predict_year})'] = [None]*len(existing_djm)
 
-for i in range(input_years_to_predict):
-    existing_djm[str(input_predict_year+i)] = [None]*len(existing_djm)
+# for i in range(input_years_to_predict):
+#     existing_djm[str(input_predict_year+i)] = [None]*len(existing_djm)
 
 existing_djm['Hasil Proyeksi Prediksi Pemantauan'] = [None]*len(existing_djm)
 
@@ -117,7 +117,7 @@ def hitung_persentase_penurunan(index, data, predict_year):
 # input_fields
 # Fungsi untuk menghitung persentase penurunan dengan lebih dari satu tahun data
 def hitung_persentase_penurunan_lebih_dari_satu(index, data, predict_year, banyak_data_ts):
-    print('function ppls: ', (index, 'existing_djm', predict_year, banyak_data_ts))
+    # print('function ppls: ', (index, 'existing_djm', predict_year, banyak_data_ts))
     global input_fields
 
     total_penurunan = 0
@@ -177,7 +177,7 @@ for index, row in existing_djm.iterrows():
     input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
         # looping isi prediksi
     tahun_tidak_lolos_found = False
-    existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Lebih dari {input_years_to_predict} Tahun ke Depan"
+    existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Lolos Lebih dari {input_years_to_predict} Tahun ke Depan"
     for i in range(input_years_to_predict):
         next_year = input_last_year + i
         
@@ -206,7 +206,7 @@ for index, row in existing_djm.iterrows():
         if (not tahun_tidak_lolos_found) and (input_kriteria=='Jumlah Mahasiswa') and (prediksi_mahasiswa<input_ambang_batas_jumlah):
             existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Tidak Lolos pada {next_year+1}"
             tahun_tidak_lolos_found = True
-        else:
+        elif input_kriteria=='Persentase Penurunan':
             existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Hanya tersedia untuk Kriteria Jumlah Mahasiswa"
 
         # print('loop:', prediksi_mahasiswa, input_ambang_batas_jumlah, tahun_tidak_lolos_found, input_kriteria, existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'])    
@@ -289,6 +289,7 @@ for index, row in existing_djm.iterrows():
 
 # 9. wrapping op columns
 
+data_ts = 
 data_predict_years = [f"{next_year}" for next_year in range(input_predict_year+1, input_predict_year+input_years_to_predict)]
 data_predict_target= [f"{input_predict_year}"]
 
@@ -296,10 +297,10 @@ data_predict_target= [f"{input_predict_year}"]
 ordered_data_prodi = ["Prodi"] + ["Jenjang"] + ["Lembaga"] +  ["Kriteria Input"] + ts + [f"{input_last_year}"] + data_predict_target + ["Hitung Persentase Penurunan"] +  ["Persentase Penurunan Maksimal"]+ ["Jumlah Mahasiswa Minimal"] +  [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + data_predict_years + ['Hasil Proyeksi Prediksi Pemantauan']
 tampil_data_prodi = existing_djm[ordered_data_prodi]
 
-
-rename_ts = {f"input_jumlah_mahasiswa_ts{i+1}": f"{input_last_year-i-1} (TS-{i+1})" for i in range(int(input_banyak_data_ts-1))}
+if input_kriteria=="persentase_penurunan":
+    rename_ts = {f"input_jumlah_mahasiswa_ts{i+1}": f"{input_last_year-i-1} (TS-{i+1})" for i in range(int(input_banyak_data_ts-1))}
+    tampil_data_prodi.rename(columns=rename_ts, inplace=True)
 rename_predict_years = {f"{next_year}": f"{next_year} (Prediksi)" for next_year in range(input_predict_year+1, input_predict_year+input_years_to_predict)}
-tampil_data_prodi.rename(columns=rename_ts, inplace=True)
 tampil_data_prodi.rename(columns=rename_predict_years, inplace=True)
 tampil_data_prodi.rename(columns={f"{input_predict_year}": f"{input_predict_year} (Prediksi)"}, inplace=True)
 tampil_data_prodi.rename(columns={f"{input_last_year}": f"{input_last_year} (TS)"}, inplace=True)
