@@ -80,6 +80,7 @@ existing_djm['Hasil Proyeksi Prediksi Pemantauan'] = [None]*len(existing_djm)
 # 6. Get Data Formula Pemantauan
 
 selected_formulas_lembaga = {}
+banyak_data_ts_lembaga = {}
     # Pilih Formula untuk setiap lembaga
 for lembaga_name in lembaga_options:
     # Filter formulas by the selected Lembaga
@@ -90,7 +91,13 @@ for lembaga_name in lembaga_options:
     print("selected_formula", selected_formulas_lembaga[lembaga_name]) #Rumus Pertama BAN 2024
     selected_formulas_name = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[lembaga_name]) & (existing_formula['Lembaga'] == lembaga_name)].iloc[0]
     st.write(selected_formulas_name)
+    banyak_data_ts_lembaga[lembaga_name] = selected_formulas_name['Banyak Data TS'].max()
 
+
+max_banyak_data_ts = int(max([0 if pd.isna(banyak_data_ts_lembaga[lembaga_name]) else banyak_data_ts_lembaga[lembaga_name] for lembaga_name in lembaga_options]))
+st.write(max_banyak_data_ts)
+# st.write(banyak_data_ts_lembaga)
+# max_banyak_data_ts = banyak_data_ts_lembaga[lembaga_name].max()
 # 7. Fungsi hitung persentase penurunan
 def hitung_persentase_penurunan(index, data, predict_year):
     # data_mahasiswa_start_year = input_fields["input_jumlah_mahasiswa_ts0"]
@@ -100,6 +107,7 @@ def hitung_persentase_penurunan(index, data, predict_year):
     # return persentase_penurunan
     ts_1 = data.at[index, f"{predict_year}"]
     ts_0 = data.at[index, str(input_last_year)]
+    
     try:
         if ts_1==0.0 or np.isnan(ts_1) or (ts_1 is None):
             return 0
@@ -233,8 +241,7 @@ for index, row in existing_djm.iterrows():
             except KeyError:
                 # MUNGKIN datanya ga cukup, misal pilih 2014, tapi datanya cmn ada dari 2013, trus ambil -3 tahun
                 raise ValueError("Data TS tidak tersedia")    
-    
-
+            
         # dari looping function
         input_ambang_batas_persen = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[existing_djm.at[index, 'Lembaga']]) & (existing_formula['Lembaga'] == existing_djm.at[index, 'Lembaga'])].iloc[0]['Ambang Batas (%)']
         input_ambang_batas_persen = 0 if np.isnan(input_ambang_batas_persen) else input_ambang_batas_persen
@@ -261,19 +268,28 @@ for index, row in existing_djm.iterrows():
         
         # existing_djm.at[index, "Persentase Penurunan Maksimal"]
         # print(f'row existing djm at index {index}: ', existing_djm.loc[index])
+        # memasukkan input_fields ke existing_djm
         for col, value in input_fields.items():
             existing_djm[col] = value
+
+        # rename_ts = {f"input_jumlah_mahasiswa_ts{i}": f"{input_last_year-i-1} (TS-{i+1})" for i in range(int(input_banyak_data_ts-1))}
+        # existing_djm.rename(columns=rename_ts, inplace=True)
         ts = [f"input_jumlah_mahasiswa_ts{i}" for i in range(1, int(input_banyak_data_ts-1))]
         ts = sorted(ts, reverse=True)
-        
-
-
-
+        # ts
+        # df_ts = existing_djm[ts]
+        # df_ts
+        # rename_ts = {f"input_jumlah_mahasiswa_ts{i}": f"{input_last_year-i-1} (TS-{i+1})" for i in range(int(input_banyak_data_ts-1))}
+        # existing_djm.rename(columns=rename_ts, inplace=True)
+        # rename_predict_years = {f"{next_year}": f"{next_year} (Prediksi)" for next_year in range(input_predict_year+1, input_predict_year+input_years_to_predict)}
+        # ts = df_ts.rename(columns=rename_ts, inplace=True)
+        # ts = []
+        # ts = [f"{input_last_year-i-1} (TS-{i+1})" for i in range(int(input_banyak_data_ts-1))]
         existing_djm.at[index, "Jumlah Mahasiswa Minimal"] = 0
 
     elif input_kriteria == "Jumlah Mahasiswa":
         print(index, 'JUMLAH MAHASISWA')
-        
+        input_banyak_data_ts = 0
         existing_djm.at[index, "Hitung Persentase Penurunan"] = 0
 
         existing_djm.at[index, "Persentase Penurunan Maksimal"] = 0.0
@@ -288,6 +304,8 @@ for index, row in existing_djm.iterrows():
         ts = []
 
 # 9. wrapping op columns
+# input_fields
+existing_djm
 
 data_predict_years = [f"{next_year}" for next_year in range(input_predict_year+1, input_predict_year+input_years_to_predict)]
 data_predict_target= [f"{input_predict_year}"]
