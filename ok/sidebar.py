@@ -30,7 +30,7 @@ def sidebar():
         if selected == "Prediksi Pemantauan":
             submenu = option_menu(
                 menu_title="Submenu Pemantauan",
-                options=["Formula Pemantauan", "Prediksi Pemantauan Satu Prodi", "Prediksi Pemantauan Semua Prodi"],
+                options=["Formula Pemantauan", "Pemantauan Satu Prodi", "Pemantauan Semua Prodi"],
                 icons=["clipboard", "clipboard-check", "clipboard-data"],
                 menu_icon="cast",
                 default_index=0,
@@ -42,6 +42,22 @@ def sidebar():
                     "nav-link-selected": {"background-color": "#FF4B4B"},
                     "menu-title": {"color": "white", "font-size": "18px"},  # Mengubah warna judul submenu jadi putih
                 }
+            )
+            submenu = option_menu(
+                menu_title="Submenu Prediksi",
+                options=["Kalkulator Prediksi", "Prediksi Pemantauan Satu Prodi", "Prediksi Pemantauan Semua Prodi"],
+                icons=["clipboard", "clipboard-check", "clipboard-data"],
+                menu_icon="cast",
+                default_index=0,
+                orientation="vertical",
+                styles={
+                    "container": {"padding": "5!important", "background-color": "#1F1F2E"},
+                    "icon": {"color": "white", "font-size": "18px"}, 
+                    "nav-link": {"font-size": "16px", "text-align": "left", "margin": "0px", "color": "white", "--hover-color": "#FF4B4B"},
+                    "nav-link-selected": {"background-color": "#FF4B4B"},
+                    "menu-title": {"color": "white", "font-size": "18px"},  # Mengubah warna judul submenu jadi putih
+                }
+            
             )
 
     # Konten utama berdasarkan menu yang dipilih
