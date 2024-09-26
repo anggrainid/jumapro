@@ -1,96 +1,94 @@
-from coba_visualisasi_model import visualisasi_model
-from coba_histori_prediksi import histori_prediksi
-from dashboard import dashboard
+import streamlit as st
+from streamlit_option_menu import option_menu
 
 def sidebar():
-
-    import streamlit as st
-    from streamlit_option_menu import option_menu
-
-    # Membuat sidebar dengan menu pilihan menggunakan option_menu
+    # Sidebar Utama
     with st.sidebar:
-        # Menu utama
         selected = option_menu(
-            menu_title="Menu Utama",  # Judul menu sidebar
+            menu_title="Menu Utama",
             options=["Dashboard", "Analisis Data", "Prediksi Pemantauan", "Histori Prediksi", "Visualisasi Model"],
-            icons=["house", "bar-chart-line", "graph-up-arrow", "clock-history", "bar-chart"],  # Ikon untuk setiap menu
-            menu_icon="cast",  # Ikon untuk menu sidebar
-            default_index=0,  # Menu yang aktif secara default
-            orientation="vertical",  # Orientasi vertikal (sidebar)
+            icons=["house", "bar-chart-line", "graph-up-arrow", "clock-history", "bar-chart"],
+            menu_icon="cast",
+            default_index=0,
             styles={
                 "container": {"padding": "5!important", "background-color": "#262730"},
-                "icon": {"color": "white", "font-size": "18px"}, 
+                "icon": {"color": "white", "font-size": "18px"},
                 "nav-link": {"font-size": "16px", "text-align": "left", "margin": "0px", "color": "white", "--hover-color": "#4B4BFF"},
-                "nav-link-selected": {"background-color": "#FF4B4B"},  # Warna saat menu dipilih
-                "menu-title": {"color": "white", "font-size": "18px"},  # Mengubah warna judul menu jadi putih
+                "nav-link-selected": {"background-color": "#FF4B4B"},
+                "menu-title": {"color": "white", "font-size": "18px"},
             }
         )
 
-        # Submenu jika "Prediksi Pemantauan" dipilih
+        submenu = None
+        # Jika 'Prediksi Pemantauan' dipilih, tampilkan gabungan submenunya dengan pemisah visual
         if selected == "Prediksi Pemantauan":
-            submenu = option_menu(
-                menu_title="Submenu Pemantauan",
-                options=["Formula Pemantauan", "Pemantauan Satu Prodi", "Pemantauan Semua Prodi"],
-                icons=["clipboard", "clipboard-check", "clipboard-data"],
-                menu_icon="cast",
-                default_index=0,
-                orientation="vertical",
-                styles={
-                    "container": {"padding": "5!important", "background-color": "#1F1F2E"},
-                    "icon": {"color": "white", "font-size": "18px"}, 
-                    "nav-link": {"font-size": "16px", "text-align": "left", "margin": "0px", "color": "white", "--hover-color": "#FF4B4B"},
-                    "nav-link-selected": {"background-color": "#FF4B4B"},
-                    "menu-title": {"color": "white", "font-size": "18px"},  # Mengubah warna judul submenu jadi putih
-                }
-            )
-            submenu = option_menu(
-                menu_title="Submenu Prediksi",
-                options=["Kalkulator Prediksi", "Prediksi Pemantauan Satu Prodi", "Prediksi Pemantauan Semua Prodi"],
-                icons=["clipboard", "clipboard-check", "clipboard-data"],
-                menu_icon="cast",
-                default_index=0,
-                orientation="vertical",
-                styles={
-                    "container": {"padding": "5!important", "background-color": "#1F1F2E"},
-                    "icon": {"color": "white", "font-size": "18px"}, 
-                    "nav-link": {"font-size": "16px", "text-align": "left", "margin": "0px", "color": "white", "--hover-color": "#FF4B4B"},
-                    "nav-link-selected": {"background-color": "#FF4B4B"},
-                    "menu-title": {"color": "white", "font-size": "18px"},  # Mengubah warna judul submenu jadi putih
-                }
-            
-            )
 
-    # Konten utama berdasarkan menu yang dipilih
+            submenu = option_menu(
+                menu_title=None,
+                
+                options=[
+                    "---",
+                    "Formula Pemantauan", 
+                    "Pemantauan Satu Prodi",
+                    "Pemantauan Semua Prodi",
+                    "---",  # Pemisah visual
+                    "Kalkulator Prediksi", 
+                    "Prediksi Pemantauan Satu Prodi", 
+                    "Prediksi Pemantauan Semua Prodi"
+                ],
+                icons=[
+                    "clipboard", "clipboard-check", "clipboard-data", 
+                    "",  # Tidak ada ikon untuk pemisah
+                    "calculator", "clipboard-check", "clipboard-data"
+                ],
+                menu_icon="cast",
+                default_index=0,
+                styles={
+                    "container": {"padding": "5!important", "background-color": "#1F1F2E"},
+                    "icon": {"color": "white", "font-size": "16px"},
+                    "nav-link": {"font-size": "15px", "text-align": "left", "margin": "0px", "color": "white", "--hover-color": "#FF4B4B"},
+                    "nav-link-selected": {"background-color": "#FF4B4B"},
+                }
+            )
+        return selected, submenu
+
+def main():
+    selected, submenu = sidebar()
+
+    # Menampilkan halaman utama
     st.title(f"Halaman {selected}")
 
-    # Dashboard
-    if selected == "Dashboard":
-        # st.write("Ini adalah halaman Dashboard.")
-        dashboard()
-    # Analisis Data
-    elif selected == "Analisis Data":
-        st.write("Ini adalah halaman Analisis Data.")
-        # Tambahkan konten analisis data di sini
-
     # Prediksi Pemantauan
-    elif selected == "Prediksi Pemantauan":
+    if selected == "Prediksi Pemantauan":
+        st.write(f"Halaman untuk {submenu}")
         if submenu == "Formula Pemantauan":
             st.write("Ini adalah halaman Formula Pemantauan.")
-        elif submenu == "Prediksi Satu Prodi":
-            st.write("Ini adalah halaman Prediksi Satu Prodi.")
-        elif submenu == "Prediksi Semua Prodi":
-            st.write("Ini adalah halaman Prediksi Semua Prodi.")
+        elif submenu == "Pemantauan Satu Prodi":
+            st.write("Ini adalah halaman Pemantauan Satu Prodi.")
+        elif submenu == "Pemantauan Semua Prodi":
+            st.write("Ini adalah halaman Pemantauan Semua Prodi.")
+        elif submenu == "Kalkulator Prediksi":
+            st.write("Ini adalah halaman Kalkulator Prediksi.")
+        elif submenu == "Prediksi Pemantauan Satu Prodi":
+            st.write("Ini adalah halaman Prediksi Pemantauan Satu Prodi.")
+        elif submenu == "Prediksi Pemantauan Semua Prodi":
+            st.write("Ini adalah halaman Prediksi Pemantauan Semua Prodi.")
 
-    # Histori Prediksi
+    elif selected == "Dashboard":
+        st.header("Dashboard")
+        st.write("Konten untuk Dashboard.")
+
+    elif selected == "Analisis Data":
+        st.header("Analisis Data")
+        st.write("Konten untuk Analisis Data.")
+
     elif selected == "Histori Prediksi":
-        histori_prediksi()
-        # st.write("Ini adalah halaman Histori Prediksi.")
-        # Tambahkan konten histori prediksi di sini
+        st.header("Histori Prediksi")
+        st.write("Konten untuk Histori Prediksi.")
 
-    # Visualisasi Model
     elif selected == "Visualisasi Model":
-        visualisasi_model()
-        # st.write("Ini adalah halaman Visualisasi Model.")
-        # Tambahkan konten visualisasi model di sini
+        st.header("Visualisasi Model")
+        st.write("Konten untuk Visualisasi Model.")
 
-sidebar()
+if __name__ == "__main__":
+    main()

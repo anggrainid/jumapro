@@ -214,7 +214,7 @@ def create_pemantauan_form(existing_djm, existing_formula):
                         'Persentase Penurunan Maksimal (%)': prodi_formula["Ambang Batas (%)"],
                         'Ambang Batas Jumlah Mahasiswa Minimal': ambang_batas_jumlah_mahasiswa,
                         f'Hasil Pemantauan ({current_year})': hasil_pemantauan,
-                        'Tanggal Pemantauan': date.today(),
+                        # 'Tanggal Pemantauan': date.today(),
                         'TS Data': ts_values
                     })
                 
@@ -226,7 +226,7 @@ def create_pemantauan_form(existing_djm, existing_formula):
                         'Persentase Penurunan Maksimal (%)': "-",
                         'Ambang Batas Jumlah Mahasiswa Minimal': "-",
                         f'Hasil Pemantauan ({current_year})': "-",
-                        'Tanggal Pemantauan': date.today(),
+                        # 'Tanggal Pemantauan': date.today(),
                         'TS Data': ts_values
                     })
             
@@ -242,7 +242,7 @@ def create_pemantauan_form(existing_djm, existing_formula):
                     'Prodi': prodi_name,
                     'Jumlah Mahasiswa Minimal': prodi_formula["Ambang Batas (Jumlah)"],
                     f'Hasil Pemantauan ({current_year})': hasil_pemantauan,
-                    'Tanggal Pemantauan': date.today(),
+                    # 'Tanggal Pemantauan': date.today(),
                     'TS Data': ts_values
                 })
         

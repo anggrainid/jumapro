@@ -27,7 +27,7 @@ def histori_prediksi():
     # Pastikan kolom 'Prodi' ada di DataFrame
     if 'Prodi' in df.columns:
         # Melakukan melt hanya pada kolom tahun
-        df_melted = df.melt(id_vars=['Prodi'], value_vars=year_columns, var_name='Tahun', value_name='Jumlah Mahasiswa Saat Ini')
+        df_melted = df.melt(id_vars=['Prodi'], value_vars=year_columns, var_name='Tahun', value_name='Jumlah Mahasiswa')
         df_melted['Tahun'] = df_melted['Tahun'].astype(int)
     else:
         st.error("Kolom 'Prodi' tidak ditemukan dalam data.")
@@ -42,7 +42,7 @@ def histori_prediksi():
         return round(prediksi)
 
     # Menambahkan kolom prediksi
-    df_melted['Prediksi'] = df_melted['Jumlah Mahasiswa Saat Ini'].apply(lambda x: prediksi_jumlah_mahasiswa(x))
+    df_melted['Prediksi Jumlah Mahasiswa'] = df_melted['Jumlah Mahasiswa'].apply(lambda x: prediksi_jumlah_mahasiswa(x))
 
     # Tampilan Streamlit
     # st.title('Histori Prediksi')
@@ -55,8 +55,8 @@ def histori_prediksi():
     df_prodi = df_melted[df_melted['Prodi'] == prodi]
 
     # Menghitung total mahasiswa sebenarnya dan prediksi
-    total_actual = df_prodi['Jumlah Mahasiswa Saat Ini'].sum()
-    total_predicted = df_prodi['Prediksi'].sum()
+    total_actual = df_prodi['Jumlah Mahasiswa'].sum()
+    total_predicted = df_prodi['Prediksi Jumlah Mahasiswa'].sum()
 
     st.write('Total Mahasiswa Sebenarnya: ', total_actual)
     st.write('Total Prediksi Mahasiswa: ', total_predicted)
@@ -67,13 +67,13 @@ def histori_prediksi():
     plt.figure(figsize=(10, 6))
 
     # Plot Mahasiswa Sebenarnya
-    plt.plot(df_prodi['Tahun'], df_prodi['Jumlah Mahasiswa Saat Ini'], label='Mahasiswa Sebenarnya', marker='o', color='blue')
+    plt.plot(df_prodi['Tahun'], df_prodi['Jumlah Mahasiswa'], label='Mahasiswa Sebenarnya', marker='o', color='blue')
 
     # Plot Prediksi Mahasiswa
-    plt.plot(df_prodi['Tahun'], df_prodi['Prediksi'], label='Prediksi Mahasiswa', marker='o', color='red')
+    plt.plot(df_prodi['Tahun'], df_prodi['Prediksi Jumlah Mahasiswa'], label='Prediksi Mahasiswa', marker='o', color='red')
 
     # Menghitung garis tren untuk Mahasiswa Sebenarnya
-    z = np.polyfit(df_prodi['Tahun'], df_prodi['Jumlah Mahasiswa Saat Ini'], 1)
+    z = np.polyfit(df_prodi['Tahun'], df_prodi['Jumlah Mahasiswa'], 1)
     p = np.poly1d(z)
     plt.plot(df_prodi['Tahun'], p(df_prodi['Tahun']), "g--", label='Garis Tren')
 
