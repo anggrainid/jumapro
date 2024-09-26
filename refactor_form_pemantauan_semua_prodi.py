@@ -50,14 +50,14 @@ def calculate_persentase_penurunan(ts_values):
         ts_previous = ts_values[i - 1]
         
         if ts_current == 0 or pd.isna(ts_current) or (ts_current is None):
-            return "-"
+            return 0
         
         penurunan = (ts_previous - ts_current) / ts_current
         total_penurunan += penurunan
         valid_years += 1
     
     if valid_years == 0:
-        return "-"
+        return 0
     
     rata_rata_penurunan = total_penurunan / valid_years
     persentase_penurunan = rata_rata_penurunan * 100
@@ -186,8 +186,8 @@ def create_pemantauan_form(existing_djm, existing_formula):
                     ts_values.append(ts_value)
                     ts_columns.append(f"TS-{i}")
             else:
-                ts_values = ["-"] * 3  # Default placeholder
-                ts_columns = ["TS-0", "TS-1", "TS-2"]  # Default placeholder if Banyak Data TS not available
+                ts_values = row[str(current_year)]  # Default placeholder
+                ts_columns = ["TS-0"]  # Default placeholder if Banyak Data TS not available
             
             if prodi_kriteria == "Persentase Penurunan":
                 # Hitung persentase penurunan jika ts_values valid
