@@ -130,7 +130,6 @@ def create_pemantauan_form(existing_djm, existing_formula):
         
         # Iterasi melalui semua prodi
         for index, row in existing_djm.iterrows():
-            fakultas_name = row['Fakultas']
             prodi_name = row['Prodi']
             lembaga = row['Lembaga']
             
@@ -148,7 +147,8 @@ def create_pemantauan_form(existing_djm, existing_formula):
                     'Persentase Penurunan Maksimal (%)': "-",
                     'Ambang Batas Jumlah Mahasiswa Minimal': "-",
                     f'Hasil Pemantauan ({current_year})': "-",
-                    
+                    'Tanggal Pemantauan': date.today(),
+                    'TS Data': "-"
                 })
                 continue
             
@@ -165,35 +165,37 @@ def create_pemantauan_form(existing_djm, existing_formula):
                     'Persentase Penurunan Maksimal (%)': "-",
                     'Ambang Batas Jumlah Mahasiswa Minimal': "-",
                     f'Hasil Pemantauan ({current_year})': "-",
-                   
+                    'Tanggal Pemantauan': date.today(),
+                    'TS Data': "-"
                 })
                 continue
             
             prodi_formula = prodi_formula.iloc[0]
             prodi_kriteria = prodi_formula["Kriteria"]
             
+            # Ambil Banyak Data TS
+            banyak_data_ts = banyak_data_ts_lembaga[lembaga]
+            ts_columns = []
+            ts_values = []
+            
+            if banyak_data_ts != "-":
+                for i in range(int(banyak_data_ts)):
+                    year = current_year - i
+                    ts_key = str(year)
+                    ts_value = row[ts_key] if ts_key in row else "-"
+                    ts_values.append(ts_value)
+                    ts_columns.append(f"TS-{i}")
+            else:
+                ts_values = ["-"] * 3  # Default placeholder
+                ts_columns = ["TS-0", "TS-1", "TS-2"]  # Default placeholder if Banyak Data TS not available
+            
             if prodi_kriteria == "Persentase Penurunan":
-                banyak_data_ts = banyak_data_ts_lembaga[lembaga]
-                
-                if banyak_data_ts == "-":
-                    ts_values = ["-"] * 3  # Misalnya, set ke "-" untuk 3 tahun
-                else:
-                    # Ambil ts_values dari existing_djm berdasarkan Banyak Data TS
-                    ts_values = []
-                    for i in range(banyak_data_ts):
-                        year = current_year - i
-                        ts_key = str(year)
-                        if ts_key in row:
-                            ts_values.append(row[ts_key])
-                        else:
-                            ts_values.append(0)  # Jika data tidak ada, set ke 0
-                
                 # Hitung persentase penurunan jika ts_values valid
-                if isinstance(ts_values, list) and all(isinstance(val, (int, float)) for val in ts_values):
+                if isinstance(ts_values, list) and all(isinstance(val, (int, float)) for val in ts_values if val != "-"):
                     persentase_penurunan = calculate_persentase_penurunan(ts_values)
                     
                     # Hitung Ambang Batas Jumlah Mahasiswa Minimal
-                    if banyak_data_ts != "-" and len(ts_values) > 1 and ts_values[1] != 0:
+                    if len(ts_values) > 1 and ts_values[1] != 0 and ts_values[1] != "-":
                         ts1 = ts_values[1]
                         ambang_batas_jumlah_mahasiswa = math.ceil(ts1 / (1 + prodi_formula["Ambang Batas (%)"] / 100))
                     else:
@@ -208,11 +210,12 @@ def create_pemantauan_form(existing_djm, existing_formula):
                     # Tambahkan hasil ke list
                     hasil_list.append({
                         'Prodi': prodi_name,
-                        'Persentase Penurunan (%)': persentase_penurunan if persentase_penurunan != "-" else "-",
-                        'Persentase Penurunan Maksimal (%)': prodi_formula["Ambang Batas (%)"] if banyak_data_ts != "-" else "-",
+                        'Persentase Penurunan (%)': persentase_penurunan,
+                        'Persentase Penurunan Maksimal (%)': prodi_formula["Ambang Batas (%)"],
                         'Ambang Batas Jumlah Mahasiswa Minimal': ambang_batas_jumlah_mahasiswa,
                         f'Hasil Pemantauan ({current_year})': hasil_pemantauan,
-                        'Tanggal Pemantauan': date.today()
+                        'Tanggal Pemantauan': date.today(),
+                        'TS Data': ts_values
                     })
                 
                 else:
@@ -223,7 +226,8 @@ def create_pemantauan_form(existing_djm, existing_formula):
                         'Persentase Penurunan Maksimal (%)': "-",
                         'Ambang Batas Jumlah Mahasiswa Minimal': "-",
                         f'Hasil Pemantauan ({current_year})': "-",
-                        'Tanggal Pemantauan': date.today()
+                        'Tanggal Pemantauan': date.today(),
+                        'TS Data': ts_values
                     })
             
             elif prodi_kriteria == "Jumlah Mahasiswa":
@@ -238,7 +242,8 @@ def create_pemantauan_form(existing_djm, existing_formula):
                     'Prodi': prodi_name,
                     'Jumlah Mahasiswa Minimal': prodi_formula["Ambang Batas (Jumlah)"],
                     f'Hasil Pemantauan ({current_year})': hasil_pemantauan,
-                    'Tanggal Pemantauan': date.today()
+                    'Tanggal Pemantauan': date.today(),
+                    'TS Data': ts_values
                 })
         
         if not hasil_list:
