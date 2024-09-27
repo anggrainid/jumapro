@@ -49,7 +49,7 @@ existing_djm.columns = [str(i) for i in existing_djm.columns]
 lembaga_options = existing_djm['Lembaga'].unique()
 formula_options = existing_formula['Nama Rumus'].unique()
 
-unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Program Studi', 'BAN PT', 'Departemen', 'Kluster', 'PDDIKTI x BAN']
+unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Departemen', 'Kluster']
 existing_djm = existing_djm.drop(unused_column, axis=1)
 existing_djm
 # st.write(existing_djm.info())
@@ -95,7 +95,6 @@ for lembaga_name in lembaga_options:
 
     # Ambil nilai Banyak Data TS untuk lembaga terkait
     banyak_data_ts_lembaga[lembaga_name] = selected_formulas_name['Banyak Data TS']
-    
 
 # Ambil nilai max dari Banyak Data TS, dan jika NaN maka set ke 0
 max_banyak_data_ts = max([0 if pd.isna(banyak_data_ts_lembaga[lembaga_name]) else banyak_data_ts_lembaga[lembaga_name] for lembaga_name in lembaga_options])
@@ -114,7 +113,7 @@ def hitung_persentase_penurunan(index, data, predict_year):
     ts_0 = data.at[index, str(input_last_year)]
     try:
         if ts_1==0.0 or np.isnan(ts_1) or (ts_1 is None):
-            return 0.0
+            return 0
     except Exception as e:
         print('ERRROR: ts0 ts1', index, type(ts_1), ts_0, ts_1)
         raise e
@@ -123,7 +122,7 @@ def hitung_persentase_penurunan(index, data, predict_year):
 
     persentase_penurunan = penurunan * 100
 
-    return round(persentase_penurunan, 2)
+    return round(-persentase_penurunan, 2)
 
 # print('input_fields:', input_fields)
 # input_fields
@@ -150,7 +149,7 @@ def hitung_persentase_penurunan_lebih_dari_satu(index, data, predict_year, banya
         print(i, (ts_0), (ts_1))
         
         if ts_1==0 or np.isnan(ts_1) or (ts_1 is None):
-            return 0.0     
+            return 0           
                  
         penurunan = (ts_0 - ts_1) / ts_1
         total_penurunan += penurunan
@@ -185,14 +184,13 @@ for index, row in existing_djm.iterrows():
     
     selected_formula = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[lembaga_prodi]) & (existing_formula['Lembaga'] == lembaga_prodi)].iloc[0]
     input_kriteria = selected_formula["Kriteria"]
-    existing_djm.at[index, 'Kriteria'] = input_kriteria
+    existing_djm.at[index, 'Kriteria Input'] = input_kriteria
     input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
         # looping isi prediksi
     tahun_tidak_lolos_found = False
     existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Lebih dari {input_years_to_predict} Tahun ke Depan"
     
-    input_banyak_data_ts = selected_formula["Banyak Data TS"]
-    existing_djm.at[index, 'Banyak Data TS'] = input_banyak_data_ts
+    # input_banyak_data_ts = selected_formula["Banyak Data TS"]
     input_fields = {}
     input_fields["input_jumlah_mahasiswa_ts0"] = existing_djm[str(input_predict_year)]
     for i in range(max_banyak_data_ts-1):
@@ -239,8 +237,8 @@ for index, row in existing_djm.iterrows():
         if (not tahun_tidak_lolos_found) and (input_kriteria=='Jumlah Mahasiswa') and (prediksi_mahasiswa<input_ambang_batas_jumlah):
             existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Tidak Lolos pada {next_year+1}"
             tahun_tidak_lolos_found = True
-        elif input_kriteria=='Persentase Penurunan':
-            existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = "-"
+        else:
+            existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Hanya tersedia untuk Kriteria Jumlah Mahasiswa"
 
         # print('loop:', prediksi_mahasiswa, input_ambang_batas_jumlah, tahun_tidak_lolos_found, input_kriteria, existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'])    
 
@@ -299,22 +297,23 @@ for index, row in existing_djm.iterrows():
 
 
 
-        existing_djm.at[index, "Jumlah Mahasiswa Minimal"] = "-"
+        existing_djm.at[index, "Jumlah Mahasiswa Minimal"] = 0
 
     elif input_kriteria == "Jumlah Mahasiswa":
         print(index, 'JUMLAH MAHASISWA')
         
-        existing_djm.at[index, "Hitung Persentase Penurunan"] = "-"
+        existing_djm.at[index, "Hitung Persentase Penurunan"] = 0
 
-        existing_djm.at[index, "Persentase Penurunan Maksimal"] = "-"
+        existing_djm.at[index, "Persentase Penurunan Maksimal"] = 0.0
 
         hasil_prediksi_pemantauan = str(("Lolos" if existing_djm.at[index, str(input_predict_year)] >= input_ambang_batas_jumlah else "Tidak Lolos"))
         input_ambang_batas_persen = None
         # input_fields = None
 
         
-        existing_djm.at[index, "Jumlah Mahasiswa Minimal"] = int(input_ambang_batas_jumlah)
+        existing_djm.at[index, "Jumlah Mahasiswa Minimal"] = input_ambang_batas_jumlah
         existing_djm.at[index, f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
+        # ts = []
 
 # 9. wrapping op columns
 
@@ -322,16 +321,17 @@ data_predict_years = [f"{next_year}" for next_year in range(input_predict_year+1
 data_predict_target= [f"{input_predict_year}"]
 
 
-ordered_data_prodi = ["Prodi"] + ["Jenjang"] + ["Lembaga"] +  ["Kriteria"] + ["Banyak Data TS"]+ ts + [f"{input_last_year}"] + data_predict_target +  ["Hitung Persentase Penurunan"] +  ["Persentase Penurunan Maksimal"]+ ["Jumlah Mahasiswa Minimal"] +  [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + data_predict_years + ['Hasil Proyeksi Prediksi Pemantauan']
+ordered_data_prodi = ["Prodi"] + ["Jenjang"] + ["Lembaga"] +  ["Kriteria Input"] + ts + [f"{input_last_year}"] + data_predict_target + ["Hitung Persentase Penurunan"] +  ["Persentase Penurunan Maksimal"]+ ["Jumlah Mahasiswa Minimal"] +  [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + data_predict_years + ['Hasil Proyeksi Prediksi Pemantauan']
 tampil_data_prodi = existing_djm[ordered_data_prodi]
 
 
 
-rename_ts = {f"input_jumlah_mahasiswa_ts{i+1}": f"{input_last_year-i-1} (TS-{i+1})" for i in range(int(max_banyak_data_ts-1))}
+rename_ts = {f"input_jumlah_mahasiswa_ts{i+1}": f"{input_last_year-i-1} (TS-{i+1})" for i in range(int(input_banyak_data_ts-1))}
 rename_predict_years = {f"{next_year}": f"{next_year} (Prediksi)" for next_year in range(input_predict_year+1, input_predict_year+input_years_to_predict)}
 tampil_data_prodi.rename(columns=rename_ts, inplace=True)
 tampil_data_prodi.rename(columns=rename_predict_years, inplace=True)
 tampil_data_prodi.rename(columns={f"{input_predict_year}": f"{input_predict_year} (Prediksi)"}, inplace=True)
 tampil_data_prodi.rename(columns={f"{input_last_year}": f"{input_last_year} (TS)"}, inplace=True)
 
-tampil_data_prodi
+if st.button('Prediksi'):
+    tampil_data_prodi

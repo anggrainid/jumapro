@@ -1,4 +1,4 @@
-def load_form_prediksi():
+def prediksi_pemantauan_satu_prodi():
 
     import streamlit as st
     from streamlit_gsheets import GSheetsConnection
@@ -7,7 +7,9 @@ def load_form_prediksi():
     from datetime import date
 
     # Halaman Prediksi Suatu Prodi
-    st.title("Halaman Prediksi Suatu Prodi Dengan Formula")
+    # st.title("Halaman Prediksi Suatu Prodi Dengan Formula")
+    st.markdown("Form Prediksi Pemantauan Suatu Program Studi")
+
 
 
     # Establishing a Google Sheets connection
@@ -230,6 +232,6 @@ def load_form_prediksi():
     if st.button("Prediksi"):
         hasil_prediksi = prediksi_dan_penilaian(input_prodi, input_predict_year, input_last_year, input_years_to_predict, input_kriteria, input_ambang_batas_jumlah, input_ambang_batas_persen, input_fields)
         st.write(hasil_prediksi)
-        st.success("Data berhasil ditambahkan ke worksheet!")
+        # st.success("Data berhasil ditambahkan ke worksheet!")
         
-load_form_prediksi()
+# load_form_prediksi()

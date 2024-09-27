@@ -4,8 +4,8 @@ def formula():
     import pandas as pd
 
     # Display Title and Description
-    st.title("Halaman Manajemen Rumus Pemantauan")
-    st.markdown("Masukkan Rumus Baru di Bawah Ini.")
+    # st.title("Manajemen Rumus Pemantauan")
+    st.markdown("Masukkan Rumus Baru di Bawah Ini")
 
     # Establishing a Google Sheets connection
     conn = st.connection("gsheets", type=GSheetsConnection)

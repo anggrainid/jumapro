@@ -5,7 +5,8 @@ def kalkulator_prediksi():
     import pandas as pd
 
     # Halaman Prediksi Suatu Prodi
-    st.title("Kalkulator Prediksi Jumlah Mahasiswa")
+    # st.title("Kalkulator Prediksi Jumlah Mahasiswa")
+    st.markdown("Kalkulator Prediksi Jumlah Mahasiswa")
 
 
     # Establishing a Google Sheets connection
@@ -238,6 +239,6 @@ def kalkulator_prediksi():
         # rename_ts = {f"input_jumlah_mahasiswa_ts{i+1}": f"{input_last_year-i-1}" for i in range(int(input_banyak_data_ts-1))}
         # tampil_data_prodi.rename(columns=rename_ts, inplace=True)
         # tampil_data_prodi.rename(columns={'current_students': f'{input_last_year_data} (Saat Ini)'}, inplace=True)
-        data_prodi
-        st.success("Data berhasil ditambahkan ke worksheet!")
+        st.write(data_prodi)
+        # st.success("Data berhasil ditambahkan ke worksheet!")
         
