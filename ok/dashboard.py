@@ -97,6 +97,3 @@ def dashboard():
         st.table(data_jenjang)
 
     # st.write(existing_djm[2013])
-
-    
-    

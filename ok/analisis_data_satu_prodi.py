@@ -9,11 +9,11 @@ def analisis_data(existing_djm):
     prodi_options = existing_djm['Prodi'].unique()
     selected_prodi = st.selectbox("Pilih Program Studi", options=prodi_options)
 
-    # Convert column names to string and filter columns that are numeric (representing years)
-    year_columns = [str(col) for col in existing_djm.columns if str(col).isdigit()]
-
     # Handle NaN values (Replace NaN with 0 for simplicity)
     existing_djm = existing_djm.fillna(0)
+
+    # Convert column names to string and filter columns that are numeric (representing years)
+    year_columns = [str(col) for col in existing_djm.columns if str(col).isdigit()]
 
     # Filter Tahun
     min_year = int(min(year_columns))

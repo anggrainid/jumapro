@@ -85,3 +85,5 @@ def visualisasi_model():
     # Menampilkan tabel detail data
     st.write('Tabel Detail Data')
     st.dataframe(df_tahun)
+
+    
