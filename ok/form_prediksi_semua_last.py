@@ -3,45 +3,53 @@ import pickle
 import pandas as pd
 from streamlit_gsheets import GSheetsConnection
 import numpy as np
+from data import refresh_data, get_data, preprocess_data
 
-def load_data_from_gsheets():
-    conn = st.connection("gsheets", type=GSheetsConnection)
-    # existing_dhp = conn.read(worksheet="Data Histori Prediksi Suatu Prodi", ttl=5)
-    existing_djm = conn.read(worksheet="Data Jumlah Mahasiswa")
-    existing_formula = conn.read(worksheet="Rumus Pemantauan", usecols=list(range(7)), ttl=5)
 
-    # Simpan data ke file pickle
-    # with open('existing_dhp.pickle', 'wb') as handle:
-    #     pickle.dump(existing_dhp, handle, protocol=pickle.HIGHEST_PROTOCOL)
+# def load_data_from_gsheets():
+#     conn = st.connection("gsheets", type=GSheetsConnection)
+#     # existing_dhp = conn.read(worksheet="Data Histori Prediksi Suatu Prodi", ttl=5)
+#     existing_djm = conn.read(worksheet="Data Jumlah Mahasiswa")
+#     existing_formula = conn.read(worksheet="Rumus Pemantauan", usecols=list(range(7)), ttl=5)
 
-    with open('existing_djm.pickle', 'wb') as handle:
-        pickle.dump(existing_djm, handle, protocol=pickle.HIGHEST_PROTOCOL)
+#     # Simpan data ke file pickle
+#     # with open('existing_dhp.pickle', 'wb') as handle:
+#     #     pickle.dump(existing_dhp, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-    with open('existing_formula.pickle', 'wb') as handle:
-        pickle.dump(existing_formula, handle, protocol=pickle.HIGHEST_PROTOCOL)
+#     with open('existing_djm.pickle', 'wb') as handle:
+#         pickle.dump(existing_djm, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-    return existing_djm, existing_formula
+#     with open('existing_formula.pickle', 'wb') as handle:
+#         pickle.dump(existing_formula, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-# Fungsi untuk memuat data dari pickle
-def load_data_from_pickle():
-    with open('existing_djm.pickle', 'rb') as handle:
-        existing_djm = pickle.load(handle)
+#     return existing_djm, existing_formula
+# def connection_data(sheet):
+#     conn = st.connection("gsheets", type=GSheetsConnection)
+#     data = conn.read(worksheet=sheet, ttl=5)
+    
 
-    with open('existing_formula.pickle', 'rb') as handle:
-        existing_formula = pickle.load(handle)
 
-    return existing_djm, existing_formula
+
+# # Fungsi untuk memuat data dari pickle
+# def load_data_from_pickle():
+#     with open('existing_djm.pickle', 'rb') as handle:
+#         existing_djm = pickle.load(handle)
+
+#     with open('existing_formula.pickle', 'rb') as handle:
+#         existing_formula = pickle.load(handle)
+
+#     return existing_djm, existing_formula
 
 # Tombol Refresh untuk memutuskan apakah akan memuat ulang dari Google Sheets atau tidak
 if st.button('Refresh Data'):
     # st.write("Memuat ulang data dari Google Sheets...")
     # Muat data ulang dari Google Sheets
-    existing_djm, existing_formula = load_data_from_gsheets()
+    existing_djm, existing_formula, existing_dhp = refresh_data()
     st.success("Data berhasil dimuat ulang dari Google Sheets!")
 else:
     # Muat data dari file pickle jika tidak di-refresh
     # st.write("Memuat data dari pickle...")
-    existing_djm, existing_formula = load_data_from_pickle()
+    existing_djm, existing_formula, existing_dhp = get_data()
     # st.success("Data berhasil dimuat dari file pickle!")    
 model = pickle.load(open(r"next_year_students_prediction.sav", "rb"))
 
@@ -50,19 +58,18 @@ model = pickle.load(open(r"next_year_students_prediction.sav", "rb"))
 # Djm = data jumlah mahasiswa
 # Dhp = data history prediksi
 
-existing_djm = existing_djm.dropna(how="all")
-existing_djm = existing_djm.replace('#N/A ()', 0)
-# existing_dhp = existing_dhp.dropna(how="all")
-existing_formula = existing_formula.dropna(how="all")
-existing_djm.columns = [str(i) for i in existing_djm.columns]
+# existing_djm = existing_djm.dropna(how="all")
+# existing_djm = existing_djm.replace('#N/A ()', 0)
+# # existing_dhp = existing_dhp.dropna(how="all")
+# existing_formula = existing_formula.dropna(how="all")
+# existing_djm.columns = [str(i) for i in existing_djm.columns]
 
+existing_djm = preprocess_data(existing_djm)
+existing_formula = preprocess_data(existing_formula)
 # Dropdown options for Lembaga
 lembaga_options = existing_djm['Lembaga'].unique()
 formula_options = existing_formula['Nama Rumus'].unique()
 
-unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Departemen', 'Kluster']
-existing_djm = existing_djm.drop(unused_column, axis=1)
-existing_djm
 # st.write(existing_djm.info())
 
 # 4. CRUD form prediksi pemantauan semua prodi
@@ -114,26 +121,26 @@ max_banyak_data_ts = int(max_banyak_data_ts)
 # st.write(max_banyak_data_ts)
 
 # 7. Fungsi hitung persentase penurunan
-def hitung_persentase_penurunan(index, data, predict_year):
-    # data_mahasiswa_start_year = input_fields["input_jumlah_mahasiswa_ts0"]
-    # end_year = predict_year
-    # penurunan_total = (data[f"{end_year} (Prediksi)"] - data_mahasiswa_start_year)
-    # persentase_penurunan = (penurunan_total / 2) * 100
-    # return persentase_penurunan
-    ts_1 = data.at[index, f"{predict_year}"]
-    ts_0 = data.at[index, str(input_last_year)]
-    try:
-        if ts_1==0.0 or np.isnan(ts_1) or (ts_1 is None):
-            return 0
-    except Exception as e:
-        print('ERRROR: ts0 ts1', index, type(ts_1), ts_0, ts_1)
-        raise e
+# def hitung_persentase_penurunan(index, data, predict_year):
+#     # data_mahasiswa_start_year = input_fields["input_jumlah_mahasiswa_ts0"]
+#     # end_year = predict_year
+#     # penurunan_total = (data[f"{end_year} (Prediksi)"] - data_mahasiswa_start_year)
+#     # persentase_penurunan = (penurunan_total / 2) * 100
+#     # return persentase_penurunan
+#     ts_1 = data.at[index, f"{predict_year}"]
+#     ts_0 = data.at[index, str(input_last_year)]
+#     try:
+#         if ts_1==0.0 or np.isnan(ts_1) or (ts_1 is None):
+#             return 0
+#     except Exception as e:
+#         print('ERRROR: ts0 ts1', index, type(ts_1), ts_0, ts_1)
+#         raise e
             
-    penurunan = (ts_0 - ts_1) / ts_1
+#     penurunan = (ts_0 - ts_1) / ts_1
 
-    persentase_penurunan = penurunan * 100
+#     persentase_penurunan = penurunan * 100
 
-    return round(-persentase_penurunan, 2)
+#     return round(-persentase_penurunan, 2)
 
 # print('input_fields:', input_fields)
 # input_fields

@@ -71,6 +71,6 @@ def formula():
 
             # Update Google Sheets with the new vendor data
             conn.update(worksheet="Rumus Pemantauan", data=updated_df)
-
+            # update_worksheet("Rumus Pemantauan", updated_df)
             st.success("Rumus berhasil ditambahkan!")
             st.write(updated_df)
