@@ -65,3 +65,5 @@ def preprocess_data(data):
     data = data.drop(unused_columns, axis=1, errors='ignore')
 
     return data
+# def year():
+#     available_years = [int(col) for col in existing_djm.columns if col.isdigit()]
