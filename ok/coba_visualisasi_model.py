@@ -49,19 +49,37 @@ def visualisasi_model():
     model.fit(X, y)
     y_pred = model.predict(X)
 
+
+    # Menambahkan kolom prediksi ke df_tahun
+    df_tahun['Prediksi Jumlah Mahasiswa Setelahnya'] = np.round(y_pred)
+    
+    comparison = (df_tahun['Prediksi Jumlah Mahasiswa Setelahnya'] / df_tahun['Jumlah Mahasiswa Setelahnya']) * 100
+    df_tahun['Perbandingan Persentase Prediksi Mahasiswa Baru (%)'] = np.where(df_tahun['Jumlah Mahasiswa Setelahnya']==0, np.nan, comparison.round())
+
+    average_row = pd.DataFrame({
+        'Program Studi': ['Average'],
+        'Jumlah Mahasiswa Saat Ini': [df_tahun['Jumlah Mahasiswa Saat Ini'].mean(skipna=True)],
+        'Jumlah Mahasiswa Setelahnya': [df_tahun['Jumlah Mahasiswa Setelahnya'].mean(skipna=True)],
+        'Prediksi Jumlah Mahasiswa Setelahnya': [df_tahun['Prediksi Jumlah Mahasiswa Setelahnya'].mean(skipna=True)],
+        'Perbandingan Persentase Prediksi Mahasiswa Baru (%)': [df_tahun['Perbandingan Persentase Prediksi Mahasiswa Baru (%)'].mean(skipna=True)]
+    })
+    # Menambahkan baris rata-rata ke dataframe
+    df_tahun = pd.concat([df_tahun, average_row], ignore_index=True)
+
     plt.figure(figsize=(10, 6))
 
     # Scatter plot jumlah mahasiswa saat ini vs jumlah mahasiswa setelahnya
-    plt.scatter(X, y, color='blue')
+    plt.scatter(X, y, color='blue', label='Data Sebenarnya')
 
     # Menambahkan garis regresi merah
-    plt.plot(X, y_pred, color='red', linewidth=2)
+    plt.plot(X, y_pred, color='red', linewidth=2, label='Data Prediksi')
 
     # Menambahkan label, judul tanpa legend dan grid
     plt.title(f"Scatter Plot Linear Regression\nTahun: {tahun}", fontsize=18)
     plt.xlabel('Jumlah Mahasiswa Saat Ini', fontsize=12)
     plt.ylabel('Jumlah Mahasiswa Setelahnya', fontsize=12)
     plt.grid(False)
+    plt.legend()
 
     # Menampilkan grafik di Streamlit
     st.pyplot(plt)

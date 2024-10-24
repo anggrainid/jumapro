@@ -57,9 +57,14 @@ def prediksi_pemantauan_semua_prodi():
 
     # 4. CRUD form prediksi pemantauan semua prodi
     djm_prodi = existing_djm["Prodi"]
+    available_years = [int(col) for col in existing_djm.columns if col.isdigit()]
+    if not available_years:
+        st.error("Tidak ada data tahun yang tersedia di existing_djm.")
+        return
+        
 
-    max_year = int(existing_djm.columns[-1])
-    min_year = int(existing_djm.columns[12])
+    max_year = max(available_years)
+    min_year = min(available_years)
 
     input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=min_year, max_value=max_year+1)
     input_last_year = input_predict_year - 1

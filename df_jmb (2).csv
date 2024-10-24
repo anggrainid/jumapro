@@ -1,0 +1,1276 @@
+id_ps,ps,level,faculty,year,current_students,next_year_students,current_students_lag1
+82001,Doktor Antropologi,S-3,Ilmu Budaya,2014,0.0,0.0,0.0
+23001,Doktor Arsitektur,S-3,Teknik,2014,4.0,2.0,1.0
+46001,Doktor Biologi,S-3,Biologi,2014,9.0,4.0,9.0
+46002,Doktor Bioteknologi,S-3,Pascasarjana,2014,7.0,2.0,7.0
+75001,Doktor Filsafat,S-3,Filsafat,2014,8.0,11.0,15.0
+45001,Doktor Fisika,S-3,MIPA,2014,8.0,9.0,8.0
+63002,Doktor Ilmu Administrasi Publik,S-3,ISIPOL,2014,2.0,3.0,2.0
+62001,Doktor Ilmu Akuntansi,S-3,Ekonomika dan Bisnis,2014,16.0,5.0,14.0
+60001,Doktor Ilmu Ekonomi,S-3,Ekonomika dan Bisnis,2014,4.0,5.0,3.0
+48001,Doktor Ilmu Farmasi,S-3,Farmasi,2014,13.0,19.0,15.0
+51001,Doktor Ilmu Geografi,S-3,Geografi,2014,10.0,10.0,10.0
+74001,Doktor Ilmu Hukum,S-3,Hukum,2014,51.0,18.0,53.0
+11001,Doktor Ilmu Kedokteran dan Kesehatan,S-3,KKMK,2014,38.0,37.0,53.0
+12001,Doktor Ilmu Kedokteran Gigi,S-3,Kedokteran Gigi,2014,2.0,8.0,2.0
+54051,Doktor Ilmu Kehutanan,S-3,Kehutanan,2014,9.0,14.0,14.0
+95028,Doktor Ilmu Ketahanan Nasional,S-3,Pascasarjana,2014,0.0,0.0,0.0
+55001,Doktor Ilmu Komputer,S-3,MIPA,2014,8.0,11.0,17.0
+70001,Doktor Ilmu Komunikasi,S-3,ISIPOL,2014,0.0,0.0,0.0
+95029,Doktor Ilmu Lingkungan,S-3,Pascasarjana,2014,8.0,6.0,6.0
+61001,Doktor Ilmu Manajemen,S-3,Ekonomika dan Bisnis,2014,12.0,10.0,11.0
+41021,Doktor Ilmu Pangan,S-3,Teknologi Pertanian,2014,7.0,12.0,11.0
+54001,Doktor Ilmu Pertanian,S-3,Pertanian,2014,33.0,20.0,23.0
+54031,Doktor Ilmu Peternakan,S-3,Peternakan,2014,8.0,6.0,9.0
+67001,Doktor Ilmu Politik,S-3,ISIPOL,2014,11.0,6.0,9.0
+73001,Doktor Ilmu Psikologi,S-3,Psikologi,2014,19.0,13.0,19.0
+41001,Doktor Ilmu Teknik Pertanian,S-3,Teknologi Pertanian,2014,5.0,1.0,2.0
+95031,Doktor Ilmu-Ilmu Humaniora,S-3,Ilmu Budaya,2014,17.0,13.0,30.0
+76002,Doktor Inter-Religious Studies,S-3,Pascasarjana,2014,6.0,5.0,10.0
+95027,Doktor Kajian Budaya dan Media,S-3,Pascasarjana,2014,5.0,12.0,9.0
+95004,Doktor Kajian Pariwisata,S-3,Pascasarjana,2014,8.0,5.0,6.0
+95007,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),S-3,Pascasarjana,2014,13.0,9.0,7.0
+95002,Doktor Kependudukan,S-3,Pascasarjana,2014,0.0,0.0,2.0
+47001,Doktor Kimia,S-3,MIPA,2014,9.0,8.0,11.0
+63001,Doktor Manajemen dan Kebijakan Publik,S-3,ISIPOL,2014,5.0,5.0,4.0
+44002,Doktor Matematika,S-3,MIPA,2014,8.0,8.0,1.0
+95021,Doktor Pengkajian Amerika,S-3,Ilmu Budaya,2014,1.0,4.0,4.0
+91001,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,S-3,Pascasarjana,2014,8.0,7.0,5.0
+54003,Doktor Penyuluhan dan Komunikasi Pembangunan,S-3,Pascasarjana,2014,7.0,4.0,3.0
+35001,Doktor Perencanaan Wilayah dan Kota,S-3,Teknik,2014,0.0,0.0,0.0
+54062,Doktor Sain Veteriner,S-3,Kedokteran Hewan,2014,4.0,6.0,6.0
+69001,Doktor Sosiologi,S-3,ISIPOL,2014,0.0,2.0,5.0
+20001,Doktor Teknik Elektro,S-3,Teknik,2014,18.0,20.0,9.0
+34001,Doktor Teknik Geologi,S-3,Teknik,2014,10.0,9.0,9.0
+29001,Doktor Teknik Geomatika,S-3,Teknik,2014,2.0,1.0,2.0
+26001,Doktor Teknik Industri,S-3,Teknik,2014,0.0,0.0,0.0
+24001,Doktor Teknik Kimia,S-3,Teknik,2014,4.0,4.0,9.0
+21001,Doktor Teknik Mesin,S-3,Teknik,2014,12.0,14.0,16.0
+22001,Doktor Teknik Sipil,S-3,Teknik,2014,11.0,10.0,12.0
+41011,Doktor Teknologi Industri Pertanian,S-3,Teknologi Pertanian,2014,0.0,0.0,0.0
+76101,Magister Agama dan Lintas Budaya,S-2,Pascasarjana,2014,41.0,41.0,33.0
+54104,Magister Agronomi,S-2,Pertanian,2014,19.0,17.0,10.0
+62103,Magister Akuntansi,S-2,Ekonomika dan Bisnis,2014,246.0,240.0,173.0
+82101,Magister Antropologi,S-2,Ilmu Budaya,2014,25.0,27.0,42.0
+81101,Magister Arkeologi,S-2,Ilmu Budaya,2014,10.0,12.0,17.0
+23101,Magister Arsitektur,S-2,Teknik,2014,51.0,40.0,56.0
+68102,Magister Bioetika,S-2,Pascasarjana,2014,0.0,0.0,0.0
+46101,Magister Biologi,S-2,Biologi,2014,93.0,49.0,143.0
+46102,Magister Bioteknologi,S-2,Pascasarjana,2014,35.0,29.0,49.0
+54102,Magister Ekonomi Pertanian,S-2,Pertanian,2014,15.0,20.0,12.0
+60102,Magister Ekonomika Pembangunan,S-2,Ekonomika dan Bisnis,2014,139.0,121.0,143.0
+48102,Magister Farmasi Klinik,S-2,Farmasi,2014,0.0,38.0,1.0
+75101,Magister Filsafat,S-2,Filsafat,2014,9.0,15.0,29.0
+45101,Magister Fisika,S-2,MIPA,2014,71.0,62.0,103.0
+54111,Magister Fitopatologi,S-2,Pertanian,2014,13.0,17.0,10.0
+51101,Magister Geografi,S-2,Geografi,2014,32.0,46.0,57.0
+74105,Magister Hukum Bisnis dan Kenegaraan,S-2,Hukum,2014,85.0,108.0,60.0
+74104,Magister Hukum Kesehatan,S-2,Hukum,2014,14.0,11.0,17.0
+74103,Magister Hukum Litigasi,S-2,Hukum,2014,20.0,20.0,23.0
+63102,Magister Ilmu Administrasi Publik,S-2,ISIPOL,2014,66.0,68.0,59.0
+11101,Magister Ilmu Biomedik,S-2,KKMK,2014,51.0,44.0,49.0
+41103,Magister Ilmu dan Teknologi Pangan,S-2,Teknologi Pertanian,2014,40.0,38.0,46.0
+48101,Magister Ilmu Farmasi,S-2,Farmasi,2014,107.0,66.0,111.0
+54106,Magister Ilmu Hama Tanaman,S-2,Pertanian,2014,5.0,20.0,7.0
+64101,Magister Ilmu Hubungan Internasional,S-2,ISIPOL,2014,95.0,40.0,89.0
+74101,Magister Ilmu Hukum,S-2,Hukum,2014,65.0,54.0,56.0
+74171,Magister Ilmu Hukum (Kampus Jakarta),S-2,Hukum,2014,147.0,136.0,119.0
+12101,Magister Ilmu Kedokteran Gigi,S-2,Kedokteran Gigi,2014,9.0,5.0,16.0
+12102,Magister Ilmu Kedokteran Gigi Klinis,S-2,Kedokteran Gigi,2014,15.0,0.0,24.0
+11103,Magister Ilmu Kedokteran Klinis,S-2,KKMK,2014,96.0,82.0,75.0
+11104,Magister Ilmu Kedokteran Tropis,S-2,KKMK,2014,17.0,11.0,14.0
+54151,Magister Ilmu Kehutanan,S-2,Kehutanan,2014,40.0,50.0,42.0
+13101,Magister Ilmu Kesehatan Masyarakat,S-2,KKMK,2014,255.0,273.0,344.0
+55101,Magister Ilmu Komputer,S-2,MIPA,2014,84.0,73.0,119.0
+70101,Magister Ilmu Komunikasi,S-2,ISIPOL,2014,77.0,50.0,83.0
+95129,Magister Ilmu Lingkungan,S-2,Pascasarjana,2014,86.0,77.0,62.0
+11109,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,S-2,KKMK,2014,13.0,12.0,5.0
+54146,Magister Ilmu Perikanan,S-2,Pertanian,2014,0.0,8.0,0.0
+54131,Magister Ilmu Peternakan,S-2,Peternakan,2014,39.0,41.0,25.0
+54105,Magister Ilmu Tanah,S-2,Pertanian,2014,7.0,7.0,13.0
+95127,Magister Kajian Budaya dan Media,S-2,Pascasarjana,2014,29.0,30.0,41.0
+95124,Magister Kajian Budaya Timur Tengah,S-2,Ilmu Budaya,2014,0.0,0.0,0.0
+95104,Magister Kajian Pariwisata,S-2,Pascasarjana,2014,21.0,26.0,29.0
+13163,Magister Kebijakan dan Manajemen Kesehatan,S-2,KKMK,2014,0.0,0.0,0.0
+74102,Magister Kenotariatan,S-2,Hukum,2014,175.0,188.0,155.0
+95107,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),S-2,Pascasarjana,2014,12.0,6.0,8.0
+95102,Magister Kependudukan,S-2,Pascasarjana,2014,8.0,9.0,23.0
+14101,Magister Keperawatan,S-2,KKMK,2014,29.0,54.0,53.0
+95128,Magister Ketahanan Nasional,S-2,Pascasarjana,2014,57.0,40.0,70.0
+47101,Magister Kimia,S-2,MIPA,2014,75.0,66.0,86.0
+79102,Magister Linguistik,S-2,Ilmu Budaya,2014,59.0,52.0,71.0
+61101,Magister Manajemen,S-2,Ekonomika dan Bisnis,2014,289.0,239.0,586.0
+61171,Magister Manajemen (Kampus Jakarta),S-2,Ekonomika dan Bisnis,2014,453.0,286.0,0.0
+54101,Magister Manajemen Agribisnis,S-2,Pertanian,2014,16.0,29.0,24.0
+61104,Magister Manajemen Bencana,S-2,Pascasarjana,2014,9.0,9.0,33.0
+63101,Magister Manajemen dan Kebijakan Publik,S-2,ISIPOL,2014,29.0,36.0,28.0
+48105,Magister Manajemen Farmasi,S-2,Farmasi,2014,0.0,0.0,0.0
+86105,Magister Manajemen Pendidikan Tinggi,S-2,Pascasarjana,2014,18.0,17.0,18.0
+44101,Magister Matematika,S-2,MIPA,2014,75.0,47.0,111.0
+86102,Magister Pembangunan Sosial dan Kesejahteraan,S-2,ISIPOL,2014,36.0,19.0,30.0
+54107,Magister Pemuliaan Tanaman,S-2,Pertanian,2014,6.0,3.0,9.0
+51111,Magister Penginderaan Jauh,S-2,Geografi,2014,11.0,16.0,19.0
+95121,Magister Pengkajian Amerika,S-2,Ilmu Budaya,2014,18.0,9.0,24.0
+91101,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,S-2,Pascasarjana,2014,28.0,19.0,26.0
+54103,Magister Penyuluhan dan Komunikasi Pembangunan,S-2,Pascasarjana,2014,12.0,8.0,18.0
+95103,Magister Perencanaan Wilayah dan Kota,S-2,Teknik,2014,83.0,83.0,79.0
+67101,Magister Politik dan Pemerintahan,S-2,ISIPOL,2014,44.0,43.0,54.0
+73101,Magister Psikologi,S-2,Psikologi,2014,73.0,78.0,75.0
+73103,Magister Psikologi Profesi,S-2,Psikologi,2014,98.0,87.0,104.0
+35102,Magister Rancang Kota,S-2,Teknik,2014,0.0,0.0,0.0
+62101,Magister Sains Akuntansi,S-2,Ekonomika dan Bisnis,2014,46.0,56.0,54.0
+60101,Magister Sains Ilmu Ekonomi,S-2,Ekonomika dan Bisnis,2014,25.0,15.0,14.0
+61102,Magister Sains Manajemen,S-2,Ekonomika dan Bisnis,2014,48.0,40.0,54.0
+54162,Magister Sains Veteriner,S-2,Kedokteran Hewan,2014,16.0,54.0,32.0
+79101,Magister Sastra,S-2,Ilmu Budaya,2014,26.0,27.0,72.0
+80101,Magister Sejarah,S-2,Ilmu Budaya,2014,10.0,7.0,30.0
+22102,Magister Sistem dan Teknik Transportasi,S-2,Teknik,2014,50.0,44.0,59.0
+69101,Magister Sosiologi,S-2,ISIPOL,2014,22.0,27.0,25.0
+11123,Magister Teknik Biomedis,S-2,Pascasarjana,2014,0.0,0.0,0.0
+20101,Magister Teknik Elektro,S-2,Teknik,2014,160.0,123.0,197.0
+30101,Magister Teknik Fisika,S-2,Teknik,2014,0.0,0.0,0.0
+34101,Magister Teknik Geologi,S-2,Teknik,2014,34.0,34.0,64.0
+29101,Magister Teknik Geomatika,S-2,Teknik,2014,21.0,24.0,18.0
+26101,Magister Teknik Industri,S-2,Teknik,2014,41.0,36.0,43.0
+24101,Magister Teknik Kimia,S-2,Teknik,2014,24.0,32.0,36.0
+21101,Magister Teknik Mesin,S-2,Teknik,2014,33.0,48.0,25.0
+22105,Magister Teknik Pengelolaan Bencana Alam,S-2,Teknik,2014,30.0,20.0,1.0
+41101,Magister Teknik Pertanian,S-2,Teknologi Pertanian,2014,10.0,5.0,21.0
+22101,Magister Teknik Sipil,S-2,Teknik,2014,66.0,91.0,116.0
+31103,Magister Teknik Sistem,S-2,Teknik,2014,27.0,11.0,14.0
+41133,Magister Teknologi Hasil Perkebunan,S-2,Teknologi Pertanian,2014,7.0,3.0,12.0
+41111,Magister Teknologi Industri Pertanian,S-2,Teknologi Pertanian,2014,6.0,7.0,14.0
+59101,Magister Teknologi informasi,S-2,Teknik,2014,0.0,16.0,0.0
+82001,Doktor Antropologi,S-3,Ilmu Budaya,2015,0.0,0.0,0.0
+23001,Doktor Arsitektur,S-3,Teknik,2015,2.0,7.0,4.0
+46001,Doktor Biologi,S-3,Biologi,2015,4.0,8.0,9.0
+46002,Doktor Bioteknologi,S-3,Pascasarjana,2015,2.0,4.0,7.0
+75001,Doktor Filsafat,S-3,Filsafat,2015,11.0,13.0,8.0
+45001,Doktor Fisika,S-3,MIPA,2015,9.0,6.0,8.0
+63002,Doktor Ilmu Administrasi Publik,S-3,ISIPOL,2015,3.0,2.0,2.0
+62001,Doktor Ilmu Akuntansi,S-3,Ekonomika dan Bisnis,2015,5.0,8.0,16.0
+60001,Doktor Ilmu Ekonomi,S-3,Ekonomika dan Bisnis,2015,5.0,4.0,4.0
+48001,Doktor Ilmu Farmasi,S-3,Farmasi,2015,19.0,19.0,13.0
+51001,Doktor Ilmu Geografi,S-3,Geografi,2015,10.0,9.0,10.0
+74001,Doktor Ilmu Hukum,S-3,Hukum,2015,18.0,8.0,51.0
+11001,Doktor Ilmu Kedokteran dan Kesehatan,S-3,KKMK,2015,37.0,59.0,38.0
+12001,Doktor Ilmu Kedokteran Gigi,S-3,Kedokteran Gigi,2015,8.0,7.0,2.0
+54051,Doktor Ilmu Kehutanan,S-3,Kehutanan,2015,14.0,12.0,9.0
+95028,Doktor Ilmu Ketahanan Nasional,S-3,Pascasarjana,2015,0.0,0.0,0.0
+55001,Doktor Ilmu Komputer,S-3,MIPA,2015,11.0,18.0,8.0
+70001,Doktor Ilmu Komunikasi,S-3,ISIPOL,2015,0.0,0.0,0.0
+95029,Doktor Ilmu Lingkungan,S-3,Pascasarjana,2015,6.0,7.0,8.0
+61001,Doktor Ilmu Manajemen,S-3,Ekonomika dan Bisnis,2015,10.0,17.0,12.0
+41021,Doktor Ilmu Pangan,S-3,Teknologi Pertanian,2015,12.0,6.0,7.0
+54001,Doktor Ilmu Pertanian,S-3,Pertanian,2015,20.0,25.0,33.0
+54031,Doktor Ilmu Peternakan,S-3,Peternakan,2015,6.0,17.0,8.0
+67001,Doktor Ilmu Politik,S-3,ISIPOL,2015,6.0,7.0,11.0
+73001,Doktor Ilmu Psikologi,S-3,Psikologi,2015,13.0,12.0,19.0
+41001,Doktor Ilmu Teknik Pertanian,S-3,Teknologi Pertanian,2015,1.0,3.0,5.0
+95031,Doktor Ilmu-Ilmu Humaniora,S-3,Ilmu Budaya,2015,13.0,33.0,17.0
+76002,Doktor Inter-Religious Studies,S-3,Pascasarjana,2015,5.0,5.0,6.0
+95027,Doktor Kajian Budaya dan Media,S-3,Pascasarjana,2015,12.0,9.0,5.0
+95004,Doktor Kajian Pariwisata,S-3,Pascasarjana,2015,5.0,0.0,8.0
+95007,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),S-3,Pascasarjana,2015,9.0,11.0,13.0
+95002,Doktor Kependudukan,S-3,Pascasarjana,2015,0.0,1.0,0.0
+47001,Doktor Kimia,S-3,MIPA,2015,8.0,16.0,9.0
+63001,Doktor Manajemen dan Kebijakan Publik,S-3,ISIPOL,2015,5.0,5.0,5.0
+44002,Doktor Matematika,S-3,MIPA,2015,8.0,5.0,8.0
+95021,Doktor Pengkajian Amerika,S-3,Ilmu Budaya,2015,4.0,8.0,1.0
+91001,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,S-3,Pascasarjana,2015,7.0,3.0,8.0
+54003,Doktor Penyuluhan dan Komunikasi Pembangunan,S-3,Pascasarjana,2015,4.0,7.0,7.0
+35001,Doktor Perencanaan Wilayah dan Kota,S-3,Teknik,2015,0.0,0.0,0.0
+54062,Doktor Sain Veteriner,S-3,Kedokteran Hewan,2015,6.0,3.0,4.0
+69001,Doktor Sosiologi,S-3,ISIPOL,2015,2.0,7.0,0.0
+20001,Doktor Teknik Elektro,S-3,Teknik,2015,20.0,13.0,18.0
+34001,Doktor Teknik Geologi,S-3,Teknik,2015,9.0,7.0,10.0
+29001,Doktor Teknik Geomatika,S-3,Teknik,2015,1.0,2.0,2.0
+26001,Doktor Teknik Industri,S-3,Teknik,2015,0.0,1.0,0.0
+24001,Doktor Teknik Kimia,S-3,Teknik,2015,4.0,3.0,4.0
+21001,Doktor Teknik Mesin,S-3,Teknik,2015,14.0,11.0,12.0
+22001,Doktor Teknik Sipil,S-3,Teknik,2015,10.0,11.0,11.0
+41011,Doktor Teknologi Industri Pertanian,S-3,Teknologi Pertanian,2015,0.0,0.0,0.0
+76101,Magister Agama dan Lintas Budaya,S-2,Pascasarjana,2015,41.0,49.0,41.0
+54104,Magister Agronomi,S-2,Pertanian,2015,17.0,20.0,19.0
+62103,Magister Akuntansi,S-2,Ekonomika dan Bisnis,2015,240.0,187.0,246.0
+82101,Magister Antropologi,S-2,Ilmu Budaya,2015,27.0,28.0,25.0
+81101,Magister Arkeologi,S-2,Ilmu Budaya,2015,12.0,13.0,10.0
+23101,Magister Arsitektur,S-2,Teknik,2015,40.0,43.0,51.0
+68102,Magister Bioetika,S-2,Pascasarjana,2015,0.0,0.0,0.0
+46101,Magister Biologi,S-2,Biologi,2015,49.0,69.0,93.0
+46102,Magister Bioteknologi,S-2,Pascasarjana,2015,29.0,31.0,35.0
+54102,Magister Ekonomi Pertanian,S-2,Pertanian,2015,20.0,14.0,15.0
+60102,Magister Ekonomika Pembangunan,S-2,Ekonomika dan Bisnis,2015,121.0,223.0,139.0
+48102,Magister Farmasi Klinik,S-2,Farmasi,2015,38.0,43.0,0.0
+75101,Magister Filsafat,S-2,Filsafat,2015,15.0,14.0,9.0
+45101,Magister Fisika,S-2,MIPA,2015,62.0,58.0,71.0
+54111,Magister Fitopatologi,S-2,Pertanian,2015,17.0,5.0,13.0
+51101,Magister Geografi,S-2,Geografi,2015,46.0,35.0,32.0
+74105,Magister Hukum Bisnis dan Kenegaraan,S-2,Hukum,2015,108.0,95.0,85.0
+74104,Magister Hukum Kesehatan,S-2,Hukum,2015,11.0,23.0,14.0
+74103,Magister Hukum Litigasi,S-2,Hukum,2015,20.0,25.0,20.0
+63102,Magister Ilmu Administrasi Publik,S-2,ISIPOL,2015,68.0,64.0,66.0
+11101,Magister Ilmu Biomedik,S-2,KKMK,2015,44.0,57.0,51.0
+41103,Magister Ilmu dan Teknologi Pangan,S-2,Teknologi Pertanian,2015,38.0,46.0,40.0
+48101,Magister Ilmu Farmasi,S-2,Farmasi,2015,66.0,62.0,107.0
+54106,Magister Ilmu Hama Tanaman,S-2,Pertanian,2015,20.0,9.0,5.0
+64101,Magister Ilmu Hubungan Internasional,S-2,ISIPOL,2015,40.0,39.0,95.0
+74101,Magister Ilmu Hukum,S-2,Hukum,2015,54.0,46.0,65.0
+74171,Magister Ilmu Hukum (Kampus Jakarta),S-2,Hukum,2015,136.0,103.0,147.0
+12101,Magister Ilmu Kedokteran Gigi,S-2,Kedokteran Gigi,2015,5.0,7.0,9.0
+12102,Magister Ilmu Kedokteran Gigi Klinis,S-2,Kedokteran Gigi,2015,0.0,12.0,15.0
+11103,Magister Ilmu Kedokteran Klinis,S-2,KKMK,2015,82.0,51.0,96.0
+11104,Magister Ilmu Kedokteran Tropis,S-2,KKMK,2015,11.0,20.0,17.0
+54151,Magister Ilmu Kehutanan,S-2,Kehutanan,2015,50.0,39.0,40.0
+13101,Magister Ilmu Kesehatan Masyarakat,S-2,KKMK,2015,273.0,247.0,255.0
+55101,Magister Ilmu Komputer,S-2,MIPA,2015,73.0,67.0,84.0
+70101,Magister Ilmu Komunikasi,S-2,ISIPOL,2015,50.0,82.0,77.0
+95129,Magister Ilmu Lingkungan,S-2,Pascasarjana,2015,77.0,76.0,86.0
+11109,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,S-2,KKMK,2015,12.0,12.0,13.0
+54146,Magister Ilmu Perikanan,S-2,Pertanian,2015,8.0,6.0,0.0
+54131,Magister Ilmu Peternakan,S-2,Peternakan,2015,41.0,35.0,39.0
+54105,Magister Ilmu Tanah,S-2,Pertanian,2015,7.0,11.0,7.0
+95127,Magister Kajian Budaya dan Media,S-2,Pascasarjana,2015,30.0,42.0,29.0
+95124,Magister Kajian Budaya Timur Tengah,S-2,Ilmu Budaya,2015,0.0,0.0,0.0
+95104,Magister Kajian Pariwisata,S-2,Pascasarjana,2015,26.0,33.0,21.0
+13163,Magister Kebijakan dan Manajemen Kesehatan,S-2,KKMK,2015,0.0,0.0,0.0
+74102,Magister Kenotariatan,S-2,Hukum,2015,188.0,198.0,175.0
+95107,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),S-2,Pascasarjana,2015,6.0,0.0,12.0
+95102,Magister Kependudukan,S-2,Pascasarjana,2015,9.0,5.0,8.0
+14101,Magister Keperawatan,S-2,KKMK,2015,54.0,82.0,29.0
+95128,Magister Ketahanan Nasional,S-2,Pascasarjana,2015,40.0,41.0,57.0
+47101,Magister Kimia,S-2,MIPA,2015,66.0,62.0,75.0
+79102,Magister Linguistik,S-2,Ilmu Budaya,2015,52.0,64.0,59.0
+61101,Magister Manajemen,S-2,Ekonomika dan Bisnis,2015,239.0,239.0,289.0
+61171,Magister Manajemen (Kampus Jakarta),S-2,Ekonomika dan Bisnis,2015,286.0,288.0,453.0
+54101,Magister Manajemen Agribisnis,S-2,Pertanian,2015,29.0,59.0,16.0
+61104,Magister Manajemen Bencana,S-2,Pascasarjana,2015,9.0,7.0,9.0
+63101,Magister Manajemen dan Kebijakan Publik,S-2,ISIPOL,2015,36.0,52.0,29.0
+48105,Magister Manajemen Farmasi,S-2,Farmasi,2015,0.0,0.0,0.0
+86105,Magister Manajemen Pendidikan Tinggi,S-2,Pascasarjana,2015,17.0,16.0,18.0
+44101,Magister Matematika,S-2,MIPA,2015,47.0,51.0,75.0
+86102,Magister Pembangunan Sosial dan Kesejahteraan,S-2,ISIPOL,2015,19.0,23.0,36.0
+54107,Magister Pemuliaan Tanaman,S-2,Pertanian,2015,3.0,7.0,6.0
+51111,Magister Penginderaan Jauh,S-2,Geografi,2015,16.0,15.0,11.0
+95121,Magister Pengkajian Amerika,S-2,Ilmu Budaya,2015,9.0,16.0,18.0
+91101,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,S-2,Pascasarjana,2015,19.0,17.0,28.0
+54103,Magister Penyuluhan dan Komunikasi Pembangunan,S-2,Pascasarjana,2015,8.0,21.0,12.0
+95103,Magister Perencanaan Wilayah dan Kota,S-2,Teknik,2015,83.0,87.0,83.0
+67101,Magister Politik dan Pemerintahan,S-2,ISIPOL,2015,43.0,31.0,44.0
+73101,Magister Psikologi,S-2,Psikologi,2015,78.0,63.0,73.0
+73103,Magister Psikologi Profesi,S-2,Psikologi,2015,87.0,99.0,98.0
+35102,Magister Rancang Kota,S-2,Teknik,2015,0.0,0.0,0.0
+62101,Magister Sains Akuntansi,S-2,Ekonomika dan Bisnis,2015,56.0,64.0,46.0
+60101,Magister Sains Ilmu Ekonomi,S-2,Ekonomika dan Bisnis,2015,15.0,28.0,25.0
+61102,Magister Sains Manajemen,S-2,Ekonomika dan Bisnis,2015,40.0,73.0,48.0
+54162,Magister Sains Veteriner,S-2,Kedokteran Hewan,2015,54.0,29.0,16.0
+79101,Magister Sastra,S-2,Ilmu Budaya,2015,27.0,56.0,26.0
+80101,Magister Sejarah,S-2,Ilmu Budaya,2015,7.0,15.0,10.0
+22102,Magister Sistem dan Teknik Transportasi,S-2,Teknik,2015,44.0,53.0,50.0
+69101,Magister Sosiologi,S-2,ISIPOL,2015,27.0,23.0,22.0
+11123,Magister Teknik Biomedis,S-2,Pascasarjana,2015,0.0,0.0,0.0
+20101,Magister Teknik Elektro,S-2,Teknik,2015,123.0,69.0,160.0
+30101,Magister Teknik Fisika,S-2,Teknik,2015,0.0,10.0,0.0
+34101,Magister Teknik Geologi,S-2,Teknik,2015,34.0,42.0,34.0
+29101,Magister Teknik Geomatika,S-2,Teknik,2015,24.0,19.0,21.0
+26101,Magister Teknik Industri,S-2,Teknik,2015,36.0,38.0,41.0
+24101,Magister Teknik Kimia,S-2,Teknik,2015,32.0,46.0,24.0
+21101,Magister Teknik Mesin,S-2,Teknik,2015,48.0,63.0,33.0
+22105,Magister Teknik Pengelolaan Bencana Alam,S-2,Teknik,2015,20.0,13.0,30.0
+41101,Magister Teknik Pertanian,S-2,Teknologi Pertanian,2015,5.0,6.0,10.0
+22101,Magister Teknik Sipil,S-2,Teknik,2015,91.0,71.0,66.0
+31103,Magister Teknik Sistem,S-2,Teknik,2015,11.0,29.0,27.0
+41133,Magister Teknologi Hasil Perkebunan,S-2,Teknologi Pertanian,2015,3.0,6.0,7.0
+41111,Magister Teknologi Industri Pertanian,S-2,Teknologi Pertanian,2015,7.0,15.0,6.0
+59101,Magister Teknologi informasi,S-2,Teknik,2015,16.0,64.0,0.0
+82001,Doktor Antropologi,S-3,Ilmu Budaya,2016,0.0,0.0,0.0
+23001,Doktor Arsitektur,S-3,Teknik,2016,7.0,6.0,2.0
+46001,Doktor Biologi,S-3,Biologi,2016,8.0,6.0,4.0
+46002,Doktor Bioteknologi,S-3,Pascasarjana,2016,4.0,7.0,2.0
+75001,Doktor Filsafat,S-3,Filsafat,2016,13.0,8.0,11.0
+45001,Doktor Fisika,S-3,MIPA,2016,6.0,3.0,9.0
+63002,Doktor Ilmu Administrasi Publik,S-3,ISIPOL,2016,2.0,2.0,3.0
+62001,Doktor Ilmu Akuntansi,S-3,Ekonomika dan Bisnis,2016,8.0,5.0,5.0
+60001,Doktor Ilmu Ekonomi,S-3,Ekonomika dan Bisnis,2016,4.0,2.0,5.0
+48001,Doktor Ilmu Farmasi,S-3,Farmasi,2016,19.0,16.0,19.0
+51001,Doktor Ilmu Geografi,S-3,Geografi,2016,9.0,10.0,10.0
+74001,Doktor Ilmu Hukum,S-3,Hukum,2016,8.0,14.0,18.0
+11001,Doktor Ilmu Kedokteran dan Kesehatan,S-3,KKMK,2016,59.0,44.0,37.0
+12001,Doktor Ilmu Kedokteran Gigi,S-3,Kedokteran Gigi,2016,7.0,2.0,8.0
+54051,Doktor Ilmu Kehutanan,S-3,Kehutanan,2016,12.0,16.0,14.0
+95028,Doktor Ilmu Ketahanan Nasional,S-3,Pascasarjana,2016,0.0,0.0,0.0
+55001,Doktor Ilmu Komputer,S-3,MIPA,2016,18.0,9.0,11.0
+70001,Doktor Ilmu Komunikasi,S-3,ISIPOL,2016,0.0,0.0,0.0
+95029,Doktor Ilmu Lingkungan,S-3,Pascasarjana,2016,7.0,6.0,6.0
+61001,Doktor Ilmu Manajemen,S-3,Ekonomika dan Bisnis,2016,17.0,7.0,10.0
+41021,Doktor Ilmu Pangan,S-3,Teknologi Pertanian,2016,6.0,10.0,12.0
+54001,Doktor Ilmu Pertanian,S-3,Pertanian,2016,25.0,17.0,20.0
+54031,Doktor Ilmu Peternakan,S-3,Peternakan,2016,17.0,4.0,6.0
+67001,Doktor Ilmu Politik,S-3,ISIPOL,2016,7.0,7.0,6.0
+73001,Doktor Ilmu Psikologi,S-3,Psikologi,2016,12.0,11.0,13.0
+41001,Doktor Ilmu Teknik Pertanian,S-3,Teknologi Pertanian,2016,3.0,6.0,1.0
+95031,Doktor Ilmu-Ilmu Humaniora,S-3,Ilmu Budaya,2016,33.0,28.0,13.0
+76002,Doktor Inter-Religious Studies,S-3,Pascasarjana,2016,5.0,6.0,5.0
+95027,Doktor Kajian Budaya dan Media,S-3,Pascasarjana,2016,9.0,4.0,12.0
+95004,Doktor Kajian Pariwisata,S-3,Pascasarjana,2016,0.0,0.0,5.0
+95007,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),S-3,Pascasarjana,2016,11.0,11.0,9.0
+95002,Doktor Kependudukan,S-3,Pascasarjana,2016,1.0,4.0,0.0
+47001,Doktor Kimia,S-3,MIPA,2016,16.0,11.0,8.0
+63001,Doktor Manajemen dan Kebijakan Publik,S-3,ISIPOL,2016,5.0,5.0,5.0
+44002,Doktor Matematika,S-3,MIPA,2016,5.0,8.0,8.0
+95021,Doktor Pengkajian Amerika,S-3,Ilmu Budaya,2016,8.0,1.0,4.0
+91001,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,S-3,Pascasarjana,2016,3.0,7.0,7.0
+54003,Doktor Penyuluhan dan Komunikasi Pembangunan,S-3,Pascasarjana,2016,7.0,8.0,4.0
+35001,Doktor Perencanaan Wilayah dan Kota,S-3,Teknik,2016,0.0,0.0,0.0
+54062,Doktor Sain Veteriner,S-3,Kedokteran Hewan,2016,3.0,5.0,6.0
+69001,Doktor Sosiologi,S-3,ISIPOL,2016,7.0,3.0,2.0
+20001,Doktor Teknik Elektro,S-3,Teknik,2016,13.0,13.0,20.0
+34001,Doktor Teknik Geologi,S-3,Teknik,2016,7.0,2.0,9.0
+29001,Doktor Teknik Geomatika,S-3,Teknik,2016,2.0,1.0,1.0
+26001,Doktor Teknik Industri,S-3,Teknik,2016,1.0,4.0,0.0
+24001,Doktor Teknik Kimia,S-3,Teknik,2016,3.0,11.0,4.0
+21001,Doktor Teknik Mesin,S-3,Teknik,2016,11.0,7.0,14.0
+22001,Doktor Teknik Sipil,S-3,Teknik,2016,11.0,8.0,10.0
+41011,Doktor Teknologi Industri Pertanian,S-3,Teknologi Pertanian,2016,0.0,0.0,0.0
+76101,Magister Agama dan Lintas Budaya,S-2,Pascasarjana,2016,49.0,47.0,41.0
+54104,Magister Agronomi,S-2,Pertanian,2016,20.0,14.0,17.0
+62103,Magister Akuntansi,S-2,Ekonomika dan Bisnis,2016,187.0,85.0,240.0
+82101,Magister Antropologi,S-2,Ilmu Budaya,2016,28.0,29.0,27.0
+81101,Magister Arkeologi,S-2,Ilmu Budaya,2016,13.0,8.0,12.0
+23101,Magister Arsitektur,S-2,Teknik,2016,43.0,39.0,40.0
+68102,Magister Bioetika,S-2,Pascasarjana,2016,0.0,0.0,0.0
+46101,Magister Biologi,S-2,Biologi,2016,69.0,81.0,49.0
+46102,Magister Bioteknologi,S-2,Pascasarjana,2016,31.0,37.0,29.0
+54102,Magister Ekonomi Pertanian,S-2,Pertanian,2016,14.0,17.0,20.0
+60102,Magister Ekonomika Pembangunan,S-2,Ekonomika dan Bisnis,2016,223.0,139.0,121.0
+48102,Magister Farmasi Klinik,S-2,Farmasi,2016,43.0,41.0,38.0
+75101,Magister Filsafat,S-2,Filsafat,2016,14.0,20.0,15.0
+45101,Magister Fisika,S-2,MIPA,2016,58.0,55.0,62.0
+54111,Magister Fitopatologi,S-2,Pertanian,2016,5.0,10.0,17.0
+51101,Magister Geografi,S-2,Geografi,2016,35.0,30.0,46.0
+74105,Magister Hukum Bisnis dan Kenegaraan,S-2,Hukum,2016,95.0,83.0,108.0
+74104,Magister Hukum Kesehatan,S-2,Hukum,2016,23.0,16.0,11.0
+74103,Magister Hukum Litigasi,S-2,Hukum,2016,25.0,35.0,20.0
+63102,Magister Ilmu Administrasi Publik,S-2,ISIPOL,2016,64.0,65.0,68.0
+11101,Magister Ilmu Biomedik,S-2,KKMK,2016,57.0,44.0,44.0
+41103,Magister Ilmu dan Teknologi Pangan,S-2,Teknologi Pertanian,2016,46.0,41.0,38.0
+48101,Magister Ilmu Farmasi,S-2,Farmasi,2016,62.0,75.0,66.0
+54106,Magister Ilmu Hama Tanaman,S-2,Pertanian,2016,9.0,8.0,20.0
+64101,Magister Ilmu Hubungan Internasional,S-2,ISIPOL,2016,39.0,27.0,40.0
+74101,Magister Ilmu Hukum,S-2,Hukum,2016,46.0,41.0,54.0
+74171,Magister Ilmu Hukum (Kampus Jakarta),S-2,Hukum,2016,103.0,102.0,136.0
+12101,Magister Ilmu Kedokteran Gigi,S-2,Kedokteran Gigi,2016,7.0,8.0,5.0
+12102,Magister Ilmu Kedokteran Gigi Klinis,S-2,Kedokteran Gigi,2016,12.0,8.0,0.0
+11103,Magister Ilmu Kedokteran Klinis,S-2,KKMK,2016,51.0,39.0,82.0
+11104,Magister Ilmu Kedokteran Tropis,S-2,KKMK,2016,20.0,15.0,11.0
+54151,Magister Ilmu Kehutanan,S-2,Kehutanan,2016,39.0,43.0,50.0
+13101,Magister Ilmu Kesehatan Masyarakat,S-2,KKMK,2016,247.0,212.0,273.0
+55101,Magister Ilmu Komputer,S-2,MIPA,2016,67.0,63.0,73.0
+70101,Magister Ilmu Komunikasi,S-2,ISIPOL,2016,82.0,86.0,50.0
+95129,Magister Ilmu Lingkungan,S-2,Pascasarjana,2016,76.0,61.0,77.0
+11109,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,S-2,KKMK,2016,12.0,5.0,12.0
+54146,Magister Ilmu Perikanan,S-2,Pertanian,2016,6.0,5.0,8.0
+54131,Magister Ilmu Peternakan,S-2,Peternakan,2016,35.0,35.0,41.0
+54105,Magister Ilmu Tanah,S-2,Pertanian,2016,11.0,10.0,7.0
+95127,Magister Kajian Budaya dan Media,S-2,Pascasarjana,2016,42.0,45.0,30.0
+95124,Magister Kajian Budaya Timur Tengah,S-2,Ilmu Budaya,2016,0.0,0.0,0.0
+95104,Magister Kajian Pariwisata,S-2,Pascasarjana,2016,33.0,31.0,26.0
+13163,Magister Kebijakan dan Manajemen Kesehatan,S-2,KKMK,2016,0.0,0.0,0.0
+74102,Magister Kenotariatan,S-2,Hukum,2016,198.0,167.0,188.0
+95107,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),S-2,Pascasarjana,2016,0.0,0.0,6.0
+95102,Magister Kependudukan,S-2,Pascasarjana,2016,5.0,27.0,9.0
+14101,Magister Keperawatan,S-2,KKMK,2016,82.0,48.0,54.0
+95128,Magister Ketahanan Nasional,S-2,Pascasarjana,2016,41.0,48.0,40.0
+47101,Magister Kimia,S-2,MIPA,2016,62.0,64.0,66.0
+79102,Magister Linguistik,S-2,Ilmu Budaya,2016,64.0,76.0,52.0
+61101,Magister Manajemen,S-2,Ekonomika dan Bisnis,2016,239.0,294.0,239.0
+61171,Magister Manajemen (Kampus Jakarta),S-2,Ekonomika dan Bisnis,2016,288.0,391.0,286.0
+54101,Magister Manajemen Agribisnis,S-2,Pertanian,2016,59.0,35.0,29.0
+61104,Magister Manajemen Bencana,S-2,Pascasarjana,2016,7.0,20.0,9.0
+63101,Magister Manajemen dan Kebijakan Publik,S-2,ISIPOL,2016,52.0,40.0,36.0
+48105,Magister Manajemen Farmasi,S-2,Farmasi,2016,0.0,0.0,0.0
+86105,Magister Manajemen Pendidikan Tinggi,S-2,Pascasarjana,2016,16.0,22.0,17.0
+44101,Magister Matematika,S-2,MIPA,2016,51.0,64.0,47.0
+86102,Magister Pembangunan Sosial dan Kesejahteraan,S-2,ISIPOL,2016,23.0,28.0,19.0
+54107,Magister Pemuliaan Tanaman,S-2,Pertanian,2016,7.0,6.0,3.0
+51111,Magister Penginderaan Jauh,S-2,Geografi,2016,15.0,23.0,16.0
+95121,Magister Pengkajian Amerika,S-2,Ilmu Budaya,2016,16.0,19.0,9.0
+91101,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,S-2,Pascasarjana,2016,17.0,21.0,19.0
+54103,Magister Penyuluhan dan Komunikasi Pembangunan,S-2,Pascasarjana,2016,21.0,23.0,8.0
+95103,Magister Perencanaan Wilayah dan Kota,S-2,Teknik,2016,87.0,0.0,83.0
+67101,Magister Politik dan Pemerintahan,S-2,ISIPOL,2016,31.0,53.0,43.0
+73101,Magister Psikologi,S-2,Psikologi,2016,63.0,68.0,78.0
+73103,Magister Psikologi Profesi,S-2,Psikologi,2016,99.0,101.0,87.0
+35102,Magister Rancang Kota,S-2,Teknik,2016,0.0,0.0,0.0
+62101,Magister Sains Akuntansi,S-2,Ekonomika dan Bisnis,2016,64.0,60.0,56.0
+60101,Magister Sains Ilmu Ekonomi,S-2,Ekonomika dan Bisnis,2016,28.0,24.0,15.0
+61102,Magister Sains Manajemen,S-2,Ekonomika dan Bisnis,2016,73.0,62.0,40.0
+54162,Magister Sains Veteriner,S-2,Kedokteran Hewan,2016,29.0,48.0,54.0
+79101,Magister Sastra,S-2,Ilmu Budaya,2016,56.0,53.0,27.0
+80101,Magister Sejarah,S-2,Ilmu Budaya,2016,15.0,16.0,7.0
+22102,Magister Sistem dan Teknik Transportasi,S-2,Teknik,2016,53.0,53.0,44.0
+69101,Magister Sosiologi,S-2,ISIPOL,2016,23.0,41.0,27.0
+11123,Magister Teknik Biomedis,S-2,Pascasarjana,2016,0.0,0.0,0.0
+20101,Magister Teknik Elektro,S-2,Teknik,2016,69.0,63.0,123.0
+30101,Magister Teknik Fisika,S-2,Teknik,2016,10.0,6.0,0.0
+34101,Magister Teknik Geologi,S-2,Teknik,2016,42.0,40.0,34.0
+29101,Magister Teknik Geomatika,S-2,Teknik,2016,19.0,18.0,24.0
+26101,Magister Teknik Industri,S-2,Teknik,2016,38.0,33.0,36.0
+24101,Magister Teknik Kimia,S-2,Teknik,2016,46.0,46.0,32.0
+21101,Magister Teknik Mesin,S-2,Teknik,2016,63.0,85.0,48.0
+22105,Magister Teknik Pengelolaan Bencana Alam,S-2,Teknik,2016,13.0,12.0,20.0
+41101,Magister Teknik Pertanian,S-2,Teknologi Pertanian,2016,6.0,9.0,5.0
+22101,Magister Teknik Sipil,S-2,Teknik,2016,71.0,70.0,91.0
+31103,Magister Teknik Sistem,S-2,Teknik,2016,29.0,20.0,11.0
+41133,Magister Teknologi Hasil Perkebunan,S-2,Teknologi Pertanian,2016,6.0,8.0,3.0
+41111,Magister Teknologi Industri Pertanian,S-2,Teknologi Pertanian,2016,15.0,15.0,7.0
+59101,Magister Teknologi informasi,S-2,Teknik,2016,64.0,46.0,16.0
+82001,Doktor Antropologi,S-3,Ilmu Budaya,2017,0.0,0.0,0.0
+23001,Doktor Arsitektur,S-3,Teknik,2017,6.0,11.0,7.0
+46001,Doktor Biologi,S-3,Biologi,2017,6.0,10.0,8.0
+46002,Doktor Bioteknologi,S-3,Pascasarjana,2017,7.0,1.0,4.0
+75001,Doktor Filsafat,S-3,Filsafat,2017,8.0,3.0,13.0
+45001,Doktor Fisika,S-3,MIPA,2017,3.0,2.0,6.0
+63002,Doktor Ilmu Administrasi Publik,S-3,ISIPOL,2017,2.0,4.0,2.0
+62001,Doktor Ilmu Akuntansi,S-3,Ekonomika dan Bisnis,2017,5.0,10.0,8.0
+60001,Doktor Ilmu Ekonomi,S-3,Ekonomika dan Bisnis,2017,2.0,5.0,4.0
+48001,Doktor Ilmu Farmasi,S-3,Farmasi,2017,16.0,12.0,19.0
+51001,Doktor Ilmu Geografi,S-3,Geografi,2017,10.0,8.0,9.0
+74001,Doktor Ilmu Hukum,S-3,Hukum,2017,14.0,5.0,8.0
+11001,Doktor Ilmu Kedokteran dan Kesehatan,S-3,KKMK,2017,44.0,49.0,59.0
+12001,Doktor Ilmu Kedokteran Gigi,S-3,Kedokteran Gigi,2017,2.0,3.0,7.0
+54051,Doktor Ilmu Kehutanan,S-3,Kehutanan,2017,16.0,2.0,12.0
+95028,Doktor Ilmu Ketahanan Nasional,S-3,Pascasarjana,2017,0.0,0.0,0.0
+55001,Doktor Ilmu Komputer,S-3,MIPA,2017,9.0,14.0,18.0
+70001,Doktor Ilmu Komunikasi,S-3,ISIPOL,2017,0.0,0.0,0.0
+95029,Doktor Ilmu Lingkungan,S-3,Pascasarjana,2017,6.0,7.0,7.0
+61001,Doktor Ilmu Manajemen,S-3,Ekonomika dan Bisnis,2017,7.0,6.0,17.0
+41021,Doktor Ilmu Pangan,S-3,Teknologi Pertanian,2017,10.0,5.0,6.0
+54001,Doktor Ilmu Pertanian,S-3,Pertanian,2017,17.0,13.0,25.0
+54031,Doktor Ilmu Peternakan,S-3,Peternakan,2017,4.0,2.0,17.0
+67001,Doktor Ilmu Politik,S-3,ISIPOL,2017,7.0,6.0,7.0
+73001,Doktor Ilmu Psikologi,S-3,Psikologi,2017,11.0,10.0,12.0
+41001,Doktor Ilmu Teknik Pertanian,S-3,Teknologi Pertanian,2017,6.0,0.0,3.0
+95031,Doktor Ilmu-Ilmu Humaniora,S-3,Ilmu Budaya,2017,28.0,30.0,33.0
+76002,Doktor Inter-Religious Studies,S-3,Pascasarjana,2017,6.0,4.0,5.0
+95027,Doktor Kajian Budaya dan Media,S-3,Pascasarjana,2017,4.0,9.0,9.0
+95004,Doktor Kajian Pariwisata,S-3,Pascasarjana,2017,0.0,10.0,0.0
+95007,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),S-3,Pascasarjana,2017,11.0,10.0,11.0
+95002,Doktor Kependudukan,S-3,Pascasarjana,2017,4.0,1.0,1.0
+47001,Doktor Kimia,S-3,MIPA,2017,11.0,5.0,16.0
+63001,Doktor Manajemen dan Kebijakan Publik,S-3,ISIPOL,2017,5.0,3.0,5.0
+44002,Doktor Matematika,S-3,MIPA,2017,8.0,7.0,5.0
+95021,Doktor Pengkajian Amerika,S-3,Ilmu Budaya,2017,1.0,2.0,8.0
+91001,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,S-3,Pascasarjana,2017,7.0,1.0,3.0
+54003,Doktor Penyuluhan dan Komunikasi Pembangunan,S-3,Pascasarjana,2017,8.0,4.0,7.0
+35001,Doktor Perencanaan Wilayah dan Kota,S-3,Teknik,2017,0.0,0.0,0.0
+54062,Doktor Sain Veteriner,S-3,Kedokteran Hewan,2017,5.0,2.0,3.0
+69001,Doktor Sosiologi,S-3,ISIPOL,2017,3.0,2.0,7.0
+20001,Doktor Teknik Elektro,S-3,Teknik,2017,13.0,16.0,13.0
+34001,Doktor Teknik Geologi,S-3,Teknik,2017,2.0,3.0,7.0
+29001,Doktor Teknik Geomatika,S-3,Teknik,2017,1.0,3.0,2.0
+26001,Doktor Teknik Industri,S-3,Teknik,2017,4.0,4.0,1.0
+24001,Doktor Teknik Kimia,S-3,Teknik,2017,11.0,5.0,3.0
+21001,Doktor Teknik Mesin,S-3,Teknik,2017,7.0,7.0,11.0
+22001,Doktor Teknik Sipil,S-3,Teknik,2017,8.0,10.0,11.0
+41011,Doktor Teknologi Industri Pertanian,S-3,Teknologi Pertanian,2017,0.0,0.0,0.0
+76101,Magister Agama dan Lintas Budaya,S-2,Pascasarjana,2017,47.0,35.0,49.0
+54104,Magister Agronomi,S-2,Pertanian,2017,14.0,22.0,20.0
+62103,Magister Akuntansi,S-2,Ekonomika dan Bisnis,2017,85.0,89.0,187.0
+82101,Magister Antropologi,S-2,Ilmu Budaya,2017,29.0,22.0,28.0
+81101,Magister Arkeologi,S-2,Ilmu Budaya,2017,8.0,13.0,13.0
+23101,Magister Arsitektur,S-2,Teknik,2017,39.0,42.0,43.0
+68102,Magister Bioetika,S-2,Pascasarjana,2017,0.0,10.0,0.0
+46101,Magister Biologi,S-2,Biologi,2017,81.0,42.0,69.0
+46102,Magister Bioteknologi,S-2,Pascasarjana,2017,37.0,32.0,31.0
+54102,Magister Ekonomi Pertanian,S-2,Pertanian,2017,17.0,13.0,14.0
+60102,Magister Ekonomika Pembangunan,S-2,Ekonomika dan Bisnis,2017,139.0,129.0,223.0
+48102,Magister Farmasi Klinik,S-2,Farmasi,2017,41.0,39.0,43.0
+75101,Magister Filsafat,S-2,Filsafat,2017,20.0,24.0,14.0
+45101,Magister Fisika,S-2,MIPA,2017,55.0,47.0,58.0
+54111,Magister Fitopatologi,S-2,Pertanian,2017,10.0,11.0,5.0
+51101,Magister Geografi,S-2,Geografi,2017,30.0,32.0,35.0
+74105,Magister Hukum Bisnis dan Kenegaraan,S-2,Hukum,2017,83.0,81.0,95.0
+74104,Magister Hukum Kesehatan,S-2,Hukum,2017,16.0,7.0,23.0
+74103,Magister Hukum Litigasi,S-2,Hukum,2017,35.0,21.0,25.0
+63102,Magister Ilmu Administrasi Publik,S-2,ISIPOL,2017,65.0,78.0,64.0
+11101,Magister Ilmu Biomedik,S-2,KKMK,2017,44.0,34.0,57.0
+41103,Magister Ilmu dan Teknologi Pangan,S-2,Teknologi Pertanian,2017,41.0,51.0,46.0
+48101,Magister Ilmu Farmasi,S-2,Farmasi,2017,75.0,50.0,62.0
+54106,Magister Ilmu Hama Tanaman,S-2,Pertanian,2017,8.0,11.0,9.0
+64101,Magister Ilmu Hubungan Internasional,S-2,ISIPOL,2017,27.0,27.0,39.0
+74101,Magister Ilmu Hukum,S-2,Hukum,2017,41.0,37.0,46.0
+74171,Magister Ilmu Hukum (Kampus Jakarta),S-2,Hukum,2017,102.0,129.0,103.0
+12101,Magister Ilmu Kedokteran Gigi,S-2,Kedokteran Gigi,2017,8.0,22.0,7.0
+12102,Magister Ilmu Kedokteran Gigi Klinis,S-2,Kedokteran Gigi,2017,8.0,13.0,12.0
+11103,Magister Ilmu Kedokteran Klinis,S-2,KKMK,2017,39.0,48.0,51.0
+11104,Magister Ilmu Kedokteran Tropis,S-2,KKMK,2017,15.0,10.0,20.0
+54151,Magister Ilmu Kehutanan,S-2,Kehutanan,2017,43.0,32.0,39.0
+13101,Magister Ilmu Kesehatan Masyarakat,S-2,KKMK,2017,212.0,169.0,247.0
+55101,Magister Ilmu Komputer,S-2,MIPA,2017,63.0,45.0,67.0
+70101,Magister Ilmu Komunikasi,S-2,ISIPOL,2017,86.0,64.0,82.0
+95129,Magister Ilmu Lingkungan,S-2,Pascasarjana,2017,61.0,65.0,76.0
+11109,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,S-2,KKMK,2017,5.0,10.0,12.0
+54146,Magister Ilmu Perikanan,S-2,Pertanian,2017,5.0,17.0,6.0
+54131,Magister Ilmu Peternakan,S-2,Peternakan,2017,35.0,36.0,35.0
+54105,Magister Ilmu Tanah,S-2,Pertanian,2017,10.0,15.0,11.0
+95127,Magister Kajian Budaya dan Media,S-2,Pascasarjana,2017,45.0,34.0,42.0
+95124,Magister Kajian Budaya Timur Tengah,S-2,Ilmu Budaya,2017,0.0,0.0,0.0
+95104,Magister Kajian Pariwisata,S-2,Pascasarjana,2017,31.0,20.0,33.0
+13163,Magister Kebijakan dan Manajemen Kesehatan,S-2,KKMK,2017,0.0,0.0,0.0
+74102,Magister Kenotariatan,S-2,Hukum,2017,167.0,125.0,198.0
+95107,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),S-2,Pascasarjana,2017,0.0,21.0,0.0
+95102,Magister Kependudukan,S-2,Pascasarjana,2017,27.0,18.0,5.0
+14101,Magister Keperawatan,S-2,KKMK,2017,48.0,50.0,82.0
+95128,Magister Ketahanan Nasional,S-2,Pascasarjana,2017,48.0,52.0,41.0
+47101,Magister Kimia,S-2,MIPA,2017,64.0,58.0,62.0
+79102,Magister Linguistik,S-2,Ilmu Budaya,2017,76.0,76.0,64.0
+61101,Magister Manajemen,S-2,Ekonomika dan Bisnis,2017,294.0,307.0,239.0
+61171,Magister Manajemen (Kampus Jakarta),S-2,Ekonomika dan Bisnis,2017,391.0,371.0,288.0
+54101,Magister Manajemen Agribisnis,S-2,Pertanian,2017,35.0,34.0,59.0
+61104,Magister Manajemen Bencana,S-2,Pascasarjana,2017,20.0,14.0,7.0
+63101,Magister Manajemen dan Kebijakan Publik,S-2,ISIPOL,2017,40.0,28.0,52.0
+48105,Magister Manajemen Farmasi,S-2,Farmasi,2017,0.0,0.0,0.0
+86105,Magister Manajemen Pendidikan Tinggi,S-2,Pascasarjana,2017,22.0,20.0,16.0
+44101,Magister Matematika,S-2,MIPA,2017,64.0,46.0,51.0
+86102,Magister Pembangunan Sosial dan Kesejahteraan,S-2,ISIPOL,2017,28.0,26.0,23.0
+54107,Magister Pemuliaan Tanaman,S-2,Pertanian,2017,6.0,12.0,7.0
+51111,Magister Penginderaan Jauh,S-2,Geografi,2017,23.0,15.0,15.0
+95121,Magister Pengkajian Amerika,S-2,Ilmu Budaya,2017,19.0,19.0,16.0
+91101,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,S-2,Pascasarjana,2017,21.0,24.0,17.0
+54103,Magister Penyuluhan dan Komunikasi Pembangunan,S-2,Pascasarjana,2017,23.0,10.0,21.0
+95103,Magister Perencanaan Wilayah dan Kota,S-2,Teknik,2017,0.0,71.0,87.0
+67101,Magister Politik dan Pemerintahan,S-2,ISIPOL,2017,53.0,23.0,31.0
+73101,Magister Psikologi,S-2,Psikologi,2017,68.0,52.0,63.0
+73103,Magister Psikologi Profesi,S-2,Psikologi,2017,101.0,122.0,99.0
+35102,Magister Rancang Kota,S-2,Teknik,2017,0.0,0.0,0.0
+62101,Magister Sains Akuntansi,S-2,Ekonomika dan Bisnis,2017,60.0,44.0,64.0
+60101,Magister Sains Ilmu Ekonomi,S-2,Ekonomika dan Bisnis,2017,24.0,14.0,28.0
+61102,Magister Sains Manajemen,S-2,Ekonomika dan Bisnis,2017,62.0,44.0,73.0
+54162,Magister Sains Veteriner,S-2,Kedokteran Hewan,2017,48.0,31.0,29.0
+79101,Magister Sastra,S-2,Ilmu Budaya,2017,53.0,59.0,56.0
+80101,Magister Sejarah,S-2,Ilmu Budaya,2017,16.0,20.0,15.0
+22102,Magister Sistem dan Teknik Transportasi,S-2,Teknik,2017,53.0,44.0,53.0
+69101,Magister Sosiologi,S-2,ISIPOL,2017,41.0,33.0,23.0
+11123,Magister Teknik Biomedis,S-2,Pascasarjana,2017,0.0,0.0,0.0
+20101,Magister Teknik Elektro,S-2,Teknik,2017,63.0,27.0,69.0
+30101,Magister Teknik Fisika,S-2,Teknik,2017,6.0,8.0,10.0
+34101,Magister Teknik Geologi,S-2,Teknik,2017,40.0,31.0,42.0
+29101,Magister Teknik Geomatika,S-2,Teknik,2017,18.0,17.0,19.0
+26101,Magister Teknik Industri,S-2,Teknik,2017,33.0,39.0,38.0
+24101,Magister Teknik Kimia,S-2,Teknik,2017,46.0,48.0,46.0
+21101,Magister Teknik Mesin,S-2,Teknik,2017,85.0,24.0,63.0
+22105,Magister Teknik Pengelolaan Bencana Alam,S-2,Teknik,2017,12.0,14.0,13.0
+41101,Magister Teknik Pertanian,S-2,Teknologi Pertanian,2017,9.0,19.0,6.0
+22101,Magister Teknik Sipil,S-2,Teknik,2017,70.0,62.0,71.0
+31103,Magister Teknik Sistem,S-2,Teknik,2017,20.0,41.0,29.0
+41133,Magister Teknologi Hasil Perkebunan,S-2,Teknologi Pertanian,2017,8.0,8.0,6.0
+41111,Magister Teknologi Industri Pertanian,S-2,Teknologi Pertanian,2017,15.0,10.0,15.0
+59101,Magister Teknologi informasi,S-2,Teknik,2017,46.0,48.0,64.0
+82001,Doktor Antropologi,S-3,Ilmu Budaya,2018,0.0,0.0,0.0
+23001,Doktor Arsitektur,S-3,Teknik,2018,11.0,5.0,6.0
+46001,Doktor Biologi,S-3,Biologi,2018,10.0,12.0,6.0
+46002,Doktor Bioteknologi,S-3,Pascasarjana,2018,1.0,4.0,7.0
+75001,Doktor Filsafat,S-3,Filsafat,2018,3.0,12.0,8.0
+45001,Doktor Fisika,S-3,MIPA,2018,2.0,9.0,3.0
+63002,Doktor Ilmu Administrasi Publik,S-3,ISIPOL,2018,4.0,4.0,2.0
+62001,Doktor Ilmu Akuntansi,S-3,Ekonomika dan Bisnis,2018,10.0,8.0,5.0
+60001,Doktor Ilmu Ekonomi,S-3,Ekonomika dan Bisnis,2018,5.0,5.0,2.0
+48001,Doktor Ilmu Farmasi,S-3,Farmasi,2018,12.0,21.0,16.0
+51001,Doktor Ilmu Geografi,S-3,Geografi,2018,8.0,15.0,10.0
+74001,Doktor Ilmu Hukum,S-3,Hukum,2018,5.0,8.0,14.0
+11001,Doktor Ilmu Kedokteran dan Kesehatan,S-3,KKMK,2018,49.0,57.0,44.0
+12001,Doktor Ilmu Kedokteran Gigi,S-3,Kedokteran Gigi,2018,3.0,5.0,2.0
+54051,Doktor Ilmu Kehutanan,S-3,Kehutanan,2018,2.0,13.0,16.0
+95028,Doktor Ilmu Ketahanan Nasional,S-3,Pascasarjana,2018,0.0,0.0,0.0
+55001,Doktor Ilmu Komputer,S-3,MIPA,2018,14.0,22.0,9.0
+70001,Doktor Ilmu Komunikasi,S-3,ISIPOL,2018,0.0,0.0,0.0
+95029,Doktor Ilmu Lingkungan,S-3,Pascasarjana,2018,7.0,7.0,6.0
+61001,Doktor Ilmu Manajemen,S-3,Ekonomika dan Bisnis,2018,6.0,11.0,7.0
+41021,Doktor Ilmu Pangan,S-3,Teknologi Pertanian,2018,5.0,14.0,10.0
+54001,Doktor Ilmu Pertanian,S-3,Pertanian,2018,13.0,18.0,17.0
+54031,Doktor Ilmu Peternakan,S-3,Peternakan,2018,2.0,9.0,4.0
+67001,Doktor Ilmu Politik,S-3,ISIPOL,2018,6.0,5.0,7.0
+73001,Doktor Ilmu Psikologi,S-3,Psikologi,2018,10.0,7.0,11.0
+41001,Doktor Ilmu Teknik Pertanian,S-3,Teknologi Pertanian,2018,0.0,7.0,6.0
+95031,Doktor Ilmu-Ilmu Humaniora,S-3,Ilmu Budaya,2018,30.0,27.0,28.0
+76002,Doktor Inter-Religious Studies,S-3,Pascasarjana,2018,4.0,5.0,6.0
+95027,Doktor Kajian Budaya dan Media,S-3,Pascasarjana,2018,9.0,5.0,4.0
+95004,Doktor Kajian Pariwisata,S-3,Pascasarjana,2018,10.0,11.0,0.0
+95007,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),S-3,Pascasarjana,2018,10.0,30.0,11.0
+47001,Doktor Kimia,S-3,MIPA,2018,5.0,21.0,11.0
+63001,Doktor Manajemen dan Kebijakan Publik,S-3,ISIPOL,2018,3.0,6.0,5.0
+44002,Doktor Matematika,S-3,MIPA,2018,7.0,8.0,8.0
+95021,Doktor Pengkajian Amerika,S-3,Ilmu Budaya,2018,2.0,6.0,1.0
+91001,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,S-3,Pascasarjana,2018,1.0,3.0,7.0
+54003,Doktor Penyuluhan dan Komunikasi Pembangunan,S-3,Pascasarjana,2018,4.0,10.0,8.0
+35001,Doktor Perencanaan Wilayah dan Kota,S-3,Teknik,2018,0.0,0.0,0.0
+54062,Doktor Sain Veteriner,S-3,Kedokteran Hewan,2018,2.0,6.0,5.0
+69001,Doktor Sosiologi,S-3,ISIPOL,2018,2.0,7.0,3.0
+20001,Doktor Teknik Elektro,S-3,Teknik,2018,16.0,24.0,13.0
+34001,Doktor Teknik Geologi,S-3,Teknik,2018,3.0,2.0,2.0
+29001,Doktor Teknik Geomatika,S-3,Teknik,2018,3.0,3.0,1.0
+26001,Doktor Teknik Industri,S-3,Teknik,2018,4.0,12.0,4.0
+24001,Doktor Teknik Kimia,S-3,Teknik,2018,5.0,8.0,11.0
+21001,Doktor Teknik Mesin,S-3,Teknik,2018,7.0,8.0,7.0
+22001,Doktor Teknik Sipil,S-3,Teknik,2018,10.0,8.0,8.0
+41011,Doktor Teknologi Industri Pertanian,S-3,Teknologi Pertanian,2018,0.0,0.0,0.0
+76101,Magister Agama dan Lintas Budaya,S-2,Pascasarjana,2018,35.0,46.0,47.0
+54104,Magister Agronomi,S-2,Pertanian,2018,22.0,23.0,14.0
+62103,Magister Akuntansi,S-2,Ekonomika dan Bisnis,2018,89.0,122.0,85.0
+82101,Magister Antropologi,S-2,Ilmu Budaya,2018,22.0,23.0,29.0
+81101,Magister Arkeologi,S-2,Ilmu Budaya,2018,13.0,4.0,8.0
+23101,Magister Arsitektur,S-2,Teknik,2018,42.0,36.0,39.0
+68102,Magister Bioetika,S-2,Pascasarjana,2018,10.0,11.0,0.0
+46101,Magister Biologi,S-2,Biologi,2018,42.0,101.0,81.0
+46102,Magister Bioteknologi,S-2,Pascasarjana,2018,32.0,24.0,37.0
+54102,Magister Ekonomi Pertanian,S-2,Pertanian,2018,13.0,18.0,17.0
+60102,Magister Ekonomika Pembangunan,S-2,Ekonomika dan Bisnis,2018,129.0,154.0,139.0
+48102,Magister Farmasi Klinik,S-2,Farmasi,2018,39.0,34.0,41.0
+75101,Magister Filsafat,S-2,Filsafat,2018,24.0,11.0,20.0
+45101,Magister Fisika,S-2,MIPA,2018,47.0,40.0,55.0
+54111,Magister Fitopatologi,S-2,Pertanian,2018,11.0,15.0,10.0
+51101,Magister Geografi,S-2,Geografi,2018,32.0,31.0,30.0
+74105,Magister Hukum Bisnis dan Kenegaraan,S-2,Hukum,2018,81.0,57.0,83.0
+74104,Magister Hukum Kesehatan,S-2,Hukum,2018,7.0,6.0,16.0
+74103,Magister Hukum Litigasi,S-2,Hukum,2018,21.0,23.0,35.0
+63102,Magister Ilmu Administrasi Publik,S-2,ISIPOL,2018,78.0,86.0,65.0
+11101,Magister Ilmu Biomedik,S-2,KKMK,2018,34.0,32.0,44.0
+41103,Magister Ilmu dan Teknologi Pangan,S-2,Teknologi Pertanian,2018,51.0,37.0,41.0
+48101,Magister Ilmu Farmasi,S-2,Farmasi,2018,50.0,19.0,75.0
+54106,Magister Ilmu Hama Tanaman,S-2,Pertanian,2018,11.0,13.0,8.0
+64101,Magister Ilmu Hubungan Internasional,S-2,ISIPOL,2018,27.0,26.0,27.0
+74101,Magister Ilmu Hukum,S-2,Hukum,2018,37.0,43.0,41.0
+74171,Magister Ilmu Hukum (Kampus Jakarta),S-2,Hukum,2018,129.0,113.0,102.0
+12101,Magister Ilmu Kedokteran Gigi,S-2,Kedokteran Gigi,2018,22.0,5.0,8.0
+12102,Magister Ilmu Kedokteran Gigi Klinis,S-2,Kedokteran Gigi,2018,13.0,5.0,8.0
+11103,Magister Ilmu Kedokteran Klinis,S-2,KKMK,2018,48.0,80.0,39.0
+11104,Magister Ilmu Kedokteran Tropis,S-2,KKMK,2018,10.0,8.0,15.0
+54151,Magister Ilmu Kehutanan,S-2,Kehutanan,2018,32.0,37.0,43.0
+13101,Magister Ilmu Kesehatan Masyarakat,S-2,KKMK,2018,169.0,163.0,212.0
+55101,Magister Ilmu Komputer,S-2,MIPA,2018,45.0,58.0,63.0
+70101,Magister Ilmu Komunikasi,S-2,ISIPOL,2018,64.0,76.0,86.0
+95129,Magister Ilmu Lingkungan,S-2,Pascasarjana,2018,65.0,75.0,61.0
+11109,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,S-2,KKMK,2018,10.0,9.0,5.0
+54146,Magister Ilmu Perikanan,S-2,Pertanian,2018,17.0,13.0,5.0
+54131,Magister Ilmu Peternakan,S-2,Peternakan,2018,36.0,55.0,35.0
+54105,Magister Ilmu Tanah,S-2,Pertanian,2018,15.0,23.0,10.0
+95127,Magister Kajian Budaya dan Media,S-2,Pascasarjana,2018,34.0,37.0,45.0
+95124,Magister Kajian Budaya Timur Tengah,S-2,Ilmu Budaya,2018,0.0,0.0,0.0
+95104,Magister Kajian Pariwisata,S-2,Pascasarjana,2018,20.0,32.0,31.0
+13163,Magister Kebijakan dan Manajemen Kesehatan,S-2,KKMK,2018,0.0,0.0,0.0
+74102,Magister Kenotariatan,S-2,Hukum,2018,125.0,161.0,167.0
+95107,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),S-2,Pascasarjana,2018,21.0,41.0,0.0
+95102,Magister Kependudukan,S-2,Pascasarjana,2018,18.0,14.0,27.0
+14101,Magister Keperawatan,S-2,KKMK,2018,50.0,30.0,48.0
+95128,Magister Ketahanan Nasional,S-2,Pascasarjana,2018,52.0,33.0,48.0
+47101,Magister Kimia,S-2,MIPA,2018,58.0,51.0,64.0
+79102,Magister Linguistik,S-2,Ilmu Budaya,2018,76.0,51.0,76.0
+61101,Magister Manajemen,S-2,Ekonomika dan Bisnis,2018,307.0,345.0,294.0
+61171,Magister Manajemen (Kampus Jakarta),S-2,Ekonomika dan Bisnis,2018,371.0,430.0,391.0
+54101,Magister Manajemen Agribisnis,S-2,Pertanian,2018,34.0,26.0,35.0
+61104,Magister Manajemen Bencana,S-2,Pascasarjana,2018,14.0,10.0,20.0
+63101,Magister Manajemen dan Kebijakan Publik,S-2,ISIPOL,2018,28.0,43.0,40.0
+48105,Magister Manajemen Farmasi,S-2,Farmasi,2018,0.0,13.0,0.0
+86105,Magister Manajemen Pendidikan Tinggi,S-2,Pascasarjana,2018,20.0,20.0,22.0
+44101,Magister Matematika,S-2,MIPA,2018,46.0,37.0,64.0
+86102,Magister Pembangunan Sosial dan Kesejahteraan,S-2,ISIPOL,2018,26.0,31.0,28.0
+54107,Magister Pemuliaan Tanaman,S-2,Pertanian,2018,12.0,4.0,6.0
+51111,Magister Penginderaan Jauh,S-2,Geografi,2018,15.0,14.0,23.0
+95121,Magister Pengkajian Amerika,S-2,Ilmu Budaya,2018,19.0,25.0,19.0
+91101,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,S-2,Pascasarjana,2018,24.0,33.0,21.0
+54103,Magister Penyuluhan dan Komunikasi Pembangunan,S-2,Pascasarjana,2018,10.0,19.0,23.0
+95103,Magister Perencanaan Wilayah dan Kota,S-2,Teknik,2018,71.0,54.0,0.0
+67101,Magister Politik dan Pemerintahan,S-2,ISIPOL,2018,23.0,32.0,53.0
+73101,Magister Psikologi,S-2,Psikologi,2018,52.0,64.0,68.0
+73103,Magister Psikologi Profesi,S-2,Psikologi,2018,122.0,98.0,101.0
+35102,Magister Rancang Kota,S-2,Teknik,2018,0.0,0.0,0.0
+62101,Magister Sains Akuntansi,S-2,Ekonomika dan Bisnis,2018,44.0,51.0,60.0
+60101,Magister Sains Ilmu Ekonomi,S-2,Ekonomika dan Bisnis,2018,14.0,24.0,24.0
+61102,Magister Sains Manajemen,S-2,Ekonomika dan Bisnis,2018,44.0,40.0,62.0
+54162,Magister Sains Veteriner,S-2,Kedokteran Hewan,2018,31.0,34.0,48.0
+79101,Magister Sastra,S-2,Ilmu Budaya,2018,59.0,59.0,53.0
+80101,Magister Sejarah,S-2,Ilmu Budaya,2018,20.0,16.0,16.0
+22102,Magister Sistem dan Teknik Transportasi,S-2,Teknik,2018,44.0,38.0,53.0
+69101,Magister Sosiologi,S-2,ISIPOL,2018,33.0,39.0,41.0
+11123,Magister Teknik Biomedis,S-2,Pascasarjana,2018,0.0,0.0,0.0
+20101,Magister Teknik Elektro,S-2,Teknik,2018,27.0,36.0,63.0
+30101,Magister Teknik Fisika,S-2,Teknik,2018,8.0,9.0,6.0
+34101,Magister Teknik Geologi,S-2,Teknik,2018,31.0,25.0,40.0
+29101,Magister Teknik Geomatika,S-2,Teknik,2018,17.0,19.0,18.0
+26101,Magister Teknik Industri,S-2,Teknik,2018,39.0,37.0,33.0
+24101,Magister Teknik Kimia,S-2,Teknik,2018,48.0,55.0,46.0
+21101,Magister Teknik Mesin,S-2,Teknik,2018,24.0,42.0,85.0
+22105,Magister Teknik Pengelolaan Bencana Alam,S-2,Teknik,2018,14.0,4.0,12.0
+41101,Magister Teknik Pertanian,S-2,Teknologi Pertanian,2018,19.0,7.0,9.0
+22101,Magister Teknik Sipil,S-2,Teknik,2018,62.0,87.0,70.0
+31103,Magister Teknik Sistem,S-2,Teknik,2018,41.0,35.0,20.0
+41133,Magister Teknologi Hasil Perkebunan,S-2,Teknologi Pertanian,2018,8.0,5.0,8.0
+41111,Magister Teknologi Industri Pertanian,S-2,Teknologi Pertanian,2018,10.0,8.0,15.0
+59101,Magister Teknologi informasi,S-2,Teknik,2018,48.0,61.0,46.0
+82001,Doktor Antropologi,S-3,Ilmu Budaya,2019,0.0,4.0,0.0
+23001,Doktor Arsitektur,S-3,Teknik,2019,5.0,10.0,11.0
+46001,Doktor Biologi,S-3,Biologi,2019,12.0,10.0,10.0
+46002,Doktor Bioteknologi,S-3,Pascasarjana,2019,4.0,3.0,1.0
+75001,Doktor Filsafat,S-3,Filsafat,2019,12.0,8.0,3.0
+45001,Doktor Fisika,S-3,MIPA,2019,9.0,5.0,2.0
+63002,Doktor Ilmu Administrasi Publik,S-3,ISIPOL,2019,4.0,5.0,4.0
+62001,Doktor Ilmu Akuntansi,S-3,Ekonomika dan Bisnis,2019,8.0,12.0,10.0
+60001,Doktor Ilmu Ekonomi,S-3,Ekonomika dan Bisnis,2019,5.0,1.0,5.0
+48001,Doktor Ilmu Farmasi,S-3,Farmasi,2019,21.0,25.0,12.0
+51001,Doktor Ilmu Geografi,S-3,Geografi,2019,15.0,5.0,8.0
+74001,Doktor Ilmu Hukum,S-3,Hukum,2019,8.0,9.0,5.0
+11001,Doktor Ilmu Kedokteran dan Kesehatan,S-3,KKMK,2019,57.0,61.0,49.0
+12001,Doktor Ilmu Kedokteran Gigi,S-3,Kedokteran Gigi,2019,5.0,7.0,3.0
+54051,Doktor Ilmu Kehutanan,S-3,Kehutanan,2019,13.0,11.0,2.0
+95028,Doktor Ilmu Ketahanan Nasional,S-3,Pascasarjana,2019,0.0,14.0,0.0
+55001,Doktor Ilmu Komputer,S-3,MIPA,2019,22.0,21.0,14.0
+70001,Doktor Ilmu Komunikasi,S-3,ISIPOL,2019,0.0,11.0,0.0
+95029,Doktor Ilmu Lingkungan,S-3,Pascasarjana,2019,7.0,4.0,7.0
+61001,Doktor Ilmu Manajemen,S-3,Ekonomika dan Bisnis,2019,11.0,4.0,6.0
+41021,Doktor Ilmu Pangan,S-3,Teknologi Pertanian,2019,14.0,13.0,5.0
+54001,Doktor Ilmu Pertanian,S-3,Pertanian,2019,18.0,26.0,13.0
+54031,Doktor Ilmu Peternakan,S-3,Peternakan,2019,9.0,8.0,2.0
+67001,Doktor Ilmu Politik,S-3,ISIPOL,2019,5.0,7.0,6.0
+73001,Doktor Ilmu Psikologi,S-3,Psikologi,2019,7.0,10.0,10.0
+41001,Doktor Ilmu Teknik Pertanian,S-3,Teknologi Pertanian,2019,7.0,4.0,0.0
+95031,Doktor Ilmu-Ilmu Humaniora,S-3,Ilmu Budaya,2019,27.0,18.0,30.0
+76002,Doktor Inter-Religious Studies,S-3,Pascasarjana,2019,5.0,5.0,4.0
+95027,Doktor Kajian Budaya dan Media,S-3,Pascasarjana,2019,5.0,8.0,9.0
+95004,Doktor Kajian Pariwisata,S-3,Pascasarjana,2019,11.0,7.0,10.0
+95007,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),S-3,Pascasarjana,2019,30.0,31.0,10.0
+95002,Doktor Kependudukan,S-3,Pascasarjana,2019,1.0,5.0,4.0
+47001,Doktor Kimia,S-3,MIPA,2019,21.0,11.0,5.0
+63001,Doktor Manajemen dan Kebijakan Publik,S-3,ISIPOL,2019,6.0,7.0,3.0
+44002,Doktor Matematika,S-3,MIPA,2019,8.0,6.0,7.0
+95021,Doktor Pengkajian Amerika,S-3,Ilmu Budaya,2019,6.0,8.0,2.0
+91001,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,S-3,Pascasarjana,2019,3.0,5.0,1.0
+54003,Doktor Penyuluhan dan Komunikasi Pembangunan,S-3,Pascasarjana,2019,10.0,4.0,4.0
+35001,Doktor Perencanaan Wilayah dan Kota,S-3,Teknik,2019,0.0,0.0,0.0
+54062,Doktor Sain Veteriner,S-3,Kedokteran Hewan,2019,6.0,3.0,2.0
+69001,Doktor Sosiologi,S-3,ISIPOL,2019,7.0,3.0,2.0
+20001,Doktor Teknik Elektro,S-3,Teknik,2019,24.0,14.0,16.0
+34001,Doktor Teknik Geologi,S-3,Teknik,2019,2.0,4.0,3.0
+29001,Doktor Teknik Geomatika,S-3,Teknik,2019,3.0,3.0,3.0
+26001,Doktor Teknik Industri,S-3,Teknik,2019,12.0,7.0,4.0
+24001,Doktor Teknik Kimia,S-3,Teknik,2019,8.0,8.0,5.0
+21001,Doktor Teknik Mesin,S-3,Teknik,2019,8.0,6.0,7.0
+22001,Doktor Teknik Sipil,S-3,Teknik,2019,8.0,13.0,10.0
+41011,Doktor Teknologi Industri Pertanian,S-3,Teknologi Pertanian,2019,0.0,1.0,0.0
+76101,Magister Agama dan Lintas Budaya,S-2,Pascasarjana,2019,46.0,45.0,35.0
+54104,Magister Agronomi,S-2,Pertanian,2019,23.0,25.0,22.0
+62103,Magister Akuntansi,S-2,Ekonomika dan Bisnis,2019,122.0,139.0,89.0
+82101,Magister Antropologi,S-2,Ilmu Budaya,2019,23.0,27.0,22.0
+81101,Magister Arkeologi,S-2,Ilmu Budaya,2019,4.0,11.0,13.0
+23101,Magister Arsitektur,S-2,Teknik,2019,36.0,47.0,42.0
+68102,Magister Bioetika,S-2,Pascasarjana,2019,11.0,13.0,10.0
+46101,Magister Biologi,S-2,Biologi,2019,101.0,57.0,42.0
+46102,Magister Bioteknologi,S-2,Pascasarjana,2019,24.0,27.0,32.0
+54102,Magister Ekonomi Pertanian,S-2,Pertanian,2019,18.0,17.0,13.0
+60102,Magister Ekonomika Pembangunan,S-2,Ekonomika dan Bisnis,2019,154.0,130.0,129.0
+48102,Magister Farmasi Klinik,S-2,Farmasi,2019,34.0,41.0,39.0
+75101,Magister Filsafat,S-2,Filsafat,2019,11.0,18.0,24.0
+45101,Magister Fisika,S-2,MIPA,2019,40.0,41.0,47.0
+54111,Magister Fitopatologi,S-2,Pertanian,2019,15.0,11.0,11.0
+51101,Magister Geografi,S-2,Geografi,2019,31.0,21.0,32.0
+74105,Magister Hukum Bisnis dan Kenegaraan,S-2,Hukum,2019,57.0,67.0,81.0
+74104,Magister Hukum Kesehatan,S-2,Hukum,2019,6.0,4.0,7.0
+74103,Magister Hukum Litigasi,S-2,Hukum,2019,23.0,28.0,21.0
+63102,Magister Ilmu Administrasi Publik,S-2,ISIPOL,2019,86.0,49.0,78.0
+11101,Magister Ilmu Biomedik,S-2,KKMK,2019,32.0,46.0,34.0
+41103,Magister Ilmu dan Teknologi Pangan,S-2,Teknologi Pertanian,2019,37.0,50.0,51.0
+48101,Magister Ilmu Farmasi,S-2,Farmasi,2019,19.0,27.0,50.0
+54106,Magister Ilmu Hama Tanaman,S-2,Pertanian,2019,13.0,9.0,11.0
+64101,Magister Ilmu Hubungan Internasional,S-2,ISIPOL,2019,26.0,32.0,27.0
+74101,Magister Ilmu Hukum,S-2,Hukum,2019,43.0,58.0,37.0
+74171,Magister Ilmu Hukum (Kampus Jakarta),S-2,Hukum,2019,113.0,104.0,129.0
+12101,Magister Ilmu Kedokteran Gigi,S-2,Kedokteran Gigi,2019,5.0,11.0,22.0
+12102,Magister Ilmu Kedokteran Gigi Klinis,S-2,Kedokteran Gigi,2019,5.0,6.0,13.0
+11103,Magister Ilmu Kedokteran Klinis,S-2,KKMK,2019,80.0,101.0,48.0
+11104,Magister Ilmu Kedokteran Tropis,S-2,KKMK,2019,8.0,13.0,10.0
+54151,Magister Ilmu Kehutanan,S-2,Kehutanan,2019,37.0,40.0,32.0
+13101,Magister Ilmu Kesehatan Masyarakat,S-2,KKMK,2019,163.0,273.0,169.0
+55101,Magister Ilmu Komputer,S-2,MIPA,2019,58.0,52.0,45.0
+70101,Magister Ilmu Komunikasi,S-2,ISIPOL,2019,76.0,54.0,64.0
+95129,Magister Ilmu Lingkungan,S-2,Pascasarjana,2019,75.0,74.0,65.0
+11109,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,S-2,KKMK,2019,9.0,16.0,10.0
+54146,Magister Ilmu Perikanan,S-2,Pertanian,2019,13.0,12.0,17.0
+54131,Magister Ilmu Peternakan,S-2,Peternakan,2019,55.0,50.0,36.0
+54105,Magister Ilmu Tanah,S-2,Pertanian,2019,23.0,18.0,15.0
+95127,Magister Kajian Budaya dan Media,S-2,Pascasarjana,2019,37.0,30.0,34.0
+95124,Magister Kajian Budaya Timur Tengah,S-2,Ilmu Budaya,2019,0.0,18.0,0.0
+95104,Magister Kajian Pariwisata,S-2,Pascasarjana,2019,32.0,43.0,20.0
+13163,Magister Kebijakan dan Manajemen Kesehatan,S-2,KKMK,2019,0.0,0.0,0.0
+74102,Magister Kenotariatan,S-2,Hukum,2019,161.0,135.0,125.0
+95107,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),S-2,Pascasarjana,2019,41.0,64.0,21.0
+95102,Magister Kependudukan,S-2,Pascasarjana,2019,14.0,19.0,18.0
+14101,Magister Keperawatan,S-2,KKMK,2019,30.0,41.0,50.0
+95128,Magister Ketahanan Nasional,S-2,Pascasarjana,2019,33.0,36.0,52.0
+47101,Magister Kimia,S-2,MIPA,2019,51.0,66.0,58.0
+79102,Magister Linguistik,S-2,Ilmu Budaya,2019,51.0,60.0,76.0
+61101,Magister Manajemen,S-2,Ekonomika dan Bisnis,2019,345.0,387.0,307.0
+61171,Magister Manajemen (Kampus Jakarta),S-2,Ekonomika dan Bisnis,2019,430.0,409.0,371.0
+54101,Magister Manajemen Agribisnis,S-2,Pertanian,2019,26.0,32.0,34.0
+61104,Magister Manajemen Bencana,S-2,Pascasarjana,2019,10.0,16.0,14.0
+63101,Magister Manajemen dan Kebijakan Publik,S-2,ISIPOL,2019,43.0,42.0,28.0
+48105,Magister Manajemen Farmasi,S-2,Farmasi,2019,13.0,18.0,0.0
+86105,Magister Manajemen Pendidikan Tinggi,S-2,Pascasarjana,2019,20.0,18.0,20.0
+44101,Magister Matematika,S-2,MIPA,2019,37.0,47.0,46.0
+86102,Magister Pembangunan Sosial dan Kesejahteraan,S-2,ISIPOL,2019,31.0,41.0,26.0
+54107,Magister Pemuliaan Tanaman,S-2,Pertanian,2019,4.0,9.0,12.0
+51111,Magister Penginderaan Jauh,S-2,Geografi,2019,14.0,17.0,15.0
+95121,Magister Pengkajian Amerika,S-2,Ilmu Budaya,2019,25.0,12.0,19.0
+91101,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,S-2,Pascasarjana,2019,33.0,18.0,24.0
+54103,Magister Penyuluhan dan Komunikasi Pembangunan,S-2,Pascasarjana,2019,19.0,24.0,10.0
+95103,Magister Perencanaan Wilayah dan Kota,S-2,Teknik,2019,54.0,68.0,71.0
+67101,Magister Politik dan Pemerintahan,S-2,ISIPOL,2019,32.0,27.0,23.0
+73101,Magister Psikologi,S-2,Psikologi,2019,64.0,57.0,52.0
+73103,Magister Psikologi Profesi,S-2,Psikologi,2019,98.0,99.0,122.0
+35102,Magister Rancang Kota,S-2,Teknik,2019,0.0,0.0,0.0
+62101,Magister Sains Akuntansi,S-2,Ekonomika dan Bisnis,2019,51.0,30.0,44.0
+60101,Magister Sains Ilmu Ekonomi,S-2,Ekonomika dan Bisnis,2019,24.0,26.0,14.0
+61102,Magister Sains Manajemen,S-2,Ekonomika dan Bisnis,2019,40.0,30.0,44.0
+54162,Magister Sains Veteriner,S-2,Kedokteran Hewan,2019,34.0,22.0,31.0
+79101,Magister Sastra,S-2,Ilmu Budaya,2019,59.0,35.0,59.0
+80101,Magister Sejarah,S-2,Ilmu Budaya,2019,16.0,23.0,20.0
+22102,Magister Sistem dan Teknik Transportasi,S-2,Teknik,2019,38.0,40.0,44.0
+69101,Magister Sosiologi,S-2,ISIPOL,2019,39.0,44.0,33.0
+11123,Magister Teknik Biomedis,S-2,Pascasarjana,2019,0.0,8.0,0.0
+20101,Magister Teknik Elektro,S-2,Teknik,2019,36.0,42.0,27.0
+30101,Magister Teknik Fisika,S-2,Teknik,2019,9.0,12.0,8.0
+34101,Magister Teknik Geologi,S-2,Teknik,2019,25.0,62.0,31.0
+29101,Magister Teknik Geomatika,S-2,Teknik,2019,19.0,13.0,17.0
+26101,Magister Teknik Industri,S-2,Teknik,2019,37.0,40.0,39.0
+24101,Magister Teknik Kimia,S-2,Teknik,2019,55.0,61.0,48.0
+21101,Magister Teknik Mesin,S-2,Teknik,2019,42.0,48.0,24.0
+22105,Magister Teknik Pengelolaan Bencana Alam,S-2,Teknik,2019,4.0,21.0,14.0
+41101,Magister Teknik Pertanian,S-2,Teknologi Pertanian,2019,7.0,14.0,19.0
+22101,Magister Teknik Sipil,S-2,Teknik,2019,87.0,71.0,62.0
+31103,Magister Teknik Sistem,S-2,Teknik,2019,35.0,29.0,41.0
+41133,Magister Teknologi Hasil Perkebunan,S-2,Teknologi Pertanian,2019,5.0,6.0,8.0
+41111,Magister Teknologi Industri Pertanian,S-2,Teknologi Pertanian,2019,8.0,6.0,10.0
+59101,Magister Teknologi informasi,S-2,Teknik,2019,61.0,55.0,48.0
+82001,Doktor Antropologi,S-3,Ilmu Budaya,2020,4.0,3.0,0.0
+23001,Doktor Arsitektur,S-3,Teknik,2020,10.0,6.0,5.0
+46001,Doktor Biologi,S-3,Biologi,2020,10.0,19.0,12.0
+46002,Doktor Bioteknologi,S-3,Pascasarjana,2020,3.0,11.0,4.0
+75001,Doktor Filsafat,S-3,Filsafat,2020,8.0,14.0,12.0
+45001,Doktor Fisika,S-3,MIPA,2020,5.0,17.0,9.0
+63002,Doktor Ilmu Administrasi Publik,S-3,ISIPOL,2020,5.0,7.0,4.0
+62001,Doktor Ilmu Akuntansi,S-3,Ekonomika dan Bisnis,2020,12.0,8.0,8.0
+60001,Doktor Ilmu Ekonomi,S-3,Ekonomika dan Bisnis,2020,1.0,4.0,5.0
+48001,Doktor Ilmu Farmasi,S-3,Farmasi,2020,25.0,34.0,21.0
+51001,Doktor Ilmu Geografi,S-3,Geografi,2020,5.0,18.0,15.0
+74001,Doktor Ilmu Hukum,S-3,Hukum,2020,9.0,13.0,8.0
+11001,Doktor Ilmu Kedokteran dan Kesehatan,S-3,KKMK,2020,61.0,62.0,57.0
+12001,Doktor Ilmu Kedokteran Gigi,S-3,Kedokteran Gigi,2020,7.0,8.0,5.0
+54051,Doktor Ilmu Kehutanan,S-3,Kehutanan,2020,11.0,19.0,13.0
+95028,Doktor Ilmu Ketahanan Nasional,S-3,Pascasarjana,2020,14.0,3.0,0.0
+55001,Doktor Ilmu Komputer,S-3,MIPA,2020,21.0,22.0,22.0
+70001,Doktor Ilmu Komunikasi,S-3,ISIPOL,2020,11.0,14.0,0.0
+95029,Doktor Ilmu Lingkungan,S-3,Pascasarjana,2020,4.0,12.0,7.0
+61001,Doktor Ilmu Manajemen,S-3,Ekonomika dan Bisnis,2020,4.0,14.0,11.0
+41021,Doktor Ilmu Pangan,S-3,Teknologi Pertanian,2020,13.0,6.0,14.0
+54001,Doktor Ilmu Pertanian,S-3,Pertanian,2020,26.0,20.0,18.0
+54031,Doktor Ilmu Peternakan,S-3,Peternakan,2020,8.0,23.0,9.0
+67001,Doktor Ilmu Politik,S-3,ISIPOL,2020,7.0,15.0,5.0
+73001,Doktor Ilmu Psikologi,S-3,Psikologi,2020,10.0,14.0,7.0
+41001,Doktor Ilmu Teknik Pertanian,S-3,Teknologi Pertanian,2020,4.0,6.0,7.0
+95031,Doktor Ilmu-Ilmu Humaniora,S-3,Ilmu Budaya,2020,18.0,35.0,27.0
+76002,Doktor Inter-Religious Studies,S-3,Pascasarjana,2020,5.0,4.0,5.0
+95027,Doktor Kajian Budaya dan Media,S-3,Pascasarjana,2020,8.0,9.0,5.0
+95004,Doktor Kajian Pariwisata,S-3,Pascasarjana,2020,7.0,15.0,11.0
+95007,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),S-3,Pascasarjana,2020,31.0,18.0,30.0
+95002,Doktor Kependudukan,S-3,Pascasarjana,2020,5.0,18.0,1.0
+47001,Doktor Kimia,S-3,MIPA,2020,11.0,19.0,21.0
+63001,Doktor Manajemen dan Kebijakan Publik,S-3,ISIPOL,2020,7.0,6.0,6.0
+44002,Doktor Matematika,S-3,MIPA,2020,6.0,10.0,8.0
+95021,Doktor Pengkajian Amerika,S-3,Ilmu Budaya,2020,8.0,2.0,6.0
+91001,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,S-3,Pascasarjana,2020,5.0,6.0,3.0
+54003,Doktor Penyuluhan dan Komunikasi Pembangunan,S-3,Pascasarjana,2020,4.0,6.0,10.0
+35001,Doktor Perencanaan Wilayah dan Kota,S-3,Teknik,2020,0.0,5.0,0.0
+54062,Doktor Sain Veteriner,S-3,Kedokteran Hewan,2020,3.0,14.0,6.0
+69001,Doktor Sosiologi,S-3,ISIPOL,2020,3.0,7.0,7.0
+20001,Doktor Teknik Elektro,S-3,Teknik,2020,14.0,16.0,24.0
+34001,Doktor Teknik Geologi,S-3,Teknik,2020,4.0,6.0,2.0
+29001,Doktor Teknik Geomatika,S-3,Teknik,2020,3.0,2.0,3.0
+26001,Doktor Teknik Industri,S-3,Teknik,2020,7.0,19.0,12.0
+24001,Doktor Teknik Kimia,S-3,Teknik,2020,8.0,3.0,8.0
+21001,Doktor Teknik Mesin,S-3,Teknik,2020,6.0,15.0,8.0
+22001,Doktor Teknik Sipil,S-3,Teknik,2020,13.0,6.0,8.0
+41011,Doktor Teknologi Industri Pertanian,S-3,Teknologi Pertanian,2020,1.0,3.0,0.0
+76101,Magister Agama dan Lintas Budaya,S-2,Pascasarjana,2020,45.0,30.0,46.0
+54104,Magister Agronomi,S-2,Pertanian,2020,25.0,20.0,23.0
+62103,Magister Akuntansi,S-2,Ekonomika dan Bisnis,2020,139.0,77.0,122.0
+82101,Magister Antropologi,S-2,Ilmu Budaya,2020,27.0,30.0,23.0
+81101,Magister Arkeologi,S-2,Ilmu Budaya,2020,11.0,13.0,4.0
+23101,Magister Arsitektur,S-2,Teknik,2020,47.0,21.0,36.0
+68102,Magister Bioetika,S-2,Pascasarjana,2020,13.0,7.0,11.0
+46101,Magister Biologi,S-2,Biologi,2020,57.0,73.0,101.0
+46102,Magister Bioteknologi,S-2,Pascasarjana,2020,27.0,31.0,24.0
+54102,Magister Ekonomi Pertanian,S-2,Pertanian,2020,17.0,17.0,18.0
+60102,Magister Ekonomika Pembangunan,S-2,Ekonomika dan Bisnis,2020,130.0,82.0,154.0
+48102,Magister Farmasi Klinik,S-2,Farmasi,2020,41.0,44.0,34.0
+75101,Magister Filsafat,S-2,Filsafat,2020,18.0,14.0,11.0
+45101,Magister Fisika,S-2,MIPA,2020,41.0,42.0,40.0
+54111,Magister Fitopatologi,S-2,Pertanian,2020,11.0,14.0,15.0
+51101,Magister Geografi,S-2,Geografi,2020,21.0,18.0,31.0
+74105,Magister Hukum Bisnis dan Kenegaraan,S-2,Hukum,2020,67.0,56.0,57.0
+74104,Magister Hukum Kesehatan,S-2,Hukum,2020,4.0,19.0,6.0
+74103,Magister Hukum Litigasi,S-2,Hukum,2020,28.0,24.0,23.0
+63102,Magister Ilmu Administrasi Publik,S-2,ISIPOL,2020,49.0,74.0,86.0
+11101,Magister Ilmu Biomedik,S-2,KKMK,2020,46.0,63.0,32.0
+41103,Magister Ilmu dan Teknologi Pangan,S-2,Teknologi Pertanian,2020,50.0,48.0,37.0
+48101,Magister Ilmu Farmasi,S-2,Farmasi,2020,27.0,26.0,19.0
+54106,Magister Ilmu Hama Tanaman,S-2,Pertanian,2020,9.0,15.0,13.0
+64101,Magister Ilmu Hubungan Internasional,S-2,ISIPOL,2020,32.0,32.0,26.0
+74101,Magister Ilmu Hukum,S-2,Hukum,2020,58.0,70.0,43.0
+74171,Magister Ilmu Hukum (Kampus Jakarta),S-2,Hukum,2020,104.0,119.0,113.0
+12101,Magister Ilmu Kedokteran Gigi,S-2,Kedokteran Gigi,2020,11.0,6.0,5.0
+12102,Magister Ilmu Kedokteran Gigi Klinis,S-2,Kedokteran Gigi,2020,6.0,10.0,5.0
+11103,Magister Ilmu Kedokteran Klinis,S-2,KKMK,2020,101.0,50.0,80.0
+11104,Magister Ilmu Kedokteran Tropis,S-2,KKMK,2020,13.0,15.0,8.0
+54151,Magister Ilmu Kehutanan,S-2,Kehutanan,2020,40.0,36.0,37.0
+13101,Magister Ilmu Kesehatan Masyarakat,S-2,KKMK,2020,273.0,150.0,163.0
+55101,Magister Ilmu Komputer,S-2,MIPA,2020,52.0,54.0,58.0
+70101,Magister Ilmu Komunikasi,S-2,ISIPOL,2020,54.0,68.0,76.0
+95129,Magister Ilmu Lingkungan,S-2,Pascasarjana,2020,74.0,64.0,75.0
+11109,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,S-2,KKMK,2020,16.0,16.0,9.0
+54146,Magister Ilmu Perikanan,S-2,Pertanian,2020,12.0,16.0,13.0
+54131,Magister Ilmu Peternakan,S-2,Peternakan,2020,50.0,60.0,55.0
+54105,Magister Ilmu Tanah,S-2,Pertanian,2020,18.0,20.0,23.0
+95127,Magister Kajian Budaya dan Media,S-2,Pascasarjana,2020,30.0,22.0,37.0
+95124,Magister Kajian Budaya Timur Tengah,S-2,Ilmu Budaya,2020,18.0,15.0,0.0
+95104,Magister Kajian Pariwisata,S-2,Pascasarjana,2020,43.0,28.0,32.0
+13163,Magister Kebijakan dan Manajemen Kesehatan,S-2,KKMK,2020,0.0,102.0,0.0
+74102,Magister Kenotariatan,S-2,Hukum,2020,135.0,103.0,161.0
+95107,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),S-2,Pascasarjana,2020,64.0,48.0,41.0
+95102,Magister Kependudukan,S-2,Pascasarjana,2020,19.0,2.0,14.0
+14101,Magister Keperawatan,S-2,KKMK,2020,41.0,44.0,30.0
+95128,Magister Ketahanan Nasional,S-2,Pascasarjana,2020,36.0,30.0,33.0
+47101,Magister Kimia,S-2,MIPA,2020,66.0,36.0,51.0
+79102,Magister Linguistik,S-2,Ilmu Budaya,2020,60.0,79.0,51.0
+61101,Magister Manajemen,S-2,Ekonomika dan Bisnis,2020,387.0,359.0,345.0
+61171,Magister Manajemen (Kampus Jakarta),S-2,Ekonomika dan Bisnis,2020,409.0,382.0,430.0
+54101,Magister Manajemen Agribisnis,S-2,Pertanian,2020,32.0,33.0,26.0
+61104,Magister Manajemen Bencana,S-2,Pascasarjana,2020,16.0,10.0,10.0
+63101,Magister Manajemen dan Kebijakan Publik,S-2,ISIPOL,2020,42.0,68.0,43.0
+48105,Magister Manajemen Farmasi,S-2,Farmasi,2020,18.0,33.0,13.0
+86105,Magister Manajemen Pendidikan Tinggi,S-2,Pascasarjana,2020,18.0,10.0,20.0
+44101,Magister Matematika,S-2,MIPA,2020,47.0,23.0,37.0
+86102,Magister Pembangunan Sosial dan Kesejahteraan,S-2,ISIPOL,2020,41.0,29.0,31.0
+54107,Magister Pemuliaan Tanaman,S-2,Pertanian,2020,9.0,7.0,4.0
+51111,Magister Penginderaan Jauh,S-2,Geografi,2020,17.0,8.0,14.0
+95121,Magister Pengkajian Amerika,S-2,Ilmu Budaya,2020,12.0,14.0,25.0
+91101,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,S-2,Pascasarjana,2020,18.0,17.0,33.0
+54103,Magister Penyuluhan dan Komunikasi Pembangunan,S-2,Pascasarjana,2020,24.0,24.0,19.0
+95103,Magister Perencanaan Wilayah dan Kota,S-2,Teknik,2020,68.0,56.0,54.0
+67101,Magister Politik dan Pemerintahan,S-2,ISIPOL,2020,27.0,17.0,32.0
+73101,Magister Psikologi,S-2,Psikologi,2020,57.0,54.0,64.0
+73103,Magister Psikologi Profesi,S-2,Psikologi,2020,99.0,101.0,98.0
+35102,Magister Rancang Kota,S-2,Teknik,2020,0.0,10.0,0.0
+62101,Magister Sains Akuntansi,S-2,Ekonomika dan Bisnis,2020,30.0,25.0,51.0
+60101,Magister Sains Ilmu Ekonomi,S-2,Ekonomika dan Bisnis,2020,26.0,12.0,24.0
+61102,Magister Sains Manajemen,S-2,Ekonomika dan Bisnis,2020,30.0,38.0,40.0
+54162,Magister Sains Veteriner,S-2,Kedokteran Hewan,2020,22.0,52.0,34.0
+79101,Magister Sastra,S-2,Ilmu Budaya,2020,35.0,57.0,59.0
+80101,Magister Sejarah,S-2,Ilmu Budaya,2020,23.0,21.0,16.0
+22102,Magister Sistem dan Teknik Transportasi,S-2,Teknik,2020,40.0,41.0,38.0
+69101,Magister Sosiologi,S-2,ISIPOL,2020,44.0,18.0,39.0
+11123,Magister Teknik Biomedis,S-2,Pascasarjana,2020,8.0,3.0,0.0
+20101,Magister Teknik Elektro,S-2,Teknik,2020,42.0,35.0,36.0
+30101,Magister Teknik Fisika,S-2,Teknik,2020,12.0,10.0,9.0
+34101,Magister Teknik Geologi,S-2,Teknik,2020,62.0,54.0,25.0
+29101,Magister Teknik Geomatika,S-2,Teknik,2020,13.0,20.0,19.0
+26101,Magister Teknik Industri,S-2,Teknik,2020,40.0,39.0,37.0
+24101,Magister Teknik Kimia,S-2,Teknik,2020,61.0,51.0,55.0
+21101,Magister Teknik Mesin,S-2,Teknik,2020,48.0,29.0,42.0
+22105,Magister Teknik Pengelolaan Bencana Alam,S-2,Teknik,2020,21.0,25.0,4.0
+41101,Magister Teknik Pertanian,S-2,Teknologi Pertanian,2020,14.0,19.0,7.0
+22101,Magister Teknik Sipil,S-2,Teknik,2020,71.0,53.0,87.0
+31103,Magister Teknik Sistem,S-2,Teknik,2020,29.0,24.0,35.0
+41133,Magister Teknologi Hasil Perkebunan,S-2,Teknologi Pertanian,2020,6.0,8.0,5.0
+41111,Magister Teknologi Industri Pertanian,S-2,Teknologi Pertanian,2020,6.0,13.0,8.0
+59101,Magister Teknologi informasi,S-2,Teknik,2020,55.0,61.0,61.0
+82001,Doktor Antropologi,S-3,Ilmu Budaya,2021,3.0,5.0,4.0
+23001,Doktor Arsitektur,S-3,Teknik,2021,6.0,17.0,10.0
+46001,Doktor Biologi,S-3,Biologi,2021,19.0,26.0,10.0
+46002,Doktor Bioteknologi,S-3,Pascasarjana,2021,11.0,14.0,3.0
+75001,Doktor Filsafat,S-3,Filsafat,2021,14.0,13.0,8.0
+45001,Doktor Fisika,S-3,MIPA,2021,17.0,27.0,5.0
+63002,Doktor Ilmu Administrasi Publik,S-3,ISIPOL,2021,7.0,0.0,5.0
+62001,Doktor Ilmu Akuntansi,S-3,Ekonomika dan Bisnis,2021,8.0,12.0,12.0
+60001,Doktor Ilmu Ekonomi,S-3,Ekonomika dan Bisnis,2021,4.0,2.0,1.0
+48001,Doktor Ilmu Farmasi,S-3,Farmasi,2021,34.0,40.0,25.0
+51001,Doktor Ilmu Geografi,S-3,Geografi,2021,18.0,11.0,5.0
+74001,Doktor Ilmu Hukum,S-3,Hukum,2021,13.0,8.0,9.0
+11001,Doktor Ilmu Kedokteran dan Kesehatan,S-3,KKMK,2021,62.0,79.0,61.0
+12001,Doktor Ilmu Kedokteran Gigi,S-3,Kedokteran Gigi,2021,8.0,9.0,7.0
+54051,Doktor Ilmu Kehutanan,S-3,Kehutanan,2021,19.0,14.0,11.0
+95028,Doktor Ilmu Ketahanan Nasional,S-3,Pascasarjana,2021,3.0,4.0,14.0
+55001,Doktor Ilmu Komputer,S-3,MIPA,2021,22.0,34.0,21.0
+70001,Doktor Ilmu Komunikasi,S-3,ISIPOL,2021,14.0,10.0,11.0
+95029,Doktor Ilmu Lingkungan,S-3,Pascasarjana,2021,12.0,10.0,4.0
+61001,Doktor Ilmu Manajemen,S-3,Ekonomika dan Bisnis,2021,14.0,14.0,4.0
+41021,Doktor Ilmu Pangan,S-3,Teknologi Pertanian,2021,6.0,16.0,13.0
+54001,Doktor Ilmu Pertanian,S-3,Pertanian,2021,20.0,26.0,26.0
+54031,Doktor Ilmu Peternakan,S-3,Peternakan,2021,23.0,28.0,8.0
+67001,Doktor Ilmu Politik,S-3,ISIPOL,2021,15.0,11.0,7.0
+73001,Doktor Ilmu Psikologi,S-3,Psikologi,2021,14.0,14.0,10.0
+41001,Doktor Ilmu Teknik Pertanian,S-3,Teknologi Pertanian,2021,6.0,3.0,4.0
+95031,Doktor Ilmu-Ilmu Humaniora,S-3,Ilmu Budaya,2021,35.0,38.0,18.0
+76002,Doktor Inter-Religious Studies,S-3,Pascasarjana,2021,4.0,6.0,5.0
+95027,Doktor Kajian Budaya dan Media,S-3,Pascasarjana,2021,9.0,13.0,8.0
+95004,Doktor Kajian Pariwisata,S-3,Pascasarjana,2021,15.0,13.0,7.0
+95007,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),S-3,Pascasarjana,2021,18.0,16.0,31.0
+95002,Doktor Kependudukan,S-3,Pascasarjana,2021,18.0,7.0,5.0
+47001,Doktor Kimia,S-3,MIPA,2021,19.0,28.0,11.0
+63001,Doktor Manajemen dan Kebijakan Publik,S-3,ISIPOL,2021,6.0,14.0,7.0
+44002,Doktor Matematika,S-3,MIPA,2021,10.0,15.0,6.0
+95021,Doktor Pengkajian Amerika,S-3,Ilmu Budaya,2021,2.0,3.0,8.0
+91001,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,S-3,Pascasarjana,2021,6.0,7.0,5.0
+54003,Doktor Penyuluhan dan Komunikasi Pembangunan,S-3,Pascasarjana,2021,6.0,5.0,4.0
+35001,Doktor Perencanaan Wilayah dan Kota,S-3,Teknik,2021,5.0,2.0,0.0
+54062,Doktor Sain Veteriner,S-3,Kedokteran Hewan,2021,14.0,16.0,3.0
+69001,Doktor Sosiologi,S-3,ISIPOL,2021,7.0,4.0,3.0
+20001,Doktor Teknik Elektro,S-3,Teknik,2021,16.0,22.0,14.0
+34001,Doktor Teknik Geologi,S-3,Teknik,2021,6.0,11.0,4.0
+29001,Doktor Teknik Geomatika,S-3,Teknik,2021,2.0,4.0,3.0
+26001,Doktor Teknik Industri,S-3,Teknik,2021,19.0,17.0,7.0
+24001,Doktor Teknik Kimia,S-3,Teknik,2021,3.0,14.0,8.0
+21001,Doktor Teknik Mesin,S-3,Teknik,2021,15.0,14.0,6.0
+22001,Doktor Teknik Sipil,S-3,Teknik,2021,6.0,20.0,13.0
+41011,Doktor Teknologi Industri Pertanian,S-3,Teknologi Pertanian,2021,3.0,5.0,1.0
+76101,Magister Agama dan Lintas Budaya,S-2,Pascasarjana,2021,30.0,30.0,45.0
+54104,Magister Agronomi,S-2,Pertanian,2021,20.0,26.0,25.0
+62103,Magister Akuntansi,S-2,Ekonomika dan Bisnis,2021,77.0,88.0,139.0
+82101,Magister Antropologi,S-2,Ilmu Budaya,2021,30.0,28.0,27.0
+81101,Magister Arkeologi,S-2,Ilmu Budaya,2021,13.0,13.0,11.0
+23101,Magister Arsitektur,S-2,Teknik,2021,21.0,38.0,47.0
+68102,Magister Bioetika,S-2,Pascasarjana,2021,7.0,9.0,13.0
+46101,Magister Biologi,S-2,Biologi,2021,73.0,94.0,57.0
+46102,Magister Bioteknologi,S-2,Pascasarjana,2021,31.0,47.0,27.0
+54102,Magister Ekonomi Pertanian,S-2,Pertanian,2021,17.0,12.0,17.0
+60102,Magister Ekonomika Pembangunan,S-2,Ekonomika dan Bisnis,2021,82.0,71.0,130.0
+48102,Magister Farmasi Klinik,S-2,Farmasi,2021,44.0,40.0,41.0
+75101,Magister Filsafat,S-2,Filsafat,2021,14.0,24.0,18.0
+45101,Magister Fisika,S-2,MIPA,2021,42.0,30.0,41.0
+54111,Magister Fitopatologi,S-2,Pertanian,2021,14.0,20.0,11.0
+51101,Magister Geografi,S-2,Geografi,2021,18.0,39.0,21.0
+74105,Magister Hukum Bisnis dan Kenegaraan,S-2,Hukum,2021,56.0,81.0,67.0
+74104,Magister Hukum Kesehatan,S-2,Hukum,2021,19.0,11.0,4.0
+74103,Magister Hukum Litigasi,S-2,Hukum,2021,24.0,30.0,28.0
+63102,Magister Ilmu Administrasi Publik,S-2,ISIPOL,2021,74.0,68.0,49.0
+11101,Magister Ilmu Biomedik,S-2,KKMK,2021,63.0,61.0,46.0
+41103,Magister Ilmu dan Teknologi Pangan,S-2,Teknologi Pertanian,2021,48.0,57.0,50.0
+48101,Magister Ilmu Farmasi,S-2,Farmasi,2021,26.0,27.0,27.0
+54106,Magister Ilmu Hama Tanaman,S-2,Pertanian,2021,15.0,16.0,9.0
+64101,Magister Ilmu Hubungan Internasional,S-2,ISIPOL,2021,32.0,41.0,32.0
+74101,Magister Ilmu Hukum,S-2,Hukum,2021,70.0,68.0,58.0
+74171,Magister Ilmu Hukum (Kampus Jakarta),S-2,Hukum,2021,119.0,106.0,104.0
+12101,Magister Ilmu Kedokteran Gigi,S-2,Kedokteran Gigi,2021,6.0,8.0,11.0
+12102,Magister Ilmu Kedokteran Gigi Klinis,S-2,Kedokteran Gigi,2021,10.0,10.0,6.0
+11103,Magister Ilmu Kedokteran Klinis,S-2,KKMK,2021,50.0,147.0,101.0
+11104,Magister Ilmu Kedokteran Tropis,S-2,KKMK,2021,15.0,12.0,13.0
+54151,Magister Ilmu Kehutanan,S-2,Kehutanan,2021,36.0,26.0,40.0
+13101,Magister Ilmu Kesehatan Masyarakat,S-2,KKMK,2021,150.0,100.0,273.0
+55101,Magister Ilmu Komputer,S-2,MIPA,2021,54.0,63.0,52.0
+70101,Magister Ilmu Komunikasi,S-2,ISIPOL,2021,68.0,93.0,54.0
+95129,Magister Ilmu Lingkungan,S-2,Pascasarjana,2021,64.0,55.0,74.0
+11109,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,S-2,KKMK,2021,16.0,18.0,16.0
+54146,Magister Ilmu Perikanan,S-2,Pertanian,2021,16.0,27.0,12.0
+54131,Magister Ilmu Peternakan,S-2,Peternakan,2021,60.0,65.0,50.0
+54105,Magister Ilmu Tanah,S-2,Pertanian,2021,20.0,20.0,18.0
+95127,Magister Kajian Budaya dan Media,S-2,Pascasarjana,2021,22.0,28.0,30.0
+95124,Magister Kajian Budaya Timur Tengah,S-2,Ilmu Budaya,2021,15.0,13.0,18.0
+95104,Magister Kajian Pariwisata,S-2,Pascasarjana,2021,28.0,27.0,43.0
+13163,Magister Kebijakan dan Manajemen Kesehatan,S-2,KKMK,2021,102.0,84.0,0.0
+74102,Magister Kenotariatan,S-2,Hukum,2021,103.0,126.0,135.0
+95107,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),S-2,Pascasarjana,2021,48.0,37.0,64.0
+95102,Magister Kependudukan,S-2,Pascasarjana,2021,2.0,4.0,19.0
+14101,Magister Keperawatan,S-2,KKMK,2021,44.0,59.0,41.0
+95128,Magister Ketahanan Nasional,S-2,Pascasarjana,2021,30.0,25.0,36.0
+47101,Magister Kimia,S-2,MIPA,2021,36.0,44.0,66.0
+79102,Magister Linguistik,S-2,Ilmu Budaya,2021,79.0,69.0,60.0
+61101,Magister Manajemen,S-2,Ekonomika dan Bisnis,2021,359.0,299.0,387.0
+61171,Magister Manajemen (Kampus Jakarta),S-2,Ekonomika dan Bisnis,2021,382.0,371.0,409.0
+54101,Magister Manajemen Agribisnis,S-2,Pertanian,2021,33.0,40.0,32.0
+61104,Magister Manajemen Bencana,S-2,Pascasarjana,2021,10.0,9.0,16.0
+63101,Magister Manajemen dan Kebijakan Publik,S-2,ISIPOL,2021,68.0,46.0,42.0
+48105,Magister Manajemen Farmasi,S-2,Farmasi,2021,33.0,36.0,18.0
+86105,Magister Manajemen Pendidikan Tinggi,S-2,Pascasarjana,2021,10.0,22.0,18.0
+44101,Magister Matematika,S-2,MIPA,2021,23.0,48.0,47.0
+86102,Magister Pembangunan Sosial dan Kesejahteraan,S-2,ISIPOL,2021,29.0,23.0,41.0
+54107,Magister Pemuliaan Tanaman,S-2,Pertanian,2021,7.0,5.0,9.0
+51111,Magister Penginderaan Jauh,S-2,Geografi,2021,8.0,27.0,17.0
+95121,Magister Pengkajian Amerika,S-2,Ilmu Budaya,2021,14.0,19.0,12.0
+91101,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,S-2,Pascasarjana,2021,17.0,33.0,18.0
+54103,Magister Penyuluhan dan Komunikasi Pembangunan,S-2,Pascasarjana,2021,24.0,23.0,24.0
+95103,Magister Perencanaan Wilayah dan Kota,S-2,Teknik,2021,56.0,40.0,68.0
+67101,Magister Politik dan Pemerintahan,S-2,ISIPOL,2021,17.0,27.0,27.0
+73101,Magister Psikologi,S-2,Psikologi,2021,54.0,79.0,57.0
+73103,Magister Psikologi Profesi,S-2,Psikologi,2021,101.0,97.0,99.0
+35102,Magister Rancang Kota,S-2,Teknik,2021,10.0,14.0,0.0
+62101,Magister Sains Akuntansi,S-2,Ekonomika dan Bisnis,2021,25.0,30.0,30.0
+60101,Magister Sains Ilmu Ekonomi,S-2,Ekonomika dan Bisnis,2021,12.0,18.0,26.0
+61102,Magister Sains Manajemen,S-2,Ekonomika dan Bisnis,2021,38.0,43.0,30.0
+54162,Magister Sains Veteriner,S-2,Kedokteran Hewan,2021,52.0,36.0,22.0
+79101,Magister Sastra,S-2,Ilmu Budaya,2021,57.0,66.0,35.0
+80101,Magister Sejarah,S-2,Ilmu Budaya,2021,21.0,28.0,23.0
+22102,Magister Sistem dan Teknik Transportasi,S-2,Teknik,2021,41.0,50.0,40.0
+69101,Magister Sosiologi,S-2,ISIPOL,2021,18.0,41.0,44.0
+11123,Magister Teknik Biomedis,S-2,Pascasarjana,2021,3.0,13.0,8.0
+20101,Magister Teknik Elektro,S-2,Teknik,2021,35.0,29.0,42.0
+30101,Magister Teknik Fisika,S-2,Teknik,2021,10.0,5.0,12.0
+34101,Magister Teknik Geologi,S-2,Teknik,2021,54.0,46.0,62.0
+29101,Magister Teknik Geomatika,S-2,Teknik,2021,20.0,15.0,13.0
+26101,Magister Teknik Industri,S-2,Teknik,2021,39.0,44.0,40.0
+24101,Magister Teknik Kimia,S-2,Teknik,2021,51.0,50.0,61.0
+21101,Magister Teknik Mesin,S-2,Teknik,2021,29.0,51.0,48.0
+22105,Magister Teknik Pengelolaan Bencana Alam,S-2,Teknik,2021,25.0,32.0,21.0
+41101,Magister Teknik Pertanian,S-2,Teknologi Pertanian,2021,19.0,14.0,14.0
+22101,Magister Teknik Sipil,S-2,Teknik,2021,53.0,83.0,71.0
+31103,Magister Teknik Sistem,S-2,Teknik,2021,24.0,25.0,29.0
+41133,Magister Teknologi Hasil Perkebunan,S-2,Teknologi Pertanian,2021,8.0,4.0,6.0
+41111,Magister Teknologi Industri Pertanian,S-2,Teknologi Pertanian,2021,13.0,8.0,6.0
+59101,Magister Teknologi informasi,S-2,Teknik,2021,61.0,53.0,55.0
+82001,Doktor Antropologi,S-3,Ilmu Budaya,2022,5.0,3.0,3.0
+23001,Doktor Arsitektur,S-3,Teknik,2022,17.0,14.0,6.0
+46001,Doktor Biologi,S-3,Biologi,2022,26.0,29.0,19.0
+46002,Doktor Bioteknologi,S-3,Pascasarjana,2022,14.0,13.0,11.0
+75001,Doktor Filsafat,S-3,Filsafat,2022,13.0,14.0,14.0
+45001,Doktor Fisika,S-3,MIPA,2022,27.0,23.0,17.0
+63002,Doktor Ilmu Administrasi Publik,S-3,ISIPOL,2022,0.0,9.0,7.0
+62001,Doktor Ilmu Akuntansi,S-3,Ekonomika dan Bisnis,2022,12.0,17.0,8.0
+60001,Doktor Ilmu Ekonomi,S-3,Ekonomika dan Bisnis,2022,2.0,3.0,4.0
+48001,Doktor Ilmu Farmasi,S-3,Farmasi,2022,40.0,41.0,34.0
+51001,Doktor Ilmu Geografi,S-3,Geografi,2022,11.0,14.0,18.0
+74001,Doktor Ilmu Hukum,S-3,Hukum,2022,8.0,14.0,13.0
+11001,Doktor Ilmu Kedokteran dan Kesehatan,S-3,KKMK,2022,79.0,64.0,62.0
+12001,Doktor Ilmu Kedokteran Gigi,S-3,Kedokteran Gigi,2022,9.0,12.0,8.0
+54051,Doktor Ilmu Kehutanan,S-3,Kehutanan,2022,14.0,20.0,19.0
+95028,Doktor Ilmu Ketahanan Nasional,S-3,Pascasarjana,2022,4.0,8.0,3.0
+55001,Doktor Ilmu Komputer,S-3,MIPA,2022,34.0,38.0,22.0
+70001,Doktor Ilmu Komunikasi,S-3,ISIPOL,2022,10.0,19.0,14.0
+95029,Doktor Ilmu Lingkungan,S-3,Pascasarjana,2022,10.0,15.0,12.0
+61001,Doktor Ilmu Manajemen,S-3,Ekonomika dan Bisnis,2022,14.0,16.0,14.0
+41021,Doktor Ilmu Pangan,S-3,Teknologi Pertanian,2022,16.0,9.0,6.0
+54001,Doktor Ilmu Pertanian,S-3,Pertanian,2022,26.0,35.0,20.0
+54031,Doktor Ilmu Peternakan,S-3,Peternakan,2022,28.0,21.0,23.0
+67001,Doktor Ilmu Politik,S-3,ISIPOL,2022,11.0,8.0,15.0
+73001,Doktor Ilmu Psikologi,S-3,Psikologi,2022,14.0,12.0,14.0
+41001,Doktor Ilmu Teknik Pertanian,S-3,Teknologi Pertanian,2022,3.0,7.0,6.0
+95031,Doktor Ilmu-Ilmu Humaniora,S-3,Ilmu Budaya,2022,38.0,36.0,35.0
+76002,Doktor Inter-Religious Studies,S-3,Pascasarjana,2022,6.0,3.0,4.0
+95027,Doktor Kajian Budaya dan Media,S-3,Pascasarjana,2022,13.0,8.0,9.0
+95004,Doktor Kajian Pariwisata,S-3,Pascasarjana,2022,13.0,10.0,15.0
+95007,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),S-3,Pascasarjana,2022,16.0,17.0,18.0
+95002,Doktor Kependudukan,S-3,Pascasarjana,2022,7.0,5.0,18.0
+47001,Doktor Kimia,S-3,MIPA,2022,28.0,12.0,19.0
+63001,Doktor Manajemen dan Kebijakan Publik,S-3,ISIPOL,2022,14.0,8.0,6.0
+44002,Doktor Matematika,S-3,MIPA,2022,15.0,11.0,10.0
+95021,Doktor Pengkajian Amerika,S-3,Ilmu Budaya,2022,3.0,2.0,2.0
+91001,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,S-3,Pascasarjana,2022,7.0,11.0,6.0
+54003,Doktor Penyuluhan dan Komunikasi Pembangunan,S-3,Pascasarjana,2022,5.0,11.0,6.0
+35001,Doktor Perencanaan Wilayah dan Kota,S-3,Teknik,2022,2.0,2.0,5.0
+69001,Doktor Sosiologi,S-3,ISIPOL,2022,4.0,6.0,7.0
+20001,Doktor Teknik Elektro,S-3,Teknik,2022,22.0,22.0,16.0
+34001,Doktor Teknik Geologi,S-3,Teknik,2022,11.0,12.0,6.0
+29001,Doktor Teknik Geomatika,S-3,Teknik,2022,4.0,1.0,2.0
+26001,Doktor Teknik Industri,S-3,Teknik,2022,17.0,9.0,19.0
+24001,Doktor Teknik Kimia,S-3,Teknik,2022,14.0,12.0,3.0
+21001,Doktor Teknik Mesin,S-3,Teknik,2022,14.0,16.0,15.0
+22001,Doktor Teknik Sipil,S-3,Teknik,2022,20.0,22.0,6.0
+41011,Doktor Teknologi Industri Pertanian,S-3,Teknologi Pertanian,2022,5.0,1.0,3.0
+76101,Magister Agama dan Lintas Budaya,S-2,Pascasarjana,2022,30.0,42.0,30.0
+54104,Magister Agronomi,S-2,Pertanian,2022,26.0,20.0,20.0
+62103,Magister Akuntansi,S-2,Ekonomika dan Bisnis,2022,88.0,118.0,77.0
+82101,Magister Antropologi,S-2,Ilmu Budaya,2022,28.0,57.0,30.0
+81101,Magister Arkeologi,S-2,Ilmu Budaya,2022,13.0,15.0,13.0
+23101,Magister Arsitektur,S-2,Teknik,2022,38.0,43.0,21.0
+68102,Magister Bioetika,S-2,Pascasarjana,2022,9.0,10.0,7.0
+46101,Magister Biologi,S-2,Biologi,2022,94.0,86.0,73.0
+46102,Magister Bioteknologi,S-2,Pascasarjana,2022,47.0,45.0,31.0
+54102,Magister Ekonomi Pertanian,S-2,Pertanian,2022,12.0,21.0,17.0
+60102,Magister Ekonomika Pembangunan,S-2,Ekonomika dan Bisnis,2022,71.0,99.0,82.0
+48102,Magister Farmasi Klinik,S-2,Farmasi,2022,40.0,42.0,44.0
+75101,Magister Filsafat,S-2,Filsafat,2022,24.0,32.0,14.0
+45101,Magister Fisika,S-2,MIPA,2022,30.0,34.0,42.0
+54111,Magister Fitopatologi,S-2,Pertanian,2022,20.0,26.0,14.0
+51101,Magister Geografi,S-2,Geografi,2022,39.0,53.0,18.0
+74105,Magister Hukum Bisnis dan Kenegaraan,S-2,Hukum,2022,81.0,86.0,56.0
+74104,Magister Hukum Kesehatan,S-2,Hukum,2022,11.0,11.0,19.0
+74103,Magister Hukum Litigasi,S-2,Hukum,2022,30.0,36.0,24.0
+63102,Magister Ilmu Administrasi Publik,S-2,ISIPOL,2022,68.0,94.0,74.0
+11101,Magister Ilmu Biomedik,S-2,KKMK,2022,61.0,62.0,63.0
+41103,Magister Ilmu dan Teknologi Pangan,S-2,Teknologi Pertanian,2022,57.0,51.0,48.0
+48101,Magister Ilmu Farmasi,S-2,Farmasi,2022,27.0,36.0,26.0
+54106,Magister Ilmu Hama Tanaman,S-2,Pertanian,2022,16.0,22.0,15.0
+64101,Magister Ilmu Hubungan Internasional,S-2,ISIPOL,2022,41.0,62.0,32.0
+74101,Magister Ilmu Hukum,S-2,Hukum,2022,68.0,102.0,70.0
+74171,Magister Ilmu Hukum (Kampus Jakarta),S-2,Hukum,2022,106.0,144.0,119.0
+12101,Magister Ilmu Kedokteran Gigi,S-2,Kedokteran Gigi,2022,8.0,22.0,6.0
+12102,Magister Ilmu Kedokteran Gigi Klinis,S-2,Kedokteran Gigi,2022,10.0,8.0,10.0
+11103,Magister Ilmu Kedokteran Klinis,S-2,KKMK,2022,147.0,139.0,50.0
+11104,Magister Ilmu Kedokteran Tropis,S-2,KKMK,2022,12.0,9.0,15.0
+54151,Magister Ilmu Kehutanan,S-2,Kehutanan,2022,26.0,68.0,36.0
+13101,Magister Ilmu Kesehatan Masyarakat,S-2,KKMK,2022,100.0,128.0,150.0
+55101,Magister Ilmu Komputer,S-2,MIPA,2022,63.0,71.0,54.0
+70101,Magister Ilmu Komunikasi,S-2,ISIPOL,2022,93.0,93.0,68.0
+95129,Magister Ilmu Lingkungan,S-2,Pascasarjana,2022,55.0,73.0,64.0
+11109,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,S-2,KKMK,2022,18.0,13.0,16.0
+54146,Magister Ilmu Perikanan,S-2,Pertanian,2022,27.0,45.0,16.0
+54131,Magister Ilmu Peternakan,S-2,Peternakan,2022,65.0,71.0,60.0
+54105,Magister Ilmu Tanah,S-2,Pertanian,2022,20.0,23.0,20.0
+95127,Magister Kajian Budaya dan Media,S-2,Pascasarjana,2022,28.0,41.0,22.0
+95124,Magister Kajian Budaya Timur Tengah,S-2,Ilmu Budaya,2022,13.0,22.0,15.0
+95104,Magister Kajian Pariwisata,S-2,Pascasarjana,2022,27.0,25.0,28.0
+13163,Magister Kebijakan dan Manajemen Kesehatan,S-2,KKMK,2022,84.0,96.0,102.0
+74102,Magister Kenotariatan,S-2,Hukum,2022,126.0,130.0,103.0
+95107,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),S-2,Pascasarjana,2022,37.0,45.0,48.0
+95102,Magister Kependudukan,S-2,Pascasarjana,2022,4.0,12.0,2.0
+14101,Magister Keperawatan,S-2,KKMK,2022,59.0,57.0,44.0
+95128,Magister Ketahanan Nasional,S-2,Pascasarjana,2022,25.0,25.0,30.0
+47101,Magister Kimia,S-2,MIPA,2022,44.0,69.0,36.0
+79102,Magister Linguistik,S-2,Ilmu Budaya,2022,69.0,110.0,79.0
+61101,Magister Manajemen,S-2,Ekonomika dan Bisnis,2022,299.0,281.0,359.0
+61171,Magister Manajemen (Kampus Jakarta),S-2,Ekonomika dan Bisnis,2022,371.0,405.0,382.0
+54101,Magister Manajemen Agribisnis,S-2,Pertanian,2022,40.0,46.0,33.0
+61104,Magister Manajemen Bencana,S-2,Pascasarjana,2022,9.0,11.0,10.0
+63101,Magister Manajemen dan Kebijakan Publik,S-2,ISIPOL,2022,46.0,50.0,68.0
+48105,Magister Manajemen Farmasi,S-2,Farmasi,2022,36.0,34.0,33.0
+86105,Magister Manajemen Pendidikan Tinggi,S-2,Pascasarjana,2022,22.0,11.0,10.0
+44101,Magister Matematika,S-2,MIPA,2022,48.0,44.0,23.0
+86102,Magister Pembangunan Sosial dan Kesejahteraan,S-2,ISIPOL,2022,23.0,40.0,29.0
+54107,Magister Pemuliaan Tanaman,S-2,Pertanian,2022,5.0,15.0,7.0
+51111,Magister Penginderaan Jauh,S-2,Geografi,2022,27.0,39.0,8.0
+95121,Magister Pengkajian Amerika,S-2,Ilmu Budaya,2022,19.0,7.0,14.0
+91101,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,S-2,Pascasarjana,2022,33.0,23.0,17.0
+54103,Magister Penyuluhan dan Komunikasi Pembangunan,S-2,Pascasarjana,2022,23.0,29.0,24.0
+95103,Magister Perencanaan Wilayah dan Kota,S-2,Teknik,2022,40.0,76.0,56.0
+67101,Magister Politik dan Pemerintahan,S-2,ISIPOL,2022,27.0,30.0,17.0
+73101,Magister Psikologi,S-2,Psikologi,2022,79.0,121.0,54.0
+35102,Magister Rancang Kota,S-2,Teknik,2022,14.0,24.0,10.0
+62101,Magister Sains Akuntansi,S-2,Ekonomika dan Bisnis,2022,30.0,19.0,25.0
+60101,Magister Sains Ilmu Ekonomi,S-2,Ekonomika dan Bisnis,2022,18.0,15.0,12.0
+61102,Magister Sains Manajemen,S-2,Ekonomika dan Bisnis,2022,43.0,51.0,38.0
+54162,Magister Sains Veteriner,S-2,Kedokteran Hewan,2022,36.0,36.0,52.0
+79101,Magister Sastra,S-2,Ilmu Budaya,2022,66.0,78.0,57.0
+80101,Magister Sejarah,S-2,Ilmu Budaya,2022,28.0,27.0,21.0
+22102,Magister Sistem dan Teknik Transportasi,S-2,Teknik,2022,50.0,47.0,41.0
+69101,Magister Sosiologi,S-2,ISIPOL,2022,41.0,33.0,18.0
+11123,Magister Teknik Biomedis,S-2,Pascasarjana,2022,13.0,16.0,3.0
+20101,Magister Teknik Elektro,S-2,Teknik,2022,29.0,69.0,35.0
+30101,Magister Teknik Fisika,S-2,Teknik,2022,5.0,9.0,10.0
+34101,Magister Teknik Geologi,S-2,Teknik,2022,46.0,57.0,54.0
+29101,Magister Teknik Geomatika,S-2,Teknik,2022,15.0,26.0,20.0
+26101,Magister Teknik Industri,S-2,Teknik,2022,44.0,56.0,39.0
+24101,Magister Teknik Kimia,S-2,Teknik,2022,50.0,51.0,51.0
+21101,Magister Teknik Mesin,S-2,Teknik,2022,51.0,40.0,29.0
+22105,Magister Teknik Pengelolaan Bencana Alam,S-2,Teknik,2022,32.0,25.0,25.0
+41101,Magister Teknik Pertanian,S-2,Teknologi Pertanian,2022,14.0,15.0,19.0
+22101,Magister Teknik Sipil,S-2,Teknik,2022,83.0,93.0,53.0
+31103,Magister Teknik Sistem,S-2,Teknik,2022,25.0,46.0,24.0
+41133,Magister Teknologi Hasil Perkebunan,S-2,Teknologi Pertanian,2022,4.0,7.0,8.0
+41111,Magister Teknologi Industri Pertanian,S-2,Teknologi Pertanian,2022,8.0,15.0,13.0
+59101,Magister Teknologi informasi,S-2,Teknik,2022,53.0,86.0,61.0

@@ -6,6 +6,7 @@ import numpy as np
 from data import refresh_data, get_data, preprocess_data
 
 
+
 # def load_data_from_gsheets():
 #     conn = st.connection("gsheets", type=GSheetsConnection)
 #     # existing_dhp = conn.read(worksheet="Data Histori Prediksi Suatu Prodi", ttl=5)
@@ -121,26 +122,26 @@ max_banyak_data_ts = int(max_banyak_data_ts)
 # st.write(max_banyak_data_ts)
 
 # 7. Fungsi hitung persentase penurunan
-# def hitung_persentase_penurunan(index, data, predict_year):
-#     # data_mahasiswa_start_year = input_fields["input_jumlah_mahasiswa_ts0"]
-#     # end_year = predict_year
-#     # penurunan_total = (data[f"{end_year} (Prediksi)"] - data_mahasiswa_start_year)
-#     # persentase_penurunan = (penurunan_total / 2) * 100
-#     # return persentase_penurunan
-#     ts_1 = data.at[index, f"{predict_year}"]
-#     ts_0 = data.at[index, str(input_last_year)]
-#     try:
-#         if ts_1==0.0 or np.isnan(ts_1) or (ts_1 is None):
-#             return 0
-#     except Exception as e:
-#         print('ERRROR: ts0 ts1', index, type(ts_1), ts_0, ts_1)
-#         raise e
-            
-#     penurunan = (ts_0 - ts_1) / ts_1
+def hitung_persentase_penurunan(index, data, predict_year):
+    # data_mahasiswa_start_year = input_fields["input_jumlah_mahasiswa_ts0"]
+    # end_year = predict_year
+    # penurunan_total = (data[f"{end_year} (Prediksi)"] - data_mahasiswa_start_year)
+    # persentase_penurunan = (penurunan_total / 2) * 100
+    # return persentase_penurunan
+    ts_1 = data.at[index, f"{predict_year}"]
+    ts_0 = data.at[index, str(input_last_year)]
+    try:
+        if ts_1==0.0 or np.isnan(ts_1) or (ts_1 is None):
+            return 0
+    except Exception as e:
+        print('ERRROR: ts0 ts1', index, type(ts_1), ts_0, ts_1)
+        raise e
+        
+    penurunan = (ts_0 - ts_1) / ts_1
 
-#     persentase_penurunan = penurunan * 100
+    persentase_penurunan = penurunan * 100
 
-#     return round(-persentase_penurunan, 2)
+    return round(-persentase_penurunan, 2)
 
 # print('input_fields:', input_fields)
 # input_fields

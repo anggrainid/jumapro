@@ -1,15 +1,14 @@
-def prediksi_pemantauan_satu_prodi():
+import streamlit as st
+from streamlit_gsheets import GSheetsConnection
+import pickle
+import pandas as pd
+from datetime import date
 
-    import streamlit as st
-    from streamlit_gsheets import GSheetsConnection
-    import pickle
-    import pandas as pd
-    from datetime import date
+def prediksi_pemantauan_satu_prodi():
 
     # Halaman Prediksi Suatu Prodi
     # st.title("Halaman Prediksi Suatu Prodi Dengan Formula")
     st.markdown("Form Prediksi Pemantauan Suatu Program Studi")
-
 
 
     # Establishing a Google Sheets connection

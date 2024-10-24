@@ -1,0 +1,1276 @@
+faculty,ps,cluster,level,year,current_students,current_students_lag1,next_year_students
+Ilmu Budaya,Doktor Antropologi,Soshum,S-3,2014,0.0,0.0,0.0
+Ilmu Budaya,Doktor Antropologi,Soshum,S-3,2015,0.0,0.0,0.0
+Ilmu Budaya,Doktor Antropologi,Soshum,S-3,2016,0.0,0.0,0.0
+Ilmu Budaya,Doktor Antropologi,Soshum,S-3,2017,0.0,0.0,0.0
+Ilmu Budaya,Doktor Antropologi,Soshum,S-3,2018,0.0,0.0,0.0
+Ilmu Budaya,Doktor Antropologi,Soshum,S-3,2019,0.0,0.0,4.0
+Ilmu Budaya,Doktor Antropologi,Soshum,S-3,2020,4.0,0.0,3.0
+Ilmu Budaya,Doktor Antropologi,Soshum,S-3,2021,3.0,4.0,5.0
+Ilmu Budaya,Doktor Antropologi,Soshum,S-3,2022,5.0,3.0,3.0
+Teknik,Doktor Arsitektur,Saintek,S-3,2014,4.0,1.0,2.0
+Teknik,Doktor Arsitektur,Saintek,S-3,2015,2.0,4.0,7.0
+Teknik,Doktor Arsitektur,Saintek,S-3,2016,7.0,2.0,6.0
+Teknik,Doktor Arsitektur,Saintek,S-3,2017,6.0,7.0,11.0
+Teknik,Doktor Arsitektur,Saintek,S-3,2018,11.0,6.0,5.0
+Teknik,Doktor Arsitektur,Saintek,S-3,2019,5.0,11.0,10.0
+Teknik,Doktor Arsitektur,Saintek,S-3,2020,10.0,5.0,6.0
+Teknik,Doktor Arsitektur,Saintek,S-3,2021,6.0,10.0,17.0
+Teknik,Doktor Arsitektur,Saintek,S-3,2022,17.0,6.0,14.0
+Biologi,Doktor Biologi,Saintek,S-3,2014,9.0,9.0,4.0
+Biologi,Doktor Biologi,Saintek,S-3,2015,4.0,9.0,8.0
+Biologi,Doktor Biologi,Saintek,S-3,2016,8.0,4.0,6.0
+Biologi,Doktor Biologi,Saintek,S-3,2017,6.0,8.0,10.0
+Biologi,Doktor Biologi,Saintek,S-3,2018,10.0,6.0,12.0
+Biologi,Doktor Biologi,Saintek,S-3,2019,12.0,10.0,10.0
+Biologi,Doktor Biologi,Saintek,S-3,2020,10.0,12.0,19.0
+Biologi,Doktor Biologi,Saintek,S-3,2021,19.0,10.0,26.0
+Biologi,Doktor Biologi,Saintek,S-3,2022,26.0,19.0,29.0
+Pascasarjana,Doktor Bioteknologi,Pascasarjana,S-3,2014,7.0,7.0,2.0
+Pascasarjana,Doktor Bioteknologi,Pascasarjana,S-3,2015,2.0,7.0,4.0
+Pascasarjana,Doktor Bioteknologi,Pascasarjana,S-3,2016,4.0,2.0,7.0
+Pascasarjana,Doktor Bioteknologi,Pascasarjana,S-3,2017,7.0,4.0,1.0
+Pascasarjana,Doktor Bioteknologi,Pascasarjana,S-3,2018,1.0,7.0,4.0
+Pascasarjana,Doktor Bioteknologi,Pascasarjana,S-3,2019,4.0,1.0,3.0
+Pascasarjana,Doktor Bioteknologi,Pascasarjana,S-3,2020,3.0,4.0,11.0
+Pascasarjana,Doktor Bioteknologi,Pascasarjana,S-3,2021,11.0,3.0,14.0
+Pascasarjana,Doktor Bioteknologi,Pascasarjana,S-3,2022,14.0,11.0,13.0
+Filsafat,Doktor Filsafat,Soshum,S-3,2014,8.0,15.0,11.0
+Filsafat,Doktor Filsafat,Soshum,S-3,2015,11.0,8.0,13.0
+Filsafat,Doktor Filsafat,Soshum,S-3,2016,13.0,11.0,8.0
+Filsafat,Doktor Filsafat,Soshum,S-3,2017,8.0,13.0,3.0
+Filsafat,Doktor Filsafat,Soshum,S-3,2018,3.0,8.0,12.0
+Filsafat,Doktor Filsafat,Soshum,S-3,2019,12.0,3.0,8.0
+Filsafat,Doktor Filsafat,Soshum,S-3,2020,8.0,12.0,14.0
+Filsafat,Doktor Filsafat,Soshum,S-3,2021,14.0,8.0,13.0
+Filsafat,Doktor Filsafat,Soshum,S-3,2022,13.0,14.0,14.0
+MIPA,Doktor Fisika,Saintek,S-3,2014,8.0,8.0,9.0
+MIPA,Doktor Fisika,Saintek,S-3,2015,9.0,8.0,6.0
+MIPA,Doktor Fisika,Saintek,S-3,2016,6.0,9.0,3.0
+MIPA,Doktor Fisika,Saintek,S-3,2017,3.0,6.0,2.0
+MIPA,Doktor Fisika,Saintek,S-3,2018,2.0,3.0,9.0
+MIPA,Doktor Fisika,Saintek,S-3,2019,9.0,2.0,5.0
+MIPA,Doktor Fisika,Saintek,S-3,2020,5.0,9.0,17.0
+MIPA,Doktor Fisika,Saintek,S-3,2021,17.0,5.0,27.0
+MIPA,Doktor Fisika,Saintek,S-3,2022,27.0,17.0,23.0
+ISIPOL,Doktor Ilmu Administrasi Publik,Soshum,S-3,2014,2.0,2.0,3.0
+ISIPOL,Doktor Ilmu Administrasi Publik,Soshum,S-3,2015,3.0,2.0,2.0
+ISIPOL,Doktor Ilmu Administrasi Publik,Soshum,S-3,2016,2.0,3.0,2.0
+ISIPOL,Doktor Ilmu Administrasi Publik,Soshum,S-3,2017,2.0,2.0,4.0
+ISIPOL,Doktor Ilmu Administrasi Publik,Soshum,S-3,2018,4.0,2.0,4.0
+ISIPOL,Doktor Ilmu Administrasi Publik,Soshum,S-3,2019,4.0,4.0,5.0
+ISIPOL,Doktor Ilmu Administrasi Publik,Soshum,S-3,2020,5.0,4.0,7.0
+ISIPOL,Doktor Ilmu Administrasi Publik,Soshum,S-3,2021,7.0,5.0,0.0
+ISIPOL,Doktor Ilmu Administrasi Publik,Soshum,S-3,2022,0.0,7.0,9.0
+Ekonomika dan Bisnis,Doktor Ilmu Akuntansi,Soshum,S-3,2014,16.0,14.0,5.0
+Ekonomika dan Bisnis,Doktor Ilmu Akuntansi,Soshum,S-3,2015,5.0,16.0,8.0
+Ekonomika dan Bisnis,Doktor Ilmu Akuntansi,Soshum,S-3,2016,8.0,5.0,5.0
+Ekonomika dan Bisnis,Doktor Ilmu Akuntansi,Soshum,S-3,2017,5.0,8.0,10.0
+Ekonomika dan Bisnis,Doktor Ilmu Akuntansi,Soshum,S-3,2018,10.0,5.0,8.0
+Ekonomika dan Bisnis,Doktor Ilmu Akuntansi,Soshum,S-3,2019,8.0,10.0,12.0
+Ekonomika dan Bisnis,Doktor Ilmu Akuntansi,Soshum,S-3,2020,12.0,8.0,8.0
+Ekonomika dan Bisnis,Doktor Ilmu Akuntansi,Soshum,S-3,2021,8.0,12.0,12.0
+Ekonomika dan Bisnis,Doktor Ilmu Akuntansi,Soshum,S-3,2022,12.0,8.0,17.0
+Ekonomika dan Bisnis,Doktor Ilmu Ekonomi,Soshum,S-3,2014,4.0,3.0,5.0
+Ekonomika dan Bisnis,Doktor Ilmu Ekonomi,Soshum,S-3,2015,5.0,4.0,4.0
+Ekonomika dan Bisnis,Doktor Ilmu Ekonomi,Soshum,S-3,2016,4.0,5.0,2.0
+Ekonomika dan Bisnis,Doktor Ilmu Ekonomi,Soshum,S-3,2017,2.0,4.0,5.0
+Ekonomika dan Bisnis,Doktor Ilmu Ekonomi,Soshum,S-3,2018,5.0,2.0,5.0
+Ekonomika dan Bisnis,Doktor Ilmu Ekonomi,Soshum,S-3,2019,5.0,5.0,1.0
+Ekonomika dan Bisnis,Doktor Ilmu Ekonomi,Soshum,S-3,2020,1.0,5.0,4.0
+Ekonomika dan Bisnis,Doktor Ilmu Ekonomi,Soshum,S-3,2021,4.0,1.0,2.0
+Ekonomika dan Bisnis,Doktor Ilmu Ekonomi,Soshum,S-3,2022,2.0,4.0,3.0
+Farmasi,Doktor Ilmu Farmasi,Medika,S-3,2014,13.0,15.0,19.0
+Farmasi,Doktor Ilmu Farmasi,Medika,S-3,2015,19.0,13.0,19.0
+Farmasi,Doktor Ilmu Farmasi,Medika,S-3,2016,19.0,19.0,16.0
+Farmasi,Doktor Ilmu Farmasi,Medika,S-3,2017,16.0,19.0,12.0
+Farmasi,Doktor Ilmu Farmasi,Medika,S-3,2018,12.0,16.0,21.0
+Farmasi,Doktor Ilmu Farmasi,Medika,S-3,2019,21.0,12.0,25.0
+Farmasi,Doktor Ilmu Farmasi,Medika,S-3,2020,25.0,21.0,34.0
+Farmasi,Doktor Ilmu Farmasi,Medika,S-3,2021,34.0,25.0,40.0
+Farmasi,Doktor Ilmu Farmasi,Medika,S-3,2022,40.0,34.0,41.0
+Geografi,Doktor Ilmu Geografi,Saintek,S-3,2014,10.0,10.0,10.0
+Geografi,Doktor Ilmu Geografi,Saintek,S-3,2015,10.0,10.0,9.0
+Geografi,Doktor Ilmu Geografi,Saintek,S-3,2016,9.0,10.0,10.0
+Geografi,Doktor Ilmu Geografi,Saintek,S-3,2017,10.0,9.0,8.0
+Geografi,Doktor Ilmu Geografi,Saintek,S-3,2018,8.0,10.0,15.0
+Geografi,Doktor Ilmu Geografi,Saintek,S-3,2019,15.0,8.0,5.0
+Geografi,Doktor Ilmu Geografi,Saintek,S-3,2020,5.0,15.0,18.0
+Geografi,Doktor Ilmu Geografi,Saintek,S-3,2021,18.0,5.0,11.0
+Geografi,Doktor Ilmu Geografi,Saintek,S-3,2022,11.0,18.0,14.0
+Hukum,Doktor Ilmu Hukum,Soshum,S-3,2014,51.0,53.0,18.0
+Hukum,Doktor Ilmu Hukum,Soshum,S-3,2015,18.0,51.0,8.0
+Hukum,Doktor Ilmu Hukum,Soshum,S-3,2016,8.0,18.0,14.0
+Hukum,Doktor Ilmu Hukum,Soshum,S-3,2017,14.0,8.0,5.0
+Hukum,Doktor Ilmu Hukum,Soshum,S-3,2018,5.0,14.0,8.0
+Hukum,Doktor Ilmu Hukum,Soshum,S-3,2019,8.0,5.0,9.0
+Hukum,Doktor Ilmu Hukum,Soshum,S-3,2020,9.0,8.0,13.0
+Hukum,Doktor Ilmu Hukum,Soshum,S-3,2021,13.0,9.0,8.0
+Hukum,Doktor Ilmu Hukum,Soshum,S-3,2022,8.0,13.0,14.0
+Kedokteran Gigi,Doktor Ilmu Kedokteran Gigi,Medika,S-3,2014,2.0,2.0,8.0
+Kedokteran Gigi,Doktor Ilmu Kedokteran Gigi,Medika,S-3,2015,8.0,2.0,7.0
+Kedokteran Gigi,Doktor Ilmu Kedokteran Gigi,Medika,S-3,2016,7.0,8.0,2.0
+Kedokteran Gigi,Doktor Ilmu Kedokteran Gigi,Medika,S-3,2017,2.0,7.0,3.0
+Kedokteran Gigi,Doktor Ilmu Kedokteran Gigi,Medika,S-3,2018,3.0,2.0,5.0
+Kedokteran Gigi,Doktor Ilmu Kedokteran Gigi,Medika,S-3,2019,5.0,3.0,7.0
+Kedokteran Gigi,Doktor Ilmu Kedokteran Gigi,Medika,S-3,2020,7.0,5.0,8.0
+Kedokteran Gigi,Doktor Ilmu Kedokteran Gigi,Medika,S-3,2021,8.0,7.0,9.0
+Kedokteran Gigi,Doktor Ilmu Kedokteran Gigi,Medika,S-3,2022,9.0,8.0,12.0
+KKMK,Doktor Ilmu Kedokteran dan Kesehatan,Medika,S-3,2014,38.0,53.0,37.0
+KKMK,Doktor Ilmu Kedokteran dan Kesehatan,Medika,S-3,2015,37.0,38.0,59.0
+KKMK,Doktor Ilmu Kedokteran dan Kesehatan,Medika,S-3,2016,59.0,37.0,44.0
+KKMK,Doktor Ilmu Kedokteran dan Kesehatan,Medika,S-3,2017,44.0,59.0,49.0
+KKMK,Doktor Ilmu Kedokteran dan Kesehatan,Medika,S-3,2018,49.0,44.0,57.0
+KKMK,Doktor Ilmu Kedokteran dan Kesehatan,Medika,S-3,2019,57.0,49.0,61.0
+KKMK,Doktor Ilmu Kedokteran dan Kesehatan,Medika,S-3,2020,61.0,57.0,62.0
+KKMK,Doktor Ilmu Kedokteran dan Kesehatan,Medika,S-3,2021,62.0,61.0,79.0
+KKMK,Doktor Ilmu Kedokteran dan Kesehatan,Medika,S-3,2022,79.0,62.0,64.0
+Kehutanan,Doktor Ilmu Kehutanan,Agro,S-3,2014,9.0,14.0,14.0
+Kehutanan,Doktor Ilmu Kehutanan,Agro,S-3,2015,14.0,9.0,12.0
+Kehutanan,Doktor Ilmu Kehutanan,Agro,S-3,2016,12.0,14.0,16.0
+Kehutanan,Doktor Ilmu Kehutanan,Agro,S-3,2017,16.0,12.0,2.0
+Kehutanan,Doktor Ilmu Kehutanan,Agro,S-3,2018,2.0,16.0,13.0
+Kehutanan,Doktor Ilmu Kehutanan,Agro,S-3,2019,13.0,2.0,11.0
+Kehutanan,Doktor Ilmu Kehutanan,Agro,S-3,2020,11.0,13.0,19.0
+Kehutanan,Doktor Ilmu Kehutanan,Agro,S-3,2021,19.0,11.0,14.0
+Kehutanan,Doktor Ilmu Kehutanan,Agro,S-3,2022,14.0,19.0,20.0
+Pascasarjana,Doktor Ilmu Ketahanan Nasional,Pascasarjana,S-3,2014,0.0,0.0,0.0
+Pascasarjana,Doktor Ilmu Ketahanan Nasional,Pascasarjana,S-3,2015,0.0,0.0,0.0
+Pascasarjana,Doktor Ilmu Ketahanan Nasional,Pascasarjana,S-3,2016,0.0,0.0,0.0
+Pascasarjana,Doktor Ilmu Ketahanan Nasional,Pascasarjana,S-3,2017,0.0,0.0,0.0
+Pascasarjana,Doktor Ilmu Ketahanan Nasional,Pascasarjana,S-3,2018,0.0,0.0,0.0
+Pascasarjana,Doktor Ilmu Ketahanan Nasional,Pascasarjana,S-3,2019,0.0,0.0,14.0
+Pascasarjana,Doktor Ilmu Ketahanan Nasional,Pascasarjana,S-3,2020,14.0,0.0,3.0
+Pascasarjana,Doktor Ilmu Ketahanan Nasional,Pascasarjana,S-3,2021,3.0,14.0,4.0
+Pascasarjana,Doktor Ilmu Ketahanan Nasional,Pascasarjana,S-3,2022,4.0,3.0,8.0
+MIPA,Doktor Ilmu Komputer,Saintek,S-3,2014,8.0,17.0,11.0
+MIPA,Doktor Ilmu Komputer,Saintek,S-3,2015,11.0,8.0,18.0
+MIPA,Doktor Ilmu Komputer,Saintek,S-3,2016,18.0,11.0,9.0
+MIPA,Doktor Ilmu Komputer,Saintek,S-3,2017,9.0,18.0,14.0
+MIPA,Doktor Ilmu Komputer,Saintek,S-3,2018,14.0,9.0,22.0
+MIPA,Doktor Ilmu Komputer,Saintek,S-3,2019,22.0,14.0,21.0
+MIPA,Doktor Ilmu Komputer,Saintek,S-3,2020,21.0,22.0,22.0
+MIPA,Doktor Ilmu Komputer,Saintek,S-3,2021,22.0,21.0,34.0
+MIPA,Doktor Ilmu Komputer,Saintek,S-3,2022,34.0,22.0,38.0
+ISIPOL,Doktor Ilmu Komunikasi,Soshum,S-3,2014,0.0,0.0,0.0
+ISIPOL,Doktor Ilmu Komunikasi,Soshum,S-3,2015,0.0,0.0,0.0
+ISIPOL,Doktor Ilmu Komunikasi,Soshum,S-3,2016,0.0,0.0,0.0
+ISIPOL,Doktor Ilmu Komunikasi,Soshum,S-3,2017,0.0,0.0,0.0
+ISIPOL,Doktor Ilmu Komunikasi,Soshum,S-3,2018,0.0,0.0,0.0
+ISIPOL,Doktor Ilmu Komunikasi,Soshum,S-3,2019,0.0,0.0,11.0
+ISIPOL,Doktor Ilmu Komunikasi,Soshum,S-3,2020,11.0,0.0,14.0
+ISIPOL,Doktor Ilmu Komunikasi,Soshum,S-3,2021,14.0,11.0,10.0
+ISIPOL,Doktor Ilmu Komunikasi,Soshum,S-3,2022,10.0,14.0,19.0
+Pascasarjana,Doktor Ilmu Lingkungan,Pascasarjana,S-3,2014,8.0,6.0,6.0
+Pascasarjana,Doktor Ilmu Lingkungan,Pascasarjana,S-3,2015,6.0,8.0,7.0
+Pascasarjana,Doktor Ilmu Lingkungan,Pascasarjana,S-3,2016,7.0,6.0,6.0
+Pascasarjana,Doktor Ilmu Lingkungan,Pascasarjana,S-3,2017,6.0,7.0,7.0
+Pascasarjana,Doktor Ilmu Lingkungan,Pascasarjana,S-3,2018,7.0,6.0,7.0
+Pascasarjana,Doktor Ilmu Lingkungan,Pascasarjana,S-3,2019,7.0,7.0,4.0
+Pascasarjana,Doktor Ilmu Lingkungan,Pascasarjana,S-3,2020,4.0,7.0,12.0
+Pascasarjana,Doktor Ilmu Lingkungan,Pascasarjana,S-3,2021,12.0,4.0,10.0
+Pascasarjana,Doktor Ilmu Lingkungan,Pascasarjana,S-3,2022,10.0,12.0,15.0
+Ekonomika dan Bisnis,Doktor Ilmu Manajemen,Soshum,S-3,2014,12.0,11.0,10.0
+Ekonomika dan Bisnis,Doktor Ilmu Manajemen,Soshum,S-3,2015,10.0,12.0,17.0
+Ekonomika dan Bisnis,Doktor Ilmu Manajemen,Soshum,S-3,2016,17.0,10.0,7.0
+Ekonomika dan Bisnis,Doktor Ilmu Manajemen,Soshum,S-3,2017,7.0,17.0,6.0
+Ekonomika dan Bisnis,Doktor Ilmu Manajemen,Soshum,S-3,2018,6.0,7.0,11.0
+Ekonomika dan Bisnis,Doktor Ilmu Manajemen,Soshum,S-3,2019,11.0,6.0,4.0
+Ekonomika dan Bisnis,Doktor Ilmu Manajemen,Soshum,S-3,2020,4.0,11.0,14.0
+Ekonomika dan Bisnis,Doktor Ilmu Manajemen,Soshum,S-3,2021,14.0,4.0,14.0
+Ekonomika dan Bisnis,Doktor Ilmu Manajemen,Soshum,S-3,2022,14.0,14.0,16.0
+Teknologi Pertanian,Doktor Ilmu Pangan,Agro,S-3,2014,7.0,11.0,12.0
+Teknologi Pertanian,Doktor Ilmu Pangan,Agro,S-3,2015,12.0,7.0,6.0
+Teknologi Pertanian,Doktor Ilmu Pangan,Agro,S-3,2016,6.0,12.0,10.0
+Teknologi Pertanian,Doktor Ilmu Pangan,Agro,S-3,2017,10.0,6.0,5.0
+Teknologi Pertanian,Doktor Ilmu Pangan,Agro,S-3,2018,5.0,10.0,14.0
+Teknologi Pertanian,Doktor Ilmu Pangan,Agro,S-3,2019,14.0,5.0,13.0
+Teknologi Pertanian,Doktor Ilmu Pangan,Agro,S-3,2020,13.0,14.0,6.0
+Teknologi Pertanian,Doktor Ilmu Pangan,Agro,S-3,2021,6.0,13.0,16.0
+Teknologi Pertanian,Doktor Ilmu Pangan,Agro,S-3,2022,16.0,6.0,9.0
+Pertanian,Doktor Ilmu Pertanian,Agro,S-3,2014,33.0,23.0,20.0
+Pertanian,Doktor Ilmu Pertanian,Agro,S-3,2015,20.0,33.0,25.0
+Pertanian,Doktor Ilmu Pertanian,Agro,S-3,2016,25.0,20.0,17.0
+Pertanian,Doktor Ilmu Pertanian,Agro,S-3,2017,17.0,25.0,13.0
+Pertanian,Doktor Ilmu Pertanian,Agro,S-3,2018,13.0,17.0,18.0
+Pertanian,Doktor Ilmu Pertanian,Agro,S-3,2019,18.0,13.0,26.0
+Pertanian,Doktor Ilmu Pertanian,Agro,S-3,2020,26.0,18.0,20.0
+Pertanian,Doktor Ilmu Pertanian,Agro,S-3,2021,20.0,26.0,26.0
+Pertanian,Doktor Ilmu Pertanian,Agro,S-3,2022,26.0,20.0,35.0
+Peternakan,Doktor Ilmu Peternakan,Agro,S-3,2014,8.0,9.0,6.0
+Peternakan,Doktor Ilmu Peternakan,Agro,S-3,2015,6.0,8.0,17.0
+Peternakan,Doktor Ilmu Peternakan,Agro,S-3,2016,17.0,6.0,4.0
+Peternakan,Doktor Ilmu Peternakan,Agro,S-3,2017,4.0,17.0,2.0
+Peternakan,Doktor Ilmu Peternakan,Agro,S-3,2018,2.0,4.0,9.0
+Peternakan,Doktor Ilmu Peternakan,Agro,S-3,2019,9.0,2.0,8.0
+Peternakan,Doktor Ilmu Peternakan,Agro,S-3,2020,8.0,9.0,23.0
+Peternakan,Doktor Ilmu Peternakan,Agro,S-3,2021,23.0,8.0,28.0
+Peternakan,Doktor Ilmu Peternakan,Agro,S-3,2022,28.0,23.0,21.0
+ISIPOL,Doktor Ilmu Politik,Soshum,S-3,2014,11.0,9.0,6.0
+ISIPOL,Doktor Ilmu Politik,Soshum,S-3,2015,6.0,11.0,7.0
+ISIPOL,Doktor Ilmu Politik,Soshum,S-3,2016,7.0,6.0,7.0
+ISIPOL,Doktor Ilmu Politik,Soshum,S-3,2017,7.0,7.0,6.0
+ISIPOL,Doktor Ilmu Politik,Soshum,S-3,2018,6.0,7.0,5.0
+ISIPOL,Doktor Ilmu Politik,Soshum,S-3,2019,5.0,6.0,7.0
+ISIPOL,Doktor Ilmu Politik,Soshum,S-3,2020,7.0,5.0,15.0
+ISIPOL,Doktor Ilmu Politik,Soshum,S-3,2021,15.0,7.0,11.0
+ISIPOL,Doktor Ilmu Politik,Soshum,S-3,2022,11.0,15.0,8.0
+Psikologi,Doktor Ilmu Psikologi,Soshum,S-3,2014,19.0,19.0,13.0
+Psikologi,Doktor Ilmu Psikologi,Soshum,S-3,2015,13.0,19.0,12.0
+Psikologi,Doktor Ilmu Psikologi,Soshum,S-3,2016,12.0,13.0,11.0
+Psikologi,Doktor Ilmu Psikologi,Soshum,S-3,2017,11.0,12.0,10.0
+Psikologi,Doktor Ilmu Psikologi,Soshum,S-3,2018,10.0,11.0,7.0
+Psikologi,Doktor Ilmu Psikologi,Soshum,S-3,2019,7.0,10.0,10.0
+Psikologi,Doktor Ilmu Psikologi,Soshum,S-3,2020,10.0,7.0,14.0
+Psikologi,Doktor Ilmu Psikologi,Soshum,S-3,2021,14.0,10.0,14.0
+Psikologi,Doktor Ilmu Psikologi,Soshum,S-3,2022,14.0,14.0,12.0
+Teknologi Pertanian,Doktor Ilmu Teknik Pertanian,Agro,S-3,2014,5.0,2.0,1.0
+Teknologi Pertanian,Doktor Ilmu Teknik Pertanian,Agro,S-3,2015,1.0,5.0,3.0
+Teknologi Pertanian,Doktor Ilmu Teknik Pertanian,Agro,S-3,2016,3.0,1.0,6.0
+Teknologi Pertanian,Doktor Ilmu Teknik Pertanian,Agro,S-3,2017,6.0,3.0,0.0
+Teknologi Pertanian,Doktor Ilmu Teknik Pertanian,Agro,S-3,2018,0.0,6.0,7.0
+Teknologi Pertanian,Doktor Ilmu Teknik Pertanian,Agro,S-3,2019,7.0,0.0,4.0
+Teknologi Pertanian,Doktor Ilmu Teknik Pertanian,Agro,S-3,2020,4.0,7.0,6.0
+Teknologi Pertanian,Doktor Ilmu Teknik Pertanian,Agro,S-3,2021,6.0,4.0,3.0
+Teknologi Pertanian,Doktor Ilmu Teknik Pertanian,Agro,S-3,2022,3.0,6.0,7.0
+Ilmu Budaya,Doktor Ilmu-Ilmu Humaniora,Soshum,S-3,2014,17.0,30.0,13.0
+Ilmu Budaya,Doktor Ilmu-Ilmu Humaniora,Soshum,S-3,2015,13.0,17.0,33.0
+Ilmu Budaya,Doktor Ilmu-Ilmu Humaniora,Soshum,S-3,2016,33.0,13.0,28.0
+Ilmu Budaya,Doktor Ilmu-Ilmu Humaniora,Soshum,S-3,2017,28.0,33.0,30.0
+Ilmu Budaya,Doktor Ilmu-Ilmu Humaniora,Soshum,S-3,2018,30.0,28.0,27.0
+Ilmu Budaya,Doktor Ilmu-Ilmu Humaniora,Soshum,S-3,2019,27.0,30.0,18.0
+Ilmu Budaya,Doktor Ilmu-Ilmu Humaniora,Soshum,S-3,2020,18.0,27.0,35.0
+Ilmu Budaya,Doktor Ilmu-Ilmu Humaniora,Soshum,S-3,2021,35.0,18.0,38.0
+Ilmu Budaya,Doktor Ilmu-Ilmu Humaniora,Soshum,S-3,2022,38.0,35.0,36.0
+Pascasarjana,Doktor Inter-Religious Studies,Pascasarjana,S-3,2014,6.0,10.0,5.0
+Pascasarjana,Doktor Inter-Religious Studies,Pascasarjana,S-3,2015,5.0,6.0,5.0
+Pascasarjana,Doktor Inter-Religious Studies,Pascasarjana,S-3,2016,5.0,5.0,6.0
+Pascasarjana,Doktor Inter-Religious Studies,Pascasarjana,S-3,2017,6.0,5.0,4.0
+Pascasarjana,Doktor Inter-Religious Studies,Pascasarjana,S-3,2018,4.0,6.0,5.0
+Pascasarjana,Doktor Inter-Religious Studies,Pascasarjana,S-3,2019,5.0,4.0,5.0
+Pascasarjana,Doktor Inter-Religious Studies,Pascasarjana,S-3,2020,5.0,5.0,4.0
+Pascasarjana,Doktor Inter-Religious Studies,Pascasarjana,S-3,2021,4.0,5.0,6.0
+Pascasarjana,Doktor Inter-Religious Studies,Pascasarjana,S-3,2022,6.0,4.0,3.0
+Pascasarjana,Doktor Kajian Budaya dan Media,Pascasarjana,S-3,2014,5.0,9.0,12.0
+Pascasarjana,Doktor Kajian Budaya dan Media,Pascasarjana,S-3,2015,12.0,5.0,9.0
+Pascasarjana,Doktor Kajian Budaya dan Media,Pascasarjana,S-3,2016,9.0,12.0,4.0
+Pascasarjana,Doktor Kajian Budaya dan Media,Pascasarjana,S-3,2017,4.0,9.0,9.0
+Pascasarjana,Doktor Kajian Budaya dan Media,Pascasarjana,S-3,2018,9.0,4.0,5.0
+Pascasarjana,Doktor Kajian Budaya dan Media,Pascasarjana,S-3,2019,5.0,9.0,8.0
+Pascasarjana,Doktor Kajian Budaya dan Media,Pascasarjana,S-3,2020,8.0,5.0,9.0
+Pascasarjana,Doktor Kajian Budaya dan Media,Pascasarjana,S-3,2021,9.0,8.0,13.0
+Pascasarjana,Doktor Kajian Budaya dan Media,Pascasarjana,S-3,2022,13.0,9.0,8.0
+Pascasarjana,Doktor Kajian Pariwisata,Pascasarjana,S-3,2014,8.0,6.0,5.0
+Pascasarjana,Doktor Kajian Pariwisata,Pascasarjana,S-3,2015,5.0,8.0,0.0
+Pascasarjana,Doktor Kajian Pariwisata,Pascasarjana,S-3,2016,0.0,5.0,0.0
+Pascasarjana,Doktor Kajian Pariwisata,Pascasarjana,S-3,2017,0.0,0.0,10.0
+Pascasarjana,Doktor Kajian Pariwisata,Pascasarjana,S-3,2018,10.0,0.0,11.0
+Pascasarjana,Doktor Kajian Pariwisata,Pascasarjana,S-3,2019,11.0,10.0,7.0
+Pascasarjana,Doktor Kajian Pariwisata,Pascasarjana,S-3,2020,7.0,11.0,15.0
+Pascasarjana,Doktor Kajian Pariwisata,Pascasarjana,S-3,2021,15.0,7.0,13.0
+Pascasarjana,Doktor Kajian Pariwisata,Pascasarjana,S-3,2022,13.0,15.0,10.0
+Pascasarjana,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),Pascasarjana,S-3,2014,13.0,7.0,9.0
+Pascasarjana,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),Pascasarjana,S-3,2015,9.0,13.0,11.0
+Pascasarjana,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),Pascasarjana,S-3,2016,11.0,9.0,11.0
+Pascasarjana,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),Pascasarjana,S-3,2017,11.0,11.0,10.0
+Pascasarjana,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),Pascasarjana,S-3,2018,10.0,11.0,30.0
+Pascasarjana,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),Pascasarjana,S-3,2019,30.0,10.0,31.0
+Pascasarjana,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),Pascasarjana,S-3,2020,31.0,30.0,18.0
+Pascasarjana,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),Pascasarjana,S-3,2021,18.0,31.0,16.0
+Pascasarjana,Doktor Kepemimpinan dan Inovasi Kebijakan (Doktor Studi Kebijakan),Pascasarjana,S-3,2022,16.0,18.0,17.0
+Pascasarjana,Doktor Kependudukan,Pascasarjana,S-3,2014,0.0,2.0,0.0
+Pascasarjana,Doktor Kependudukan,Pascasarjana,S-3,2015,0.0,0.0,1.0
+Pascasarjana,Doktor Kependudukan,Pascasarjana,S-3,2016,1.0,0.0,4.0
+Pascasarjana,Doktor Kependudukan,Pascasarjana,S-3,2017,4.0,1.0,1.0
+Pascasarjana,Doktor Kependudukan,Pascasarjana,S-3,2019,1.0,4.0,5.0
+Pascasarjana,Doktor Kependudukan,Pascasarjana,S-3,2020,5.0,1.0,18.0
+Pascasarjana,Doktor Kependudukan,Pascasarjana,S-3,2021,18.0,5.0,7.0
+Pascasarjana,Doktor Kependudukan,Pascasarjana,S-3,2022,7.0,18.0,5.0
+MIPA,Doktor Kimia,Saintek,S-3,2014,9.0,11.0,8.0
+MIPA,Doktor Kimia,Saintek,S-3,2015,8.0,9.0,16.0
+MIPA,Doktor Kimia,Saintek,S-3,2016,16.0,8.0,11.0
+MIPA,Doktor Kimia,Saintek,S-3,2017,11.0,16.0,5.0
+MIPA,Doktor Kimia,Saintek,S-3,2018,5.0,11.0,21.0
+MIPA,Doktor Kimia,Saintek,S-3,2019,21.0,5.0,11.0
+MIPA,Doktor Kimia,Saintek,S-3,2020,11.0,21.0,19.0
+MIPA,Doktor Kimia,Saintek,S-3,2021,19.0,11.0,28.0
+MIPA,Doktor Kimia,Saintek,S-3,2022,28.0,19.0,12.0
+ISIPOL,Doktor Manajemen dan Kebijakan Publik,Soshum,S-3,2014,5.0,4.0,5.0
+ISIPOL,Doktor Manajemen dan Kebijakan Publik,Soshum,S-3,2015,5.0,5.0,5.0
+ISIPOL,Doktor Manajemen dan Kebijakan Publik,Soshum,S-3,2016,5.0,5.0,5.0
+ISIPOL,Doktor Manajemen dan Kebijakan Publik,Soshum,S-3,2017,5.0,5.0,3.0
+ISIPOL,Doktor Manajemen dan Kebijakan Publik,Soshum,S-3,2018,3.0,5.0,6.0
+ISIPOL,Doktor Manajemen dan Kebijakan Publik,Soshum,S-3,2019,6.0,3.0,7.0
+ISIPOL,Doktor Manajemen dan Kebijakan Publik,Soshum,S-3,2020,7.0,6.0,6.0
+ISIPOL,Doktor Manajemen dan Kebijakan Publik,Soshum,S-3,2021,6.0,7.0,14.0
+ISIPOL,Doktor Manajemen dan Kebijakan Publik,Soshum,S-3,2022,14.0,6.0,8.0
+MIPA,Doktor Matematika,Saintek,S-3,2014,8.0,1.0,8.0
+MIPA,Doktor Matematika,Saintek,S-3,2015,8.0,8.0,5.0
+MIPA,Doktor Matematika,Saintek,S-3,2016,5.0,8.0,8.0
+MIPA,Doktor Matematika,Saintek,S-3,2017,8.0,5.0,7.0
+MIPA,Doktor Matematika,Saintek,S-3,2018,7.0,8.0,8.0
+MIPA,Doktor Matematika,Saintek,S-3,2019,8.0,7.0,6.0
+MIPA,Doktor Matematika,Saintek,S-3,2020,6.0,8.0,10.0
+MIPA,Doktor Matematika,Saintek,S-3,2021,10.0,6.0,15.0
+MIPA,Doktor Matematika,Saintek,S-3,2022,15.0,10.0,11.0
+Ilmu Budaya,Doktor Pengkajian Amerika,Soshum,S-3,2014,1.0,4.0,4.0
+Ilmu Budaya,Doktor Pengkajian Amerika,Soshum,S-3,2015,4.0,1.0,8.0
+Ilmu Budaya,Doktor Pengkajian Amerika,Soshum,S-3,2016,8.0,4.0,1.0
+Ilmu Budaya,Doktor Pengkajian Amerika,Soshum,S-3,2017,1.0,8.0,2.0
+Ilmu Budaya,Doktor Pengkajian Amerika,Soshum,S-3,2018,2.0,1.0,6.0
+Ilmu Budaya,Doktor Pengkajian Amerika,Soshum,S-3,2019,6.0,2.0,8.0
+Ilmu Budaya,Doktor Pengkajian Amerika,Soshum,S-3,2020,8.0,6.0,2.0
+Ilmu Budaya,Doktor Pengkajian Amerika,Soshum,S-3,2021,2.0,8.0,3.0
+Ilmu Budaya,Doktor Pengkajian Amerika,Soshum,S-3,2022,3.0,2.0,2.0
+Pascasarjana,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-3,2014,8.0,5.0,7.0
+Pascasarjana,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-3,2015,7.0,8.0,3.0
+Pascasarjana,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-3,2016,3.0,7.0,7.0
+Pascasarjana,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-3,2017,7.0,3.0,1.0
+Pascasarjana,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-3,2018,1.0,7.0,3.0
+Pascasarjana,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-3,2019,3.0,1.0,5.0
+Pascasarjana,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-3,2020,5.0,3.0,6.0
+Pascasarjana,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-3,2021,6.0,5.0,7.0
+Pascasarjana,Doktor Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-3,2022,7.0,6.0,11.0
+Pascasarjana,Doktor Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-3,2014,7.0,3.0,4.0
+Pascasarjana,Doktor Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-3,2015,4.0,7.0,7.0
+Pascasarjana,Doktor Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-3,2016,7.0,4.0,8.0
+Pascasarjana,Doktor Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-3,2017,8.0,7.0,4.0
+Pascasarjana,Doktor Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-3,2018,4.0,8.0,10.0
+Pascasarjana,Doktor Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-3,2019,10.0,4.0,4.0
+Pascasarjana,Doktor Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-3,2020,4.0,10.0,6.0
+Pascasarjana,Doktor Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-3,2021,6.0,4.0,5.0
+Pascasarjana,Doktor Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-3,2022,5.0,6.0,11.0
+Teknik,Doktor Perencanaan Wilayah dan Kota,Saintek,S-3,2014,0.0,0.0,0.0
+Teknik,Doktor Perencanaan Wilayah dan Kota,Saintek,S-3,2015,0.0,0.0,0.0
+Teknik,Doktor Perencanaan Wilayah dan Kota,Saintek,S-3,2016,0.0,0.0,0.0
+Teknik,Doktor Perencanaan Wilayah dan Kota,Saintek,S-3,2017,0.0,0.0,0.0
+Teknik,Doktor Perencanaan Wilayah dan Kota,Saintek,S-3,2018,0.0,0.0,0.0
+Teknik,Doktor Perencanaan Wilayah dan Kota,Saintek,S-3,2019,0.0,0.0,0.0
+Teknik,Doktor Perencanaan Wilayah dan Kota,Saintek,S-3,2020,0.0,0.0,5.0
+Teknik,Doktor Perencanaan Wilayah dan Kota,Saintek,S-3,2021,5.0,0.0,2.0
+Teknik,Doktor Perencanaan Wilayah dan Kota,Saintek,S-3,2022,2.0,5.0,2.0
+Kedokteran Hewan,Doktor Sain Veteriner,Medika,S-3,2014,4.0,6.0,6.0
+Kedokteran Hewan,Doktor Sain Veteriner,Medika,S-3,2015,6.0,4.0,3.0
+Kedokteran Hewan,Doktor Sain Veteriner,Medika,S-3,2016,3.0,6.0,5.0
+Kedokteran Hewan,Doktor Sain Veteriner,Medika,S-3,2017,5.0,3.0,2.0
+Kedokteran Hewan,Doktor Sain Veteriner,Medika,S-3,2018,2.0,5.0,6.0
+Kedokteran Hewan,Doktor Sain Veteriner,Medika,S-3,2019,6.0,2.0,3.0
+Kedokteran Hewan,Doktor Sain Veteriner,Medika,S-3,2020,3.0,6.0,14.0
+Kedokteran Hewan,Doktor Sain Veteriner,Medika,S-3,2021,14.0,3.0,16.0
+ISIPOL,Doktor Sosiologi,Soshum,S-3,2014,0.0,5.0,2.0
+ISIPOL,Doktor Sosiologi,Soshum,S-3,2015,2.0,0.0,7.0
+ISIPOL,Doktor Sosiologi,Soshum,S-3,2016,7.0,2.0,3.0
+ISIPOL,Doktor Sosiologi,Soshum,S-3,2017,3.0,7.0,2.0
+ISIPOL,Doktor Sosiologi,Soshum,S-3,2018,2.0,3.0,7.0
+ISIPOL,Doktor Sosiologi,Soshum,S-3,2019,7.0,2.0,3.0
+ISIPOL,Doktor Sosiologi,Soshum,S-3,2020,3.0,7.0,7.0
+ISIPOL,Doktor Sosiologi,Soshum,S-3,2021,7.0,3.0,4.0
+ISIPOL,Doktor Sosiologi,Soshum,S-3,2022,4.0,7.0,6.0
+Teknik,Doktor Teknik Elektro,Saintek,S-3,2014,18.0,9.0,20.0
+Teknik,Doktor Teknik Elektro,Saintek,S-3,2015,20.0,18.0,13.0
+Teknik,Doktor Teknik Elektro,Saintek,S-3,2016,13.0,20.0,13.0
+Teknik,Doktor Teknik Elektro,Saintek,S-3,2017,13.0,13.0,16.0
+Teknik,Doktor Teknik Elektro,Saintek,S-3,2018,16.0,13.0,24.0
+Teknik,Doktor Teknik Elektro,Saintek,S-3,2019,24.0,16.0,14.0
+Teknik,Doktor Teknik Elektro,Saintek,S-3,2020,14.0,24.0,16.0
+Teknik,Doktor Teknik Elektro,Saintek,S-3,2021,16.0,14.0,22.0
+Teknik,Doktor Teknik Elektro,Saintek,S-3,2022,22.0,16.0,22.0
+Teknik,Doktor Teknik Geologi,Saintek,S-3,2014,10.0,9.0,9.0
+Teknik,Doktor Teknik Geologi,Saintek,S-3,2015,9.0,10.0,7.0
+Teknik,Doktor Teknik Geologi,Saintek,S-3,2016,7.0,9.0,2.0
+Teknik,Doktor Teknik Geologi,Saintek,S-3,2017,2.0,7.0,3.0
+Teknik,Doktor Teknik Geologi,Saintek,S-3,2018,3.0,2.0,2.0
+Teknik,Doktor Teknik Geologi,Saintek,S-3,2019,2.0,3.0,4.0
+Teknik,Doktor Teknik Geologi,Saintek,S-3,2020,4.0,2.0,6.0
+Teknik,Doktor Teknik Geologi,Saintek,S-3,2021,6.0,4.0,11.0
+Teknik,Doktor Teknik Geologi,Saintek,S-3,2022,11.0,6.0,12.0
+Teknik,Doktor Teknik Geomatika,Saintek,S-3,2014,2.0,2.0,1.0
+Teknik,Doktor Teknik Geomatika,Saintek,S-3,2015,1.0,2.0,2.0
+Teknik,Doktor Teknik Geomatika,Saintek,S-3,2016,2.0,1.0,1.0
+Teknik,Doktor Teknik Geomatika,Saintek,S-3,2017,1.0,2.0,3.0
+Teknik,Doktor Teknik Geomatika,Saintek,S-3,2018,3.0,1.0,3.0
+Teknik,Doktor Teknik Geomatika,Saintek,S-3,2019,3.0,3.0,3.0
+Teknik,Doktor Teknik Geomatika,Saintek,S-3,2020,3.0,3.0,2.0
+Teknik,Doktor Teknik Geomatika,Saintek,S-3,2021,2.0,3.0,4.0
+Teknik,Doktor Teknik Geomatika,Saintek,S-3,2022,4.0,2.0,1.0
+Teknik,Doktor Teknik Industri,Saintek,S-3,2014,0.0,0.0,0.0
+Teknik,Doktor Teknik Industri,Saintek,S-3,2015,0.0,0.0,1.0
+Teknik,Doktor Teknik Industri,Saintek,S-3,2016,1.0,0.0,4.0
+Teknik,Doktor Teknik Industri,Saintek,S-3,2017,4.0,1.0,4.0
+Teknik,Doktor Teknik Industri,Saintek,S-3,2018,4.0,4.0,12.0
+Teknik,Doktor Teknik Industri,Saintek,S-3,2019,12.0,4.0,7.0
+Teknik,Doktor Teknik Industri,Saintek,S-3,2020,7.0,12.0,19.0
+Teknik,Doktor Teknik Industri,Saintek,S-3,2021,19.0,7.0,17.0
+Teknik,Doktor Teknik Industri,Saintek,S-3,2022,17.0,19.0,9.0
+Teknik,Doktor Teknik Kimia,Saintek,S-3,2014,4.0,9.0,4.0
+Teknik,Doktor Teknik Kimia,Saintek,S-3,2015,4.0,4.0,3.0
+Teknik,Doktor Teknik Kimia,Saintek,S-3,2016,3.0,4.0,11.0
+Teknik,Doktor Teknik Kimia,Saintek,S-3,2017,11.0,3.0,5.0
+Teknik,Doktor Teknik Kimia,Saintek,S-3,2018,5.0,11.0,8.0
+Teknik,Doktor Teknik Kimia,Saintek,S-3,2019,8.0,5.0,8.0
+Teknik,Doktor Teknik Kimia,Saintek,S-3,2020,8.0,8.0,3.0
+Teknik,Doktor Teknik Kimia,Saintek,S-3,2021,3.0,8.0,14.0
+Teknik,Doktor Teknik Kimia,Saintek,S-3,2022,14.0,3.0,12.0
+Teknik,Doktor Teknik Mesin,Saintek,S-3,2014,12.0,16.0,14.0
+Teknik,Doktor Teknik Mesin,Saintek,S-3,2015,14.0,12.0,11.0
+Teknik,Doktor Teknik Mesin,Saintek,S-3,2016,11.0,14.0,7.0
+Teknik,Doktor Teknik Mesin,Saintek,S-3,2017,7.0,11.0,7.0
+Teknik,Doktor Teknik Mesin,Saintek,S-3,2018,7.0,7.0,8.0
+Teknik,Doktor Teknik Mesin,Saintek,S-3,2019,8.0,7.0,6.0
+Teknik,Doktor Teknik Mesin,Saintek,S-3,2020,6.0,8.0,15.0
+Teknik,Doktor Teknik Mesin,Saintek,S-3,2021,15.0,6.0,14.0
+Teknik,Doktor Teknik Mesin,Saintek,S-3,2022,14.0,15.0,16.0
+Teknik,Doktor Teknik Sipil,Saintek,S-3,2014,11.0,12.0,10.0
+Teknik,Doktor Teknik Sipil,Saintek,S-3,2015,10.0,11.0,11.0
+Teknik,Doktor Teknik Sipil,Saintek,S-3,2016,11.0,10.0,8.0
+Teknik,Doktor Teknik Sipil,Saintek,S-3,2017,8.0,11.0,10.0
+Teknik,Doktor Teknik Sipil,Saintek,S-3,2018,10.0,8.0,8.0
+Teknik,Doktor Teknik Sipil,Saintek,S-3,2019,8.0,10.0,13.0
+Teknik,Doktor Teknik Sipil,Saintek,S-3,2020,13.0,8.0,6.0
+Teknik,Doktor Teknik Sipil,Saintek,S-3,2021,6.0,13.0,20.0
+Teknik,Doktor Teknik Sipil,Saintek,S-3,2022,20.0,6.0,22.0
+Teknologi Pertanian,Doktor Teknologi Industri Pertanian,Agro,S-3,2014,0.0,0.0,0.0
+Teknologi Pertanian,Doktor Teknologi Industri Pertanian,Agro,S-3,2015,0.0,0.0,0.0
+Teknologi Pertanian,Doktor Teknologi Industri Pertanian,Agro,S-3,2016,0.0,0.0,0.0
+Teknologi Pertanian,Doktor Teknologi Industri Pertanian,Agro,S-3,2017,0.0,0.0,0.0
+Teknologi Pertanian,Doktor Teknologi Industri Pertanian,Agro,S-3,2018,0.0,0.0,0.0
+Teknologi Pertanian,Doktor Teknologi Industri Pertanian,Agro,S-3,2019,0.0,0.0,1.0
+Teknologi Pertanian,Doktor Teknologi Industri Pertanian,Agro,S-3,2020,1.0,0.0,3.0
+Teknologi Pertanian,Doktor Teknologi Industri Pertanian,Agro,S-3,2021,3.0,1.0,5.0
+Teknologi Pertanian,Doktor Teknologi Industri Pertanian,Agro,S-3,2022,5.0,3.0,1.0
+Pascasarjana,Magister Agama dan Lintas Budaya,Pascasarjana,S-2,2014,41.0,33.0,41.0
+Pascasarjana,Magister Agama dan Lintas Budaya,Pascasarjana,S-2,2015,41.0,41.0,49.0
+Pascasarjana,Magister Agama dan Lintas Budaya,Pascasarjana,S-2,2016,49.0,41.0,47.0
+Pascasarjana,Magister Agama dan Lintas Budaya,Pascasarjana,S-2,2017,47.0,49.0,35.0
+Pascasarjana,Magister Agama dan Lintas Budaya,Pascasarjana,S-2,2018,35.0,47.0,46.0
+Pascasarjana,Magister Agama dan Lintas Budaya,Pascasarjana,S-2,2019,46.0,35.0,45.0
+Pascasarjana,Magister Agama dan Lintas Budaya,Pascasarjana,S-2,2020,45.0,46.0,30.0
+Pascasarjana,Magister Agama dan Lintas Budaya,Pascasarjana,S-2,2021,30.0,45.0,30.0
+Pascasarjana,Magister Agama dan Lintas Budaya,Pascasarjana,S-2,2022,30.0,30.0,42.0
+Pertanian,Magister Agronomi,Agro,S-2,2014,19.0,10.0,17.0
+Pertanian,Magister Agronomi,Agro,S-2,2015,17.0,19.0,20.0
+Pertanian,Magister Agronomi,Agro,S-2,2016,20.0,17.0,14.0
+Pertanian,Magister Agronomi,Agro,S-2,2017,14.0,20.0,22.0
+Pertanian,Magister Agronomi,Agro,S-2,2018,22.0,14.0,23.0
+Pertanian,Magister Agronomi,Agro,S-2,2019,23.0,22.0,25.0
+Pertanian,Magister Agronomi,Agro,S-2,2020,25.0,23.0,20.0
+Pertanian,Magister Agronomi,Agro,S-2,2021,20.0,25.0,26.0
+Pertanian,Magister Agronomi,Agro,S-2,2022,26.0,20.0,20.0
+Ekonomika dan Bisnis,Magister Akuntansi,Soshum,S-2,2014,246.0,173.0,240.0
+Ekonomika dan Bisnis,Magister Akuntansi,Soshum,S-2,2015,240.0,246.0,187.0
+Ekonomika dan Bisnis,Magister Akuntansi,Soshum,S-2,2016,187.0,240.0,85.0
+Ekonomika dan Bisnis,Magister Akuntansi,Soshum,S-2,2017,85.0,187.0,89.0
+Ekonomika dan Bisnis,Magister Akuntansi,Soshum,S-2,2018,89.0,85.0,122.0
+Ekonomika dan Bisnis,Magister Akuntansi,Soshum,S-2,2019,122.0,89.0,139.0
+Ekonomika dan Bisnis,Magister Akuntansi,Soshum,S-2,2020,139.0,122.0,77.0
+Ekonomika dan Bisnis,Magister Akuntansi,Soshum,S-2,2021,77.0,139.0,88.0
+Ekonomika dan Bisnis,Magister Akuntansi,Soshum,S-2,2022,88.0,77.0,118.0
+Ilmu Budaya,Magister Antropologi,Soshum,S-2,2014,25.0,42.0,27.0
+Ilmu Budaya,Magister Antropologi,Soshum,S-2,2015,27.0,25.0,28.0
+Ilmu Budaya,Magister Antropologi,Soshum,S-2,2016,28.0,27.0,29.0
+Ilmu Budaya,Magister Antropologi,Soshum,S-2,2017,29.0,28.0,22.0
+Ilmu Budaya,Magister Antropologi,Soshum,S-2,2018,22.0,29.0,23.0
+Ilmu Budaya,Magister Antropologi,Soshum,S-2,2019,23.0,22.0,27.0
+Ilmu Budaya,Magister Antropologi,Soshum,S-2,2020,27.0,23.0,30.0
+Ilmu Budaya,Magister Antropologi,Soshum,S-2,2021,30.0,27.0,28.0
+Ilmu Budaya,Magister Antropologi,Soshum,S-2,2022,28.0,30.0,57.0
+Ilmu Budaya,Magister Arkeologi,Soshum,S-2,2014,10.0,17.0,12.0
+Ilmu Budaya,Magister Arkeologi,Soshum,S-2,2015,12.0,10.0,13.0
+Ilmu Budaya,Magister Arkeologi,Soshum,S-2,2016,13.0,12.0,8.0
+Ilmu Budaya,Magister Arkeologi,Soshum,S-2,2017,8.0,13.0,13.0
+Ilmu Budaya,Magister Arkeologi,Soshum,S-2,2018,13.0,8.0,4.0
+Ilmu Budaya,Magister Arkeologi,Soshum,S-2,2019,4.0,13.0,11.0
+Ilmu Budaya,Magister Arkeologi,Soshum,S-2,2020,11.0,4.0,13.0
+Ilmu Budaya,Magister Arkeologi,Soshum,S-2,2021,13.0,11.0,13.0
+Ilmu Budaya,Magister Arkeologi,Soshum,S-2,2022,13.0,13.0,15.0
+Teknik,Magister Arsitektur,Saintek,S-2,2014,51.0,56.0,40.0
+Teknik,Magister Arsitektur,Saintek,S-2,2015,40.0,51.0,43.0
+Teknik,Magister Arsitektur,Saintek,S-2,2016,43.0,40.0,39.0
+Teknik,Magister Arsitektur,Saintek,S-2,2017,39.0,43.0,42.0
+Teknik,Magister Arsitektur,Saintek,S-2,2018,42.0,39.0,36.0
+Teknik,Magister Arsitektur,Saintek,S-2,2019,36.0,42.0,47.0
+Teknik,Magister Arsitektur,Saintek,S-2,2020,47.0,36.0,21.0
+Teknik,Magister Arsitektur,Saintek,S-2,2021,21.0,47.0,38.0
+Teknik,Magister Arsitektur,Saintek,S-2,2022,38.0,21.0,43.0
+Pascasarjana,Magister Bioetika,Pascasarjana,S-2,2014,0.0,0.0,0.0
+Pascasarjana,Magister Bioetika,Pascasarjana,S-2,2015,0.0,0.0,0.0
+Pascasarjana,Magister Bioetika,Pascasarjana,S-2,2016,0.0,0.0,0.0
+Pascasarjana,Magister Bioetika,Pascasarjana,S-2,2017,0.0,0.0,10.0
+Pascasarjana,Magister Bioetika,Pascasarjana,S-2,2018,10.0,0.0,11.0
+Pascasarjana,Magister Bioetika,Pascasarjana,S-2,2019,11.0,10.0,13.0
+Pascasarjana,Magister Bioetika,Pascasarjana,S-2,2020,13.0,11.0,7.0
+Pascasarjana,Magister Bioetika,Pascasarjana,S-2,2021,7.0,13.0,9.0
+Pascasarjana,Magister Bioetika,Pascasarjana,S-2,2022,9.0,7.0,10.0
+Biologi,Magister Biologi,Saintek,S-2,2014,93.0,143.0,49.0
+Biologi,Magister Biologi,Saintek,S-2,2015,49.0,93.0,69.0
+Biologi,Magister Biologi,Saintek,S-2,2016,69.0,49.0,81.0
+Biologi,Magister Biologi,Saintek,S-2,2017,81.0,69.0,42.0
+Biologi,Magister Biologi,Saintek,S-2,2018,42.0,81.0,101.0
+Biologi,Magister Biologi,Saintek,S-2,2019,101.0,42.0,57.0
+Biologi,Magister Biologi,Saintek,S-2,2020,57.0,101.0,73.0
+Biologi,Magister Biologi,Saintek,S-2,2021,73.0,57.0,94.0
+Biologi,Magister Biologi,Saintek,S-2,2022,94.0,73.0,86.0
+Pascasarjana,Magister Bioteknologi,Pascasarjana,S-2,2014,35.0,49.0,29.0
+Pascasarjana,Magister Bioteknologi,Pascasarjana,S-2,2015,29.0,35.0,31.0
+Pascasarjana,Magister Bioteknologi,Pascasarjana,S-2,2016,31.0,29.0,37.0
+Pascasarjana,Magister Bioteknologi,Pascasarjana,S-2,2017,37.0,31.0,32.0
+Pascasarjana,Magister Bioteknologi,Pascasarjana,S-2,2018,32.0,37.0,24.0
+Pascasarjana,Magister Bioteknologi,Pascasarjana,S-2,2019,24.0,32.0,27.0
+Pascasarjana,Magister Bioteknologi,Pascasarjana,S-2,2020,27.0,24.0,31.0
+Pascasarjana,Magister Bioteknologi,Pascasarjana,S-2,2021,31.0,27.0,47.0
+Pascasarjana,Magister Bioteknologi,Pascasarjana,S-2,2022,47.0,31.0,45.0
+Pertanian,Magister Ekonomi Pertanian,Agro,S-2,2014,15.0,12.0,20.0
+Pertanian,Magister Ekonomi Pertanian,Agro,S-2,2015,20.0,15.0,14.0
+Pertanian,Magister Ekonomi Pertanian,Agro,S-2,2016,14.0,20.0,17.0
+Pertanian,Magister Ekonomi Pertanian,Agro,S-2,2017,17.0,14.0,13.0
+Pertanian,Magister Ekonomi Pertanian,Agro,S-2,2018,13.0,17.0,18.0
+Pertanian,Magister Ekonomi Pertanian,Agro,S-2,2019,18.0,13.0,17.0
+Pertanian,Magister Ekonomi Pertanian,Agro,S-2,2020,17.0,18.0,17.0
+Pertanian,Magister Ekonomi Pertanian,Agro,S-2,2021,17.0,17.0,12.0
+Pertanian,Magister Ekonomi Pertanian,Agro,S-2,2022,12.0,17.0,21.0
+Ekonomika dan Bisnis,Magister Ekonomika Pembangunan,Soshum,S-2,2014,139.0,143.0,121.0
+Ekonomika dan Bisnis,Magister Ekonomika Pembangunan,Soshum,S-2,2015,121.0,139.0,223.0
+Ekonomika dan Bisnis,Magister Ekonomika Pembangunan,Soshum,S-2,2016,223.0,121.0,139.0
+Ekonomika dan Bisnis,Magister Ekonomika Pembangunan,Soshum,S-2,2017,139.0,223.0,129.0
+Ekonomika dan Bisnis,Magister Ekonomika Pembangunan,Soshum,S-2,2018,129.0,139.0,154.0
+Ekonomika dan Bisnis,Magister Ekonomika Pembangunan,Soshum,S-2,2019,154.0,129.0,130.0
+Ekonomika dan Bisnis,Magister Ekonomika Pembangunan,Soshum,S-2,2020,130.0,154.0,82.0
+Ekonomika dan Bisnis,Magister Ekonomika Pembangunan,Soshum,S-2,2021,82.0,130.0,71.0
+Ekonomika dan Bisnis,Magister Ekonomika Pembangunan,Soshum,S-2,2022,71.0,82.0,99.0
+Farmasi,Magister Farmasi Klinik,Medika,S-2,2014,0.0,1.0,38.0
+Farmasi,Magister Farmasi Klinik,Medika,S-2,2015,38.0,0.0,43.0
+Farmasi,Magister Farmasi Klinik,Medika,S-2,2016,43.0,38.0,41.0
+Farmasi,Magister Farmasi Klinik,Medika,S-2,2017,41.0,43.0,39.0
+Farmasi,Magister Farmasi Klinik,Medika,S-2,2018,39.0,41.0,34.0
+Farmasi,Magister Farmasi Klinik,Medika,S-2,2019,34.0,39.0,41.0
+Farmasi,Magister Farmasi Klinik,Medika,S-2,2020,41.0,34.0,44.0
+Farmasi,Magister Farmasi Klinik,Medika,S-2,2021,44.0,41.0,40.0
+Farmasi,Magister Farmasi Klinik,Medika,S-2,2022,40.0,44.0,42.0
+Filsafat,Magister Filsafat,Soshum,S-2,2014,9.0,29.0,15.0
+Filsafat,Magister Filsafat,Soshum,S-2,2015,15.0,9.0,14.0
+Filsafat,Magister Filsafat,Soshum,S-2,2016,14.0,15.0,20.0
+Filsafat,Magister Filsafat,Soshum,S-2,2017,20.0,14.0,24.0
+Filsafat,Magister Filsafat,Soshum,S-2,2018,24.0,20.0,11.0
+Filsafat,Magister Filsafat,Soshum,S-2,2019,11.0,24.0,18.0
+Filsafat,Magister Filsafat,Soshum,S-2,2020,18.0,11.0,14.0
+Filsafat,Magister Filsafat,Soshum,S-2,2021,14.0,18.0,24.0
+Filsafat,Magister Filsafat,Soshum,S-2,2022,24.0,14.0,32.0
+MIPA,Magister Fisika,Saintek,S-2,2014,71.0,103.0,62.0
+MIPA,Magister Fisika,Saintek,S-2,2015,62.0,71.0,58.0
+MIPA,Magister Fisika,Saintek,S-2,2016,58.0,62.0,55.0
+MIPA,Magister Fisika,Saintek,S-2,2017,55.0,58.0,47.0
+MIPA,Magister Fisika,Saintek,S-2,2018,47.0,55.0,40.0
+MIPA,Magister Fisika,Saintek,S-2,2019,40.0,47.0,41.0
+MIPA,Magister Fisika,Saintek,S-2,2020,41.0,40.0,42.0
+MIPA,Magister Fisika,Saintek,S-2,2021,42.0,41.0,30.0
+MIPA,Magister Fisika,Saintek,S-2,2022,30.0,42.0,34.0
+Pertanian,Magister Fitopatologi,Agro,S-2,2014,13.0,10.0,17.0
+Pertanian,Magister Fitopatologi,Agro,S-2,2015,17.0,13.0,5.0
+Pertanian,Magister Fitopatologi,Agro,S-2,2016,5.0,17.0,10.0
+Pertanian,Magister Fitopatologi,Agro,S-2,2017,10.0,5.0,11.0
+Pertanian,Magister Fitopatologi,Agro,S-2,2018,11.0,10.0,15.0
+Pertanian,Magister Fitopatologi,Agro,S-2,2019,15.0,11.0,11.0
+Pertanian,Magister Fitopatologi,Agro,S-2,2020,11.0,15.0,14.0
+Pertanian,Magister Fitopatologi,Agro,S-2,2021,14.0,11.0,20.0
+Pertanian,Magister Fitopatologi,Agro,S-2,2022,20.0,14.0,26.0
+Geografi,Magister Geografi,Saintek,S-2,2014,32.0,57.0,46.0
+Geografi,Magister Geografi,Saintek,S-2,2015,46.0,32.0,35.0
+Geografi,Magister Geografi,Saintek,S-2,2016,35.0,46.0,30.0
+Geografi,Magister Geografi,Saintek,S-2,2017,30.0,35.0,32.0
+Geografi,Magister Geografi,Saintek,S-2,2018,32.0,30.0,31.0
+Geografi,Magister Geografi,Saintek,S-2,2019,31.0,32.0,21.0
+Geografi,Magister Geografi,Saintek,S-2,2020,21.0,31.0,18.0
+Geografi,Magister Geografi,Saintek,S-2,2021,18.0,21.0,39.0
+Geografi,Magister Geografi,Saintek,S-2,2022,39.0,18.0,53.0
+Hukum,Magister Hukum Bisnis dan Kenegaraan,Soshum,S-2,2014,85.0,60.0,108.0
+Hukum,Magister Hukum Bisnis dan Kenegaraan,Soshum,S-2,2015,108.0,85.0,95.0
+Hukum,Magister Hukum Bisnis dan Kenegaraan,Soshum,S-2,2016,95.0,108.0,83.0
+Hukum,Magister Hukum Bisnis dan Kenegaraan,Soshum,S-2,2017,83.0,95.0,81.0
+Hukum,Magister Hukum Bisnis dan Kenegaraan,Soshum,S-2,2018,81.0,83.0,57.0
+Hukum,Magister Hukum Bisnis dan Kenegaraan,Soshum,S-2,2019,57.0,81.0,67.0
+Hukum,Magister Hukum Bisnis dan Kenegaraan,Soshum,S-2,2020,67.0,57.0,56.0
+Hukum,Magister Hukum Bisnis dan Kenegaraan,Soshum,S-2,2021,56.0,67.0,81.0
+Hukum,Magister Hukum Bisnis dan Kenegaraan,Soshum,S-2,2022,81.0,56.0,86.0
+Hukum,Magister Hukum Kesehatan,Soshum,S-2,2014,14.0,17.0,11.0
+Hukum,Magister Hukum Kesehatan,Soshum,S-2,2015,11.0,14.0,23.0
+Hukum,Magister Hukum Kesehatan,Soshum,S-2,2016,23.0,11.0,16.0
+Hukum,Magister Hukum Kesehatan,Soshum,S-2,2017,16.0,23.0,7.0
+Hukum,Magister Hukum Kesehatan,Soshum,S-2,2018,7.0,16.0,6.0
+Hukum,Magister Hukum Kesehatan,Soshum,S-2,2019,6.0,7.0,4.0
+Hukum,Magister Hukum Kesehatan,Soshum,S-2,2020,4.0,6.0,19.0
+Hukum,Magister Hukum Kesehatan,Soshum,S-2,2021,19.0,4.0,11.0
+Hukum,Magister Hukum Kesehatan,Soshum,S-2,2022,11.0,19.0,11.0
+Hukum,Magister Hukum Litigasi,Soshum,S-2,2014,20.0,23.0,20.0
+Hukum,Magister Hukum Litigasi,Soshum,S-2,2015,20.0,20.0,25.0
+Hukum,Magister Hukum Litigasi,Soshum,S-2,2016,25.0,20.0,35.0
+Hukum,Magister Hukum Litigasi,Soshum,S-2,2017,35.0,25.0,21.0
+Hukum,Magister Hukum Litigasi,Soshum,S-2,2018,21.0,35.0,23.0
+Hukum,Magister Hukum Litigasi,Soshum,S-2,2019,23.0,21.0,28.0
+Hukum,Magister Hukum Litigasi,Soshum,S-2,2020,28.0,23.0,24.0
+Hukum,Magister Hukum Litigasi,Soshum,S-2,2021,24.0,28.0,30.0
+Hukum,Magister Hukum Litigasi,Soshum,S-2,2022,30.0,24.0,36.0
+ISIPOL,Magister Ilmu Administrasi Publik,Soshum,S-2,2014,66.0,59.0,68.0
+ISIPOL,Magister Ilmu Administrasi Publik,Soshum,S-2,2015,68.0,66.0,64.0
+ISIPOL,Magister Ilmu Administrasi Publik,Soshum,S-2,2016,64.0,68.0,65.0
+ISIPOL,Magister Ilmu Administrasi Publik,Soshum,S-2,2017,65.0,64.0,78.0
+ISIPOL,Magister Ilmu Administrasi Publik,Soshum,S-2,2018,78.0,65.0,86.0
+ISIPOL,Magister Ilmu Administrasi Publik,Soshum,S-2,2019,86.0,78.0,49.0
+ISIPOL,Magister Ilmu Administrasi Publik,Soshum,S-2,2020,49.0,86.0,74.0
+ISIPOL,Magister Ilmu Administrasi Publik,Soshum,S-2,2021,74.0,49.0,68.0
+ISIPOL,Magister Ilmu Administrasi Publik,Soshum,S-2,2022,68.0,74.0,94.0
+KKMK,Magister Ilmu Biomedik,Medika,S-2,2014,51.0,49.0,44.0
+KKMK,Magister Ilmu Biomedik,Medika,S-2,2015,44.0,51.0,57.0
+KKMK,Magister Ilmu Biomedik,Medika,S-2,2016,57.0,44.0,44.0
+KKMK,Magister Ilmu Biomedik,Medika,S-2,2017,44.0,57.0,34.0
+KKMK,Magister Ilmu Biomedik,Medika,S-2,2018,34.0,44.0,32.0
+KKMK,Magister Ilmu Biomedik,Medika,S-2,2019,32.0,34.0,46.0
+KKMK,Magister Ilmu Biomedik,Medika,S-2,2020,46.0,32.0,63.0
+KKMK,Magister Ilmu Biomedik,Medika,S-2,2021,63.0,46.0,61.0
+KKMK,Magister Ilmu Biomedik,Medika,S-2,2022,61.0,63.0,62.0
+Farmasi,Magister Ilmu Farmasi,Medika,S-2,2014,107.0,111.0,66.0
+Farmasi,Magister Ilmu Farmasi,Medika,S-2,2015,66.0,107.0,62.0
+Farmasi,Magister Ilmu Farmasi,Medika,S-2,2016,62.0,66.0,75.0
+Farmasi,Magister Ilmu Farmasi,Medika,S-2,2017,75.0,62.0,50.0
+Farmasi,Magister Ilmu Farmasi,Medika,S-2,2018,50.0,75.0,19.0
+Farmasi,Magister Ilmu Farmasi,Medika,S-2,2019,19.0,50.0,27.0
+Farmasi,Magister Ilmu Farmasi,Medika,S-2,2020,27.0,19.0,26.0
+Farmasi,Magister Ilmu Farmasi,Medika,S-2,2021,26.0,27.0,27.0
+Farmasi,Magister Ilmu Farmasi,Medika,S-2,2022,27.0,26.0,36.0
+Pertanian,Magister Ilmu Hama Tanaman,Agro,S-2,2014,5.0,7.0,20.0
+Pertanian,Magister Ilmu Hama Tanaman,Agro,S-2,2015,20.0,5.0,9.0
+Pertanian,Magister Ilmu Hama Tanaman,Agro,S-2,2016,9.0,20.0,8.0
+Pertanian,Magister Ilmu Hama Tanaman,Agro,S-2,2017,8.0,9.0,11.0
+Pertanian,Magister Ilmu Hama Tanaman,Agro,S-2,2018,11.0,8.0,13.0
+Pertanian,Magister Ilmu Hama Tanaman,Agro,S-2,2019,13.0,11.0,9.0
+Pertanian,Magister Ilmu Hama Tanaman,Agro,S-2,2020,9.0,13.0,15.0
+Pertanian,Magister Ilmu Hama Tanaman,Agro,S-2,2021,15.0,9.0,16.0
+Pertanian,Magister Ilmu Hama Tanaman,Agro,S-2,2022,16.0,15.0,22.0
+ISIPOL,Magister Ilmu Hubungan Internasional,Soshum,S-2,2014,95.0,89.0,40.0
+ISIPOL,Magister Ilmu Hubungan Internasional,Soshum,S-2,2015,40.0,95.0,39.0
+ISIPOL,Magister Ilmu Hubungan Internasional,Soshum,S-2,2016,39.0,40.0,27.0
+ISIPOL,Magister Ilmu Hubungan Internasional,Soshum,S-2,2017,27.0,39.0,27.0
+ISIPOL,Magister Ilmu Hubungan Internasional,Soshum,S-2,2018,27.0,27.0,26.0
+ISIPOL,Magister Ilmu Hubungan Internasional,Soshum,S-2,2019,26.0,27.0,32.0
+ISIPOL,Magister Ilmu Hubungan Internasional,Soshum,S-2,2020,32.0,26.0,32.0
+ISIPOL,Magister Ilmu Hubungan Internasional,Soshum,S-2,2021,32.0,32.0,41.0
+ISIPOL,Magister Ilmu Hubungan Internasional,Soshum,S-2,2022,41.0,32.0,62.0
+Hukum,Magister Ilmu Hukum,Soshum,S-2,2014,65.0,56.0,54.0
+Hukum,Magister Ilmu Hukum,Soshum,S-2,2015,54.0,65.0,46.0
+Hukum,Magister Ilmu Hukum,Soshum,S-2,2016,46.0,54.0,41.0
+Hukum,Magister Ilmu Hukum,Soshum,S-2,2017,41.0,46.0,37.0
+Hukum,Magister Ilmu Hukum,Soshum,S-2,2018,37.0,41.0,43.0
+Hukum,Magister Ilmu Hukum,Soshum,S-2,2019,43.0,37.0,58.0
+Hukum,Magister Ilmu Hukum,Soshum,S-2,2020,58.0,43.0,70.0
+Hukum,Magister Ilmu Hukum,Soshum,S-2,2021,70.0,58.0,68.0
+Hukum,Magister Ilmu Hukum,Soshum,S-2,2022,68.0,70.0,102.0
+Hukum,Magister Ilmu Hukum (Kampus Jakarta),Soshum,S-2,2014,147.0,119.0,136.0
+Hukum,Magister Ilmu Hukum (Kampus Jakarta),Soshum,S-2,2015,136.0,147.0,103.0
+Hukum,Magister Ilmu Hukum (Kampus Jakarta),Soshum,S-2,2016,103.0,136.0,102.0
+Hukum,Magister Ilmu Hukum (Kampus Jakarta),Soshum,S-2,2017,102.0,103.0,129.0
+Hukum,Magister Ilmu Hukum (Kampus Jakarta),Soshum,S-2,2018,129.0,102.0,113.0
+Hukum,Magister Ilmu Hukum (Kampus Jakarta),Soshum,S-2,2019,113.0,129.0,104.0
+Hukum,Magister Ilmu Hukum (Kampus Jakarta),Soshum,S-2,2020,104.0,113.0,119.0
+Hukum,Magister Ilmu Hukum (Kampus Jakarta),Soshum,S-2,2021,119.0,104.0,106.0
+Hukum,Magister Ilmu Hukum (Kampus Jakarta),Soshum,S-2,2022,106.0,119.0,144.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi,Medika,S-2,2014,9.0,16.0,5.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi,Medika,S-2,2015,5.0,9.0,7.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi,Medika,S-2,2016,7.0,5.0,8.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi,Medika,S-2,2017,8.0,7.0,22.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi,Medika,S-2,2018,22.0,8.0,5.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi,Medika,S-2,2019,5.0,22.0,11.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi,Medika,S-2,2020,11.0,5.0,6.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi,Medika,S-2,2021,6.0,11.0,8.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi,Medika,S-2,2022,8.0,6.0,22.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi Klinis,Medika,S-2,2014,15.0,24.0,0.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi Klinis,Medika,S-2,2015,0.0,15.0,12.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi Klinis,Medika,S-2,2016,12.0,0.0,8.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi Klinis,Medika,S-2,2017,8.0,12.0,13.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi Klinis,Medika,S-2,2018,13.0,8.0,5.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi Klinis,Medika,S-2,2019,5.0,13.0,6.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi Klinis,Medika,S-2,2020,6.0,5.0,10.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi Klinis,Medika,S-2,2021,10.0,6.0,10.0
+Kedokteran Gigi,Magister Ilmu Kedokteran Gigi Klinis,Medika,S-2,2022,10.0,10.0,8.0
+KKMK,Magister Ilmu Kedokteran Klinis,Medika,S-2,2014,96.0,75.0,82.0
+KKMK,Magister Ilmu Kedokteran Klinis,Medika,S-2,2015,82.0,96.0,51.0
+KKMK,Magister Ilmu Kedokteran Klinis,Medika,S-2,2016,51.0,82.0,39.0
+KKMK,Magister Ilmu Kedokteran Klinis,Medika,S-2,2017,39.0,51.0,48.0
+KKMK,Magister Ilmu Kedokteran Klinis,Medika,S-2,2018,48.0,39.0,80.0
+KKMK,Magister Ilmu Kedokteran Klinis,Medika,S-2,2019,80.0,48.0,101.0
+KKMK,Magister Ilmu Kedokteran Klinis,Medika,S-2,2020,101.0,80.0,50.0
+KKMK,Magister Ilmu Kedokteran Klinis,Medika,S-2,2021,50.0,101.0,147.0
+KKMK,Magister Ilmu Kedokteran Klinis,Medika,S-2,2022,147.0,50.0,139.0
+KKMK,Magister Ilmu Kedokteran Tropis,Medika,S-2,2014,17.0,14.0,11.0
+KKMK,Magister Ilmu Kedokteran Tropis,Medika,S-2,2015,11.0,17.0,20.0
+KKMK,Magister Ilmu Kedokteran Tropis,Medika,S-2,2016,20.0,11.0,15.0
+KKMK,Magister Ilmu Kedokteran Tropis,Medika,S-2,2017,15.0,20.0,10.0
+KKMK,Magister Ilmu Kedokteran Tropis,Medika,S-2,2018,10.0,15.0,8.0
+KKMK,Magister Ilmu Kedokteran Tropis,Medika,S-2,2019,8.0,10.0,13.0
+KKMK,Magister Ilmu Kedokteran Tropis,Medika,S-2,2020,13.0,8.0,15.0
+KKMK,Magister Ilmu Kedokteran Tropis,Medika,S-2,2021,15.0,13.0,12.0
+KKMK,Magister Ilmu Kedokteran Tropis,Medika,S-2,2022,12.0,15.0,9.0
+Kehutanan,Magister Ilmu Kehutanan,Agro,S-2,2014,40.0,42.0,50.0
+Kehutanan,Magister Ilmu Kehutanan,Agro,S-2,2015,50.0,40.0,39.0
+Kehutanan,Magister Ilmu Kehutanan,Agro,S-2,2016,39.0,50.0,43.0
+Kehutanan,Magister Ilmu Kehutanan,Agro,S-2,2017,43.0,39.0,32.0
+Kehutanan,Magister Ilmu Kehutanan,Agro,S-2,2018,32.0,43.0,37.0
+Kehutanan,Magister Ilmu Kehutanan,Agro,S-2,2019,37.0,32.0,40.0
+Kehutanan,Magister Ilmu Kehutanan,Agro,S-2,2020,40.0,37.0,36.0
+Kehutanan,Magister Ilmu Kehutanan,Agro,S-2,2021,36.0,40.0,26.0
+Kehutanan,Magister Ilmu Kehutanan,Agro,S-2,2022,26.0,36.0,68.0
+KKMK,Magister Ilmu Kesehatan Masyarakat,Medika,S-2,2014,255.0,344.0,273.0
+KKMK,Magister Ilmu Kesehatan Masyarakat,Medika,S-2,2015,273.0,255.0,247.0
+KKMK,Magister Ilmu Kesehatan Masyarakat,Medika,S-2,2016,247.0,273.0,212.0
+KKMK,Magister Ilmu Kesehatan Masyarakat,Medika,S-2,2017,212.0,247.0,169.0
+KKMK,Magister Ilmu Kesehatan Masyarakat,Medika,S-2,2018,169.0,212.0,163.0
+KKMK,Magister Ilmu Kesehatan Masyarakat,Medika,S-2,2019,163.0,169.0,273.0
+KKMK,Magister Ilmu Kesehatan Masyarakat,Medika,S-2,2020,273.0,163.0,150.0
+KKMK,Magister Ilmu Kesehatan Masyarakat,Medika,S-2,2021,150.0,273.0,100.0
+KKMK,Magister Ilmu Kesehatan Masyarakat,Medika,S-2,2022,100.0,150.0,128.0
+MIPA,Magister Ilmu Komputer,Saintek,S-2,2014,84.0,119.0,73.0
+MIPA,Magister Ilmu Komputer,Saintek,S-2,2015,73.0,84.0,67.0
+MIPA,Magister Ilmu Komputer,Saintek,S-2,2016,67.0,73.0,63.0
+MIPA,Magister Ilmu Komputer,Saintek,S-2,2017,63.0,67.0,45.0
+MIPA,Magister Ilmu Komputer,Saintek,S-2,2018,45.0,63.0,58.0
+MIPA,Magister Ilmu Komputer,Saintek,S-2,2019,58.0,45.0,52.0
+MIPA,Magister Ilmu Komputer,Saintek,S-2,2020,52.0,58.0,54.0
+MIPA,Magister Ilmu Komputer,Saintek,S-2,2021,54.0,52.0,63.0
+MIPA,Magister Ilmu Komputer,Saintek,S-2,2022,63.0,54.0,71.0
+ISIPOL,Magister Ilmu Komunikasi,Soshum,S-2,2014,77.0,83.0,50.0
+ISIPOL,Magister Ilmu Komunikasi,Soshum,S-2,2015,50.0,77.0,82.0
+ISIPOL,Magister Ilmu Komunikasi,Soshum,S-2,2016,82.0,50.0,86.0
+ISIPOL,Magister Ilmu Komunikasi,Soshum,S-2,2017,86.0,82.0,64.0
+ISIPOL,Magister Ilmu Komunikasi,Soshum,S-2,2018,64.0,86.0,76.0
+ISIPOL,Magister Ilmu Komunikasi,Soshum,S-2,2019,76.0,64.0,54.0
+ISIPOL,Magister Ilmu Komunikasi,Soshum,S-2,2020,54.0,76.0,68.0
+ISIPOL,Magister Ilmu Komunikasi,Soshum,S-2,2021,68.0,54.0,93.0
+ISIPOL,Magister Ilmu Komunikasi,Soshum,S-2,2022,93.0,68.0,93.0
+Pascasarjana,Magister Ilmu Lingkungan,Pascasarjana,S-2,2014,86.0,62.0,77.0
+Pascasarjana,Magister Ilmu Lingkungan,Pascasarjana,S-2,2015,77.0,86.0,76.0
+Pascasarjana,Magister Ilmu Lingkungan,Pascasarjana,S-2,2016,76.0,77.0,61.0
+Pascasarjana,Magister Ilmu Lingkungan,Pascasarjana,S-2,2017,61.0,76.0,65.0
+Pascasarjana,Magister Ilmu Lingkungan,Pascasarjana,S-2,2018,65.0,61.0,75.0
+Pascasarjana,Magister Ilmu Lingkungan,Pascasarjana,S-2,2019,75.0,65.0,74.0
+Pascasarjana,Magister Ilmu Lingkungan,Pascasarjana,S-2,2020,74.0,75.0,64.0
+Pascasarjana,Magister Ilmu Lingkungan,Pascasarjana,S-2,2021,64.0,74.0,55.0
+Pascasarjana,Magister Ilmu Lingkungan,Pascasarjana,S-2,2022,55.0,64.0,73.0
+KKMK,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,Medika,S-2,2014,13.0,5.0,12.0
+KKMK,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,Medika,S-2,2015,12.0,13.0,12.0
+KKMK,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,Medika,S-2,2016,12.0,12.0,5.0
+KKMK,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,Medika,S-2,2017,5.0,12.0,10.0
+KKMK,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,Medika,S-2,2018,10.0,5.0,9.0
+KKMK,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,Medika,S-2,2019,9.0,10.0,16.0
+KKMK,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,Medika,S-2,2020,16.0,9.0,16.0
+KKMK,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,Medika,S-2,2021,16.0,16.0,18.0
+KKMK,Magister Ilmu Pendidikan Kedokteran dan Kesehatan,Medika,S-2,2022,18.0,16.0,13.0
+Pertanian,Magister Ilmu Perikanan,Agro,S-2,2014,0.0,0.0,8.0
+Pertanian,Magister Ilmu Perikanan,Agro,S-2,2015,8.0,0.0,6.0
+Pertanian,Magister Ilmu Perikanan,Agro,S-2,2016,6.0,8.0,5.0
+Pertanian,Magister Ilmu Perikanan,Agro,S-2,2017,5.0,6.0,17.0
+Pertanian,Magister Ilmu Perikanan,Agro,S-2,2018,17.0,5.0,13.0
+Pertanian,Magister Ilmu Perikanan,Agro,S-2,2019,13.0,17.0,12.0
+Pertanian,Magister Ilmu Perikanan,Agro,S-2,2020,12.0,13.0,16.0
+Pertanian,Magister Ilmu Perikanan,Agro,S-2,2021,16.0,12.0,27.0
+Pertanian,Magister Ilmu Perikanan,Agro,S-2,2022,27.0,16.0,45.0
+Peternakan,Magister Ilmu Peternakan,Agro,S-2,2014,39.0,25.0,41.0
+Peternakan,Magister Ilmu Peternakan,Agro,S-2,2015,41.0,39.0,35.0
+Peternakan,Magister Ilmu Peternakan,Agro,S-2,2016,35.0,41.0,35.0
+Peternakan,Magister Ilmu Peternakan,Agro,S-2,2017,35.0,35.0,36.0
+Peternakan,Magister Ilmu Peternakan,Agro,S-2,2018,36.0,35.0,55.0
+Peternakan,Magister Ilmu Peternakan,Agro,S-2,2019,55.0,36.0,50.0
+Peternakan,Magister Ilmu Peternakan,Agro,S-2,2020,50.0,55.0,60.0
+Peternakan,Magister Ilmu Peternakan,Agro,S-2,2021,60.0,50.0,65.0
+Peternakan,Magister Ilmu Peternakan,Agro,S-2,2022,65.0,60.0,71.0
+Pertanian,Magister Ilmu Tanah,Agro,S-2,2014,7.0,13.0,7.0
+Pertanian,Magister Ilmu Tanah,Agro,S-2,2015,7.0,7.0,11.0
+Pertanian,Magister Ilmu Tanah,Agro,S-2,2016,11.0,7.0,10.0
+Pertanian,Magister Ilmu Tanah,Agro,S-2,2017,10.0,11.0,15.0
+Pertanian,Magister Ilmu Tanah,Agro,S-2,2018,15.0,10.0,23.0
+Pertanian,Magister Ilmu Tanah,Agro,S-2,2019,23.0,15.0,18.0
+Pertanian,Magister Ilmu Tanah,Agro,S-2,2020,18.0,23.0,20.0
+Pertanian,Magister Ilmu Tanah,Agro,S-2,2021,20.0,18.0,20.0
+Pertanian,Magister Ilmu Tanah,Agro,S-2,2022,20.0,20.0,23.0
+Teknologi Pertanian,Magister Ilmu dan Teknologi Pangan,Agro,S-2,2014,40.0,46.0,38.0
+Teknologi Pertanian,Magister Ilmu dan Teknologi Pangan,Agro,S-2,2015,38.0,40.0,46.0
+Teknologi Pertanian,Magister Ilmu dan Teknologi Pangan,Agro,S-2,2016,46.0,38.0,41.0
+Teknologi Pertanian,Magister Ilmu dan Teknologi Pangan,Agro,S-2,2017,41.0,46.0,51.0
+Teknologi Pertanian,Magister Ilmu dan Teknologi Pangan,Agro,S-2,2018,51.0,41.0,37.0
+Teknologi Pertanian,Magister Ilmu dan Teknologi Pangan,Agro,S-2,2019,37.0,51.0,50.0
+Teknologi Pertanian,Magister Ilmu dan Teknologi Pangan,Agro,S-2,2020,50.0,37.0,48.0
+Teknologi Pertanian,Magister Ilmu dan Teknologi Pangan,Agro,S-2,2021,48.0,50.0,57.0
+Teknologi Pertanian,Magister Ilmu dan Teknologi Pangan,Agro,S-2,2022,57.0,48.0,51.0
+Ilmu Budaya,Magister Kajian Budaya Timur Tengah,Soshum,S-2,2014,0.0,0.0,0.0
+Ilmu Budaya,Magister Kajian Budaya Timur Tengah,Soshum,S-2,2015,0.0,0.0,0.0
+Ilmu Budaya,Magister Kajian Budaya Timur Tengah,Soshum,S-2,2016,0.0,0.0,0.0
+Ilmu Budaya,Magister Kajian Budaya Timur Tengah,Soshum,S-2,2017,0.0,0.0,0.0
+Ilmu Budaya,Magister Kajian Budaya Timur Tengah,Soshum,S-2,2018,0.0,0.0,0.0
+Ilmu Budaya,Magister Kajian Budaya Timur Tengah,Soshum,S-2,2019,0.0,0.0,18.0
+Ilmu Budaya,Magister Kajian Budaya Timur Tengah,Soshum,S-2,2020,18.0,0.0,15.0
+Ilmu Budaya,Magister Kajian Budaya Timur Tengah,Soshum,S-2,2021,15.0,18.0,13.0
+Ilmu Budaya,Magister Kajian Budaya Timur Tengah,Soshum,S-2,2022,13.0,15.0,22.0
+Pascasarjana,Magister Kajian Budaya dan Media,Pascasarjana,S-2,2014,29.0,41.0,30.0
+Pascasarjana,Magister Kajian Budaya dan Media,Pascasarjana,S-2,2015,30.0,29.0,42.0
+Pascasarjana,Magister Kajian Budaya dan Media,Pascasarjana,S-2,2016,42.0,30.0,45.0
+Pascasarjana,Magister Kajian Budaya dan Media,Pascasarjana,S-2,2017,45.0,42.0,34.0
+Pascasarjana,Magister Kajian Budaya dan Media,Pascasarjana,S-2,2018,34.0,45.0,37.0
+Pascasarjana,Magister Kajian Budaya dan Media,Pascasarjana,S-2,2019,37.0,34.0,30.0
+Pascasarjana,Magister Kajian Budaya dan Media,Pascasarjana,S-2,2020,30.0,37.0,22.0
+Pascasarjana,Magister Kajian Budaya dan Media,Pascasarjana,S-2,2021,22.0,30.0,28.0
+Pascasarjana,Magister Kajian Budaya dan Media,Pascasarjana,S-2,2022,28.0,22.0,41.0
+Pascasarjana,Magister Kajian Pariwisata,Pascasarjana,S-2,2014,21.0,29.0,26.0
+Pascasarjana,Magister Kajian Pariwisata,Pascasarjana,S-2,2015,26.0,21.0,33.0
+Pascasarjana,Magister Kajian Pariwisata,Pascasarjana,S-2,2016,33.0,26.0,31.0
+Pascasarjana,Magister Kajian Pariwisata,Pascasarjana,S-2,2017,31.0,33.0,20.0
+Pascasarjana,Magister Kajian Pariwisata,Pascasarjana,S-2,2018,20.0,31.0,32.0
+Pascasarjana,Magister Kajian Pariwisata,Pascasarjana,S-2,2019,32.0,20.0,43.0
+Pascasarjana,Magister Kajian Pariwisata,Pascasarjana,S-2,2020,43.0,32.0,28.0
+Pascasarjana,Magister Kajian Pariwisata,Pascasarjana,S-2,2021,28.0,43.0,27.0
+Pascasarjana,Magister Kajian Pariwisata,Pascasarjana,S-2,2022,27.0,28.0,25.0
+KKMK,Magister Kebijakan dan Manajemen Kesehatan,Medika,S-2,2014,0.0,0.0,0.0
+KKMK,Magister Kebijakan dan Manajemen Kesehatan,Medika,S-2,2015,0.0,0.0,0.0
+KKMK,Magister Kebijakan dan Manajemen Kesehatan,Medika,S-2,2016,0.0,0.0,0.0
+KKMK,Magister Kebijakan dan Manajemen Kesehatan,Medika,S-2,2017,0.0,0.0,0.0
+KKMK,Magister Kebijakan dan Manajemen Kesehatan,Medika,S-2,2018,0.0,0.0,0.0
+KKMK,Magister Kebijakan dan Manajemen Kesehatan,Medika,S-2,2019,0.0,0.0,0.0
+KKMK,Magister Kebijakan dan Manajemen Kesehatan,Medika,S-2,2020,0.0,0.0,102.0
+KKMK,Magister Kebijakan dan Manajemen Kesehatan,Medika,S-2,2021,102.0,0.0,84.0
+KKMK,Magister Kebijakan dan Manajemen Kesehatan,Medika,S-2,2022,84.0,102.0,96.0
+Hukum,Magister Kenotariatan,Soshum,S-2,2014,175.0,155.0,188.0
+Hukum,Magister Kenotariatan,Soshum,S-2,2015,188.0,175.0,198.0
+Hukum,Magister Kenotariatan,Soshum,S-2,2016,198.0,188.0,167.0
+Hukum,Magister Kenotariatan,Soshum,S-2,2017,167.0,198.0,125.0
+Hukum,Magister Kenotariatan,Soshum,S-2,2018,125.0,167.0,161.0
+Hukum,Magister Kenotariatan,Soshum,S-2,2019,161.0,125.0,135.0
+Hukum,Magister Kenotariatan,Soshum,S-2,2020,135.0,161.0,103.0
+Hukum,Magister Kenotariatan,Soshum,S-2,2021,103.0,135.0,126.0
+Hukum,Magister Kenotariatan,Soshum,S-2,2022,126.0,103.0,130.0
+Pascasarjana,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),Pascasarjana,S-2,2014,12.0,8.0,6.0
+Pascasarjana,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),Pascasarjana,S-2,2015,6.0,12.0,0.0
+Pascasarjana,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),Pascasarjana,S-2,2016,0.0,6.0,0.0
+Pascasarjana,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),Pascasarjana,S-2,2017,0.0,0.0,21.0
+Pascasarjana,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),Pascasarjana,S-2,2018,21.0,0.0,41.0
+Pascasarjana,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),Pascasarjana,S-2,2019,41.0,21.0,64.0
+Pascasarjana,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),Pascasarjana,S-2,2020,64.0,41.0,48.0
+Pascasarjana,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),Pascasarjana,S-2,2021,48.0,64.0,37.0
+Pascasarjana,Magister Kepemimpinan dan Inovasi Kebijakan (Magister Studi Kebijakan),Pascasarjana,S-2,2022,37.0,48.0,45.0
+Pascasarjana,Magister Kependudukan,Pascasarjana,S-2,2014,8.0,23.0,9.0
+Pascasarjana,Magister Kependudukan,Pascasarjana,S-2,2015,9.0,8.0,5.0
+Pascasarjana,Magister Kependudukan,Pascasarjana,S-2,2016,5.0,9.0,27.0
+Pascasarjana,Magister Kependudukan,Pascasarjana,S-2,2017,27.0,5.0,18.0
+Pascasarjana,Magister Kependudukan,Pascasarjana,S-2,2018,18.0,27.0,14.0
+Pascasarjana,Magister Kependudukan,Pascasarjana,S-2,2019,14.0,18.0,19.0
+Pascasarjana,Magister Kependudukan,Pascasarjana,S-2,2020,19.0,14.0,2.0
+Pascasarjana,Magister Kependudukan,Pascasarjana,S-2,2021,2.0,19.0,4.0
+Pascasarjana,Magister Kependudukan,Pascasarjana,S-2,2022,4.0,2.0,12.0
+KKMK,Magister Keperawatan,Medika,S-2,2014,29.0,53.0,54.0
+KKMK,Magister Keperawatan,Medika,S-2,2015,54.0,29.0,82.0
+KKMK,Magister Keperawatan,Medika,S-2,2016,82.0,54.0,48.0
+KKMK,Magister Keperawatan,Medika,S-2,2017,48.0,82.0,50.0
+KKMK,Magister Keperawatan,Medika,S-2,2018,50.0,48.0,30.0
+KKMK,Magister Keperawatan,Medika,S-2,2019,30.0,50.0,41.0
+KKMK,Magister Keperawatan,Medika,S-2,2020,41.0,30.0,44.0
+KKMK,Magister Keperawatan,Medika,S-2,2021,44.0,41.0,59.0
+KKMK,Magister Keperawatan,Medika,S-2,2022,59.0,44.0,57.0
+Pascasarjana,Magister Ketahanan Nasional,Pascasarjana,S-2,2014,57.0,70.0,40.0
+Pascasarjana,Magister Ketahanan Nasional,Pascasarjana,S-2,2015,40.0,57.0,41.0
+Pascasarjana,Magister Ketahanan Nasional,Pascasarjana,S-2,2016,41.0,40.0,48.0
+Pascasarjana,Magister Ketahanan Nasional,Pascasarjana,S-2,2017,48.0,41.0,52.0
+Pascasarjana,Magister Ketahanan Nasional,Pascasarjana,S-2,2018,52.0,48.0,33.0
+Pascasarjana,Magister Ketahanan Nasional,Pascasarjana,S-2,2019,33.0,52.0,36.0
+Pascasarjana,Magister Ketahanan Nasional,Pascasarjana,S-2,2020,36.0,33.0,30.0
+Pascasarjana,Magister Ketahanan Nasional,Pascasarjana,S-2,2021,30.0,36.0,25.0
+Pascasarjana,Magister Ketahanan Nasional,Pascasarjana,S-2,2022,25.0,30.0,25.0
+MIPA,Magister Kimia,Saintek,S-2,2014,75.0,86.0,66.0
+MIPA,Magister Kimia,Saintek,S-2,2015,66.0,75.0,62.0
+MIPA,Magister Kimia,Saintek,S-2,2016,62.0,66.0,64.0
+MIPA,Magister Kimia,Saintek,S-2,2017,64.0,62.0,58.0
+MIPA,Magister Kimia,Saintek,S-2,2018,58.0,64.0,51.0
+MIPA,Magister Kimia,Saintek,S-2,2019,51.0,58.0,66.0
+MIPA,Magister Kimia,Saintek,S-2,2020,66.0,51.0,36.0
+MIPA,Magister Kimia,Saintek,S-2,2021,36.0,66.0,44.0
+MIPA,Magister Kimia,Saintek,S-2,2022,44.0,36.0,69.0
+Ilmu Budaya,Magister Linguistik,Soshum,S-2,2014,59.0,71.0,52.0
+Ilmu Budaya,Magister Linguistik,Soshum,S-2,2015,52.0,59.0,64.0
+Ilmu Budaya,Magister Linguistik,Soshum,S-2,2016,64.0,52.0,76.0
+Ilmu Budaya,Magister Linguistik,Soshum,S-2,2017,76.0,64.0,76.0
+Ilmu Budaya,Magister Linguistik,Soshum,S-2,2018,76.0,76.0,51.0
+Ilmu Budaya,Magister Linguistik,Soshum,S-2,2019,51.0,76.0,60.0
+Ilmu Budaya,Magister Linguistik,Soshum,S-2,2020,60.0,51.0,79.0
+Ilmu Budaya,Magister Linguistik,Soshum,S-2,2021,79.0,60.0,69.0
+Ilmu Budaya,Magister Linguistik,Soshum,S-2,2022,69.0,79.0,110.0
+Ekonomika dan Bisnis,Magister Manajemen,Soshum,S-2,2014,289.0,586.0,239.0
+Ekonomika dan Bisnis,Magister Manajemen,Soshum,S-2,2015,239.0,289.0,239.0
+Ekonomika dan Bisnis,Magister Manajemen,Soshum,S-2,2016,239.0,239.0,294.0
+Ekonomika dan Bisnis,Magister Manajemen,Soshum,S-2,2017,294.0,239.0,307.0
+Ekonomika dan Bisnis,Magister Manajemen,Soshum,S-2,2018,307.0,294.0,345.0
+Ekonomika dan Bisnis,Magister Manajemen,Soshum,S-2,2019,345.0,307.0,387.0
+Ekonomika dan Bisnis,Magister Manajemen,Soshum,S-2,2020,387.0,345.0,359.0
+Ekonomika dan Bisnis,Magister Manajemen,Soshum,S-2,2021,359.0,387.0,299.0
+Ekonomika dan Bisnis,Magister Manajemen,Soshum,S-2,2022,299.0,359.0,281.0
+Ekonomika dan Bisnis,Magister Manajemen (Kampus Jakarta),Soshum,S-2,2014,453.0,0.0,286.0
+Ekonomika dan Bisnis,Magister Manajemen (Kampus Jakarta),Soshum,S-2,2015,286.0,453.0,288.0
+Ekonomika dan Bisnis,Magister Manajemen (Kampus Jakarta),Soshum,S-2,2016,288.0,286.0,391.0
+Ekonomika dan Bisnis,Magister Manajemen (Kampus Jakarta),Soshum,S-2,2017,391.0,288.0,371.0
+Ekonomika dan Bisnis,Magister Manajemen (Kampus Jakarta),Soshum,S-2,2018,371.0,391.0,430.0
+Ekonomika dan Bisnis,Magister Manajemen (Kampus Jakarta),Soshum,S-2,2019,430.0,371.0,409.0
+Ekonomika dan Bisnis,Magister Manajemen (Kampus Jakarta),Soshum,S-2,2020,409.0,430.0,382.0
+Ekonomika dan Bisnis,Magister Manajemen (Kampus Jakarta),Soshum,S-2,2021,382.0,409.0,371.0
+Ekonomika dan Bisnis,Magister Manajemen (Kampus Jakarta),Soshum,S-2,2022,371.0,382.0,405.0
+Pertanian,Magister Manajemen Agribisnis,Agro,S-2,2014,16.0,24.0,29.0
+Pertanian,Magister Manajemen Agribisnis,Agro,S-2,2015,29.0,16.0,59.0
+Pertanian,Magister Manajemen Agribisnis,Agro,S-2,2016,59.0,29.0,35.0
+Pertanian,Magister Manajemen Agribisnis,Agro,S-2,2017,35.0,59.0,34.0
+Pertanian,Magister Manajemen Agribisnis,Agro,S-2,2018,34.0,35.0,26.0
+Pertanian,Magister Manajemen Agribisnis,Agro,S-2,2019,26.0,34.0,32.0
+Pertanian,Magister Manajemen Agribisnis,Agro,S-2,2020,32.0,26.0,33.0
+Pertanian,Magister Manajemen Agribisnis,Agro,S-2,2021,33.0,32.0,40.0
+Pertanian,Magister Manajemen Agribisnis,Agro,S-2,2022,40.0,33.0,46.0
+Pascasarjana,Magister Manajemen Bencana,Pascasarjana,S-2,2014,9.0,33.0,9.0
+Pascasarjana,Magister Manajemen Bencana,Pascasarjana,S-2,2015,9.0,9.0,7.0
+Pascasarjana,Magister Manajemen Bencana,Pascasarjana,S-2,2016,7.0,9.0,20.0
+Pascasarjana,Magister Manajemen Bencana,Pascasarjana,S-2,2017,20.0,7.0,14.0
+Pascasarjana,Magister Manajemen Bencana,Pascasarjana,S-2,2018,14.0,20.0,10.0
+Pascasarjana,Magister Manajemen Bencana,Pascasarjana,S-2,2019,10.0,14.0,16.0
+Pascasarjana,Magister Manajemen Bencana,Pascasarjana,S-2,2020,16.0,10.0,10.0
+Pascasarjana,Magister Manajemen Bencana,Pascasarjana,S-2,2021,10.0,16.0,9.0
+Pascasarjana,Magister Manajemen Bencana,Pascasarjana,S-2,2022,9.0,10.0,11.0
+Farmasi,Magister Manajemen Farmasi,Medika,S-2,2014,0.0,0.0,0.0
+Farmasi,Magister Manajemen Farmasi,Medika,S-2,2015,0.0,0.0,0.0
+Farmasi,Magister Manajemen Farmasi,Medika,S-2,2016,0.0,0.0,0.0
+Farmasi,Magister Manajemen Farmasi,Medika,S-2,2017,0.0,0.0,0.0
+Farmasi,Magister Manajemen Farmasi,Medika,S-2,2018,0.0,0.0,13.0
+Farmasi,Magister Manajemen Farmasi,Medika,S-2,2019,13.0,0.0,18.0
+Farmasi,Magister Manajemen Farmasi,Medika,S-2,2020,18.0,13.0,33.0
+Farmasi,Magister Manajemen Farmasi,Medika,S-2,2021,33.0,18.0,36.0
+Farmasi,Magister Manajemen Farmasi,Medika,S-2,2022,36.0,33.0,34.0
+Pascasarjana,Magister Manajemen Pendidikan Tinggi,Pascasarjana,S-2,2014,18.0,18.0,17.0
+Pascasarjana,Magister Manajemen Pendidikan Tinggi,Pascasarjana,S-2,2015,17.0,18.0,16.0
+Pascasarjana,Magister Manajemen Pendidikan Tinggi,Pascasarjana,S-2,2016,16.0,17.0,22.0
+Pascasarjana,Magister Manajemen Pendidikan Tinggi,Pascasarjana,S-2,2017,22.0,16.0,20.0
+Pascasarjana,Magister Manajemen Pendidikan Tinggi,Pascasarjana,S-2,2018,20.0,22.0,20.0
+Pascasarjana,Magister Manajemen Pendidikan Tinggi,Pascasarjana,S-2,2019,20.0,20.0,18.0
+Pascasarjana,Magister Manajemen Pendidikan Tinggi,Pascasarjana,S-2,2020,18.0,20.0,10.0
+Pascasarjana,Magister Manajemen Pendidikan Tinggi,Pascasarjana,S-2,2021,10.0,18.0,22.0
+Pascasarjana,Magister Manajemen Pendidikan Tinggi,Pascasarjana,S-2,2022,22.0,10.0,11.0
+ISIPOL,Magister Manajemen dan Kebijakan Publik,Soshum,S-2,2014,29.0,28.0,36.0
+ISIPOL,Magister Manajemen dan Kebijakan Publik,Soshum,S-2,2015,36.0,29.0,52.0
+ISIPOL,Magister Manajemen dan Kebijakan Publik,Soshum,S-2,2016,52.0,36.0,40.0
+ISIPOL,Magister Manajemen dan Kebijakan Publik,Soshum,S-2,2017,40.0,52.0,28.0
+ISIPOL,Magister Manajemen dan Kebijakan Publik,Soshum,S-2,2018,28.0,40.0,43.0
+ISIPOL,Magister Manajemen dan Kebijakan Publik,Soshum,S-2,2019,43.0,28.0,42.0
+ISIPOL,Magister Manajemen dan Kebijakan Publik,Soshum,S-2,2020,42.0,43.0,68.0
+ISIPOL,Magister Manajemen dan Kebijakan Publik,Soshum,S-2,2021,68.0,42.0,46.0
+ISIPOL,Magister Manajemen dan Kebijakan Publik,Soshum,S-2,2022,46.0,68.0,50.0
+MIPA,Magister Matematika,Saintek,S-2,2014,75.0,111.0,47.0
+MIPA,Magister Matematika,Saintek,S-2,2015,47.0,75.0,51.0
+MIPA,Magister Matematika,Saintek,S-2,2016,51.0,47.0,64.0
+MIPA,Magister Matematika,Saintek,S-2,2017,64.0,51.0,46.0
+MIPA,Magister Matematika,Saintek,S-2,2018,46.0,64.0,37.0
+MIPA,Magister Matematika,Saintek,S-2,2019,37.0,46.0,47.0
+MIPA,Magister Matematika,Saintek,S-2,2020,47.0,37.0,23.0
+MIPA,Magister Matematika,Saintek,S-2,2021,23.0,47.0,48.0
+MIPA,Magister Matematika,Saintek,S-2,2022,48.0,23.0,44.0
+ISIPOL,Magister Pembangunan Sosial dan Kesejahteraan,Soshum,S-2,2014,36.0,30.0,19.0
+ISIPOL,Magister Pembangunan Sosial dan Kesejahteraan,Soshum,S-2,2015,19.0,36.0,23.0
+ISIPOL,Magister Pembangunan Sosial dan Kesejahteraan,Soshum,S-2,2016,23.0,19.0,28.0
+ISIPOL,Magister Pembangunan Sosial dan Kesejahteraan,Soshum,S-2,2017,28.0,23.0,26.0
+ISIPOL,Magister Pembangunan Sosial dan Kesejahteraan,Soshum,S-2,2018,26.0,28.0,31.0
+ISIPOL,Magister Pembangunan Sosial dan Kesejahteraan,Soshum,S-2,2019,31.0,26.0,41.0
+ISIPOL,Magister Pembangunan Sosial dan Kesejahteraan,Soshum,S-2,2020,41.0,31.0,29.0
+ISIPOL,Magister Pembangunan Sosial dan Kesejahteraan,Soshum,S-2,2021,29.0,41.0,23.0
+ISIPOL,Magister Pembangunan Sosial dan Kesejahteraan,Soshum,S-2,2022,23.0,29.0,40.0
+Pertanian,Magister Pemuliaan Tanaman,Agro,S-2,2014,6.0,9.0,3.0
+Pertanian,Magister Pemuliaan Tanaman,Agro,S-2,2015,3.0,6.0,7.0
+Pertanian,Magister Pemuliaan Tanaman,Agro,S-2,2016,7.0,3.0,6.0
+Pertanian,Magister Pemuliaan Tanaman,Agro,S-2,2017,6.0,7.0,12.0
+Pertanian,Magister Pemuliaan Tanaman,Agro,S-2,2018,12.0,6.0,4.0
+Pertanian,Magister Pemuliaan Tanaman,Agro,S-2,2019,4.0,12.0,9.0
+Pertanian,Magister Pemuliaan Tanaman,Agro,S-2,2020,9.0,4.0,7.0
+Pertanian,Magister Pemuliaan Tanaman,Agro,S-2,2021,7.0,9.0,5.0
+Pertanian,Magister Pemuliaan Tanaman,Agro,S-2,2022,5.0,7.0,15.0
+Geografi,Magister Penginderaan Jauh,Saintek,S-2,2014,11.0,19.0,16.0
+Geografi,Magister Penginderaan Jauh,Saintek,S-2,2015,16.0,11.0,15.0
+Geografi,Magister Penginderaan Jauh,Saintek,S-2,2016,15.0,16.0,23.0
+Geografi,Magister Penginderaan Jauh,Saintek,S-2,2017,23.0,15.0,15.0
+Geografi,Magister Penginderaan Jauh,Saintek,S-2,2018,15.0,23.0,14.0
+Geografi,Magister Penginderaan Jauh,Saintek,S-2,2019,14.0,15.0,17.0
+Geografi,Magister Penginderaan Jauh,Saintek,S-2,2020,17.0,14.0,8.0
+Geografi,Magister Penginderaan Jauh,Saintek,S-2,2021,8.0,17.0,27.0
+Geografi,Magister Penginderaan Jauh,Saintek,S-2,2022,27.0,8.0,39.0
+Ilmu Budaya,Magister Pengkajian Amerika,Soshum,S-2,2014,18.0,24.0,9.0
+Ilmu Budaya,Magister Pengkajian Amerika,Soshum,S-2,2015,9.0,18.0,16.0
+Ilmu Budaya,Magister Pengkajian Amerika,Soshum,S-2,2016,16.0,9.0,19.0
+Ilmu Budaya,Magister Pengkajian Amerika,Soshum,S-2,2017,19.0,16.0,19.0
+Ilmu Budaya,Magister Pengkajian Amerika,Soshum,S-2,2018,19.0,19.0,25.0
+Ilmu Budaya,Magister Pengkajian Amerika,Soshum,S-2,2019,25.0,19.0,12.0
+Ilmu Budaya,Magister Pengkajian Amerika,Soshum,S-2,2020,12.0,25.0,14.0
+Ilmu Budaya,Magister Pengkajian Amerika,Soshum,S-2,2021,14.0,12.0,19.0
+Ilmu Budaya,Magister Pengkajian Amerika,Soshum,S-2,2022,19.0,14.0,7.0
+Pascasarjana,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-2,2014,28.0,26.0,19.0
+Pascasarjana,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-2,2015,19.0,28.0,17.0
+Pascasarjana,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-2,2016,17.0,19.0,21.0
+Pascasarjana,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-2,2017,21.0,17.0,24.0
+Pascasarjana,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-2,2018,24.0,21.0,33.0
+Pascasarjana,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-2,2019,33.0,24.0,18.0
+Pascasarjana,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-2,2020,18.0,33.0,17.0
+Pascasarjana,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-2,2021,17.0,18.0,33.0
+Pascasarjana,Magister Pengkajian Seni Pertunjukan dan Seni Rupa,Pascasarjana,S-2,2022,33.0,17.0,23.0
+Pascasarjana,Magister Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-2,2014,12.0,18.0,8.0
+Pascasarjana,Magister Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-2,2015,8.0,12.0,21.0
+Pascasarjana,Magister Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-2,2016,21.0,8.0,23.0
+Pascasarjana,Magister Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-2,2017,23.0,21.0,10.0
+Pascasarjana,Magister Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-2,2018,10.0,23.0,19.0
+Pascasarjana,Magister Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-2,2019,19.0,10.0,24.0
+Pascasarjana,Magister Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-2,2020,24.0,19.0,24.0
+Pascasarjana,Magister Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-2,2021,24.0,24.0,23.0
+Pascasarjana,Magister Penyuluhan dan Komunikasi Pembangunan,Pascasarjana,S-2,2022,23.0,24.0,29.0
+Teknik,Magister Perencanaan Wilayah dan Kota,Saintek,S-2,2014,83.0,79.0,83.0
+Teknik,Magister Perencanaan Wilayah dan Kota,Saintek,S-2,2015,83.0,83.0,87.0
+Teknik,Magister Perencanaan Wilayah dan Kota,Saintek,S-2,2016,87.0,83.0,0.0
+Teknik,Magister Perencanaan Wilayah dan Kota,Saintek,S-2,2017,0.0,87.0,71.0
+Teknik,Magister Perencanaan Wilayah dan Kota,Saintek,S-2,2018,71.0,0.0,54.0
+Teknik,Magister Perencanaan Wilayah dan Kota,Saintek,S-2,2019,54.0,71.0,68.0
+Teknik,Magister Perencanaan Wilayah dan Kota,Saintek,S-2,2020,68.0,54.0,56.0
+Teknik,Magister Perencanaan Wilayah dan Kota,Saintek,S-2,2021,56.0,68.0,40.0
+Teknik,Magister Perencanaan Wilayah dan Kota,Saintek,S-2,2022,40.0,56.0,76.0
+ISIPOL,Magister Politik dan Pemerintahan,Soshum,S-2,2014,44.0,54.0,43.0
+ISIPOL,Magister Politik dan Pemerintahan,Soshum,S-2,2015,43.0,44.0,31.0
+ISIPOL,Magister Politik dan Pemerintahan,Soshum,S-2,2016,31.0,43.0,53.0
+ISIPOL,Magister Politik dan Pemerintahan,Soshum,S-2,2017,53.0,31.0,23.0
+ISIPOL,Magister Politik dan Pemerintahan,Soshum,S-2,2018,23.0,53.0,32.0
+ISIPOL,Magister Politik dan Pemerintahan,Soshum,S-2,2019,32.0,23.0,27.0
+ISIPOL,Magister Politik dan Pemerintahan,Soshum,S-2,2020,27.0,32.0,17.0
+ISIPOL,Magister Politik dan Pemerintahan,Soshum,S-2,2021,17.0,27.0,27.0
+ISIPOL,Magister Politik dan Pemerintahan,Soshum,S-2,2022,27.0,17.0,30.0
+Psikologi,Magister Psikologi,Soshum,S-2,2014,73.0,75.0,78.0
+Psikologi,Magister Psikologi,Soshum,S-2,2015,78.0,73.0,63.0
+Psikologi,Magister Psikologi,Soshum,S-2,2016,63.0,78.0,68.0
+Psikologi,Magister Psikologi,Soshum,S-2,2017,68.0,63.0,52.0
+Psikologi,Magister Psikologi,Soshum,S-2,2018,52.0,68.0,64.0
+Psikologi,Magister Psikologi,Soshum,S-2,2019,64.0,52.0,57.0
+Psikologi,Magister Psikologi,Soshum,S-2,2020,57.0,64.0,54.0
+Psikologi,Magister Psikologi,Soshum,S-2,2021,54.0,57.0,79.0
+Psikologi,Magister Psikologi,Soshum,S-2,2022,79.0,54.0,121.0
+Psikologi,Magister Psikologi Profesi,Soshum,S-2,2014,98.0,104.0,87.0
+Psikologi,Magister Psikologi Profesi,Soshum,S-2,2015,87.0,98.0,99.0
+Psikologi,Magister Psikologi Profesi,Soshum,S-2,2016,99.0,87.0,101.0
+Psikologi,Magister Psikologi Profesi,Soshum,S-2,2017,101.0,99.0,122.0
+Psikologi,Magister Psikologi Profesi,Soshum,S-2,2018,122.0,101.0,98.0
+Psikologi,Magister Psikologi Profesi,Soshum,S-2,2019,98.0,122.0,99.0
+Psikologi,Magister Psikologi Profesi,Soshum,S-2,2020,99.0,98.0,101.0
+Psikologi,Magister Psikologi Profesi,Soshum,S-2,2021,101.0,99.0,97.0
+Teknik,Magister Rancang Kota,Saintek,S-2,2014,0.0,0.0,0.0
+Teknik,Magister Rancang Kota,Saintek,S-2,2015,0.0,0.0,0.0
+Teknik,Magister Rancang Kota,Saintek,S-2,2016,0.0,0.0,0.0
+Teknik,Magister Rancang Kota,Saintek,S-2,2017,0.0,0.0,0.0
+Teknik,Magister Rancang Kota,Saintek,S-2,2018,0.0,0.0,0.0
+Teknik,Magister Rancang Kota,Saintek,S-2,2019,0.0,0.0,0.0
+Teknik,Magister Rancang Kota,Saintek,S-2,2020,0.0,0.0,10.0
+Teknik,Magister Rancang Kota,Saintek,S-2,2021,10.0,0.0,14.0
+Teknik,Magister Rancang Kota,Saintek,S-2,2022,14.0,10.0,24.0
+Ekonomika dan Bisnis,Magister Sains Akuntansi,Soshum,S-2,2014,46.0,54.0,56.0
+Ekonomika dan Bisnis,Magister Sains Akuntansi,Soshum,S-2,2015,56.0,46.0,64.0
+Ekonomika dan Bisnis,Magister Sains Akuntansi,Soshum,S-2,2016,64.0,56.0,60.0
+Ekonomika dan Bisnis,Magister Sains Akuntansi,Soshum,S-2,2017,60.0,64.0,44.0
+Ekonomika dan Bisnis,Magister Sains Akuntansi,Soshum,S-2,2018,44.0,60.0,51.0
+Ekonomika dan Bisnis,Magister Sains Akuntansi,Soshum,S-2,2019,51.0,44.0,30.0
+Ekonomika dan Bisnis,Magister Sains Akuntansi,Soshum,S-2,2020,30.0,51.0,25.0
+Ekonomika dan Bisnis,Magister Sains Akuntansi,Soshum,S-2,2021,25.0,30.0,30.0
+Ekonomika dan Bisnis,Magister Sains Akuntansi,Soshum,S-2,2022,30.0,25.0,19.0
+Ekonomika dan Bisnis,Magister Sains Ilmu Ekonomi,Soshum,S-2,2014,25.0,14.0,15.0
+Ekonomika dan Bisnis,Magister Sains Ilmu Ekonomi,Soshum,S-2,2015,15.0,25.0,28.0
+Ekonomika dan Bisnis,Magister Sains Ilmu Ekonomi,Soshum,S-2,2016,28.0,15.0,24.0
+Ekonomika dan Bisnis,Magister Sains Ilmu Ekonomi,Soshum,S-2,2017,24.0,28.0,14.0
+Ekonomika dan Bisnis,Magister Sains Ilmu Ekonomi,Soshum,S-2,2018,14.0,24.0,24.0
+Ekonomika dan Bisnis,Magister Sains Ilmu Ekonomi,Soshum,S-2,2019,24.0,14.0,26.0
+Ekonomika dan Bisnis,Magister Sains Ilmu Ekonomi,Soshum,S-2,2020,26.0,24.0,12.0
+Ekonomika dan Bisnis,Magister Sains Ilmu Ekonomi,Soshum,S-2,2021,12.0,26.0,18.0
+Ekonomika dan Bisnis,Magister Sains Ilmu Ekonomi,Soshum,S-2,2022,18.0,12.0,15.0
+Ekonomika dan Bisnis,Magister Sains Manajemen,Soshum,S-2,2014,48.0,54.0,40.0
+Ekonomika dan Bisnis,Magister Sains Manajemen,Soshum,S-2,2015,40.0,48.0,73.0
+Ekonomika dan Bisnis,Magister Sains Manajemen,Soshum,S-2,2016,73.0,40.0,62.0
+Ekonomika dan Bisnis,Magister Sains Manajemen,Soshum,S-2,2017,62.0,73.0,44.0
+Ekonomika dan Bisnis,Magister Sains Manajemen,Soshum,S-2,2018,44.0,62.0,40.0
+Ekonomika dan Bisnis,Magister Sains Manajemen,Soshum,S-2,2019,40.0,44.0,30.0
+Ekonomika dan Bisnis,Magister Sains Manajemen,Soshum,S-2,2020,30.0,40.0,38.0
+Ekonomika dan Bisnis,Magister Sains Manajemen,Soshum,S-2,2021,38.0,30.0,43.0
+Ekonomika dan Bisnis,Magister Sains Manajemen,Soshum,S-2,2022,43.0,38.0,51.0
+Kedokteran Hewan,Magister Sains Veteriner,Medika,S-2,2014,16.0,32.0,54.0
+Kedokteran Hewan,Magister Sains Veteriner,Medika,S-2,2015,54.0,16.0,29.0
+Kedokteran Hewan,Magister Sains Veteriner,Medika,S-2,2016,29.0,54.0,48.0
+Kedokteran Hewan,Magister Sains Veteriner,Medika,S-2,2017,48.0,29.0,31.0
+Kedokteran Hewan,Magister Sains Veteriner,Medika,S-2,2018,31.0,48.0,34.0
+Kedokteran Hewan,Magister Sains Veteriner,Medika,S-2,2019,34.0,31.0,22.0
+Kedokteran Hewan,Magister Sains Veteriner,Medika,S-2,2020,22.0,34.0,52.0
+Kedokteran Hewan,Magister Sains Veteriner,Medika,S-2,2021,52.0,22.0,36.0
+Kedokteran Hewan,Magister Sains Veteriner,Medika,S-2,2022,36.0,52.0,36.0
+Ilmu Budaya,Magister Sastra,Soshum,S-2,2014,26.0,72.0,27.0
+Ilmu Budaya,Magister Sastra,Soshum,S-2,2015,27.0,26.0,56.0
+Ilmu Budaya,Magister Sastra,Soshum,S-2,2016,56.0,27.0,53.0
+Ilmu Budaya,Magister Sastra,Soshum,S-2,2017,53.0,56.0,59.0
+Ilmu Budaya,Magister Sastra,Soshum,S-2,2018,59.0,53.0,59.0
+Ilmu Budaya,Magister Sastra,Soshum,S-2,2019,59.0,59.0,35.0
+Ilmu Budaya,Magister Sastra,Soshum,S-2,2020,35.0,59.0,57.0
+Ilmu Budaya,Magister Sastra,Soshum,S-2,2021,57.0,35.0,66.0
+Ilmu Budaya,Magister Sastra,Soshum,S-2,2022,66.0,57.0,78.0
+Ilmu Budaya,Magister Sejarah,Soshum,S-2,2014,10.0,30.0,7.0
+Ilmu Budaya,Magister Sejarah,Soshum,S-2,2015,7.0,10.0,15.0
+Ilmu Budaya,Magister Sejarah,Soshum,S-2,2016,15.0,7.0,16.0
+Ilmu Budaya,Magister Sejarah,Soshum,S-2,2017,16.0,15.0,20.0
+Ilmu Budaya,Magister Sejarah,Soshum,S-2,2018,20.0,16.0,16.0
+Ilmu Budaya,Magister Sejarah,Soshum,S-2,2019,16.0,20.0,23.0
+Ilmu Budaya,Magister Sejarah,Soshum,S-2,2020,23.0,16.0,21.0
+Ilmu Budaya,Magister Sejarah,Soshum,S-2,2021,21.0,23.0,28.0
+Ilmu Budaya,Magister Sejarah,Soshum,S-2,2022,28.0,21.0,27.0
+Teknik,Magister Sistem dan Teknik Transportasi,Saintek,S-2,2014,50.0,59.0,44.0
+Teknik,Magister Sistem dan Teknik Transportasi,Saintek,S-2,2015,44.0,50.0,53.0
+Teknik,Magister Sistem dan Teknik Transportasi,Saintek,S-2,2016,53.0,44.0,53.0
+Teknik,Magister Sistem dan Teknik Transportasi,Saintek,S-2,2017,53.0,53.0,44.0
+Teknik,Magister Sistem dan Teknik Transportasi,Saintek,S-2,2018,44.0,53.0,38.0
+Teknik,Magister Sistem dan Teknik Transportasi,Saintek,S-2,2019,38.0,44.0,40.0
+Teknik,Magister Sistem dan Teknik Transportasi,Saintek,S-2,2020,40.0,38.0,41.0
+Teknik,Magister Sistem dan Teknik Transportasi,Saintek,S-2,2021,41.0,40.0,50.0
+Teknik,Magister Sistem dan Teknik Transportasi,Saintek,S-2,2022,50.0,41.0,47.0
+ISIPOL,Magister Sosiologi,Soshum,S-2,2014,22.0,25.0,27.0
+ISIPOL,Magister Sosiologi,Soshum,S-2,2015,27.0,22.0,23.0
+ISIPOL,Magister Sosiologi,Soshum,S-2,2016,23.0,27.0,41.0
+ISIPOL,Magister Sosiologi,Soshum,S-2,2017,41.0,23.0,33.0
+ISIPOL,Magister Sosiologi,Soshum,S-2,2018,33.0,41.0,39.0
+ISIPOL,Magister Sosiologi,Soshum,S-2,2019,39.0,33.0,44.0
+ISIPOL,Magister Sosiologi,Soshum,S-2,2020,44.0,39.0,18.0
+ISIPOL,Magister Sosiologi,Soshum,S-2,2021,18.0,44.0,41.0
+ISIPOL,Magister Sosiologi,Soshum,S-2,2022,41.0,18.0,33.0
+Pascasarjana,Magister Teknik Biomedis,Pascasarjana,S-2,2014,0.0,0.0,0.0
+Pascasarjana,Magister Teknik Biomedis,Pascasarjana,S-2,2015,0.0,0.0,0.0
+Pascasarjana,Magister Teknik Biomedis,Pascasarjana,S-2,2016,0.0,0.0,0.0
+Pascasarjana,Magister Teknik Biomedis,Pascasarjana,S-2,2017,0.0,0.0,0.0
+Pascasarjana,Magister Teknik Biomedis,Pascasarjana,S-2,2018,0.0,0.0,0.0
+Pascasarjana,Magister Teknik Biomedis,Pascasarjana,S-2,2019,0.0,0.0,8.0
+Pascasarjana,Magister Teknik Biomedis,Pascasarjana,S-2,2020,8.0,0.0,3.0
+Pascasarjana,Magister Teknik Biomedis,Pascasarjana,S-2,2021,3.0,8.0,13.0
+Pascasarjana,Magister Teknik Biomedis,Pascasarjana,S-2,2022,13.0,3.0,16.0
+Teknik,Magister Teknik Elektro,Saintek,S-2,2014,160.0,197.0,123.0
+Teknik,Magister Teknik Elektro,Saintek,S-2,2015,123.0,160.0,69.0
+Teknik,Magister Teknik Elektro,Saintek,S-2,2016,69.0,123.0,63.0
+Teknik,Magister Teknik Elektro,Saintek,S-2,2017,63.0,69.0,27.0
+Teknik,Magister Teknik Elektro,Saintek,S-2,2018,27.0,63.0,36.0
+Teknik,Magister Teknik Elektro,Saintek,S-2,2019,36.0,27.0,42.0
+Teknik,Magister Teknik Elektro,Saintek,S-2,2020,42.0,36.0,35.0
+Teknik,Magister Teknik Elektro,Saintek,S-2,2021,35.0,42.0,29.0
+Teknik,Magister Teknik Elektro,Saintek,S-2,2022,29.0,35.0,69.0
+Teknik,Magister Teknik Fisika,Saintek,S-2,2014,0.0,0.0,0.0
+Teknik,Magister Teknik Fisika,Saintek,S-2,2015,0.0,0.0,10.0
+Teknik,Magister Teknik Fisika,Saintek,S-2,2016,10.0,0.0,6.0
+Teknik,Magister Teknik Fisika,Saintek,S-2,2017,6.0,10.0,8.0
+Teknik,Magister Teknik Fisika,Saintek,S-2,2018,8.0,6.0,9.0
+Teknik,Magister Teknik Fisika,Saintek,S-2,2019,9.0,8.0,12.0
+Teknik,Magister Teknik Fisika,Saintek,S-2,2020,12.0,9.0,10.0
+Teknik,Magister Teknik Fisika,Saintek,S-2,2021,10.0,12.0,5.0
+Teknik,Magister Teknik Fisika,Saintek,S-2,2022,5.0,10.0,9.0
+Teknik,Magister Teknik Geologi,Saintek,S-2,2014,34.0,64.0,34.0
+Teknik,Magister Teknik Geologi,Saintek,S-2,2015,34.0,34.0,42.0
+Teknik,Magister Teknik Geologi,Saintek,S-2,2016,42.0,34.0,40.0
+Teknik,Magister Teknik Geologi,Saintek,S-2,2017,40.0,42.0,31.0
+Teknik,Magister Teknik Geologi,Saintek,S-2,2018,31.0,40.0,25.0
+Teknik,Magister Teknik Geologi,Saintek,S-2,2019,25.0,31.0,62.0
+Teknik,Magister Teknik Geologi,Saintek,S-2,2020,62.0,25.0,54.0
+Teknik,Magister Teknik Geologi,Saintek,S-2,2021,54.0,62.0,46.0
+Teknik,Magister Teknik Geologi,Saintek,S-2,2022,46.0,54.0,57.0
+Teknik,Magister Teknik Geomatika,Saintek,S-2,2014,21.0,18.0,24.0
+Teknik,Magister Teknik Geomatika,Saintek,S-2,2015,24.0,21.0,19.0
+Teknik,Magister Teknik Geomatika,Saintek,S-2,2016,19.0,24.0,18.0
+Teknik,Magister Teknik Geomatika,Saintek,S-2,2017,18.0,19.0,17.0
+Teknik,Magister Teknik Geomatika,Saintek,S-2,2018,17.0,18.0,19.0
+Teknik,Magister Teknik Geomatika,Saintek,S-2,2019,19.0,17.0,13.0
+Teknik,Magister Teknik Geomatika,Saintek,S-2,2020,13.0,19.0,20.0
+Teknik,Magister Teknik Geomatika,Saintek,S-2,2021,20.0,13.0,15.0
+Teknik,Magister Teknik Geomatika,Saintek,S-2,2022,15.0,20.0,26.0
+Teknik,Magister Teknik Industri,Saintek,S-2,2014,41.0,43.0,36.0
+Teknik,Magister Teknik Industri,Saintek,S-2,2015,36.0,41.0,38.0
+Teknik,Magister Teknik Industri,Saintek,S-2,2016,38.0,36.0,33.0
+Teknik,Magister Teknik Industri,Saintek,S-2,2017,33.0,38.0,39.0
+Teknik,Magister Teknik Industri,Saintek,S-2,2018,39.0,33.0,37.0
+Teknik,Magister Teknik Industri,Saintek,S-2,2019,37.0,39.0,40.0
+Teknik,Magister Teknik Industri,Saintek,S-2,2020,40.0,37.0,39.0
+Teknik,Magister Teknik Industri,Saintek,S-2,2021,39.0,40.0,44.0
+Teknik,Magister Teknik Industri,Saintek,S-2,2022,44.0,39.0,56.0
+Teknik,Magister Teknik Kimia,Saintek,S-2,2014,24.0,36.0,32.0
+Teknik,Magister Teknik Kimia,Saintek,S-2,2015,32.0,24.0,46.0
+Teknik,Magister Teknik Kimia,Saintek,S-2,2016,46.0,32.0,46.0
+Teknik,Magister Teknik Kimia,Saintek,S-2,2017,46.0,46.0,48.0
+Teknik,Magister Teknik Kimia,Saintek,S-2,2018,48.0,46.0,55.0
+Teknik,Magister Teknik Kimia,Saintek,S-2,2019,55.0,48.0,61.0
+Teknik,Magister Teknik Kimia,Saintek,S-2,2020,61.0,55.0,51.0
+Teknik,Magister Teknik Kimia,Saintek,S-2,2021,51.0,61.0,50.0
+Teknik,Magister Teknik Kimia,Saintek,S-2,2022,50.0,51.0,51.0
+Teknik,Magister Teknik Mesin,Saintek,S-2,2014,33.0,25.0,48.0
+Teknik,Magister Teknik Mesin,Saintek,S-2,2015,48.0,33.0,63.0
+Teknik,Magister Teknik Mesin,Saintek,S-2,2016,63.0,48.0,85.0
+Teknik,Magister Teknik Mesin,Saintek,S-2,2017,85.0,63.0,24.0
+Teknik,Magister Teknik Mesin,Saintek,S-2,2018,24.0,85.0,42.0
+Teknik,Magister Teknik Mesin,Saintek,S-2,2019,42.0,24.0,48.0
+Teknik,Magister Teknik Mesin,Saintek,S-2,2020,48.0,42.0,29.0
+Teknik,Magister Teknik Mesin,Saintek,S-2,2021,29.0,48.0,51.0
+Teknik,Magister Teknik Mesin,Saintek,S-2,2022,51.0,29.0,40.0
+Teknik,Magister Teknik Pengelolaan Bencana Alam,Saintek,S-2,2014,30.0,1.0,20.0
+Teknik,Magister Teknik Pengelolaan Bencana Alam,Saintek,S-2,2015,20.0,30.0,13.0
+Teknik,Magister Teknik Pengelolaan Bencana Alam,Saintek,S-2,2016,13.0,20.0,12.0
+Teknik,Magister Teknik Pengelolaan Bencana Alam,Saintek,S-2,2017,12.0,13.0,14.0
+Teknik,Magister Teknik Pengelolaan Bencana Alam,Saintek,S-2,2018,14.0,12.0,4.0
+Teknik,Magister Teknik Pengelolaan Bencana Alam,Saintek,S-2,2019,4.0,14.0,21.0
+Teknik,Magister Teknik Pengelolaan Bencana Alam,Saintek,S-2,2020,21.0,4.0,25.0
+Teknik,Magister Teknik Pengelolaan Bencana Alam,Saintek,S-2,2021,25.0,21.0,32.0
+Teknik,Magister Teknik Pengelolaan Bencana Alam,Saintek,S-2,2022,32.0,25.0,25.0
+Teknologi Pertanian,Magister Teknik Pertanian,Agro,S-2,2014,10.0,21.0,5.0
+Teknologi Pertanian,Magister Teknik Pertanian,Agro,S-2,2015,5.0,10.0,6.0
+Teknologi Pertanian,Magister Teknik Pertanian,Agro,S-2,2016,6.0,5.0,9.0
+Teknologi Pertanian,Magister Teknik Pertanian,Agro,S-2,2017,9.0,6.0,19.0
+Teknologi Pertanian,Magister Teknik Pertanian,Agro,S-2,2018,19.0,9.0,7.0
+Teknologi Pertanian,Magister Teknik Pertanian,Agro,S-2,2019,7.0,19.0,14.0
+Teknologi Pertanian,Magister Teknik Pertanian,Agro,S-2,2020,14.0,7.0,19.0
+Teknologi Pertanian,Magister Teknik Pertanian,Agro,S-2,2021,19.0,14.0,14.0
+Teknologi Pertanian,Magister Teknik Pertanian,Agro,S-2,2022,14.0,19.0,15.0
+Teknik,Magister Teknik Sipil,Saintek,S-2,2014,66.0,116.0,91.0
+Teknik,Magister Teknik Sipil,Saintek,S-2,2015,91.0,66.0,71.0
+Teknik,Magister Teknik Sipil,Saintek,S-2,2016,71.0,91.0,70.0
+Teknik,Magister Teknik Sipil,Saintek,S-2,2017,70.0,71.0,62.0
+Teknik,Magister Teknik Sipil,Saintek,S-2,2018,62.0,70.0,87.0
+Teknik,Magister Teknik Sipil,Saintek,S-2,2019,87.0,62.0,71.0
+Teknik,Magister Teknik Sipil,Saintek,S-2,2020,71.0,87.0,53.0
+Teknik,Magister Teknik Sipil,Saintek,S-2,2021,53.0,71.0,83.0
+Teknik,Magister Teknik Sipil,Saintek,S-2,2022,83.0,53.0,93.0
+Teknik,Magister Teknik Sistem,Saintek,S-2,2014,27.0,14.0,11.0
+Teknik,Magister Teknik Sistem,Saintek,S-2,2015,11.0,27.0,29.0
+Teknik,Magister Teknik Sistem,Saintek,S-2,2016,29.0,11.0,20.0
+Teknik,Magister Teknik Sistem,Saintek,S-2,2017,20.0,29.0,41.0
+Teknik,Magister Teknik Sistem,Saintek,S-2,2018,41.0,20.0,35.0
+Teknik,Magister Teknik Sistem,Saintek,S-2,2019,35.0,41.0,29.0
+Teknik,Magister Teknik Sistem,Saintek,S-2,2020,29.0,35.0,24.0
+Teknik,Magister Teknik Sistem,Saintek,S-2,2021,24.0,29.0,25.0
+Teknik,Magister Teknik Sistem,Saintek,S-2,2022,25.0,24.0,46.0
+Teknologi Pertanian,Magister Teknologi Hasil Perkebunan,Agro,S-2,2014,7.0,12.0,3.0
+Teknologi Pertanian,Magister Teknologi Hasil Perkebunan,Agro,S-2,2015,3.0,7.0,6.0
+Teknologi Pertanian,Magister Teknologi Hasil Perkebunan,Agro,S-2,2016,6.0,3.0,8.0
+Teknologi Pertanian,Magister Teknologi Hasil Perkebunan,Agro,S-2,2017,8.0,6.0,8.0
+Teknologi Pertanian,Magister Teknologi Hasil Perkebunan,Agro,S-2,2018,8.0,8.0,5.0
+Teknologi Pertanian,Magister Teknologi Hasil Perkebunan,Agro,S-2,2019,5.0,8.0,6.0
+Teknologi Pertanian,Magister Teknologi Hasil Perkebunan,Agro,S-2,2020,6.0,5.0,8.0
+Teknologi Pertanian,Magister Teknologi Hasil Perkebunan,Agro,S-2,2021,8.0,6.0,4.0
+Teknologi Pertanian,Magister Teknologi Hasil Perkebunan,Agro,S-2,2022,4.0,8.0,7.0
+Teknologi Pertanian,Magister Teknologi Industri Pertanian,Agro,S-2,2014,6.0,14.0,7.0
+Teknologi Pertanian,Magister Teknologi Industri Pertanian,Agro,S-2,2015,7.0,6.0,15.0
+Teknologi Pertanian,Magister Teknologi Industri Pertanian,Agro,S-2,2016,15.0,7.0,15.0
+Teknologi Pertanian,Magister Teknologi Industri Pertanian,Agro,S-2,2017,15.0,15.0,10.0
+Teknologi Pertanian,Magister Teknologi Industri Pertanian,Agro,S-2,2018,10.0,15.0,8.0
+Teknologi Pertanian,Magister Teknologi Industri Pertanian,Agro,S-2,2019,8.0,10.0,6.0
+Teknologi Pertanian,Magister Teknologi Industri Pertanian,Agro,S-2,2020,6.0,8.0,13.0
+Teknologi Pertanian,Magister Teknologi Industri Pertanian,Agro,S-2,2021,13.0,6.0,8.0
+Teknologi Pertanian,Magister Teknologi Industri Pertanian,Agro,S-2,2022,8.0,13.0,15.0
+Teknik,Magister Teknologi informasi,Saintek,S-2,2014,0.0,0.0,16.0
+Teknik,Magister Teknologi informasi,Saintek,S-2,2015,16.0,0.0,64.0
+Teknik,Magister Teknologi informasi,Saintek,S-2,2016,64.0,16.0,46.0
+Teknik,Magister Teknologi informasi,Saintek,S-2,2017,46.0,64.0,48.0
+Teknik,Magister Teknologi informasi,Saintek,S-2,2018,48.0,46.0,61.0
+Teknik,Magister Teknologi informasi,Saintek,S-2,2019,61.0,48.0,55.0
+Teknik,Magister Teknologi informasi,Saintek,S-2,2020,55.0,61.0,61.0
+Teknik,Magister Teknologi informasi,Saintek,S-2,2021,61.0,55.0,53.0
+Teknik,Magister Teknologi informasi,Saintek,S-2,2022,53.0,61.0,86.0

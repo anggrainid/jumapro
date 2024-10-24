@@ -10,6 +10,7 @@ from form_prediksi_satu_prodi_fix_formula import prediksi_pemantauan_satu_prodi
 from refactor_form_pemantauan_satu_prodi_fix_formula_tanpa_prediksi import pemantauan_satu_prodi
 from refactor_form_pemantauan_semua_prodi import pemantauan_semua_prodi
 from analisis_data_satu_prodi import analisis_data
+from form_prediksi_semua_last_func import prediksi_pemantauan_semua_prodi
 from streamlit_gsheets import GSheetsConnection
 
 # Establishing a Google Sheets connection
@@ -93,7 +94,8 @@ def main():
         elif submenu == "Prediksi Pemantauan Satu Prodi":
             prediksi_pemantauan_satu_prodi()
         elif submenu == "Prediksi Pemantauan Semua Prodi":
-            st.markdown("Prediksi Pemantauan Semua Program Studi")
+            prediksi_pemantauan_semua_prodi()
+            # st.markdown("Prediksi Pemantauan Semua Program Studi")
     elif selected == "Histori Prediksi":
         histori_prediksi()
     elif selected == "Visualisasi Model":

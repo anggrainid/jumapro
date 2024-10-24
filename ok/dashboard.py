@@ -1,23 +1,24 @@
 def dashboard():
 
-    import streamlit as st
-    from streamlit_gsheets import GSheetsConnection
+    # import streamlit as st
+    # from streamlit_gsheets import GSheetsConnection
 
-    # Establishing a Google Sheets connection
-    conn = st.connection("gsheets", type=GSheetsConnection)
+    # # Establishing a Google Sheets connection
+    # conn = st.connection("gsheets", type=GSheetsConnection)
 
-    # # Fetch data dhp = data history prediction
-    # existing_dhp = conn.read(worksheet="Data Histori Prediksi Suatu Prodi", ttl=5)
-    # existing_dhp = existing_dhp.dropna(how="all")
+    # # # Fetch data dhp = data history prediction
+    # # existing_dhp = conn.read(worksheet="Data Histori Prediksi Suatu Prodi", ttl=5)
+    # # existing_dhp = existing_dhp.dropna(how="all")
 
-    # Fetch data djm = data jumlah mahasiswa
-    existing_djm = conn.read(worksheet="Data Jumlah Mahasiswa", ttl=5)
-    existing_djm = existing_djm.dropna(how="all")
-    existing_djm = existing_djm.replace('#N/A ()', 0)
+    # # Fetch data djm = data jumlah mahasiswa
+    # existing_djm = conn.read(worksheet="Data Jumlah Mahasiswa", ttl=5)
+    # existing_djm = existing_djm.dropna(how="all")
+    # existing_djm = existing_djm.replace('#N/A ()', 0)
 
-    unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Departemen', 'Kluster']
-    existing_djm = existing_djm.drop(unused_column, axis=1)
-    existing_djm
+    # unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Departemen', 'Kluster']
+    # existing_djm = existing_djm.drop(unused_column, axis=1)
+    # existing_djm
+
 
     # Menghitung jumlah prodi berdasarkan fakultas
     fakultas_counts = existing_djm['Fakultas'].value_counts()
@@ -33,7 +34,7 @@ def dashboard():
 
     # Membuat dashboard header
     # st.title("Dashboard Program Studi")
-    st.markdown("Dashboard Historis Jumlah Mahasiswa Semua Program Studi")
+    st.markdown("Dashboard Historis Jumlah Mahasiswa Program Studi Magister dan Doktor di Universitas Gadjah Mada")
 
 
     col9, col10 = st.columns([1, 1])

@@ -50,15 +50,15 @@ def analisis_data(existing_djm):
     plt.legend()
     st.pyplot(plt)
 
-    # Bar Chart
-    st.subheader("Bar Chart: Jumlah Mahasiswa per Tahun")
-    plt.figure(figsize=(10, 5))
-    plt.bar(available_years, filtered_data.iloc[0, 1:].values, color='skyblue')
-    plt.title(f'Jumlah Mahasiswa {selected_prodi} (Tahun {start_year} - {end_year})')
-    plt.xlabel('Tahun')
-    plt.ylabel('Jumlah Mahasiswa')
-    plt.xticks(rotation=45)
-    st.pyplot(plt)
+    # # Bar Chart
+    # st.subheader("Bar Chart: Jumlah Mahasiswa per Tahun")
+    # plt.figure(figsize=(10, 5))
+    # plt.bar(available_years, filtered_data.iloc[0, 1:].values, color='skyblue')
+    # plt.title(f'Jumlah Mahasiswa {selected_prodi} (Tahun {start_year} - {end_year})')
+    # plt.xlabel('Tahun')
+    # plt.ylabel('Jumlah Mahasiswa')
+    # plt.xticks(rotation=45)
+    # st.pyplot(plt)
 
     # Display Table of Filtered Data
     st.subheader(f"Data Jumlah Mahasiswa {selected_prodi}")
