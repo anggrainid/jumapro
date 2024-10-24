@@ -3,55 +3,50 @@ import pickle
 import pandas as pd
 from streamlit_gsheets import GSheetsConnection
 import numpy as np
-from data import refresh_data, get_data, preprocess_data
+from data import get_data, refresh_data, preprocess_data
 
+# 1. Connections from google sheets
 
+<<<<<<< HEAD
 
 # def load_data_from_gsheets():
 #     conn = st.connection("gsheets", type=GSheetsConnection)
 #     # existing_dhp = conn.read(worksheet="Data Histori Prediksi Suatu Prodi", ttl=5)
 #     existing_djm = conn.read(worksheet="Data Jumlah Mahasiswa")
 #     existing_formula = conn.read(worksheet="Rumus Pemantauan", usecols=list(range(7)), ttl=5)
+=======
+>>>>>>> 2deb462eead4128fae2902e58147cca41f5c5958
 
-#     # Simpan data ke file pickle
-#     # with open('existing_dhp.pickle', 'wb') as handle:
-#     #     pickle.dump(existing_dhp, handle, protocol=pickle.HIGHEST_PROTOCOL)
+# conn = st.connection("gsheets", type=GSheetsConnection)
+# existing_dhp = conn.read(worksheet="Data Histori Prediksi Suatu Prodi", ttl=5)
+# existing_djm = conn.read(worksheet="Data Jumlah Mahasiswa")
+# existing_formula = conn.read(worksheet="Rumus Pemantauan", usecols=list(range(7)), ttl=5)
 
-#     with open('existing_djm.pickle', 'wb') as handle:
-#         pickle.dump(existing_djm, handle, protocol=pickle.HIGHEST_PROTOCOL)
+# with open('existing_dhp.pickle', 'wb') as handle:
+#     pickle.dump(existing_dhp, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-#     with open('existing_formula.pickle', 'wb') as handle:
-#         pickle.dump(existing_formula, handle, protocol=pickle.HIGHEST_PROTOCOL)
-
-#     return existing_djm, existing_formula
-# def connection_data(sheet):
-#     conn = st.connection("gsheets", type=GSheetsConnection)
-#     data = conn.read(worksheet=sheet, ttl=5)
+# with open('existing_djm.pickle', 'wb') as handle:
+#     pickle.dump(existing_djm, handle, protocol=pickle.HIGHEST_PROTOCOL)
     
+# with open('existing_formula.pickle', 'wb') as handle:
+#     pickle.dump(existing_formula, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
+# 2. Connections from google sheets
 
+# with open('existing_djm.pickle', 'rb') as handle:
+#     existing_djm = pickle.load(handle)
 
-# # Fungsi untuk memuat data dari pickle
-# def load_data_from_pickle():
-#     with open('existing_djm.pickle', 'rb') as handle:
-#         existing_djm = pickle.load(handle)
+# with open('existing_djm.pickle', 'rb') as handle:
+#     existing_djm = pickle.load(handle)
 
-#     with open('existing_formula.pickle', 'rb') as handle:
-#         existing_formula = pickle.load(handle)
+# with open('existing_formula.pickle', 'rb') as handle:
+#     existing_formula = pickle.load(handle)
 
-#     return existing_djm, existing_formula
+existing_djm = get_data('djm')
+existing_formula = get_data('formula')
+existing_dhp = get_data('dhp')
 
-# Tombol Refresh untuk memutuskan apakah akan memuat ulang dari Google Sheets atau tidak
-if st.button('Refresh Data'):
-    # st.write("Memuat ulang data dari Google Sheets...")
-    # Muat data ulang dari Google Sheets
-    existing_djm, existing_formula, existing_dhp = refresh_data()
-    st.success("Data berhasil dimuat ulang dari Google Sheets!")
-else:
-    # Muat data dari file pickle jika tidak di-refresh
-    # st.write("Memuat data dari pickle...")
-    existing_djm, existing_formula, existing_dhp = get_data()
-    # st.success("Data berhasil dimuat dari file pickle!")    
+    
 model = pickle.load(open(r"next_year_students_prediction.sav", "rb"))
 
 # 3. Data preprocessing
@@ -63,21 +58,25 @@ model = pickle.load(open(r"next_year_students_prediction.sav", "rb"))
 # existing_djm = existing_djm.replace('#N/A ()', 0)
 # # existing_dhp = existing_dhp.dropna(how="all")
 # existing_formula = existing_formula.dropna(how="all")
-# existing_djm.columns = [str(i) for i in existing_djm.columns]
+existing_djm.columns = [str(i) for i in existing_djm.columns]
 
-existing_djm = preprocess_data(existing_djm)
-existing_formula = preprocess_data(existing_formula)
 # Dropdown options for Lembaga
 lembaga_options = existing_djm['Lembaga'].unique()
 formula_options = existing_formula['Nama Rumus'].unique()
 
+# unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Departemen', 'Kluster']
+# existing_djm = existing_djm.drop(unused_column, axis=1)
+
+
+existing_djm = preprocess_data(existing_djm)
 # st.write(existing_djm.info())
 
 # 4. CRUD form prediksi pemantauan semua prodi
 djm_prodi = existing_djm["Prodi"]
 
-max_year = int(existing_djm.columns[-1])
-min_year = int(existing_djm.columns[12])
+years = [int(col) for col in existing_djm.columns if str(col).isdigit()]
+max_year = max(years)
+min_year = min(years)
 
 input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=min_year, max_value=max_year+1)
 input_last_year = input_predict_year - 1
@@ -136,7 +135,11 @@ def hitung_persentase_penurunan(index, data, predict_year):
     except Exception as e:
         print('ERRROR: ts0 ts1', index, type(ts_1), ts_0, ts_1)
         raise e
+<<<<<<< HEAD
         
+=======
+            
+>>>>>>> 2deb462eead4128fae2902e58147cca41f5c5958
     penurunan = (ts_0 - ts_1) / ts_1
 
     persentase_penurunan = penurunan * 100
@@ -197,15 +200,16 @@ existing_djm['index'] = existing_djm.index
 
 for index, row in existing_djm.iterrows():
     lembaga_prodi = row['Lembaga']
-    # prodi_name = row['Prodi']        
-    # current_students = row[str(input_last_year)]
-    
+    prodi_name = row['Prodi']        
+    current_students = row[str(input_last_year)]
+    tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
     
     selected_formula = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[lembaga_prodi]) & (existing_formula['Lembaga'] == lembaga_prodi)].iloc[0]
     input_kriteria = selected_formula["Kriteria"]
     existing_djm.at[index, 'Kriteria Input'] = input_kriteria
     input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
-    #  looping isi prediksi
+        # looping isi prediksi
+    tahun_tidak_lolos_found = False
     existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Lebih dari {input_years_to_predict} Tahun ke Depan"
     
     # input_banyak_data_ts = selected_formula["Banyak Data TS"]
@@ -226,8 +230,7 @@ for index, row in existing_djm.iterrows():
     ts = sorted(ts, reverse=True)
     
     
-    tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
-    tahun_tidak_lolos_found = False
+    
     for i in range(input_years_to_predict):
         next_year = input_last_year + i
         

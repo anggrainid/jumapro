@@ -1,9 +1,12 @@
-def prediksi_pemantauan_semua_prodi():    
-    import streamlit as st
-    import pickle
-    import pandas as pd
-    from streamlit_gsheets import GSheetsConnection
-    import numpy as np
+import streamlit as st
+import pickle
+import pandas as pd
+from streamlit_gsheets import GSheetsConnection
+import numpy as np
+from data import get_data, refresh_data, preprocess_data
+from rumus_prediksi_pemantauan import hitung_persentase_penurunan
+
+
 
     # 1. Connections from google sheets
 
@@ -24,14 +27,19 @@ def prediksi_pemantauan_semua_prodi():
 
     # 2. Connections from google sheets
 
-    with open('existing_djm.pickle', 'rb') as handle:
-        existing_djm = pickle.load(handle)
+    # with open('existing_djm.pickle', 'rb') as handle:
+    #     existing_djm = pickle.load(handle)
 
-    with open('existing_djm.pickle', 'rb') as handle:
-        existing_djm = pickle.load(handle)
+    # with open('existing_djm.pickle', 'rb') as handle:
+    #     existing_djm = pickle.load(handle)
 
-    with open('existing_formula.pickle', 'rb') as handle:
-        existing_formula = pickle.load(handle)
+# with open('existing_formula.pickle', 'rb') as handle:
+#     existing_formula = pickle.load(handle)
+
+def prediksi():
+
+    existing_djm = get_data('djm')
+    existing_formula = get_data('formula')
         
     model = pickle.load(open(r"next_year_students_prediction.sav", "rb"))
 
@@ -40,22 +48,25 @@ def prediksi_pemantauan_semua_prodi():
     # Djm = data jumlah mahasiswa
     # Dhp = data history prediksi
 
-    existing_djm = existing_djm.dropna(how="all")
-    existing_djm = existing_djm.replace('#N/A ()', 0)
-    # existing_dhp = existing_dhp.dropna(how="all")
-    existing_formula = existing_formula.dropna(how="all")
+    # existing_djm = existing_djm.dropna(how="all")
+    # existing_djm = existing_djm.replace('#N/A ()', 0)
+    # # existing_dhp = existing_dhp.dropna(how="all")
+    # existing_formula = existing_formula.dropna(how="all")
+    # existing_djm.columns = [str(i) for i in existing_djm.columns]
     existing_djm.columns = [str(i) for i in existing_djm.columns]
 
     # Dropdown options for Lembaga
     lembaga_options = existing_djm['Lembaga'].unique()
     formula_options = existing_formula['Nama Rumus'].unique()
 
-    unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Departemen', 'Kluster']
-    existing_djm = existing_djm.drop(unused_column, axis=1)
-    existing_djm
+    # unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Departemen', 'Kluster']
+    # existing_djm = existing_djm.drop(unused_column, axis=1)
+    # existing_djm
     # st.write(existing_djm.info())
 
+    existing_djm = preprocess_data(existing_djm)
     # 4. CRUD form prediksi pemantauan semua prodi
+<<<<<<< HEAD
     djm_prodi = existing_djm["Prodi"]
     available_years = [int(col) for col in existing_djm.columns if col.isdigit()]
     if not available_years:
@@ -65,8 +76,22 @@ def prediksi_pemantauan_semua_prodi():
 
     max_year = max(available_years)
     min_year = min(available_years)
+=======
+    # djm_prodi = existing_djm["Prodi"]
 
-    input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=min_year, max_value=max_year+1)
+>>>>>>> 2deb462eead4128fae2902e58147cca41f5c5958
+
+    # Menentukan Tahun Pemantauan
+    # years = [int(col) for col in existing_djm.columns if col.isdigit()]
+    years = [int(col) for col in existing_djm.columns if str(col).isdigit()]
+    if not years:
+        st.error("Tidak ada data tahun yang tersedia di existing_djm.")
+        # return
+
+    max_year = max(years)
+    min_year = min(years)
+
+    input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=min_year+5, max_value=max_year+1)
     input_last_year = input_predict_year - 1
 
     input_years_to_predict = st.slider("Masukkan Proyeksi Prediksi (Dalam Satuan Tahun) : ", min_value=1, max_value=10)
@@ -109,68 +134,68 @@ def prediksi_pemantauan_semua_prodi():
     # st.write(max_banyak_data_ts)
 
     # 7. Fungsi hitung persentase penurunan
-    def hitung_persentase_penurunan(index, data, predict_year):
-        # data_mahasiswa_start_year = input_fields["input_jumlah_mahasiswa_ts0"]
-        # end_year = predict_year
-        # penurunan_total = (data[f"{end_year} (Prediksi)"] - data_mahasiswa_start_year)
-        # persentase_penurunan = (penurunan_total / 2) * 100
-        # return persentase_penurunan
-        ts_1 = data.at[index, f"{predict_year}"]
-        ts_0 = data.at[index, str(input_last_year)]
-        try:
-            if ts_1==0.0 or np.isnan(ts_1) or (ts_1 is None):
-                return 0
-        except Exception as e:
-            print('ERRROR: ts0 ts1', index, type(ts_1), ts_0, ts_1)
-            raise e
+    # def hitung_persentase_penurunan(index, data, predict_year):
+    #     # data_mahasiswa_start_year = input_fields["input_jumlah_mahasiswa_ts0"]
+    #     # end_year = predict_year
+    #     # penurunan_total = (data[f"{end_year} (Prediksi)"] - data_mahasiswa_start_year)
+    #     # persentase_penurunan = (penurunan_total / 2) * 100
+    #     # return persentase_penurunan
+    #     ts_1 = data.at[index, f"{predict_year}"]
+    #     ts_0 = data.at[index, str(input_last_year)]
+    #     try:
+    #         if ts_1==0.0 or np.isnan(ts_1) or (ts_1 is None):
+    #             return 0
+    #     except Exception as e:
+    #         print('ERRROR: ts0 ts1', index, type(ts_1), ts_0, ts_1)
+    #         raise e
                 
-        penurunan = (ts_0 - ts_1) / ts_1
+    #     penurunan = (ts_0 - ts_1) / ts_1
 
-        persentase_penurunan = penurunan * 100
+    #     persentase_penurunan = penurunan * 100
 
-        return round(-persentase_penurunan, 2)
+    #     return round(-persentase_penurunan, 2)
 
-    # print('input_fields:', input_fields)
-    # input_fields
-    # Fungsi untuk menghitung persentase penurunan dengan lebih dari satu tahun data
-    def hitung_persentase_penurunan_lebih_dari_satu(index, data, predict_year, banyak_data_ts):
-        print('function ppls: ', (index, 'existing_djm', predict_year, banyak_data_ts))
-        global input_fields
+    # # print('input_fields:', input_fields)
+    # # input_fields
+    # # Fungsi untuk menghitung persentase penurunan dengan lebih dari satu tahun data
+    # def hitung_persentase_penurunan_lebih_dari_satu(index, data, predict_year, banyak_data_ts):
+    #     print('function ppls: ', (index, 'existing_djm', predict_year, banyak_data_ts))
+    #     global input_fields
 
-        total_penurunan = 0
+    #     total_penurunan = 0
         
-        # Iterasi dari TS-1 hingga TS-n (n = banyak_data_ts)
-        for i in range(int(banyak_data_ts) - 1):
-            if i == 0:
-                data = data.iloc[index]
-                ts_0 = data[str(predict_year)]
-                ts_1 = data[str(input_last_year)]
+    #     # Iterasi dari TS-1 hingga TS-n (n = banyak_data_ts)
+    #     for i in range(int(banyak_data_ts) - 1):
+    #         if i == 0:
+    #             data = data.iloc[index]
+    #             ts_0 = data[str(predict_year)]
+    #             ts_1 = data[str(input_last_year)]
 
                 
-            else:
-                # input_fields = input_fields[]
-                ts_1 = input_fields[f"input_jumlah_mahasiswa_ts{i}"][index]
-                ts_0 = input_fields[f"input_jumlah_mahasiswa_ts{i-1}"][index]
+    #         else:
+    #             # input_fields = input_fields[]
+    #             ts_1 = input_fields[f"input_jumlah_mahasiswa_ts{i}"][index]
+    #             ts_0 = input_fields[f"input_jumlah_mahasiswa_ts{i-1}"][index]
 
-            print(i, (ts_0), (ts_1))
+    #         print(i, (ts_0), (ts_1))
             
-            if ts_1==0 or np.isnan(ts_1) or (ts_1 is None):
-                return 0           
+    #         if ts_1==0 or np.isnan(ts_1) or (ts_1 is None):
+    #             return 0           
                     
-            penurunan = (ts_0 - ts_1) / ts_1
-            total_penurunan += penurunan
+    #         penurunan = (ts_0 - ts_1) / ts_1
+    #         total_penurunan += penurunan
             
         
-        # print('data:', type(data))
+    #     # print('data:', type(data))
         
-        # Hitung rata-rata penurunan
+    #     # Hitung rata-rata penurunan
         
-        rata_rata_penurunan = total_penurunan / (banyak_data_ts - 1)
-        persentase_penurunan = rata_rata_penurunan * 100
+    #     rata_rata_penurunan = total_penurunan / (banyak_data_ts - 1)
+    #     persentase_penurunan = rata_rata_penurunan * 100
 
-        print(f'out {index}:', ' | ', total_penurunan, ' | ', persentase_penurunan)
+    #     print(f'out {index}:', ' | ', total_penurunan, ' | ', persentase_penurunan)
         
-        return round(-persentase_penurunan, 2)
+    #     return round(-persentase_penurunan, 2)
 
     # 8. Prediksi setiap prodi
     model_results = {
@@ -184,19 +209,18 @@ def prediksi_pemantauan_semua_prodi():
 
     for index, row in existing_djm.iterrows():
         lembaga_prodi = row['Lembaga']
-        prodi_name = row['Prodi']        
-        current_students = row[str(input_last_year)]
-        tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
+        # prodi_name = row['Prodi']        
+        # current_students = row[str(input_last_year)]
+        
         
         selected_formula = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[lembaga_prodi]) & (existing_formula['Lembaga'] == lembaga_prodi)].iloc[0]
         input_kriteria = selected_formula["Kriteria"]
         existing_djm.at[index, 'Kriteria Input'] = input_kriteria
         input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
             # looping isi prediksi
-        tahun_tidak_lolos_found = False
-        existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Lebih dari {input_years_to_predict} Tahun ke Depan"
+        # existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Lebih dari {input_years_to_predict} Tahun ke Depan"
         
-        # input_banyak_data_ts = selected_formula["Banyak Data TS"]
+        input_banyak_data_ts = selected_formula["Banyak Data TS"]
         input_fields = {}
         input_fields["input_jumlah_mahasiswa_ts0"] = existing_djm[str(input_predict_year)]
         for i in range(max_banyak_data_ts-1):
@@ -214,6 +238,9 @@ def prediksi_pemantauan_semua_prodi():
         ts = sorted(ts, reverse=True)
         
         
+        # tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
+        existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Lebih dari {input_years_to_predict} Tahun ke Depan"
+        tahun_tidak_lolos_found = False
         
         for i in range(input_years_to_predict):
             next_year = input_last_year + i
@@ -280,9 +307,9 @@ def prediksi_pemantauan_semua_prodi():
             
             
             if input_banyak_data_ts > 2:
-                persentase_penurunan = hitung_persentase_penurunan_lebih_dari_satu(index, existing_djm, input_predict_year, input_banyak_data_ts)
+                persentase_penurunan = hitung_persentase_penurunan(index=index, data = existing_djm, predict_year = input_predict_year, banyak_data_ts = input_banyak_data_ts, input_fields = input_fields)
             else:
-                persentase_penurunan = hitung_persentase_penurunan(index, existing_djm, input_predict_year)
+                persentase_penurunan = hitung_persentase_penurunan(index=index, data = existing_djm, predict_year = input_predict_year)
                 
             existing_djm.at[index, 'Hitung Persentase Penurunan'] = f"{persentase_penurunan}%"
             hasil_prediksi_pemantauan = str(("Lolos" if persentase_penurunan <= input_ambang_batas_persen else "Tidak Lolos"))
@@ -341,3 +368,7 @@ def prediksi_pemantauan_semua_prodi():
 
     if st.button('Prediksi'):
         tampil_data_prodi
+
+    # prediksi_pemantauan_semua_prodi()
+    
+prediksi()

@@ -14,14 +14,14 @@ from form_prediksi_semua_last_func import prediksi_pemantauan_semua_prodi
 from streamlit_gsheets import GSheetsConnection
 
 # Establishing a Google Sheets connection
-conn = st.connection("gsheets", type=GSheetsConnection)
+# conn = st.connection("gsheets", type=GSheetsConnection)
 
-existing_djm = conn.read(worksheet="Data Jumlah Mahasiswa", ttl=5)
-existing_djm = existing_djm.dropna(how="all")
-existing_djm = existing_djm.replace('#N/A ()', 0)
+# existing_djm = conn.read(worksheet="Data Jumlah Mahasiswa", ttl=5)
+# existing_djm = existing_djm.dropna(how="all")
+# existing_djm = existing_djm.replace('#N/A ()', 0)
 
-unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Departemen', 'Kluster']
-existing_djm = existing_djm.drop(unused_column, axis=1)
+# unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Departemen', 'Kluster']
+# existing_djm = existing_djm.drop(unused_column, axis=1)
 
 # Fungsi untuk membuat sidebar dan navigasi
 def sidebar():
