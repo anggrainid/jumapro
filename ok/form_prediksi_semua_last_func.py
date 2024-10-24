@@ -66,7 +66,6 @@ def prediksi():
 
     existing_djm = preprocess_data(existing_djm)
     # 4. CRUD form prediksi pemantauan semua prodi
-<<<<<<< HEAD
     djm_prodi = existing_djm["Prodi"]
     available_years = [int(col) for col in existing_djm.columns if col.isdigit()]
     if not available_years:
@@ -76,10 +75,8 @@ def prediksi():
 
     max_year = max(available_years)
     min_year = min(available_years)
-=======
     # djm_prodi = existing_djm["Prodi"]
 
->>>>>>> 2deb462eead4128fae2902e58147cca41f5c5958
 
     # Menentukan Tahun Pemantauan
     # years = [int(col) for col in existing_djm.columns if col.isdigit()]

@@ -3,7 +3,6 @@ from streamlit_gsheets import GSheetsConnection
 import pickle
 import pandas as pd
 from datetime import date
-<<<<<<< HEAD
 
 def prediksi_pemantauan_satu_prodi():
 
@@ -12,7 +11,6 @@ def prediksi_pemantauan_satu_prodi():
     st.markdown("Form Prediksi Pemantauan Suatu Program Studi")
 
 
-=======
 from data import get_data, refresh_data, preprocess_data
 from rumus_prediksi_pemantauan import hitung_persentase_penurunan
 
@@ -32,7 +30,6 @@ def prediksi_pemantauan_satu_prodi():
     # 2. Connections from pickle
         existing_formula = get_data('formula')
     model = pickle.load(open(r"next_year_students_prediction.sav", "rb"))
->>>>>>> 2deb462eead4128fae2902e58147cca41f5c5958
     # Establishing a Google Sheets connection
     # conn = st.connection("gsheets", type=GSheetsConnection)
 
