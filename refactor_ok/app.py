@@ -17,6 +17,10 @@ from pages_jumapro.history import histori_prediksi
 from pages_jumapro.visualization import visualisasi_model
 from pages_jumapro.monitoring.formula import formula
 from pages_jumapro.prediction.calculator import kalkulator_prediksi
+from pages_jumapro.prediction.one import prediksi_pemantauan_satu_prodi
+from pages_jumapro.prediction.all import prediksi_pemantauan_semua_prodi
+from pages_jumapro.monitoring.one import pemantauan_satu_prodi
+from pages_jumapro.monitoring.all import pemantauan_semua_prodi
 
 
 # Fungsi utama
@@ -38,16 +42,16 @@ def main():
         elif selected == "Prediksi Pemantauan":
             if submenu == "Formula Pemantauan":
                 formula()
-        #     elif submenu == "Pemantauan Satu Prodi":
-        #         pemantauan_satu_prodi()
-        #     elif submenu == "Pemantauan Semua Prodi":
-        #         pemantauan_semua_prodi()
+            elif submenu == "Pemantauan Satu Prodi":
+                pemantauan_satu_prodi()
+            elif submenu == "Pemantauan Semua Prodi":
+                pemantauan_semua_prodi()
             elif submenu == "Kalkulator Prediksi":
                 kalkulator_prediksi()
-        #     elif submenu == "Prediksi Pemantauan Satu Prodi":
-        #         prediksi_pemantauan_satu_prodi()
-        #     elif submenu == "Prediksi Pemantauan Semua Prodi":
-        #         prediksi_pemantauan_semua_prodi()
+            elif submenu == "Prediksi Pemantauan Satu Prodi":
+                prediksi_pemantauan_satu_prodi()
+            elif submenu == "Prediksi Pemantauan Semua Prodi":
+                prediksi_pemantauan_semua_prodi()
         elif selected == "Histori Prediksi":
             histori_prediksi()
         elif selected == "Visualisasi Model":

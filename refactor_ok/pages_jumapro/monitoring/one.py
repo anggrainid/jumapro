@@ -1,50 +1,64 @@
 import streamlit as st
+import pickle
 import pandas as pd
+import numpy as np
 from datetime import date
 import math
-# from rumus_prediksi_pemantauan import hitung_persentase_penurunan
+from component.data import get_data, refresh_data, preprocess_data
+from component.func import calculate_persentase_penurunan
+# def load_data():
+#     # Load existing data and formulas from pickle files
+#     # with open('existing_djm.pickle', 'rb') as handle:
+#     #     existing_djm = pickle.load(handle)
+    
+#     with open('existing_formula.pickle', 'rb') as handle:
+#         existing_formula = pickle.load(handle)
+    
+#     return existing_formula
 
-# def pemantauan_satu_prodi():    
+# def calculate_persentase_penurunan(ts_values):
+#     """
+#     Menghitung persentase penurunan berdasarkan data time series.
+#     ts_values: List of jumlah mahasiswa dari tahun-tahun sebelumnya (TS-n, ..., TS-1, TS-0)
+#     """
+#     total_penurunan = 0
+#     valid_years = 0
+    
+#     for i in range(1, len(ts_values)):
+#         ts_current = ts_values[i]
+#         ts_previous = ts_values[i - 1]
+        
+#         if ts_current == 0 or pd.isna(ts_current) or (ts_current is None):
+#             return 0.0
+        
+#         penurunan = (ts_previous - ts_current) / ts_current
+#         total_penurunan += penurunan
+#         valid_years += 1
+    
+#     if valid_years == 0:
+#         return 0.0
+    
+#     rata_rata_penurunan = total_penurunan / valid_years
+#     persentase_penurunan = rata_rata_penurunan * 100
+#     return round(-persentase_penurunan, 2)
 
-    # def load_data():
-    #     # Load existing data and formulas from pickle files
-    #     # with open('existing_djm.pickle', 'rb') as handle:
-    #     #     existing_djm = pickle.load(handle)
-        
-    #     with open('existing_formula.pickle', 'rb') as handle:
-    #         existing_formula = pickle.load(handle)
-        
-    #     return existing_formula
 
-    # def calculate_persentase_penurunan(ts_values):
-    #     """
-    #     Menghitung persentase penurunan berdasarkan data time series.
-    #     ts_values: List of jumlah mahasiswa dari tahun-tahun sebelumnya (TS-n, ..., TS-1, TS-0)
-    #     """
-    #     total_penurunan = 0
-    #     valid_years = 0
-        
-    #     for i in range(1, len(ts_values)):
-    #         ts_current = ts_values[i]
-    #         ts_previous = ts_values[i - 1]
-            
-    #         if ts_current == 0 or pd.isna(ts_current) or (ts_current is None):
-    #             return 0.0
-            
-    #         penurunan = (ts_previous - ts_current) / ts_current
-    #         total_penurunan += penurunan
-    #         valid_years += 1
-        
-    #     if valid_years == 0:
-    #         return 0.0
-        
-    #     rata_rata_penurunan = total_penurunan / valid_years
-    #     persentase_penurunan = rata_rata_penurunan * 100
-    #     return round(-persentase_penurunan, 2)
 
-def one_monitoring(existing_formula):
-    # st.title("Form Pemantauan Program Studi")
-    st.markdown("Form Pemantauan Suatu Program Studi")
+
+def pemantauan_satu_prodi():
+    if st.button('Refresh Data'):
+        existing_dhp = refresh_data('dhp')
+        existing_formula = refresh_data('formula')
+        st.success("Data berhasil dimuat ulang dari Google Sheets!")
+    else:
+    # 2. Connections from pickle
+        existing_dhp = get_data('dhp')
+        existing_formula = get_data('formula')
+    # st.write(existing_djm)
+        # 3. Data preprocessing
+    existing_dhp = preprocess_data(existing_dhp)
+    existing_formula = preprocess_data(existing_formula)
+    st.title("Form Pemantauan Program Studi")
     
     # Input Fields
     input_prodi = st.text_input("Masukkan Nama Program Studi : ")
@@ -100,7 +114,7 @@ def one_monitoring(existing_formula):
         
         if input_kriteria == "Persentase Penurunan":
             ts_values = ts_years
-            persentase_penurunan = hitung_persentase_penurunan(ts_values=ts_values)
+            persentase_penurunan = calculate_persentase_penurunan(ts_values)
             hasil_prediksi_pemantauan = "Lolos" if persentase_penurunan <= input_ambang_batas_persen else "Tidak Lolos"
             
             # Menghitung Ambang Batas Jumlah Mahasiswa Minimal
@@ -141,11 +155,14 @@ def one_monitoring(existing_formula):
             st.table(data_prodi)
 
 
-    # def main():
-    #     # Load dan preprocess data
-    #     existing_formula = load_data()
-        
-    #     # Buat form pemantauan
-    #     create_pemantauan_form(existing_formula)
+# def main():
+#     # Load dan preprocess data
+#     existing_formula = load_data()
+    
+#     # Buat form pemantauan
+#     create_pemantauan_form(existing_formula)
 
-    # main()
+# if __name__ == "__main__":
+#     main()
+
+# create_pemantauan_form()
