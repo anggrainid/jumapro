@@ -3,12 +3,16 @@ from streamlit_gsheets import GSheetsConnection
 import pickle
 import pandas as pd
 from datetime import date
+from sidebar import sidebar_main
+from login import login
 
-def prediksi_pemantauan_satu_prodi():
 
-    # Halaman Prediksi Suatu Prodi
-    # st.title("Halaman Prediksi Suatu Prodi Dengan Formula")
-    st.markdown("Form Prediksi Pemantauan Suatu Program Studi")
+
+# def prediksi_pemantauan_satu_prodi():
+
+#     # Halaman Prediksi Suatu Prodi
+#     # st.title("Halaman Prediksi Suatu Prodi Dengan Formula")
+#     st.markdown("Form Prediksi Pemantauan Suatu Program Studi")
 
 
 from data import get_data, refresh_data, preprocess_data
@@ -17,7 +21,7 @@ from rumus_prediksi_pemantauan import hitung_persentase_penurunan
 
 def prediksi_pemantauan_satu_prodi():
 
-
+    # sidebar_main()
     # Halaman Prediksi Suatu Prodi
     # st.title("Halaman Prediksi Suatu Prodi Dengan Formula")
     # st.markdown("Form Prediksi Pemantauan Suatu Program Studi")

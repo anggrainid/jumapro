@@ -1,8 +1,8 @@
 import streamlit as st
-import pandas as pd
 import matplotlib.pyplot as plt
+from component.data import get_data, refresh_data, preprocess_data
 
-def analisis_data(existing_djm):
+def analisis_data():
     # st.title("Analisis Data Historis Jumlah Mahasiswa")
 
     # 1. Connections from google sheets

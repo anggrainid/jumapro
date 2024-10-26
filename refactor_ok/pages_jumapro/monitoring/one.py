@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 from datetime import date
 import math
-from rumus_prediksi_pemantauan import hitung_persentase_penurunan
-from data import get_data, refresh_data, preprocess_data, add_data
+# from rumus_prediksi_pemantauan import hitung_persentase_penurunan
 
 # def pemantauan_satu_prodi():    
 
@@ -43,25 +42,7 @@ from data import get_data, refresh_data, preprocess_data, add_data
     #     persentase_penurunan = rata_rata_penurunan * 100
     #     return round(-persentase_penurunan, 2)
 
-
-
-def create_pemantauan_form():
-
-    # 1. Connections from google sheets
-    if st.button('Refresh Data'):
-        existing_djm = refresh_data('djm')
-        existing_formula = refresh_data('formula')
-        st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    else:
-    # 2. Connections from pickle
-        existing_djm = get_data('djm')
-        existing_formula = get_data('formula')
-    # st.write(existing_djm)
-     # 3. Data preprocessing
-    existing_djm = preprocess_data(existing_djm)
-    existing_formula = preprocess_data(existing_formula)
-
-    
+def one_monitoring(existing_formula):
     # st.title("Form Pemantauan Program Studi")
     st.markdown("Form Pemantauan Suatu Program Studi")
     
@@ -168,4 +149,3 @@ def create_pemantauan_form():
     #     create_pemantauan_form(existing_formula)
 
     # main()
-create_pemantauan_form()

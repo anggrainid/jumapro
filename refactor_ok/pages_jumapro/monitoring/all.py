@@ -4,8 +4,7 @@ import pandas as pd
 import numpy as np
 from datetime import date
 import math
-from rumus_prediksi_pemantauan import hitung_persentase_penurunan
-from data import get_data, refresh_data, preprocess_data, add_data
+# from rumus_prediksi_pemantauan import hitung_persentase_penurunan
 
 # def pemantauan_semua_prodi():
 
@@ -67,26 +66,10 @@ from data import get_data, refresh_data, preprocess_data, add_data
 #     #     persentase_penurunan = rata_rata_penurunan * 100
 #     #     return round(-persentase_penurunan, 2)
 
-def create_pemantauan_form():
+def all_monitoring(existing_djm, existing_formula):
     """
     Membuat form pemantauan untuk semua prodi dan melakukan pemantauan berdasarkan data yang ada.
     """
-
-
-    # 1. Connections from google sheets
-    if st.button('Refresh Data'):
-        existing_djm = refresh_data('djm')
-        existing_formula = refresh_data('formula')
-        st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    else:
-    # 2. Connections from pickle
-        existing_djm = get_data('djm')
-        existing_formula = get_data('formula')
-    # st.write(existing_djm)
-     # 3. Data preprocessing
-    existing_djm = preprocess_data(existing_djm)
-    existing_formula = preprocess_data(existing_formula)
-
     # st.title("Form Pemantauan Semua Program Studi")
     st.markdown("Form Pemantauan Semua Program Studi")
     
@@ -306,4 +289,3 @@ def create_pemantauan_form():
 
 
     # main()
-create_pemantauan_form()
