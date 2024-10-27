@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 import pickle
 import pandas as pd
+import matplotlib.pyplot as plt
 
 def kalkulator_prediksi():
 
@@ -70,6 +71,10 @@ def kalkulator_prediksi():
 
     # Prediksi beberapa tahun ke depan
     current_students = data_prodi['Jumlah Mahasiswa Saat Ini (TS)'].copy()
+    years = []
+    predictions = []
+    years.append(0)
+    predictions.append(data_prodi['Jumlah Mahasiswa Saat Ini (TS)'].values[0])
     for i in range(1, input_years_to_predict + 1):
         # next_year = input_last_year + i
         column_name = f'Jumlah Mahasiswa Setelahnya (Prediksi TS+{i})'
@@ -77,7 +82,8 @@ def kalkulator_prediksi():
         data_prodi[column_name] = data_prodi[column_name].astype(int)
         current_students = data_prodi[column_name].copy()
 
-
+        years.append(i)
+        predictions.append(data_prodi[column_name].values[0])
 
     # data_prodi = pd.DataFrame(new_data_prodi)
 
@@ -242,5 +248,14 @@ def kalkulator_prediksi():
         # tampil_data_prodi.rename(columns={'current_students': f'{input_last_year_data} (Saat Ini)'}, inplace=True)
         st.write(data_prodi)
         # st.success("Data berhasil ditambahkan ke worksheet!")
-        
+            # Scatter plot
+        fig, ax = plt.subplots()
+        ax.scatter(years, predictions, color='blue')
+        ax.plot(years, predictions, color='blue', alpha=0.5)  # Menambahkan garis penghubung
+        ax.set_title('Prediksi Jumlah Mahasiswa')
+        ax.set_xlabel('Tahun Ke Depan')
+        ax.set_ylabel('Jumlah Mahasiswa')
+        ax.set_xticks(years)  # Mengatur ticks untuk sumbu x
+
+        st.pyplot(fig)
 # kalkulator_prediksi()
