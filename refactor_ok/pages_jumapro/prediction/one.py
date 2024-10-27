@@ -5,7 +5,7 @@ import pandas as pd
 from datetime import date
 from component.data import get_data, refresh_data, preprocess_data
 
-def prediksi_pemantauan_satu_prodi():
+def prediksi_pemantauan_satu_prodi(existing_formula):
 
 
     # Halaman Prediksi Suatu Prodi
@@ -37,18 +37,18 @@ def prediksi_pemantauan_satu_prodi():
     # existing_formula = conn.read(worksheet="Rumus Pemantauan", usecols=list(range(7)), ttl=5)
     # existing_formula = existing_formula.dropna(how="all")
 
-    if st.button('Refresh Data'):
-        existing_dhp = refresh_data('dhp')
-        existing_formula = refresh_data('formula')
-        st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    else:
-    # 2. Connections from pickle
-        existing_dhp = get_data('dhp')
-        existing_formula = get_data('formula')
-    # st.write(existing_djm)
-        # 3. Data preprocessing
-    existing_dhp = preprocess_data(existing_dhp)
-    existing_formula = preprocess_data(existing_formula)
+    # if st.button('Refresh Data'):
+    #     existing_dhp = refresh_data('dhp')
+    #     existing_formula = refresh_data('formula')
+    #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
+    # else:
+    # # 2. Connections from pickle
+    #     existing_dhp = get_data('dhp')
+    #     existing_formula = get_data('formula')
+    # # st.write(existing_djm)
+    #     # 3. Data preprocessing
+    # existing_dhp = preprocess_data(existing_dhp)
+    # existing_formula = preprocess_data(existing_formula)
 
     # Dropdown options for Lembaga
     formula_options = existing_formula['Nama Rumus'].unique()

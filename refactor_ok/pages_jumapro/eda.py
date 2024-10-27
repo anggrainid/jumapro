@@ -2,19 +2,19 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from component.data import get_data, refresh_data, preprocess_data
 
-def analisis_data():
+def analisis_data(existing_djm):
     # st.title("Analisis Data Historis Jumlah Mahasiswa")
 
     # 1. Connections from google sheets
-    if st.button('Refresh Data'):
-        existing_djm = refresh_data('djm')
-        st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    else:
-    # 2. Connections from pickle
-        existing_djm = get_data('djm')
-    # st.write(existing_djm)
-     # 3. Data preprocessing
-    existing_djm = preprocess_data(existing_djm)
+    # if st.button('Refresh Data'):
+    #     existing_djm = refresh_data('djm')
+    #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
+    # else:
+    # # 2. Connections from pickle
+    #     existing_djm = get_data('djm')
+    # # st.write(existing_djm)
+    #  # 3. Data preprocessing
+    # existing_djm = preprocess_data(existing_djm)
     # Filter Program Studi
     prodi_options = existing_djm['Prodi'].unique()
     selected_prodi = st.selectbox("Pilih Program Studi", options=prodi_options)

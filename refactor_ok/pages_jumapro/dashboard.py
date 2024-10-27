@@ -1,8 +1,3 @@
-import streamlit as st
-from component.data import get_data, refresh_data, preprocess_data
-
-def dashboard():
-
     # import streamlit as st
     # from streamlit_gsheets import GSheetsConnection
 
@@ -22,16 +17,22 @@ def dashboard():
     # existing_djm = existing_djm.drop(unused_column, axis=1)
     # existing_djm
 
+
+import streamlit as st
+from component.data import get_data, refresh_data, preprocess_data
+
+def dashboard(existing_djm):
+
     # 1. Connections from google sheets
-    if st.button('Refresh Data'):
-        existing_djm = refresh_data('djm')
-        st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    else:
-    # 2. Connections from pickle
-        existing_djm = get_data('djm')
-    # st.write(existing_djm)
-     # 3. Data preprocessing
-    existing_djm = preprocess_data(existing_djm)
+    # if st.button('Refresh Data'):
+    #     existing_djm = refresh_data('djm')
+    #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
+    # else:
+    # # 2. Connections from pickle
+    #     existing_djm = get_data('djm')
+    # # st.write(existing_djm)
+    #  # 3. Data preprocessing
+    # existing_djm = preprocess_data(existing_djm)
 
 
     # Menghitung jumlah prodi berdasarkan fakultas

@@ -6,7 +6,8 @@ import numpy as np
 from component.data import get_data, refresh_data, preprocess_data, add_data
 from component.func import hitung_persentase_penurunan, hitung_persentase_penurunan_lebih_dari_satu
 
-def prediksi_pemantauan_semua_prodi():
+def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
+    st.markdown("Form Prediksi Pemantauan Semua Program Studi")
     # 1. Connections from google sheets
 
 
@@ -53,21 +54,22 @@ def prediksi_pemantauan_semua_prodi():
 
 
     # 1. Connections from google sheets
-    if st.button('Refresh Data'):
-        existing_djm = refresh_data('djm')
-        existing_formula = refresh_data('formula')
-        st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    else:
-    # 2. Connections from pickle
-        existing_djm = get_data('djm')
-        existing_formula = get_data('formula')
-    # st.write(existing_djm)
-        # 3. Data preprocessing
-    existing_djm = preprocess_data(existing_djm)
-    existing_formula = preprocess_data(existing_formula)
+    # if st.button('Refresh Data'):
+    #     existing_djm = refresh_data('djm')
+    #     existing_formula = refresh_data('formula')
+    #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
+    # else:
+    # # 2. Connections from pickle
+    #     existing_djm = get_data('djm')
+    #     existing_formula = get_data('formula')
+    # # st.write(existing_djm)
+    #     # 3. Data preprocessing
+    # existing_djm = preprocess_data(existing_djm)
+    # existing_formula = preprocess_data(existing_formula)
 
     existing_djm.columns = [str(i) for i in existing_djm.columns]
 
+    
     # Dropdown options for Lembaga
     lembaga_options = existing_djm['Lembaga'].unique()
     formula_options = existing_formula['Nama Rumus'].unique()

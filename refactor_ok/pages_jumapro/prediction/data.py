@@ -69,18 +69,18 @@ def preprocess_data(data):
 # def year():
 #     available_years = [int(col) for col in existing_djm.columns if col.isdigit()]
 
-def preprocess_data(data):
-    # Data Preprocessing
-    data = data.dropna(how="all")
-    data = data.replace('#N/A ()', 0)
+# def preprocess_data(data):
+#     # Data Preprocessing
+#     data = data.dropna(how="all")
+#     data = data.replace('#N/A ()', 0)
     
-    unused_columns = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Program Studi', 
-                      'BAN PT', 'Departemen', 'Kluster', 'PDDIKTI x BAN']
+#     unused_columns = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Program Studi', 
+#                       'BAN PT', 'Departemen', 'Kluster', 'PDDIKTI x BAN']
     
-    # Gunakan errors='ignore' untuk menghindari KeyError
-    data = data.drop(unused_columns, axis=1, errors='ignore')
+#     # Gunakan errors='ignore' untuk menghindari KeyError
+#     data = data.drop(unused_columns, axis=1, errors='ignore')
 
-    return data
+#     return data
 
 # def update_formula(data):
         

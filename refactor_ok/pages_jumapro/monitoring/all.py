@@ -65,21 +65,21 @@ from component.func import calculate_persentase_penurunan
 #     persentase_penurunan = rata_rata_penurunan * 100
 #     return round(-persentase_penurunan, 2)
 
-def pemantauan_semua_prodi():
+def pemantauan_semua_prodi(existing_djm, existing_formula):
     
     # 1. Connections from google sheets
-    if st.button('Refresh Data'):
-        existing_djm = refresh_data('djm')
-        existing_formula = refresh_data('formula')
-        st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    else:
-    # 2. Connections from pickle
-        existing_djm = get_data('djm')
-        existing_formula = get_data('formula')
-    # st.write(existing_djm)
-        # 3. Data preprocessing
-    existing_djm = preprocess_data(existing_djm)
-    existing_formula = preprocess_data(existing_formula)
+    # if st.button('Refresh Data'):
+    #     existing_djm = refresh_data('djm')
+    #     existing_formula = refresh_data('formula')
+    #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
+    # else:
+    # # 2. Connections from pickle
+    #     existing_djm = get_data('djm')
+    #     existing_formula = get_data('formula')
+    # # st.write(existing_djm)
+    #     # 3. Data preprocessing
+    # existing_djm = preprocess_data(existing_djm)
+    # existing_formula = preprocess_data(existing_formula)
 
     existing_djm.columns = [str(i) for i in existing_djm.columns]
 
@@ -87,7 +87,7 @@ def pemantauan_semua_prodi():
     """
     Membuat form pemantauan untuk semua prodi dan melakukan pemantauan berdasarkan data yang ada.
     """
-    st.title("Form Pemantauan Semua Program Studi")
+    st.markdown("Form Pemantauan Semua Program Studi")
     
     # Menentukan Tahun Pemantauan
     available_years = [int(col) for col in existing_djm.columns if col.isdigit()]

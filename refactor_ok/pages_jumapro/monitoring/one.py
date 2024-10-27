@@ -45,20 +45,20 @@ from component.func import calculate_persentase_penurunan
 
 
 
-def pemantauan_satu_prodi():
-    if st.button('Refresh Data'):
-        existing_dhp = refresh_data('dhp')
-        existing_formula = refresh_data('formula')
-        st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    else:
-    # 2. Connections from pickle
-        existing_dhp = get_data('dhp')
-        existing_formula = get_data('formula')
-    # st.write(existing_djm)
-        # 3. Data preprocessing
-    existing_dhp = preprocess_data(existing_dhp)
-    existing_formula = preprocess_data(existing_formula)
-    st.title("Form Pemantauan Program Studi")
+def pemantauan_satu_prodi(existing_formula):
+    # if st.button('Refresh Data'):
+    #     existing_dhp = refresh_data('dhp')
+    #     existing_formula = refresh_data('formula')
+    #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
+    # else:
+    # # 2. Connections from pickle
+    #     existing_dhp = get_data('dhp')
+    #     existing_formula = get_data('formula')
+    # # st.write(existing_djm)
+    #     # 3. Data preprocessing
+    # existing_dhp = preprocess_data(existing_dhp)
+    # existing_formula = preprocess_data(existing_formula)
+    st.markdown("Form Pemantauan Program Studi")
     
     # Input Fields
     input_prodi = st.text_input("Masukkan Nama Program Studi : ")

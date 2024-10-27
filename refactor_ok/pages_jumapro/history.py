@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pickle
 from component.data import get_data, refresh_data, preprocess_data
 
-def histori_prediksi():
+def histori_prediksi(existing_djm):
 
     # Memuat data Anda sendiri
     # with open('existing_djm.pickle', 'rb') as handle:
@@ -25,15 +25,15 @@ def histori_prediksi():
     # year_columns = [col for col in df.columns if is_year(col)]
 
     # 1. Connections from google sheets
-    if st.button('Refresh Data'):
-        existing_djm = refresh_data('djm')
-        st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    else:
-    # 2. Connections from pickle
-        existing_djm = get_data('djm')
-    # st.write(existing_djm)
-     # 3. Data preprocessing
-    existing_djm = preprocess_data(existing_djm)
+    # if st.button('Refresh Data'):
+    #     existing_djm = refresh_data('djm')
+    #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
+    # else:
+    # # 2. Connections from pickle
+    #     existing_djm = get_data('djm')
+    # # st.write(existing_djm)
+    #  # 3. Data preprocessing
+    # existing_djm = preprocess_data(existing_djm)
 
     # Convert column names to string and filter columns that are numeric (representing years)
     year_columns = [col for col in existing_djm.columns if str(col).isdigit()]

@@ -6,7 +6,7 @@ import seaborn as sns
 from sklearn.linear_model import LinearRegression
 from component.data import get_data, refresh_data, preprocess_data
 
-def visualisasi_model():
+def visualisasi_model(existing_djm):
 
     # # Memuat data existing_djm dari file pickle
     # with open('existing_djm.pickle', 'rb') as handle:
@@ -28,15 +28,15 @@ def visualisasi_model():
 
     
     # 1. Connections from google sheets
-    if st.button('Refresh Data'):
-        existing_djm = refresh_data('djm')
-        st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    else:
-    # 2. Connections from pickle
-        existing_djm = get_data('djm')
-    # st.write(existing_djm)
-     # 3. Data preprocessing
-    existing_djm = preprocess_data(existing_djm)
+    # if st.button('Refresh Data'):
+    #     existing_djm = refresh_data('djm')
+    #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
+    # else:
+    # # 2. Connections from pickle
+    #     existing_djm = get_data('djm')
+    # # st.write(existing_djm)
+    #  # 3. Data preprocessing
+    # existing_djm = preprocess_data(existing_djm)
 
     # Convert column names to string and filter columns that are numeric (representing years)
     year_columns = [col for col in existing_djm.columns if str(col).isdigit()]

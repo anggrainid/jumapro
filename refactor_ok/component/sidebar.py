@@ -1,7 +1,3 @@
-# sidebar.py
-import streamlit as st
-from streamlit_option_menu import option_menu
-
 # Establishing a Google Sheets connection
 # conn = GSheetsConnection()  # Pastikan ini sesuai dengan cara Anda menginisialisasi koneksi
 # existing_djm = conn.read(worksheet="Data Jumlah Mahasiswa", ttl=5)
@@ -12,6 +8,13 @@ from streamlit_option_menu import option_menu
 # existing_djm = existing_djm.drop(unused_column, axis=1)
 
 # Fungsi untuk membuat sidebar dan navigasi
+
+
+
+# sidebar.py
+import streamlit as st
+from streamlit_option_menu import option_menu
+
 def sidebar_main():
     with st.sidebar:
         selected = option_menu(
@@ -49,7 +52,7 @@ def sidebar_main():
                 ],
                 icons=["", "clipboard", "clipboard-check", "clipboard-data", "", "calculator", "clipboard-check", "clipboard-data"],
                 menu_icon="cast",
-                default_index=0,
+                default_index=1,
                 styles={
                     "container": {"padding": "5!important", "background-color": "#1F1F2E"},
                     "icon": {"color": "white", "font-size": "16px"},

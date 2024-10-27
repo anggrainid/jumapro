@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from component.data import get_data, refresh_data, preprocess_data, add_data
 
-def formula():
+def formula(existing_djm, existing_formula):
 
     # Display Title and Description
     # st.title("Manajemen Rumus Pemantauan")
@@ -21,18 +21,18 @@ def formula():
     # existing_djm = existing_djm.dropna(how="all")
     
     # 1. Connections from google sheets
-    if st.button('Refresh Data'):
-        existing_djm = refresh_data('djm')
-        existing_formula = refresh_data('formula')
-        st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    else:
-    # 2. Connections from pickle
-        existing_djm = get_data('djm')
-        existing_formula = get_data('formula')
-    # st.write(existing_djm)
-     # 3. Data preprocessing
-    existing_djm = preprocess_data(existing_djm)
-    existing_formula = preprocess_data(existing_formula)
+    # if st.button('Refresh Data'):
+    #     existing_djm = refresh_data('djm')
+    #     existing_formula = refresh_data('formula')
+    #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
+    # else:
+    # # 2. Connections from pickle
+    #     existing_djm = get_data('djm')
+    #     existing_formula = get_data('formula')
+    # # st.write(existing_djm)
+    #  # 3. Data preprocessing
+    # existing_djm = preprocess_data(existing_djm)
+    # existing_formula = preprocess_data(existing_formula)
 
     # Dropdown options for Lembaga
     lembaga_options = existing_djm['Lembaga'].unique()

@@ -243,4 +243,4 @@ def kalkulator_prediksi():
         st.write(data_prodi)
         # st.success("Data berhasil ditambahkan ke worksheet!")
         
-kalkulator_prediksi()
+# kalkulator_prediksi()

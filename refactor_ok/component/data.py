@@ -69,18 +69,26 @@ def preprocess_data(data):
 # def year():
 #     available_years = [int(col) for col in existing_djm.columns if col.isdigit()]
 
-def preprocess_data(data):
-    # Data Preprocessing
-    data = data.dropna(how="all")
-    data = data.replace('#N/A ()', 0)
-    
-    unused_columns = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Program Studi', 
-                      'BAN PT', 'Departemen', 'Kluster', 'PDDIKTI x BAN']
-    
-    # Gunakan errors='ignore' untuk menghindari KeyError
-    data = data.drop(unused_columns, axis=1, errors='ignore')
 
-    return data
+
+# def load_data(data):
+#     if st.button('Refresh Data', key=f'refresh_{data}'):
+#         if data == 'djm':
+#             existing_data = refresh_data('djm')
+#             st.success("Data berhasil dimuat ulang dari Google Sheets!")
+#         elif data == 'dhp':
+#             existing_data = refresh_data('dhp')
+#             st.success("Data berhasil dimuat ulang dari Google Sheets!")
+#         elif data == 'formula':
+#             existing_data = refresh_data('formula')
+#             st.success("Data berhasil dimuat ulang dari Google Sheets!")
+    
+#     else:
+#         existing_data = get_data(data)
+    
+#     # Preprocess data
+#     existing_data = preprocess_data(existing_data)
+#     return existing_data
 
 # def update_formula(data):
         
@@ -105,3 +113,6 @@ def add_data(existing_data, new_data, worksheet_name):
     except Exception as e:
         st.error(f"Gagal memperbarui data: {e}")
         return None
+    
+
+    
