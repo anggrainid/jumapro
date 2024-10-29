@@ -92,6 +92,37 @@ def calculate_persentase_penurunan(ts_values):
     persentase_penurunan = rata_rata_penurunan * 100
     return round(-persentase_penurunan, 2)
 
+def calculate_ts0_minimal(ts_values, persentase_penurunan_maksimal):
+    """
+    Menghitung nilai ts-0 (jumlah mahasiswa minimal) 
+    agar akumulasi persentase penurunan dari ts-4 hingga ts-0 
+    <= persentase penurunan maksimal.
+    """
+    
+    if len(ts_values) < 2:
+        return 0  # Tidak ada cukup data untuk menghitung
+
+    ts0_minimal = max(ts_values)  # Inisialisasi dengan nilai terbesar di ts_values
+
+    # Mencari ts0_minimal dengan mencoba nilai dari nilai terbesar di ts_values ke bawah
+    for i in range(ts0_minimal, 0, -1):
+        ts_temp = ts_values.copy()  # Buat salinan list ts_values
+        ts_temp[0] = i  # Ganti nilai ts-0 dengan nilai yang sedang dicoba
+        
+        # Pindahkan pemanggilan fungsi calculate_persentase_penurunan ke dalam loop
+        persentase_penurunan = calculate_persentase_penurunan(ts_temp)
+
+        # --- Menampilkan nilai i dan persentase penurunan ---
+        # print(f"  Mencoba ts0_minimal = {i}, ts_temp = {ts_temp}, persentase penurunan = {persentase_penurunan}%")
+
+        if persentase_penurunan >= persentase_penurunan_maksimal:
+            ts0_minimal = i+1  # Update ts0_minimal jika memenuhi syarat
+            break  # Hapus break
+        else:
+            ts0_minimal = 1
+    return ts0_minimal
+
+
 
 # gabung
 # def hitung_persentase_penurunan(data=None, ts_values=None, predict_year=None, index=None, banyak_data_ts=None, input_fields=None):

@@ -8,9 +8,9 @@ from pages_jumapro.history import histori_prediksi
 from pages_jumapro.visualization import visualisasi_model
 from pages_jumapro.monitoring.formula import formula
 from pages_jumapro.prediction.calculator import kalkulator_prediksi
-from pages_jumapro.prediction.one import prediksi_pemantauan_satu_prodi
+from pages_jumapro.prediction.one_prediction import prediksi_pemantauan_satu_prodi
 from pages_jumapro.prediction.all import prediksi_pemantauan_semua_prodi
-from pages_jumapro.monitoring.one import pemantauan_satu_prodi
+from pages_jumapro.monitoring.one_monitoring import pemantauan_satu_prodi
 from pages_jumapro.monitoring.all import pemantauan_semua_prodi
 
 # Inisialisasi data di session state

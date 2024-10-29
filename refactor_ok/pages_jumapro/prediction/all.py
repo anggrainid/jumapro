@@ -80,7 +80,7 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
     # st.write(existing_djm.info())
 
     # 4. CRUD form prediksi pemantauan semua prodi
-    djm_prodi = existing_djm["Prodi"]
+    # djm_prodi = existing_djm["Prodi"]
 
     max_year = int(existing_djm.columns[-1])
     min_year = int(existing_djm.columns[12])
@@ -204,9 +204,9 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
 
     for index, row in existing_djm.iterrows():
         lembaga_prodi = row['Lembaga']
-        prodi_name = row['Prodi']        
-        current_students = row[str(input_last_year)]
-        tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
+        # prodi_name = row['Prodi']        
+        # current_students = row[str(input_last_year)]
+        # tahun_tidak_lolos = f"Lebih dari {input_years_to_predict} Tahun ke Depan"  # Default value
         
         selected_formula = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[lembaga_prodi]) & (existing_formula['Lembaga'] == lembaga_prodi)].iloc[0]
         input_kriteria = selected_formula["Kriteria"]
@@ -359,10 +359,10 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
     tampil_data_prodi.rename(columns={f"{input_predict_year}": f"{input_predict_year} (Prediksi)"}, inplace=True)
     tampil_data_prodi.rename(columns={f"{input_last_year}": f"{input_last_year} (TS)"}, inplace=True)
 
-    tampil_data_prodi
+    st.write(tampil_data_prodi)
 
-    if st.button("Prediksi Pemantauan Semua Prodi"):
-        st.write(tampil_data_prodi)
+    # if st.button("Prediksi Pemantauan Semua Prodi"):
+        # st.write(tampil_data_prodi)
     # st.success("Data berhasil ditambahkan ke worksheet!")
     
 
