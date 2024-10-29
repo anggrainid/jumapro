@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle
+from sklearn.metrics import r2_score
 from component.data import get_data, refresh_data, preprocess_data
 
 def histori_prediksi(existing_djm):
@@ -75,6 +76,10 @@ def histori_prediksi(existing_djm):
     st.write('Total Mahasiswa Sebenarnya: ', total_actual)
     st.write('Total Prediksi Mahasiswa: ', total_predicted)
 
+    # Menghitung nilai R² untuk program studi yang dipilih
+    r2 = r2_score(df_prodi['Jumlah Mahasiswa'], df_prodi['Prediksi Jumlah Mahasiswa'])
+    r2 = round(r2, 2)
+
     # Grafik Trend Jumlah Mahasiswa
     st.write('Grafik Trend Jumlah Mahasiswa')
 
@@ -96,6 +101,7 @@ def histori_prediksi(existing_djm):
     plt.ylabel('Jumlah Mahasiswa')
     plt.title(f'Trend Jumlah Mahasiswa di {prodi}')
     st.pyplot(plt)
+    st.write(f'R² untuk prediksi di {prodi}:', r2)  # Menampilkan R²
 
     df_prodi['Tahun'] = df_prodi['Tahun'].astype(str)
     # Tabel Detail Data

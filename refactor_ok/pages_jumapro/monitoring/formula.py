@@ -5,8 +5,8 @@ from component.data import get_data, refresh_data, preprocess_data, add_data
 def formula(existing_djm, existing_formula):
 
     # Display Title and Description
-    # st.title("Manajemen Rumus Pemantauan")
-    st.markdown("Masukkan Rumus Baru di Bawah Ini")
+    st.title("Halaman Manajemen Formula Pemantauan")
+    st.markdown("Halaman ini digunakan untuk menambahkan formula pemantauan")
 
     # # Establishing a Google Sheets connection
     # conn = st.connection("gsheets", type=GSheetsConnection)
@@ -35,6 +35,7 @@ def formula(existing_djm, existing_formula):
     # existing_formula = preprocess_data(existing_formula)
 
     # Dropdown options for Lembaga
+    st.write(existing_formula)
     lembaga_options = existing_djm['Lembaga'].unique()
 
 
@@ -50,7 +51,7 @@ def formula(existing_djm, existing_formula):
     else:
         input_ambang_batas_jumlah = st.number_input("Ambang Batas Jumlah Mahasiswa Minimal", min_value=1, step=1)
         input_ambang_batas_persen = None
-        input_banyak_data_ts = None
+        input_banyak_data_ts = 1
 
     input_tanggal_mulai = st.date_input("Tanggal Mulai Berlaku", value="default_value_today")
     input_keterangan = st.text_area("Keterangan")

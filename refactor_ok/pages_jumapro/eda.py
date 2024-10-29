@@ -16,6 +16,8 @@ def analisis_data(existing_djm):
     #  # 3. Data preprocessing
     # existing_djm = preprocess_data(existing_djm)
     # Filter Program Studi
+    
+    st.markdown("Halaman ini digunakan untuk melihan visualisasi data historis untuk setiap program studi")
     prodi_options = existing_djm['Prodi'].unique()
     selected_prodi = st.selectbox("Pilih Program Studi", options=prodi_options)
 

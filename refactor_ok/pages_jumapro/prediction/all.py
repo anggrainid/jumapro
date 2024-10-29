@@ -4,10 +4,11 @@ import pandas as pd
 from streamlit_gsheets import GSheetsConnection
 import numpy as np
 from component.data import get_data, refresh_data, preprocess_data, add_data
-from component.func import hitung_persentase_penurunan, hitung_persentase_penurunan_lebih_dari_satu
+from component.func import calculate_persentase_penurunan, calculate_ts0_minimal, hitung_persentase_penurunan, hitung_persentase_penurunan_lebih_dari_satu
+import matplotlib.pyplot as plt
 
 def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
-    st.markdown("Form Prediksi Pemantauan Semua Program Studi")
+    # st.markdown("Form Prediksi Pemantauan Semua Program Studi")
     # 1. Connections from google sheets
 
 
@@ -37,6 +38,10 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
     #     existing_formula = pickle.load(handle)
         
         
+    st.title("Halaman Prediksi Pemantauan Semua Program Studi")
+    st.markdown("Halaman ini digunakan untuk melakukan prediksi pemantauan jumlah mahasiswa baru pada semua program studi yang tersedia")
+
+    
     model = pickle.load(open(r"next_year_students_prediction.sav", "rb"))
 
     # 3. Data preprocessing
@@ -67,6 +72,11 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
     # existing_djm = preprocess_data(existing_djm)
     # existing_formula = preprocess_data(existing_formula)
 
+    acc_columns = ['Peringkat', 'Awal Masa Berlaku', 'Akhir Masa Berlaku', 'Kadaluarsa']
+    existing_djm = existing_djm.drop(acc_columns, axis=1, errors='ignore')
+    st.write(existing_djm)
+
+    
     existing_djm.columns = [str(i) for i in existing_djm.columns]
 
     
@@ -74,18 +84,21 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
     lembaga_options = existing_djm['Lembaga'].unique()
     formula_options = existing_formula['Nama Rumus'].unique()
 
-    unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Program Studi', 'BAN PT', 'Departemen', 'Kluster', 'PDDIKTI x BAN']
-    existing_djm = existing_djm.drop(unused_column, axis=1, errors='ignore')
+    # unused_column = ['Kode Prodi', 'Kode Prodi UGM', 'Kode Fakultas', 'Program Studi', 'BAN PT', 'Departemen', 'Kluster', 'PDDIKTI x BAN']
+    # existing_djm = existing_djm.drop(unused_column, axis=1, errors='ignore')
     existing_djm
     # st.write(existing_djm.info())
 
     # 4. CRUD form prediksi pemantauan semua prodi
     # djm_prodi = existing_djm["Prodi"]
 
-    max_year = int(existing_djm.columns[-1])
-    min_year = int(existing_djm.columns[12])
+    available_years = [col for col in existing_djm.columns if col.isdigit()]
+    # max_year = int(existing_djm.columns[-1])
+    # min_year = int(existing_djm.columns[12])
+    max_year = max(available_years)
+    min_year = min(available_years)
 
-    input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=min_year, max_value=max_year+1)
+    input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=int(min_year)+5, max_value=int(max_year)+1)
     input_last_year = input_predict_year - 1
 
     input_years_to_predict = st.slider("Masukkan Proyeksi Prediksi (Dalam Satuan Tahun) : ", min_value=1, max_value=10)
@@ -211,31 +224,59 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
         selected_formula = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[lembaga_prodi]) & (existing_formula['Lembaga'] == lembaga_prodi)].iloc[0]
         input_kriteria = selected_formula["Kriteria"]
         existing_djm.at[index, 'Kriteria'] = input_kriteria
-        input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
+        # input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
             # looping isi prediksi
         tahun_tidak_lolos_found = False
         existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Lebih dari {input_years_to_predict} Tahun ke Depan"
         
         input_banyak_data_ts = selected_formula["Banyak Data TS"]
         existing_djm.at[index, 'Banyak Data TS'] = input_banyak_data_ts
-        input_fields = {}
-        input_fields["input_jumlah_mahasiswa_ts0"] = existing_djm[str(input_predict_year)]
-        for i in range(max_banyak_data_ts-1):
-            field_name = f"input_jumlah_mahasiswa_ts{i}"            
-            try:
-                input_fields[field_name] = existing_djm[str(input_predict_year-i-1)]
-                # print(f'jmlh {i} | {field_name} | {input_predict_year-i} | { existing_djm[input_predict_year-i]}')
-            except KeyError:
-                # MUNGKIN datanya ga cukup, misal pilih 2014, tapi datanya cmn ada dari 2013, trus ambil -3 tahun
-                raise ValueError("Data TS tidak tersedia")
+        
+        
+        # input_fields = {}
+        # input_fields["input_jumlah_mahasiswa_ts0"] = existing_djm[str(input_predict_year)]
+        # for i in range(max_banyak_data_ts-1):
+        #     field_name = f"input_jumlah_mahasiswa_ts{i}"            
+        #     try:
+        #         input_fields[field_name] = existing_djm[str(input_predict_year-i-1)]
+        #         # print(f'jmlh {i} | {field_name} | {input_predict_year-i} | { existing_djm[input_predict_year-i]}')
+        #     except KeyError:
+        #         # MUNGKIN datanya ga cukup, misal pilih 2014, tapi datanya cmn ada dari 2013, trus ambil -3 tahun
+        #         raise ValueError("Data TS tidak tersedia")
+        
+        # for col, value in input_fields.items():
+        #     existing_djm[col] = value
+        # ts = [f"input_jumlah_mahasiswa_ts{i}" for i in range(1, int(max_banyak_data_ts-1))]
+        # ts = sorted(ts, reverse=True)
+        
+        # Ubah input_fields menjadi list (ts_values)
+    
+        # ts_values.append(existing_djm.at[index, str(input_last_year)])  # TS-0
+
+        # for i in range(1, max_banyak_data_ts):
+        #     try:
+        #         ts_values.append(existing_djm.at[index, str(input_last_year - i)])  # TS-1, TS-2, dst.
+        #     except KeyError:
+        #         ts_values.append(None)  # Jika data tidak tersedia
+        # Buat ts_values untuk prodi ini berdasarkan tahun-tahun sebelumnya
+        
+        # for i in range(max_banyak_data_ts-1):
+        #     # field_name = f"input_jumlah_mahasiswa_ts{i}"            
+        #     try:
+        #         input_fields[field_name] = existing_djm[str(input_predict_year-i-1)]
+        #         # print(f'jmlh {i} | {field_name} | {input_predict_year-i} | { existing_djm[input_predict_year-i]}')
+        #     except KeyError:
+        #         # MUNGKIN datanya ga cukup, misal pilih 2014, tapi datanya cmn ada dari 2013, trus ambil -3 tahun
+        #         raise ValueError("Data TS tidak tersedia")
+        
+        ts = []
+        ts_values = []
+        for i in range(int(input_banyak_data_ts-1)):
+            year = input_last_year - i
+            ts_value = row.get(str(year), 0)
+            ts_values.append(ts_value)
+            ts.append(str(year))
             
-        for col, value in input_fields.items():
-            existing_djm[col] = value
-        ts = [f"input_jumlah_mahasiswa_ts{i}" for i in range(1, int(max_banyak_data_ts-1))]
-        ts = sorted(ts, reverse=True)
-        
-        
-        
         for i in range(input_years_to_predict):
             next_year = input_last_year + i
             
@@ -245,6 +286,10 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
             
             # print('X:', index, next_year, existing_djm.at[index, next_year])
             prediksi_mahasiswa = model.predict([[existing_djm.at[index, str(next_year)]]])[0]
+            
+            input_ambang_batas_persen = selected_formula["Ambang Batas (%)"]
+            ts_values.insert(0, round(prediksi_mahasiswa))
+            konversi_jmm = calculate_ts0_minimal(ts_values, input_ambang_batas_persen)
             model_results['index'].append(index)
             model_results['X'].append(existing_djm.at[index, str(next_year)])
             model_results['Y'].append(prediksi_mahasiswa)
@@ -261,17 +306,25 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
             # Cek apakah jumlah mahasiswa di bawah ambang batas untuk kriteria Jumlah Mahasiswa
             
             
-            if (not tahun_tidak_lolos_found) and (input_kriteria=='Jumlah Mahasiswa') and (prediksi_mahasiswa<input_ambang_batas_jumlah):
-                existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Tidak Lolos pada {next_year+1}"
-                tahun_tidak_lolos_found = True
-            elif input_kriteria=='Persentase Penurunan':
-                existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = "-"
+            if (tahun_tidak_lolos_found==False):
+                if (input_kriteria=='Jumlah Mahasiswa') and (prediksi_mahasiswa<input_ambang_batas_jumlah):
+                    existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Tidak Lolos pada {next_year+1}"
+                    tahun_tidak_lolos_found = True
+                elif (input_kriteria=='Persentase Penurunan') and (prediksi_mahasiswa<konversi_jmm):
+                    existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'] = f"Tidak Lolos pada {next_year+1}"
+                    tahun_tidak_lolos_found = True
 
             # print('loop:', prediksi_mahasiswa, input_ambang_batas_jumlah, tahun_tidak_lolos_found, input_kriteria, existing_djm.at[index, 'Hasil Proyeksi Prediksi Pemantauan'])    
 
                 # Cek apakah jumlah mahasiswa di bawah ambang batas untuk kriteria Persentase Penurunan
-                    
-        
+        # st.write(ts_values)
+
+        # Perbarui ts_values untuk prediksi berikutnya
+            # ts_values = [prediksi_mahasiswa] + ts_values[:-1]
+        # st.write(next_year)
+        # st.write(existing_djm[f'{next_year+1}'])
+        # st.write(row[f'{next_year+1}'])
+        # ts_values.insert(0, row[f'{next_year+1}'])
         if input_kriteria == "Persentase Penurunan":
             # print(index, 'PERSENTASE PENURUNAN')
             input_ambang_batas_persen = existing_formula[(existing_formula['Nama Rumus'] == selected_formulas_lembaga[existing_djm.at[index, 'Lembaga']]) & (existing_formula['Lembaga'] == existing_djm.at[index, 'Lembaga'])].iloc[0]['Ambang Batas (%)']
@@ -300,11 +353,12 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
             round(input_ambang_batas_persen, 2)
             
             
-            if input_banyak_data_ts > 2:
-                persentase_penurunan = hitung_persentase_penurunan_lebih_dari_satu(index, existing_djm, input_predict_year, input_banyak_data_ts, input_last_year, input_fields)
-            else:
-                persentase_penurunan = hitung_persentase_penurunan(index, existing_djm, input_predict_year, input_last_year)
+            # if input_banyak_data_ts > 2:
+            #     persentase_penurunan = hitung_persentase_penurunan_lebih_dari_satu(index, existing_djm, input_predict_year, input_banyak_data_ts, input_last_year, input_fields)
+            # else:
+            #     persentase_penurunan = hitung_persentase_penurunan(index, existing_djm, input_predict_year, input_last_year)
                 
+            persentase_penurunan = calculate_persentase_penurunan(ts_values)
             existing_djm.at[index, 'Hitung Persentase Penurunan'] = f"{persentase_penurunan}%"
             hasil_prediksi_pemantauan = str(("Lolos" if persentase_penurunan <= input_ambang_batas_persen else "Tidak Lolos"))
             existing_djm.at[index, f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
@@ -324,7 +378,7 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
 
 
 
-            existing_djm.at[index, "Jumlah Mahasiswa Minimal"] = "-"
+            existing_djm.at[index, "Jumlah Mahasiswa Minimal"] = calculate_ts0_minimal(ts_values, input_ambang_batas_persen)
 
         elif input_kriteria == "Jumlah Mahasiswa":
             print(index, 'JUMLAH MAHASISWA')
@@ -342,12 +396,12 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
             existing_djm.at[index, f"Hasil Prediksi Pemantauan ({input_predict_year})"] = hasil_prediksi_pemantauan
 
     # 9. wrapping op columns
-
+    # st.write(ts_values)
     data_predict_years = [f"{next_year}" for next_year in range(input_predict_year+1, input_predict_year+input_years_to_predict)]
     data_predict_target= [f"{input_predict_year}"]
 
-
-    ordered_data_prodi = ["Prodi"] + ["Jenjang"] + ["Lembaga"] +  ["Kriteria"] + ["Banyak Data TS"]+ ts + [f"{input_last_year}"] + data_predict_target +  ["Hitung Persentase Penurunan"] +  ["Persentase Penurunan Maksimal"]+ ["Jumlah Mahasiswa Minimal"] +  [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + data_predict_years + ['Hasil Proyeksi Prediksi Pemantauan']
+    ts = sorted(ts)
+    ordered_data_prodi = ["Prodi"] + ["Jenjang"] + ["Lembaga"] +  ["Kriteria"] + ["Banyak Data TS"]  + ts  + data_predict_target +  ["Hitung Persentase Penurunan"] +  ["Persentase Penurunan Maksimal"]+ ["Jumlah Mahasiswa Minimal"] +  [f"Hasil Prediksi Pemantauan ({input_predict_year})"] + data_predict_years + ['Hasil Proyeksi Prediksi Pemantauan']
     tampil_data_prodi = existing_djm[ordered_data_prodi]
 
 
@@ -357,13 +411,141 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
     tampil_data_prodi.rename(columns=rename_ts, inplace=True)
     tampil_data_prodi.rename(columns=rename_predict_years, inplace=True)
     tampil_data_prodi.rename(columns={f"{input_predict_year}": f"{input_predict_year} (Prediksi)"}, inplace=True)
-    tampil_data_prodi.rename(columns={f"{input_last_year}": f"{input_last_year} (TS)"}, inplace=True)
+    # tampil_data_prodi.rename(columns={f"{input_last_year}": f"{input_last_year} (TS)"}, inplace=True)
 
+    st.write("**Hasil Prediksi Pemantauan:**")
+    
+    prodi_options = tampil_data_prodi['Prodi'].unique()
+    selected_prodi = st.selectbox("Pilih Program Studi", options=prodi_options)
+    st.write(tampil_data_prodi[tampil_data_prodi['Prodi'] == selected_prodi])
+    filtered_data = tampil_data_prodi[tampil_data_prodi['Prodi'] == selected_prodi].iloc[0].copy()
+    
+
+    predict_years = [input_predict_year + i for i in range(input_years_to_predict)]
+    predict_values_column = [f'{predict_year} (Prediksi)' for predict_year in predict_years ]
+    predict_values = [filtered_data[(year)] for year in predict_values_column]
+    
+    ts_years = ts
+    int_ts_years = [int(i) for i in ts_years]
+    ts_values = filtered_data[ts_years].astype(int).tolist()
+
+    # st.write(ts_years)
+    # st.write(ts_values)
+
+  
+    # st.write(predict_years)
+    # st.write(predict_values_column)
+    # st.write(predict_values)
+    # predict_years = [next_year for next_year in range(input_predict_year, input_predict_year+input_years_to_predict)]
+    # predict_years_column =[col for col in tampil_data_prodi.columns if col in data_predict_years]
+    all_years = int_ts_years + predict_years
+    all_values = ts_values + predict_values
+        # Scatter Plot
+    plt.figure(figsize=(10, 6))
+    
+    # Plot TS data
+    plt.scatter(int_ts_years, ts_values, color='blue', label='Data TS')
+    # plt.plot(ts_years, ts_values, color='orange', label='Trend TS')
+    
+    # Plot predicted data
+    plt.scatter(predict_years, predict_values, color='red', label='Data Prediksi')
+    # plt.plot(predict_years, predict_values, color='green', linestyle='--', label='Trend Prediksi')
+    plt.plot(all_years, all_values)
+    # Add title, labels, and grid
+    plt.title('Jumlah Mahasiswa Tahun ke Tahun')
+    plt.xlabel('Tahun')
+    plt.ylabel('Jumlah Mahasiswa')
+    # plt.xticks(ticks=range(min(ts_years + predict_years), max(ts_years + predict_years)+1))  # Label X-axis
+    plt.legend()
+    plt.grid()
+
+    # st.write(all_years)
+    # st.write(all_values)
+    plt.axhline(y=filtered_data['Jumlah Mahasiswa Minimal'], color='red', linestyle='--', label='Ambang Batas Jumlah Mahasiswa Minimal')
+    plt.xticks(ticks=range(int(min(all_years)), int(max(all_years)+1)), labels=range(min(all_years), max(all_years)+1))
+    
+    # Display the plot in Streamlit
+    st.pyplot(plt)
+    
     st.write(tampil_data_prodi)
+    
+    # Try Plot All
+    
+    # predict_years = [input_predict_year + i for i in range(input_years_to_predict)]
+    # predict_values_column = [f'{predict_year} (Prediksi)' for predict_year in predict_years ]
+    # predict_values = [existing_djm[(year)] for year in predict_values_column]
+    
+    # ts_years = ts
+    # int_ts_years = [int(i) for i in ts_years]
+    # ts_values = existing_djm[ts_years].astype(int).tolist()
+
+    # st.write(ts_years)
+    # st.write(ts_values)
+
+  
+    # st.write(predict_years)
+    # st.write(predict_values_column)
+    # st.write(predict_values)
+    # predict_years = [next_year for next_year in range(input_predict_year, input_predict_year+input_years_to_predict)]
+    # predict_years_column =[col for col in tampil_data_prodi.columns if col in data_predict_years]
+    all_years = int_ts_years + predict_years
+    all_values = ts_values + predict_values
+        # Scatter Plot
+    plt.figure(figsize=(10, 6))
+    
+    # Plot TS data
+    plt.scatter(int_ts_years, ts_values, color='blue', label='Data TS')
+    # plt.plot(ts_years, ts_values, color='orange', label='Trend TS')
+    
+    # Plot predicted data
+    plt.scatter(predict_years, predict_values, color='red', label='Data Prediksi')
+    # plt.plot(predict_years, predict_values, color='green', linestyle='--', label='Trend Prediksi')
+    plt.plot(all_years, all_values)
+    # Add title, labels, and grid
+    plt.title('Jumlah Mahasiswa Tahun ke Tahun')
+    plt.xlabel('Tahun')
+    plt.ylabel('Jumlah Mahasiswa')
+    # plt.xticks(ticks=range(min(ts_years + predict_years), max(ts_years + predict_years)+1))  # Label X-axis
+    plt.legend()
+    plt.grid()
+
+    # st.write(all_years)
+    # st.write(all_values)
+    plt.axhline(y=existing_djm['Jumlah Mahasiswa Minimal'], color='red', linestyle='--', label='Ambang Batas Jumlah Mahasiswa Minimal')
+    plt.xticks(ticks=range(int(min(all_years)), int(max(all_years)+1)), labels=range(min(all_years), max(all_years)+1))
+    
+    # Display the plot in Streamlit
+    st.pyplot(plt)
+    
+    
+    
+    # Ambil data yang dibutuhkan
+    # ts_data = filtered_data['Jumlah Mahasiswa TS']
+    # kriteria = filtered_data['Kriteria']
+    # ambang_batas = filtered_data['Konversi Jumlah Mahasiswa Minimal']
+    # banyak_data_ts = filtered_data['Banyak Data TS']
+    
+    # Grafik Scatter Plot
+    # plt.figure(figsize=(10, 6))
+    # years = list(range(current_year - int(banyak_data_ts) + 1,current_year + 1))
+    # plt.scatter(years,ts_data[::-1], color='blue', label='Jumlah Mahasiswa')
+    # plt.plot(years, ts_data[::-1], color='orange', label='Trend')
+    # plt.axhline(y=ambang_batas, color='red', linestyle='--', label='Ambang Batas Jumlah Mahasiswa Minimal')
+    # plt.title('Jumlah Mahasiswa Tahun ke Tahun')
+    # plt.xlabel('Tahun')
+    # plt.ylabel('Jumlah Mahasiswa')
+    # plt.xticks(years)  # X-axis labels
+    # plt.legend()
+    # plt.grid()
+    # # prodi_banyak_data = prodi_formula["Banyak Data TS"]
+    # st.pyplot(plt)
+    
 
     # if st.button("Prediksi Pemantauan Semua Prodi"):
         # st.write(tampil_data_prodi)
     # st.success("Data berhasil ditambahkan ke worksheet!")
-    
+    # st.write(ts_values)
+
+
 
 # prediksi_pemantauan_semua_prodi()

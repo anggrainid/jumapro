@@ -75,8 +75,8 @@ def sidebar():
 # Fungsi utama yang memanggil dashboard dan navigasi sidebar
 def main():
     selected, submenu = sidebar()
-
-    st.title(f"Halaman {selected}")
+    if selected != "Prediksi Pemantauan":
+        st.title(f"Halaman {selected}")
 
     if selected == "Dashboard":
         dashboard()

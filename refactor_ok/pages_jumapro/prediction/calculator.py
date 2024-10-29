@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 def kalkulator_prediksi():
 
     # Halaman Prediksi Suatu Prodi
-    # st.title("Kalkulator Prediksi Jumlah Mahasiswa")
-    st.markdown("Kalkulator Prediksi Jumlah Mahasiswa")
+    st.title("Halaman Kalkulator Prediksi")
+    st.markdown("Halaman ini digunakan untuk melakukan prediksi jumlah mahasiswa baru dengan melihat jumlah mahasiswa saat ini")
 
 
     # Establishing a Google Sheets connection

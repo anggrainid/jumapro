@@ -10,9 +10,11 @@ import matplotlib.pyplot as plt
 def prediksi_pemantauan_satu_prodi(existing_formula):
 
 
+    
     # Halaman Prediksi Suatu Prodi
     # st.title("Halaman Prediksi Suatu Prodi Dengan Formula")
-    st.markdown("Form Prediksi Pemantauan Suatu Program Studi")
+    st.title("Halaman Prediksi Pemantauan Suatu Program Studi")
+    st.markdown("Halaman ini digunakan untuk melakukan prediksi pemantauan jumlah mahasiswa baru pada suatu program studi")
 
 
 
@@ -321,7 +323,7 @@ def prediksi_pemantauan_satu_prodi(existing_formula):
             # })
         # return tampil_data_prodi
         # st.write(hasil_prodi)
-        st.table(tampil_data_prodi)
+        st.write(tampil_data_prodi)
         
         # st.write(data_prodi)
         # Grafik Scatter Plot

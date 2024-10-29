@@ -49,13 +49,13 @@ def dashboard(existing_djm):
 
     # Membuat dashboard header
     # st.title("Dashboard Program Studi")
-    st.markdown("Dashboard Historis Jumlah Mahasiswa Program Studi Magister dan Doktor di Universitas Gadjah Mada")
+    st.markdown("Dashboard Pemantauan Akreditasi dan Historis Jumlah Mahasiswa Baru Program Studi Magister dan Doktor di Universitas Gadjah Mada")
 
 
     col9, col10 = st.columns([1, 1])
 
     with col9:
-        # st.subheader("Peringkat")
+        st.subheader("Total Peringkat")
         data_peringkat = {
             "Akreditasi": peringkat_counts.index.tolist(),
             "Jumlah Prodi": peringkat_counts.values.tolist()
@@ -68,6 +68,7 @@ def dashboard(existing_djm):
     kurang_dari_satu_bulan = len(existing_djm[existing_djm['Kadaluarsa'] < 30])
     
     with col10:
+        st.subheader("Total Masa Berlaku")
         data_pemantauan = {
             "Masa Berlaku Akreditasi": ["Lebih Dari 1 Tahun", "6-12 Bulan", "1-6 Bulan", "Kurang Dari 1 Bulan"],
             "Jumlah Prodi": [lebih_dari_1_tahun, enam_duabelas_bulan, satu_enam_bulan, kurang_dari_satu_bulan]
@@ -82,13 +83,14 @@ def dashboard(existing_djm):
     # st.table(data)
 
     # existing_djm
+    st.subheader("Tabel Akreditasi dan Historis Jumlah Mahasiswa Baru ")
     st.write(existing_djm)
 
     col6, col7, col8 = st.columns([1, 1, 1])
 
     # Tabel Peringkat
     with col6:
-        # st.subheader("Peringkat")
+        st.subheader("Total Fakultas")
         data_fakultas = {
             "Fakultas": fakultas_counts.index.tolist(),
             "Jumlah Prodi": fakultas_counts.values.tolist()
@@ -97,7 +99,7 @@ def dashboard(existing_djm):
 
     # Tabel Jenjang
     with col7:
-        # st.subheader("Jenjang")
+        st.subheader("Total Lembaga")
         data_lembaga = {
             "Lembaga Akreditasi": lembaga_counts.index.tolist(),
             "Jumlah Prodi": lembaga_counts.values.tolist()
@@ -105,7 +107,7 @@ def dashboard(existing_djm):
         st.table(data_lembaga)
     # Tabel Lembaga Akreditasi
     with col8:
-        # st.subheader("Lembaga")
+        st.subheader("Total Jenjang")
         data_jenjang = {
             "Jenjang": jenjang_counts.index.tolist(),
             "Jumlah Prodi": jenjang_counts.values.tolist()

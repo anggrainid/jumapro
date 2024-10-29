@@ -49,7 +49,9 @@ def main():
             existing_djm = preprocess_data(refresh_data('djm'))
             existing_formula = preprocess_data(refresh_data('formula'))
 
-        st.title(f"Halaman {selected}")
+        # st.title(f"Halaman {selected}")
+        if selected != "Prediksi Pemantauan":
+            st.title(f"Halaman {selected}")
 
 
         if selected == "Dashboard":

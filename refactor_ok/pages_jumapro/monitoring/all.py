@@ -68,7 +68,13 @@ from component.func import calculate_persentase_penurunan, calculate_ts0_minimal
 
 def pemantauan_semua_prodi(existing_djm, existing_formula):
 
+    st.title("Halaman Pemantauan Semua Program Studi")
+    st.markdown("Halaman ini digunakan untuk melakukan pemantauan jumlah mahasiswa baru pada semua program studi yang tersedia")
     
+    acc_columns = ['Peringkat', 'Awal Masa Berlaku', 'Akhir Masa Berlaku', 'Kadaluarsa']
+    existing_djm = existing_djm.drop(acc_columns, axis=1, errors='ignore')
+    st.write(existing_djm)
+
     def visualization_selected(hasil_df):
         # Filter Program Studi
         prodi_options = hasil_df['Prodi'].unique()
@@ -339,8 +345,9 @@ def pemantauan_semua_prodi(existing_djm, existing_formula):
     # Menampilkan hasil pemantauan
     # st.success("Pemantauan Berhasil Dilakukan!")
     st.write("**Hasil Pemantauan:**")
-    st.dataframe(hasil_df)
     visualization_selected(hasil_df)
+    st.write(hasil_df)
+
     
         # (Optional) Menyimpan hasil ke file pickle atau Google Sheets
         # Simpan ke 'existing_dhp.pickle'
@@ -371,3 +378,4 @@ def pemantauan_semua_prodi(existing_djm, existing_formula):
 
 # if __name__ == "__main__":
 #     main()
+

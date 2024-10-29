@@ -68,8 +68,9 @@ from component.func import calculate_persentase_penurunan, calculate_ts0_minimal
 
 
 def pemantauan_satu_prodi(existing_formula):
-    st.markdown("Form Pemantauan Program Studi")
-
+    st.title("Halaman Pemantauan Suatu Program Studi")
+    # st.markdown("Form Pemantauan Program Studi")
+    st.markdown("Halaman ini digunakan untuk melakukan pemantauan jumlah mahasiswa baru pada suatu program studi")
     # Input Fields
     input_prodi = st.text_input("Masukkan Nama Program Studi : ")
 

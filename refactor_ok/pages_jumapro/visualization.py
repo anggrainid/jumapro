@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.linear_model import LinearRegression
 from component.data import get_data, refresh_data, preprocess_data
+from sklearn.metrics import r2_score
 
 def visualisasi_model(existing_djm):
 
@@ -67,19 +68,28 @@ def visualisasi_model(existing_djm):
     model.fit(X, y)
     y_pred = model.predict(X)
 
+    # Menghitung nilai R²
+    r2 = r2_score(y, y_pred)
+    r2 = round (r2, 2)
+    st.write(f'Nilai R² untuk prediksi tahun selanjutnya adalah: ', r2)  # Menampilkan R²
 
     # Menambahkan kolom prediksi ke df_tahun
     df_tahun['Prediksi Jumlah Mahasiswa Setelahnya'] = np.round(y_pred)
     
-    comparison = (df_tahun['Prediksi Jumlah Mahasiswa Setelahnya'] / df_tahun['Jumlah Mahasiswa Setelahnya']) * 100
-    df_tahun['Perbandingan Persentase Prediksi Mahasiswa Baru (%)'] = np.where(df_tahun['Jumlah Mahasiswa Setelahnya']==0, np.nan, comparison.round())
+    # comparison = (df_tahun['Prediksi Jumlah Mahasiswa Setelahnya'] / df_tahun['Jumlah Mahasiswa Setelahnya']) * 100
+    # df_tahun['Perbandingan Persentase Prediksi Mahasiswa Baru (%)'] = np.where(df_tahun['Jumlah Mahasiswa Setelahnya']==0, np.nan, comparison.round())
+
+    # r2_prodi = r2_score(df_tahun['Jumlah Mahasiswa Setelahnya'], df_tahun['Prediksi Jumlah Mahasiswa Setelahnya'])
+    # r2_prodi = round(r2, 2)
+    # df_tahun['Perbandingan Persentase Prediksi Mahasiswa Baru (%)'] = r2_prodi
+
 
     average_row = pd.DataFrame({
         'Program Studi': ['Average'],
         'Jumlah Mahasiswa Saat Ini': [df_tahun['Jumlah Mahasiswa Saat Ini'].mean(skipna=True)],
         'Jumlah Mahasiswa Setelahnya': [df_tahun['Jumlah Mahasiswa Setelahnya'].mean(skipna=True)],
-        'Prediksi Jumlah Mahasiswa Setelahnya': [df_tahun['Prediksi Jumlah Mahasiswa Setelahnya'].mean(skipna=True)],
-        'Perbandingan Persentase Prediksi Mahasiswa Baru (%)': [df_tahun['Perbandingan Persentase Prediksi Mahasiswa Baru (%)'].mean(skipna=True)]
+        'Prediksi Jumlah Mahasiswa Setelahnya': [df_tahun['Prediksi Jumlah Mahasiswa Setelahnya'].mean(skipna=True)]
+        # 'R²': [df_tahun['Perbandingan Persentase Prediksi Mahasiswa Baru (%)'].mean(skipna=True)]
     })
     # Menambahkan baris rata-rata ke dataframe
     df_tahun = pd.concat([df_tahun, average_row], ignore_index=True)
