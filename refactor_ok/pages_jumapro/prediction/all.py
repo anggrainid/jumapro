@@ -469,54 +469,7 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
     
     st.write(tampil_data_prodi)
     
-    # Try Plot All
-    
-    # predict_years = [input_predict_year + i for i in range(input_years_to_predict)]
-    # predict_values_column = [f'{predict_year} (Prediksi)' for predict_year in predict_years ]
-    # predict_values = [existing_djm[(year)] for year in predict_values_column]
-    
-    # ts_years = ts
-    # int_ts_years = [int(i) for i in ts_years]
-    # ts_values = existing_djm[ts_years].astype(int).tolist()
-
-    # st.write(ts_years)
-    # st.write(ts_values)
-
-  
-    # st.write(predict_years)
-    # st.write(predict_values_column)
-    # st.write(predict_values)
-    # predict_years = [next_year for next_year in range(input_predict_year, input_predict_year+input_years_to_predict)]
-    # predict_years_column =[col for col in tampil_data_prodi.columns if col in data_predict_years]
-    all_years = int_ts_years + predict_years
-    all_values = ts_values + predict_values
-        # Scatter Plot
-    plt.figure(figsize=(10, 6))
-    
-    # Plot TS data
-    plt.scatter(int_ts_years, ts_values, color='blue', label='Data TS')
-    # plt.plot(ts_years, ts_values, color='orange', label='Trend TS')
-    
-    # Plot predicted data
-    plt.scatter(predict_years, predict_values, color='red', label='Data Prediksi')
-    # plt.plot(predict_years, predict_values, color='green', linestyle='--', label='Trend Prediksi')
-    plt.plot(all_years, all_values)
-    # Add title, labels, and grid
-    plt.title('Jumlah Mahasiswa Tahun ke Tahun')
-    plt.xlabel('Tahun')
-    plt.ylabel('Jumlah Mahasiswa')
-    # plt.xticks(ticks=range(min(ts_years + predict_years), max(ts_years + predict_years)+1))  # Label X-axis
-    plt.legend()
-    plt.grid()
-
-    # st.write(all_years)
-    # st.write(all_values)
-    plt.axhline(y=existing_djm['Jumlah Mahasiswa Minimal'], color='red', linestyle='--', label='Ambang Batas Jumlah Mahasiswa Minimal')
-    plt.xticks(ticks=range(int(min(all_years)), int(max(all_years)+1)), labels=range(min(all_years), max(all_years)+1))
-    
-    # Display the plot in Streamlit
-    st.pyplot(plt)
-    
+   
     
     
     # Ambil data yang dibutuhkan
