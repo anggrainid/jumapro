@@ -3,6 +3,7 @@ import streamlit as st
 # Fungsi untuk halaman login
 def login():
     st.title("Login Page")
+    st.markdown("Sistem Prediksi dan Pemantauan Jumlah Mahasiswa Baru Program Studi Pascasarjana Universitas Gadjah Mada ")
 
     # Hardcode user credentials (bisa disesuaikan)
     valid_username = "admin"

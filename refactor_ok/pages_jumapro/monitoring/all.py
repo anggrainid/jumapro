@@ -92,12 +92,12 @@ def pemantauan_semua_prodi(existing_djm, existing_formula):
         # Grafik Scatter Plot
         plt.figure(figsize=(10, 6))
         years = list(range(current_year - int(banyak_data_ts) + 1,current_year + 1))
-        plt.scatter(years,ts_data[::-1], color='blue', label='Jumlah Mahasiswa')
+        plt.scatter(years,ts_data[::-1], color='blue', label='Jumlah Mahasiswa Baru')
         plt.plot(years, ts_data[::-1], color='orange', label='Trend')
-        plt.axhline(y=ambang_batas, color='red', linestyle='--', label='Ambang Batas Jumlah Mahasiswa Minimal')
-        plt.title('Jumlah Mahasiswa Tahun ke Tahun')
+        plt.axhline(y=ambang_batas, color='red', linestyle='--', label='Ambang Batas Jumlah Mahasiswa Baru Minimal')
+        plt.title('Jumlah Mahasiswa Baru Tahun ke Tahun')
         plt.xlabel('Tahun')
-        plt.ylabel('Jumlah Mahasiswa')
+        plt.ylabel('Jumlah Mahasiswa Baru')
         plt.xticks(years)  # X-axis labels
         plt.legend()
         plt.grid()
@@ -128,15 +128,16 @@ def pemantauan_semua_prodi(existing_djm, existing_formula):
     
     # Menentukan Tahun Pemantauan
     available_years = [int(col) for col in existing_djm.columns if col.isdigit()]
-    if not available_years:
+    filtered_years = [year for year in available_years if year>min(available_years) + 4]
+    if not filtered_years:
         st.error("Tidak ada data tahun yang tersedia di existing_djm.")
         return
     
-    current_year_default = max(available_years)
+    current_year_default = max(filtered_years)
     current_year = st.selectbox(
         "Pilih Tahun Pemantauan:",
-        options=sorted(available_years),
-        index=sorted(available_years).index(current_year_default) if available_years else 0
+        options=sorted(filtered_years),
+        index=sorted(filtered_years).index(current_year_default) if filtered_years else 0
     )
     
     # Identifikasi semua lembaga

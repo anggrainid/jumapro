@@ -86,9 +86,9 @@ def visualisasi_model(existing_djm):
 
     average_row = pd.DataFrame({
         'Program Studi': ['Average'],
-        'Jumlah Mahasiswa Saat Ini': [df_tahun['Jumlah Mahasiswa Saat Ini'].mean(skipna=True)],
-        'Jumlah Mahasiswa Setelahnya': [df_tahun['Jumlah Mahasiswa Setelahnya'].mean(skipna=True)],
-        'Prediksi Jumlah Mahasiswa Setelahnya': [df_tahun['Prediksi Jumlah Mahasiswa Setelahnya'].mean(skipna=True)]
+        'Jumlah Mahasiswa Baru Saat Ini': [df_tahun['Jumlah Mahasiswa Saat Ini'].mean(skipna=True)],
+        'Jumlah Mahasiswa Baru Setelahnya': [df_tahun['Jumlah Mahasiswa Setelahnya'].mean(skipna=True)],
+        'Prediksi Jumlah Mahasiswa Baru Setelahnya': [df_tahun['Prediksi Jumlah Mahasiswa Setelahnya'].mean(skipna=True)]
         # 'R²': [df_tahun['Perbandingan Persentase Prediksi Mahasiswa Baru (%)'].mean(skipna=True)]
     })
     # Menambahkan baris rata-rata ke dataframe
@@ -104,8 +104,8 @@ def visualisasi_model(existing_djm):
 
     # Menambahkan label, judul tanpa legend dan grid
     plt.title(f"Scatter Plot Linear Regression\nTahun: {tahun}", fontsize=18)
-    plt.xlabel('Jumlah Mahasiswa Saat Ini', fontsize=12)
-    plt.ylabel('Jumlah Mahasiswa Setelahnya', fontsize=12)
+    plt.xlabel('Jumlah Mahasiswa Baru Saat Ini', fontsize=12)
+    plt.ylabel('Jumlah Mahasiswa Baru Setelahnya', fontsize=12)
     plt.grid(False)
     plt.legend()
 

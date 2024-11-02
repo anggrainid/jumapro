@@ -86,7 +86,7 @@ def prediksi_pemantauan_satu_prodi(existing_formula):
             ts_values = []
             for i in range(int(input_banyak_data_ts-1)):
                 year = input_last_year - i
-                value = st.number_input(f"Masukkan Jumlah Mahasiswa Tahun {year} (TS-{i}):", step=0)
+                value = st.number_input(f"Masukkan Jumlah Mahasiswa Baru Tahun {year} (TS-{i}):", step=0)
                 ts_values.append(value)
                 # if i == 0:
                 #     # Placeholder untuk hasil prediksi
@@ -97,7 +97,7 @@ def prediksi_pemantauan_satu_prodi(existing_formula):
 
         else:
             input_ambang_batas_jumlah = selected_formula["Ambang Batas (Jumlah)"]
-            input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa Tahun {input_last_year} (TS-0) :", value=0)
+            input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa Baru Tahun {input_last_year} (TS-0) :", value=0)
             input_ambang_batas_persen = None
             input_fields = None
             ts_values = [input_jumlah_mahasiswa_ts]
@@ -116,12 +116,12 @@ def prediksi_pemantauan_satu_prodi(existing_formula):
             #     field_name = f"input_jumlah_mahasiswa_ts{i}"
             #     input_fields[field_name] = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", value=0)
             for i in range(input_banyak_data_ts-1):
-                value = st.number_input(f"Masukkan Jumlah Mahasiswa TS-{i}:", step=0)
+                value = st.number_input(f"Masukkan Jumlah Mahasiswa Baru TS-{i}:", step=0)
                 ts_values.append(value)     
         else:
             input_banyak_data_ts = 1
-            input_ambang_batas_jumlah = st.number_input("Ambang Batas Jumlah Mahasiswa Minimal", min_value=1, step=1)
-            input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa Tahun {input_last_year} (TS-0):", step=0)
+            input_ambang_batas_jumlah = st.number_input("Ambang Batas Jumlah Mahasiswa Baru Minimal", min_value=1, step=1)
+            input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa Baru Tahun {input_last_year} (TS-0):", step=0)
             input_ambang_batas_persen = None
             input_fields = None
             ts_values.append(input_jumlah_mahasiswa_ts)
@@ -389,9 +389,9 @@ def prediksi_pemantauan_satu_prodi(existing_formula):
         # plt.plot(all_years_sorted, all_values_sorted, color='orange', label='Prediksi Terhubung')
                 
         plt.axhline(y=ambang_batas_jumlah_mahasiswa, color='red', linestyle='--', label='Ambang Batas Jumlah Mahasiswa Minimal')
-        plt.title('Jumlah Mahasiswa Tahun ke Tahun')
+        plt.title('Jumlah Mahasiswa Baru Tahun ke Tahun')
         plt.xlabel('Tahun')
-        plt.ylabel('Jumlah Mahasiswa')
+        plt.ylabel('Jumlah Mahasiswa Baru')
         # plt.xticks(predict_years)  # X-axis labels
         plt.xticks(ticks=range(min(all_years), max(all_years)+1), labels=range(min(all_years), max(all_years)+1))
         

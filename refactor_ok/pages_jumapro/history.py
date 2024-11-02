@@ -81,7 +81,7 @@ def histori_prediksi(existing_djm):
     r2 = round(r2, 2)
 
     # Grafik Trend Jumlah Mahasiswa
-    st.write('Grafik Trend Jumlah Mahasiswa')
+    st.write('Grafik Trend Jumlah Mahasiswa Baru')
 
     plt.figure(figsize=(10, 6))
 
@@ -98,8 +98,8 @@ def histori_prediksi(existing_djm):
 
     plt.legend()
     plt.xlabel('Tahun')
-    plt.ylabel('Jumlah Mahasiswa')
-    plt.title(f'Trend Jumlah Mahasiswa di {prodi}')
+    plt.ylabel('Jumlah Mahasiswa Baru')
+    plt.title(f'Trend Jumlah Mahasiswa Baru di {prodi}')
     st.pyplot(plt)
     st.write(f'R² untuk prediksi di {prodi}:', r2)  # Menampilkan R²
 

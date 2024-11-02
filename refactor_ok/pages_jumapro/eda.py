@@ -51,12 +51,12 @@ def analisis_data(existing_djm):
     filtered_data = filtered_data[['Prodi'] + available_years]
 
     # Line Chart
-    st.subheader("Line Chart: Jumlah Mahasiswa per Tahun")
+    st.subheader("Line Chart: Jumlah Mahasiswa Baru per Tahun")
     plt.figure(figsize=(10, 5))
     plt.plot(available_years, filtered_data.iloc[0, 1:].values, marker='o', label=selected_prodi)
-    plt.title(f'Jumlah Mahasiswa {selected_prodi} (Tahun {start_year} - {end_year})')
+    plt.title(f'Jumlah Mahasiswa Baru {selected_prodi} (Tahun {start_year} - {end_year})')
     plt.xlabel('Tahun')
-    plt.ylabel('Jumlah Mahasiswa')
+    plt.ylabel('Jumlah Mahasiswa Baru')
     plt.grid(True)
     plt.xticks(rotation=45)
     plt.legend()
@@ -73,5 +73,5 @@ def analisis_data(existing_djm):
     # st.pyplot(plt)
 
     # Display Table of Filtered Data
-    st.subheader(f"Data Jumlah Mahasiswa {selected_prodi}")
+    st.subheader(f"Data Jumlah Mahasiswa Baru {selected_prodi}")
     st.dataframe(filtered_data)

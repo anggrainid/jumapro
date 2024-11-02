@@ -98,7 +98,7 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
     max_year = max(available_years)
     min_year = min(available_years)
 
-    input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=int(min_year)+5, max_value=int(max_year)+1)
+    input_predict_year = st.slider("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=int(min_year)+5, max_value=int(max_year)+1, value=(int(max_year)+1))
     input_last_year = input_predict_year - 1
 
     input_years_to_predict = st.slider("Masukkan Proyeksi Prediksi (Dalam Satuan Tahun) : ", min_value=1, max_value=10)
@@ -452,16 +452,16 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
     # plt.plot(predict_years, predict_values, color='green', linestyle='--', label='Trend Prediksi')
     plt.plot(all_years, all_values)
     # Add title, labels, and grid
-    plt.title('Jumlah Mahasiswa Tahun ke Tahun')
+    plt.title('Jumlah Mahasiswa Baru Tahun ke Tahun')
     plt.xlabel('Tahun')
-    plt.ylabel('Jumlah Mahasiswa')
+    plt.ylabel('Jumlah Mahasiswa Baru')
     # plt.xticks(ticks=range(min(ts_years + predict_years), max(ts_years + predict_years)+1))  # Label X-axis
     plt.legend()
     plt.grid()
 
     # st.write(all_years)
     # st.write(all_values)
-    plt.axhline(y=filtered_data['Jumlah Mahasiswa Minimal'], color='red', linestyle='--', label='Ambang Batas Jumlah Mahasiswa Minimal')
+    plt.axhline(y=filtered_data['Jumlah Mahasiswa Baru Minimal'], color='red', linestyle='--', label='Ambang Batas Jumlah Mahasiswa Baru Minimal')
     plt.xticks(ticks=range(int(min(all_years)), int(max(all_years)+1)), labels=range(min(all_years), max(all_years)+1))
     
     # Display the plot in Streamlit

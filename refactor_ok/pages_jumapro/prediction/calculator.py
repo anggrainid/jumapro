@@ -8,7 +8,7 @@ def kalkulator_prediksi():
 
     # Halaman Prediksi Suatu Prodi
     st.title("Halaman Kalkulator Prediksi")
-    st.markdown("Halaman ini digunakan untuk melakukan prediksi jumlah mahasiswa baru dengan melihat jumlah mahasiswa saat ini")
+    st.markdown("Halaman ini digunakan untuk melakukan prediksi jumlah mahasiswa baru dengan melihat jumlah mahasiswa baru saat ini")
 
 
     # Establishing a Google Sheets connection
@@ -23,7 +23,7 @@ def kalkulator_prediksi():
 
     # input_predict_year = st.number_input("Masukkan Tahun yang Ingin Diprediksi (ex: 2025) : ", min_value=2024)
     # input_last_year = input_predict_year - 1
-    input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa Saat Ini:", value=0)
+    input_jumlah_mahasiswa_ts = st.number_input(f"Masukkan Jumlah Mahasiswa Baru Saat Ini:", value=0)
     input_years_to_predict = st.number_input("Masukkan Proyeksi Prediksi (Dalam Satuan Tahun) : ", min_value=1, max_value=10)
 
     # input_kriteria = st.radio("Kriteria", ["Jumlah Mahasiswa", "Persentase Penurunan"])
@@ -252,9 +252,9 @@ def kalkulator_prediksi():
         fig, ax = plt.subplots()
         ax.scatter(years, predictions, color='blue')
         ax.plot(years, predictions, color='blue', alpha=0.5)  # Menambahkan garis penghubung
-        ax.set_title('Prediksi Jumlah Mahasiswa')
+        ax.set_title('Prediksi Jumlah Mahasiswa Baru')
         ax.set_xlabel('Tahun Ke Depan')
-        ax.set_ylabel('Jumlah Mahasiswa')
+        ax.set_ylabel('Prediksi Jumlah Mahasiswa Baru')
         ax.set_xticks(years)  # Mengatur ticks untuk sumbu x
 
         st.pyplot(fig)
