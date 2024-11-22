@@ -23,18 +23,6 @@ from component.data import get_data, refresh_data, preprocess_data
 
 def dashboard(existing_djm):
 
-    # 1. Connections from google sheets
-    # if st.button('Refresh Data'):
-    #     existing_djm = refresh_data('djm')
-    #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    # else:
-    # # 2. Connections from pickle
-    #     existing_djm = get_data('djm')
-    # # st.write(existing_djm)
-    #  # 3. Data preprocessing
-    # existing_djm = preprocess_data(existing_djm)
-
-
     # Menghitung jumlah prodi berdasarkan fakultas
     fakultas_counts = existing_djm['Fakultas'].value_counts()
     
@@ -50,6 +38,7 @@ def dashboard(existing_djm):
     # Membuat dashboard header
     # st.title("Dashboard Program Studi")
     st.markdown("Dashboard Pemantauan Akreditasi dan Historis Jumlah Mahasiswa Baru Program Studi Magister dan Doktor di Universitas Gadjah Mada")
+
 
 
     col9, col10 = st.columns([1, 1])
@@ -83,6 +72,8 @@ def dashboard(existing_djm):
     # st.table(data)
 
     # existing_djm
+    
+    
     st.subheader("Tabel Akreditasi dan Historis Jumlah Mahasiswa Baru ")
     st.write(existing_djm)
 

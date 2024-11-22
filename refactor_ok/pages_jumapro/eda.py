@@ -3,28 +3,13 @@ import matplotlib.pyplot as plt
 from component.data import get_data, refresh_data, preprocess_data
 
 def analisis_data(existing_djm):
-    # st.title("Analisis Data Historis Jumlah Mahasiswa")
-
-    # 1. Connections from google sheets
-    # if st.button('Refresh Data'):
-    #     existing_djm = refresh_data('djm')
-    #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    # else:
-    # # 2. Connections from pickle
-    #     existing_djm = get_data('djm')
-    # # st.write(existing_djm)
-    #  # 3. Data preprocessing
-    # existing_djm = preprocess_data(existing_djm)
-    # Filter Program Studi
     
     st.markdown("Halaman ini digunakan untuk melihan visualisasi data historis untuk setiap program studi")
     prodi_options = existing_djm['Prodi'].unique()
     selected_prodi = st.selectbox("Pilih Program Studi", options=prodi_options)
 
-    # Handle NaN values (Replace NaN with 0 for simplicity)
     existing_djm = existing_djm.fillna(0)
 
-    # Convert column names to string and filter columns that are numeric (representing years)
     year_columns = [str(col) for col in existing_djm.columns if str(col).isdigit()]
 
     # Filter Tahun
@@ -34,13 +19,10 @@ def analisis_data(existing_djm):
     start_year = st.slider("Pilih Tahun Awal", min_value=min_year, max_value=max_year, value=min_year)
     end_year = st.slider("Pilih Tahun Akhir", min_value=start_year, max_value=max_year, value=max_year)
 
+   
     # Filter data berdasarkan Prodi dan Tahun
     filtered_data = existing_djm[existing_djm['Prodi'] == selected_prodi].copy()
-
-    # Generate a list of filtered years, ensuring all columns exist in the data
     filtered_years = [int(year) for year in range(start_year, end_year + 1)]
-    
-    # Pastikan kolom tahun yang ada benar-benar tersedia di dalam existing_djm
     available_years = [year for year in filtered_years if year in filtered_data.columns]
     
     if len(available_years) == 0:

@@ -1,71 +1,8 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 from datetime import date
-import math
-from component.data import get_data, refresh_data, preprocess_data
 from component.func import calculate_persentase_penurunan, calculate_ts0_minimal
-
-# def hitung_ts0_minimal(ts_values, persentase_penurunan_maksimal):
-#     """Menghitung nilai ts-0 (jumlah mahasiswa minimal) agar persentase penurunan <= persentase penurunan maksimal."""
-#     # Menggunakan nilai dari ts-1
-#     # if len(ts_values) < 2:
-#     #     return 0  # Tidak ada cukup data untuk menghitung
-
-#     # ts1 = ts_values[-2]  # Ambil nilai dari ts-1
-#     # # Hitung nilai ts-0 yang dibutuhkan
-#     # # ts0_minimal = ts1 - (ts1 * (persentase_penurunan_maksimal / 100))
-#     # # return math.ceil(ts0_minimal)  # Bulatkan ke atas
-    
-#     # # ts1 = ts_values[-2]  # Mengambil nilai dari ts-1 (tahun terakhir)
-#     # ts4 = ts_values[0]  # Mengambil nilai dari ts-4 (tahun terlama)
-
-#     # # Persentase penurunan dari ts-4 ke ts-0
-#     # # Kita cari ts-0 yang diperlukan untuk memenuhi ambang batas penurunan
-#     # # Menghitung ts-0 agar penurunan dari ts-4 ke ts-0 tidak lebih dari persentase penurunan maksimal
-#     # # Menggunakan rumus: 
-#     # ts0_minimal = ts4 - (ts4 * (persentase_penurunan_maksimal / 100))
-#     # return math.ceil(ts0_minimal)  # Bulatkan ke atas
-
-#     if len(ts_values) < 2:
-#         return 0  # Tidak ada cukup data untuk menghitung
-
-#     ts1 = ts_values[1]  # Ambil nilai dari ts-1
-#     # Hitung nilai ts-0 yang dibutuhkan
-#     ts0_minimal = ts1 / (1 - (persentase_penurunan_maksimal / 100))
-#     return math.ceil(ts0_minimal)
-
-# def hitung_ts0_minimal(ts_values, persentase_penurunan_maksimal):
-#     """
-#     Menghitung nilai ts-0 (jumlah mahasiswa minimal) 
-#     agar akumulasi persentase penurunan dari ts-4 hingga ts-0 
-#     <= persentase penurunan maksimal.
-#     """
-    
-#     if len(ts_values) < 2:
-#         return 0  # Tidak ada cukup data untuk menghitung
-
-#     ts0_minimal = max(ts_values)  # Inisialisasi dengan nilai terbesar di ts_values
-
-#     # Mencari ts0_minimal dengan mencoba nilai dari nilai terbesar di ts_values ke bawah
-#     for i in range(ts0_minimal, 0, -1):
-#         ts_temp = ts_values.copy()  # Buat salinan list ts_values
-#         ts_temp[0] = i  # Ganti nilai ts-0 dengan nilai yang sedang dicoba
-        
-#         # Pindahkan pemanggilan fungsi calculate_persentase_penurunan ke dalam loop
-#         persentase_penurunan = calculate_persentase_penurunan(ts_temp)
-
-#         # --- Menampilkan nilai i dan persentase penurunan ---
-#         # print(f"  Mencoba ts0_minimal = {i}, ts_temp = {ts_temp}, persentase penurunan = {persentase_penurunan}%")
-
-#         if persentase_penurunan >= persentase_penurunan_maksimal:
-#             ts0_minimal = i+1  # Update ts0_minimal jika memenuhi syarat
-#             break  # Hapus break
-#         else:
-#             ts0_minimal = 1
-#     return ts0_minimal
-
 
 def pemantauan_satu_prodi(existing_formula):
     st.title("Halaman Pemantauan Suatu Program Studi")
@@ -130,64 +67,9 @@ def pemantauan_satu_prodi(existing_formula):
 
     # Tombol untuk melakukan pemantauan
     if st.button("Hitung Pemantauan"):
-        if not input_prodi:
-            st.error("Nama Program Studi harus diisi.")
-            return
         
         if input_kriteria == "Persentase Penurunan":
             persentase_penurunan = calculate_persentase_penurunan(ts_values)
-            
-            # # COBA
-            # st.write(ts_values)
-            # ts0_minimal = max(ts_values)  # Inisialisasi dengan nilai terbesar di ts_values
-
-            
-            # # Mencari ts0_minimal dengan mencoba nilai dari nilai terbesar di ts_values ke bawah
-            # for i in range(ts0_minimal, 0, -1):
-            #     ts_temp = ts_values.copy()  # Buat salinan list ts_values
-            #     ts_temp[0] = i  # Ganti nilai ts-0 dengan nilai yang sedang dicoba
-                
-            #     # Pindahkan pemanggilan fungsi calculate_persentase_penurunan ke dalam loop
-            #     persentase_penurunan = calculate_persentase_penurunan(ts_temp)
-
-            #     # --- Menampilkan nilai i dan persentase penurunan ---
-            #     st.write(f"  Mencoba ts0_minimal = {i}, ts_temp = {ts_temp}, persentase penurunan = {persentase_penurunan}%")
-
-            #     if persentase_penurunan >= 20:
-            #         ts0_minimal = i+1 # Update ts0_minimal jika memenuhi syarat
-            #         break  # Hapus break
-
-            # st.write(ts0_minimal)
-
-            # # return ts0_minimal
-
-            # if len(ts_values) < 2:
-            #     return 0  # Tidak ada cukup data untuk menghitung
-
-            # ts0_minimal = max(ts_values)  # Inisialisasi dengan nilai terbesar di ts_values
-
-            # # Mencari ts0_minimal dengan mencoba nilai dari nilai terbesar di ts_values ke bawah
-            # for i in range(ts0_minimal, 0, -1):
-            #     ts_temp = ts_values.copy()  # Buat salinan list ts_values
-            #     ts_temp[0] = i  # Ganti nilai ts-0 dengan nilai yang sedang dicoba
-                
-            #     # Pindahkan pemanggilan fungsi calculate_persentase_penurunan ke dalam loop
-            #     persentase_penurunan = calculate_persentase_penurunan(ts_temp)
-
-            #     # --- Menampilkan nilai i dan persentase penurunan ---
-            #     st.write(f"  Mencoba ts0_minimal = {i}, ts_temp = {ts_temp}, persentase penurunan = {persentase_penurunan}%")
-            #     # st.write(persentase_penurunan <= input_ambang_batas_persen)
-            #     if persentase_penurunan >= input_ambang_batas_persen:
-            #         ts0_minimal = i+1  # Update ts0_minimal jika memenuhi syarat
-            #         break  # Hapus break
-            #     else:
-            #         ts0_minimal = 1
-            #         # ts0_minimal = i-1
-                    
-
-            # st.write(ts0_minimal)
-
-
 
 
             hasil_prediksi_pemantauan = "Lolos" if persentase_penurunan <= input_ambang_batas_persen else "Tidak Lolos"
@@ -224,6 +106,7 @@ def pemantauan_satu_prodi(existing_formula):
         # st.success("Pemantauan Berhasil Dilakukan!")
         # st.write("**Hasil Pemantauan:**")
         # st.table(data_prodi)
+  
         # Menampilkan hasil pemantauan
         st.success("Pemantauan Berhasil Dilakukan!")
         st.write("**Hasil Pemantauan:**")
@@ -241,8 +124,6 @@ def pemantauan_satu_prodi(existing_formula):
         plt.xticks(years)  # X-axis labels
         plt.legend()
         plt.grid()
-
-        # Display the plot in Streamlit
         st.pyplot(plt)
 
 # Pemanggilan fungsi

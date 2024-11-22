@@ -8,32 +8,6 @@ def formula(existing_djm, existing_formula):
     st.title("Halaman Manajemen Formula Pemantauan")
     st.markdown("Halaman ini digunakan untuk menambahkan formula pemantauan")
 
-    # # Establishing a Google Sheets connection
-    # conn = st.connection("gsheets", type=GSheetsConnection)
-
-    # # Fetch existing vendors data
-    # existing_data = conn.read(worksheet="Rumus Pemantauan", usecols=list(range(7)), ttl=5)
-    # existing_data = existing_data.dropna(how="all")
-    # st.write(existing_data)
-
-
-    # existing_djm = conn.read(worksheet="Data Jumlah Mahasiswa")
-    # existing_djm = existing_djm.dropna(how="all")
-    
-    # 1. Connections from google sheets
-    # if st.button('Refresh Data'):
-    #     existing_djm = refresh_data('djm')
-    #     existing_formula = refresh_data('formula')
-    #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
-    # else:
-    # # 2. Connections from pickle
-    #     existing_djm = get_data('djm')
-    #     existing_formula = get_data('formula')
-    # # st.write(existing_djm)
-    #  # 3. Data preprocessing
-    # existing_djm = preprocess_data(existing_djm)
-    # existing_formula = preprocess_data(existing_formula)
-
     # Dropdown options for Lembaga
     st.write(existing_formula)
     lembaga_options = existing_djm['Lembaga'].unique()
@@ -57,7 +31,6 @@ def formula(existing_djm, existing_formula):
     input_keterangan = st.text_area("Keterangan")
 
 
-    # If the submit button is pressed
     if st.button("Tambah Rumus"):
         # Check if all mandatory fields are filled
         if not input_lembaga or not input_nama_rumus:
@@ -83,13 +56,8 @@ def formula(existing_djm, existing_formula):
                 ]
             )
 
-            # # Add the new vendor data to the existing data
-            # updated_df = pd.concat([existing_formula, new_data], ignore_index=True)
-
-            # # Update Google Sheets with the new vendor data
             worksheet="Rumus Pemantauan"
             
             add_data(existing_formula, new_data, worksheet)
-            # update_worksheet("Rumus Pemantauan", updated_df)
             st.success("Rumus berhasil ditambahkan!")
             # st.write(updated_df)

@@ -28,6 +28,7 @@ from pages_jumapro.monitoring.all import pemantauan_semua_prodi
 #     st.success("Data berhasil dimuat ulang dari Google Sheets!")
 
 # Fungsi utama
+
 def main():
     # Cek apakah user sudah login
     if 'login_status' not in st.session_state:
@@ -43,6 +44,7 @@ def main():
         #     st.session_state['initialized'] = True  # Tandai bahwa inisialisasi telah dilakukan
 
         # Pastikan data ada
+ 
         existing_djm = preprocess_data(get_data('djm'))
         existing_formula = preprocess_data(get_data('formula'))
         if st.sidebar.button("Refresh Data"):

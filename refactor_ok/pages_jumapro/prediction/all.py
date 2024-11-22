@@ -461,7 +461,7 @@ def prediksi_pemantauan_semua_prodi(existing_djm, existing_formula):
 
     # st.write(all_years)
     # st.write(all_values)
-    plt.axhline(y=filtered_data['Jumlah Mahasiswa Baru Minimal'], color='red', linestyle='--', label='Ambang Batas Jumlah Mahasiswa Baru Minimal')
+    plt.axhline(y=filtered_data['Jumlah Mahasiswa Minimal'], color='red', linestyle='--', label='Ambang Batas Jumlah Mahasiswa Baru Minimal')
     plt.xticks(ticks=range(int(min(all_years)), int(max(all_years)+1)), labels=range(min(all_years), max(all_years)+1))
     
     # Display the plot in Streamlit
