@@ -7,6 +7,10 @@ from sklearn.linear_model import LinearRegression
 from component.data import get_data, refresh_data, preprocess_data
 from sklearn.metrics import r2_score, mean_squared_error
 import pickle
+from sklearn.neural_network import MLPRegressor
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor
 
 def visualisasi_model(existing_djm):
 
@@ -85,4 +89,102 @@ def visualisasi_model(existing_djm):
     st.write('Tabel Detail Data')
     st.dataframe(df_tahun)
 
-    
+    st.markdown("### Tabel R² dan RMSE Setiap Tahun")
+
+    metrics_list = []
+
+    for i in range(len(year_columns) - 1):
+        tahun_i = year_columns[i]
+        tahun_i_plus_1 = year_columns[i + 1]
+
+        df_pair = existing_djm[[int(tahun_i), int(tahun_i_plus_1)]].dropna()
+        if df_pair.empty:
+            continue
+
+        X_pair = df_pair[int(tahun_i)].values.reshape(-1, 1)
+        y_pair = df_pair[int(tahun_i_plus_1)].values
+
+        # Gunakan model yang sama
+        model.fit(X_pair, y_pair)
+        y_pred_pair = model.predict(X_pair)
+
+        r2_pair = r2_score(y_pair, y_pred_pair)
+        rmse_pair = np.sqrt(mean_squared_error(y_pair, y_pred_pair))
+
+        metrics_list.append({
+            'Tahun': f"{tahun_i} → {tahun_i_plus_1}",
+            'R²': round(r2_pair, 2),
+            'RMSE': round(rmse_pair, 2)
+        })
+
+    df_metrics = pd.DataFrame(metrics_list)
+    st.dataframe(df_metrics)
+
+        # ===============================
+    # Evaluasi Model Lain (MLP, KNN, DT, RF)
+    # ===============================
+    model_dict = {
+        'Linear Regression': LinearRegression(),
+        'MLP': MLPRegressor(max_iter=1000, random_state=42),
+        'KNN': KNeighborsRegressor(n_neighbors=5),
+        'Decision Tree': DecisionTreeRegressor(random_state=42),
+        'Random Forest': RandomForestRegressor(n_estimators=100, random_state=42)
+    }
+
+    summary_metrics = []  # untuk rekap akhir semua model
+
+    for model_name, model_obj in model_dict.items():
+        metrics_list = []
+
+        for i in range(len(year_columns) - 1):
+            tahun_i = year_columns[i]
+            tahun_next = year_columns[i + 1]
+
+            df_pair = existing_djm[[int(tahun_i), int(tahun_next)]].dropna()
+            if df_pair.empty:
+                continue
+
+            X_pair = df_pair[int(tahun_i)].values.reshape(-1, 1)
+            y_pair = df_pair[int(tahun_next)].values
+
+            try:
+                model_obj.fit(X_pair, y_pair)
+                y_pred_pair = model_obj.predict(X_pair)
+                r2_val = r2_score(y_pair, y_pred_pair)
+                rmse_val = np.sqrt(mean_squared_error(y_pair, y_pred_pair))
+                metrics_list.append({
+                    'Tahun': f"{tahun_i} → {tahun_next}",
+                    'R²': round(r2_val, 2),
+                    'RMSE': round(rmse_val, 2)
+                })
+            except:
+                metrics_list.append({
+                    'Tahun': f"{tahun_i} → {tahun_next}",
+                    'R²': None,
+                    'RMSE': None
+                })
+
+        df_metrics = pd.DataFrame(metrics_list)
+
+        # Hitung rata-rata R² dan RMSE (skip NaN)
+        avg_r2 = df_metrics['R²'].dropna().mean()
+        avg_rmse = df_metrics['RMSE'].dropna().mean()
+
+        # Tambahkan ke ringkasan
+        summary_metrics.append({
+            'Model': model_name,
+            'Rata-rata R²': round(avg_r2, 2) if not np.isnan(avg_r2) else None,
+            'Rata-rata RMSE': round(avg_rmse, 2) if not np.isnan(avg_rmse) else None
+        })
+
+        # Tampilkan tabel per model
+        st.markdown(f"#### Model: {model_name}")
+        st.dataframe(df_metrics)
+
+        # Tampilkan rata-rata per model
+        st.markdown(f"**Rata-rata R²:** {round(avg_r2, 2) if not np.isnan(avg_r2) else '-'}  |  **Rata-rata RMSE:** {round(avg_rmse, 2) if not np.isnan(avg_rmse) else '-'}")
+
+    # Tampilkan ringkasan rata-rata semua model
+    st.markdown("### Ringkasan Rata-rata R² dan RMSE Semua Model")
+    df_summary = pd.DataFrame(summary_metrics)
+    st.dataframe(df_summary)
